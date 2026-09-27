@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+
+const mapQuery = 'Eco Tech Group Sp. z o.o., Mieczysława Pożaryskiego 32, 04-703 Warszawa';
+const mapUrl = `https://www.google.com/maps?q=${encodeURIComponent(mapQuery)}&z=16&output=embed`;
+const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(mapQuery)}`;
+---
+
+<BaseLayout title="Kontakt | Eco Tech Group" description="Skontaktuj się z Eco Tech Group i poznaj lokalizację naszej firmy w Warszawie.">
+  <PageHero title="Kontakt" />
+
+  <section class="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
+    <div class="max-w-2xl">
+      <p class="eyebrow">Skontaktuj się z nami</p>
+      <h2 class="mt-3 text-xl font-semibold tracking-[-0.04em] md:text-2xl">Zapewniamy wsparcie handlowe i techniczne w zakresie dostaw rur stalowych dla projektów infrastrukturalnych, przemysłowych i budowlanych</h2>
+      <p class="mt-5 text-lg leading-8 text-ink/70">
+Jesteśmy dostępni od poniedziałku do piątku w godzinach 8:00–16:00..</p>
+    </div>
+
+    <div class="mt-12 grid overflow-hidden border border-accent-1/15 bg-white lg:grid-cols-2">
+      <form class="p-6 sm:p-8 lg:p-10" novalidate>
+        <div class="flex items-center justify-between gap-5 border-b border-ink/10 pb-6">
+          <div>
+            <p class="mt-2 text-sm leading-6 text-ink/60">Wypełnij formularz — wrócimy z odpowiedzią.</p>
+          </div>
+          <span class="grid size-11 shrink-0 place-items-center bg-mist text-accent-1" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="size-5 fill-none stroke-current" stroke-width="1.8"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 6.7L20.5 6"/></svg>
+          </span>
+        </div>
+
+        <div class="mt-7 grid gap-4 sm:grid-cols-2">
+          <label class="block sm:col-span-2">
+            <span class="sr-only">Imię i nazwisko</span>
+            <input type="text" name="name" autocomplete="name" placeholder="Imię i nazwisko" class="w-full border border-ink/15 bg-sand px-4 py-3.5 text-sm text-ink outline-none placeholder:text-ink/45 focus:border-accent-1 focus:ring-1 focus:ring-accent-1" />
+          </label>
+          <label class="block">
+            <span class="sr-only">Numer telefonu</span>
+            <input type="tel" name="phone" autocomplete="tel" placeholder="Numer telefonu" class="w-full border border-ink/15 bg-sand px-4 py-3.5 text-sm text-ink outline-none placeholder:text-ink/45 focus:border-accent-1 focus:ring-1 focus:ring-accent-1" />
+          </label>
+          <label class="block">
+            <span class="sr-only">Adres e-mail</span>
+            <input type="email" name="email" autocomplete="email" placeholder="Adres e-mail" class="w-full border border-ink/15 bg-sand px-4 py-3.5 text-sm text-ink outline-none placeholder:text-ink/45 focus:border-accent-1 focus:ring-1 focus:ring-accent-1" />
+          </label>
+          <label class="block">
+            <span class="sr-only">Nazwa firmy</span>
+            <input type="text" name="company" autocomplete="organization" placeholder="Nazwa firmy" class="w-full border border-ink/15 bg-sand px-4 py-3.5 text-sm text-ink outline-none placeholder:text-ink/45 focus:border-accent-1 focus:ring-1 focus:ring-accent-1" />
+          </label>
+          <label class="block">
+            <span class="sr-only">NIP</span>
+            <input type="text" name="nip" inputmode="numeric" placeholder="NIP" class="w-full border border-ink/15 bg-sand px-4 py-3.5 text-sm text-ink outline-none placeholder:text-ink/45 focus:border-accent-1 focus:ring-1 focus:ring-accent-1" />
+          </label>
+          <label class="block sm:col-span-2">
+            <span class="sr-only">Wiadomość</span>
+            <textarea name="message" rows="5" placeholder="Wiadomość" class="w-full resize-y border border-ink/15 bg-sand px-4 py-3.5 text-sm text-ink outline-none placeholder:text-ink/45 focus:border-accent-1 focus:ring-1 focus:ring-accent-1"></textarea>
+          </label>
+        </div>
+
+        <label class="mt-5 flex items-start gap-3 text-sm leading-5 text-ink/55">
+          <input type="checkbox" name="privacy" class="mt-0.5 size-4 accent-accent-1" />
+          <span>Wyrażam zgodę na przetwarzanie moich danych osobowych w celu udzielenia odpowiedzi na zapytanie.</span>
+        </label>
+        <button type="button" class="mt-6 bg-accent-1 px-7 py-4 text-sm font-semibold text-white transition-colors hover:bg-accent-1/85">Wyślij formularz</button>
+      </form>
+
+      <div class="relative min-h-[32rem] overflow-hidden bg-mist lg:min-h-full">
+        <iframe src={mapUrl} title="Mapa dojazdu do Eco Tech Group Sp. z o.o." class="absolute inset-0 h-full w-full border-0 grayscale-[0.75] contrast-[0.85]" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="pointer-events-none absolute inset-x-5 top-5 bg-white/95 p-5 shadow-xl shadow-ink/15 sm:left-6 sm:right-auto sm:top-6 sm:max-w-xs">
+          <p class="text-lg font-semibold tracking-[-0.03em] text-ink">Eco Tech Group Sp. z o.o.</p>
+          <address class="mt-2 text-sm leading-6 not-italic text-ink/65">Mieczysława Pożaryskiego 32<br />04-703 Warszawa</address>
+          <a href={directionsUrl} target="_blank" rel="noopener noreferrer" class="pointer-events-auto mt-4 inline-flex items-center gap-2 text-sm font-semibold text-accent-1 hover:text-ink">Wyznacz trasę <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

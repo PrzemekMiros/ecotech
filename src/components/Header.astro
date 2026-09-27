@@ -1,0 +1,152 @@
+---
+import { getCollection } from 'astro:content';
+
+const links = [
+  { href: '/rury-stalowe', label: 'Rury stalowe', dropdown: true, menu: 'pipes' },
+  { href: '/uslugi', label: 'Usługi', dropdown: true, menu: 'services' },
+  { href: '/produkcja', label: 'Produkcja', dropdown: true, menu: 'production' },
+  { href: '/aktualnosci', label: 'Aktualności', dropdown: false, menu: undefined },
+  { href: '/do-pobrania', label: 'Do pobrania', dropdown: false, menu: undefined },
+  { href: '/praca', label: 'Praca', dropdown: false, menu: undefined },
+  { href: '/o-nas', label: 'O nas', dropdown: false, menu: undefined },
+  { href: '/kontakt', label: 'Kontakt', dropdown: false, menu: undefined }
+];
+
+const pathname = Astro.url.pathname;
+const services = (await getCollection('services')).sort((a, b) => a.data.order - b.data.order);
+const productionItems = (await getCollection('production')).sort((a, b) => a.data.order - b.data.order);
+const pipeCategories = (await getCollection('steelPipeCategories')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<header class="absolute inset-x-0 top-0 z-30 text-white">
+  <div class="mx-auto grid min-h-20 max-w-7xl grid-cols-[1fr_auto] items-center gap-8 px-5 lg:px-8">
+    <a href="/" class="w-fit" aria-label="Eco Tech Group — strona główna">
+      <img src="/img/logo/EcoTech_Logo_white.png" alt="Eco Tech Group" class="h-6 w-auto xs:h-8 sm:h-8 lg:h-10 md:-mb-12" />
+    </a>
+
+    <div class="hidden self-stretch lg:block">
+      <div class="flex h-[66px] items-center justify-end gap-7 text-sm font-medium">
+        <div class="flex items-center gap-4 text-lg" aria-label="Wybór języka">
+          <a href="#" aria-label="English" class="transition-opacity hover:opacity-70">🇬🇧</a>
+          <a href="#" aria-label="Deutsch" class="transition-opacity hover:opacity-70">🇩🇪</a>
+        </div>
+        <a href="mailto:biuro@ecotechgroup.pl" class="text-white/90 transition-colors hover:text-white">✉ biuro@ecotechgroup.pl</a>
+        <a href="/kontakt" class="bg-accent-1 px-9 py-3 text-sm font-semibold tracking-[0.02em] transition-colors hover:bg-accent-1/85">Wyślij zapytanie</a>
+      </div>
+      <nav class="flex h-[44px] items-center justify-end gap-8 border-t border-white/20 text-sm font-semibold" aria-label="Nawigacja główna">
+        {links.map((link) => link.dropdown ? (
+          <div class="group relative flex h-full items-center">
+            <a
+              href={link.href}
+              aria-haspopup="true"
+              class:list={[
+                'flex h-full items-center gap-2 transition-colors hover:text-white/70 group-focus-within:text-white',
+                pathname.startsWith(link.href) ? 'text-white' : 'text-white/90'
+              ]}
+            >
+              {link.label}<span aria-hidden="true" class="transition-transform group-hover:rotate-180 group-focus-within:rotate-180">
+                <svg viewBox="0 0 330 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path fill="#fff" d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z"></path></svg>
+              </span>
+            </a>
+
+            <div class="pointer-events-none fixed inset-x-0 top-[113px] z-50 translate-y-2 pt-3 opacity-0 transition duration-200 group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:translate-y-0 group-focus-within:opacity-100">
+              <div class="mx-auto max-w-7xl px-5 lg:px-8">
+                <div class="border border-ink/10 bg-white p-8 shadow-2xl shadow-ink/15">
+                <div class="flex items-end justify-between gap-8 border-b border-ink/10 pb-6">
+                  <div>
+                    <p class="text-xs font-bold uppercase tracking-[0.18em] text-accent-1">{link.label}</p>
+                  </div>
+                  <a href={link.href} class="shrink-0 text-sm font-semibold text-accent-1 transition-colors hover:text-ink">{link.menu === 'pipes' ? 'Wszystkie kategorie' : link.menu === 'production' ? 'Cała produkcja' : 'Wszystkie usługi'} →</a>
+                </div>
+
+                <div class="mt-6 grid grid-cols-2 gap-x-10 gap-y-1">
+                  {(link.menu === 'pipes' ? pipeCategories : link.menu === 'production' ? productionItems : services).map((item, index) => (
+                    <a href={`${link.href}/${item.data.slug}`} class="flex items-start gap-3 border-b border-ink/8 py-3 text-ink/70 transition-colors hover:border-accent-1 hover:text-accent-1 focus:border-accent-1 focus:text-accent-1">
+                      <span class="pt-0.5 text-xs font-bold tracking-[0.12em] text-accent-1/65">{String(index + 1).padStart(2, '0')}</span>
+                      <span class="leading-5">{item.data.title}</span>
+                    </a>
+                  ))}
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <a href={link.href} class:list={[
+            'flex items-center gap-2 transition-colors hover:text-white/70',
+            pathname === link.href ? 'text-white' : 'text-white/90'
+          ]}>
+            {link.label}
+          </a>
+        ))}
+      </nav>
+    </div>
+
+    <details class="group justify-self-end lg:hidden">
+      <summary class="flex cursor-pointer list-none items-center gap-3 bg-accent-1 px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-1/85 [&::-webkit-details-marker]:hidden">
+        <span>Menu</span>
+        <span class="flex size-4 flex-col justify-center gap-1" aria-hidden="true">
+          <span class="h-px w-full bg-white transition-transform group-open:translate-y-[3px] group-open:rotate-45"></span>
+          <span class="h-px w-full bg-white transition-opacity group-open:opacity-0"></span>
+          <span class="h-px w-full bg-white transition-transform group-open:-translate-y-[3px] group-open:-rotate-45"></span>
+        </span>
+      </summary>
+
+      <div class="fixed inset-x-0 top-20 z-40 max-h-[calc(100svh-5rem)] overflow-y-auto border-t border-ink/10 bg-white text-ink shadow-2xl shadow-ink/15">
+        <nav class="mx-auto max-w-7xl px-5 py-6" aria-label="Nawigacja mobilna">
+          <div class="divide-y divide-ink/10 border-y border-ink/10">
+            <details class="group/mobile">
+              <summary class="flex cursor-pointer list-none items-center justify-between py-5 text-lg font-semibold [&::-webkit-details-marker]:hidden">
+                Rury stalowe
+                <span class="text-accent-1 transition-transform group-open/mobile:rotate-45" aria-hidden="true">+</span>
+              </summary>
+              <div class="pb-5">
+                <a href="/rury-stalowe" class="mb-2 block text-sm font-semibold text-sun">Wszystkie kategorie →</a>
+                <div class="grid gap-1 sm:grid-cols-2">
+                  {pipeCategories.map((category) => <a href={`/rury-stalowe/${category.data.slug}`} class="block py-2 text-sm text-ink/65 hover:text-accent-1">{category.data.title}</a>)}
+                </div>
+              </div>
+            </details>
+
+            <details class="group/mobile">
+              <summary class="flex cursor-pointer list-none items-center justify-between py-5 text-lg font-semibold [&::-webkit-details-marker]:hidden">
+                Usługi
+                <span class="text-accent-1 transition-transform group-open/mobile:rotate-45" aria-hidden="true">+</span>
+              </summary>
+              <div class="pb-5">
+                <a href="/uslugi" class="mb-2 block text-sm font-semibold text-sun">Wszystkie usługi →</a>
+                <div class="grid gap-1 sm:grid-cols-2">
+                  {services.map((service) => <a href={`/uslugi/${service.data.slug}`} class="block py-2 text-sm text-ink/65 hover:text-accent-1">{service.data.title}</a>)}
+                </div>
+              </div>
+            </details>
+
+            <details class="group/mobile">
+              <summary class="flex cursor-pointer list-none items-center justify-between py-5 text-lg font-semibold [&::-webkit-details-marker]:hidden">
+                Produkcja
+                <span class="text-accent-1 transition-transform group-open/mobile:rotate-45" aria-hidden="true">+</span>
+              </summary>
+              <div class="pb-5">
+                <a href="/produkcja" class="mb-2 block text-sm font-semibold text-sun">Cała produkcja →</a>
+                <div class="grid gap-1 sm:grid-cols-2">
+                  {productionItems.map((item) => <a href={`/produkcja/${item.data.slug}`} class="block py-2 text-sm text-ink/65 hover:text-accent-1">{item.data.title}</a>)}
+                </div>
+              </div>
+            </details>
+
+            {links.filter((link) => !link.dropdown).map((link) => (
+              <a href={link.href} class="flex items-center justify-between py-5 text-lg font-semibold hover:text-accent-1">
+                {link.label}<span aria-hidden="true" class="text-accent-1/60">→</span>
+              </a>
+            ))}
+          </div>
+
+          <div class="mt-6 grid gap-3 sm:grid-cols-2">
+            <a href="/kontakt" class="bg-accent-1 px-5 py-4 text-center text-sm font-semibold text-white hover:bg-accent-1/85">Wyślij zapytanie</a>
+            <a href="mailto:biuro@ecotechgroup.pl" class="border border-ink/20 px-5 py-4 text-center text-sm font-semibold text-ink hover:border-accent-1 hover:text-accent-1">biuro@ecotechgroup.pl</a>
+          </div>
+        </nav>
+      </div>
+    </details>
+  </div>
+</header>

@@ -1,0 +1,58 @@
+---
+const navigation = [
+  { href: '/uslugi', label: 'Usługi' },
+  { href: '/do-pobrania', label: 'Do pobrania' },
+  { href: '/praca', label: 'Praca' },
+  { href: '/o-nas', label: 'O nas' },
+  { href: '/kontakt', label: 'Kontakt' }
+];
+
+const customerZone = [
+  { href: '/uslugi', label: 'Usługi' },
+  { href: '/kalkulator-wagi-rur-stalowych', label: 'Kalkulator wagi rur' },
+  { href: '/kontakt', label: 'Zapytaj o ofertę' },
+  { href: '/aktualnosci', label: 'Aktualności' },
+  { href: '/o-nas', label: 'O firmie' }
+];
+---
+
+<footer class="bg-[#0b1024] text-white">
+  <div class="mx-auto grid max-w-7xl gap-12 px-5 py-20 md:grid-cols-[1fr_1fr_1.25fr] md:px-8 md:py-24">
+    <div>
+      <h2 class="text-2xl font-semibold tracking-[-0.03em]">Nawigacja</h2>
+      <ul class="mt-10 space-y-5 text-base text-white/55">
+        {navigation.map((link) => <li><a href={link.href} class="flex items-center gap-3 transition-colors hover:text-white"><span aria-hidden="true" class="text-xl leading-none text-white/20">›</span>{link.label}</a></li>)}
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="text-2xl font-semibold tracking-[-0.03em]">Strefa klienta</h2>
+      <ul class="mt-10 space-y-5 text-base text-white/55">
+        {customerZone.map((link) => <li><a href={link.href} class="flex items-center gap-3 transition-colors hover:text-white"><span aria-hidden="true" class="text-xl leading-none text-white/20">›</span>{link.label}</a></li>)}
+      </ul>
+    </div>
+
+    <div class="md:justify-self-end md:min-w-[20rem]">
+      <h2 class="text-2xl font-semibold tracking-[-0.03em]">Kontakt</h2>
+      <div class="mt-10 space-y-7 text-base leading-7 text-white/70">
+        <address class="not-italic">Eco Tech Group Sp. z o.o.<br />Adres firmy do uzupełnienia<br />Polska</address>
+        <div>
+          <a class="block transition-colors hover:text-white" href="tel:+48123456789">☎ +48 123 456 789</a>
+          <a class="block transition-colors hover:text-white" href="mailto:biuro@ecotechgroup.pl">✉ biuro@ecotechgroup.pl</a>
+        </div>
+        <p class="text-white/55">NIP: do uzupełnienia<br />REGON: do uzupełnienia<br />KRS: do uzupełnienia</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="border-t border-white/10 bg-[#080b19]">
+    <div class="mx-auto flex max-w-7xl flex-col gap-6 px-5 py-7 text-sm text-white/50 sm:flex-row sm:items-center sm:justify-between md:px-8">
+      <p>© {new Date().getFullYear()} Eco Tech Group</p>
+      <div class="flex items-center gap-3" aria-label="Media społecznościowe">
+        <span class="grid size-12 place-items-center rounded-full border border-white/40 text-lg font-semibold text-white/70" aria-label="Facebook">f</span>
+        <span class="grid size-12 place-items-center rounded-full border border-white/40 text-lg font-semibold text-white/70" aria-label="LinkedIn">in</span>
+        <span class="grid size-12 place-items-center rounded-full border border-white/40 text-lg font-semibold text-white/70" aria-label="Instagram">◎</span>
+      </div>
+    </div>
+  </div>
+</footer>

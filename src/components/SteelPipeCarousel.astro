@@ -1,0 +1,86 @@
+---
+import { Picture } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import hallImage from '../assets/img/main/hala-rury-stalowe-wynajem.jpg';
+import heroImage from '../assets/img/main/hero-industrial-pipes.jpg';
+import workshopImage from '../assets/img/main/eco-tech-o-firmie.jpg';
+
+const categories = (await getCollection('steelPipeCategories')).sort((a, b) => a.data.order - b.data.order);
+const fallbackImages = [
+  hallImage,
+  heroImage,
+  workshopImage
+];
+---
+
+<section class="bg-white">
+  <div class="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
+    <div class="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
+      <div class="max-w-xl">
+        <p class="eyebrow">Rury stalowe</p>
+        <h2 class="mt-4 text-3xl font-semibold md:text-4xl">W naszych magazynach w ciągłej sprzedaży znajduje się ponad 10 000 ton rur stalowych</h2>
+      </div>
+
+      <div class="flex gap-2" aria-label="Sterowanie karuzelą">
+        <button type="button" data-carousel-prev aria-label="Pokaż poprzednie kategorie" class="grid size-11 place-items-center border border-ink/15 text-xl text-ink transition-colors hover:border-accent-1 hover:bg-mist disabled:cursor-not-allowed disabled:opacity-35">←</button>
+        <button type="button" data-carousel-next aria-label="Pokaż następne kategorie" class="grid size-11 place-items-center border border-ink/15 text-xl text-ink transition-colors hover:border-accent-1 hover:bg-mist disabled:cursor-not-allowed disabled:opacity-35">→</button>
+      </div>
+    </div>
+
+    <div class="mt-12" data-steel-pipe-carousel>
+      <div data-carousel-scroller tabindex="0" role="region" aria-label="Kategorie rur stalowych" class="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth pb-5 outline-none focus-visible:ring-2 focus-visible:ring-accent-1 focus-visible:ring-offset-4 md:gap-5 [scrollbar-width:thin]">
+        {categories.map((category, index) => (
+          <a href={`/rury-stalowe/${category.data.slug}`} class="group w-[82%] shrink-0 snap-start sm:w-[calc(50%-0.625rem)] lg:w-[calc((100%-2.5rem)/3)]">
+            <div class="aspect-[4/3] overflow-hidden bg-mist">
+              {category.data.image ? (
+                <img src={category.data.image} alt={category.data.imageAlt ?? category.data.title} loading="lazy" decoding="async" class="h-full w-full object-cover transition duration-500 motion-reduce:transition-none group-hover:scale-105" />
+              ) : (
+                <Picture src={fallbackImages[index % fallbackImages.length]} widths={[400, 640, 800]} sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 82vw" formats={['avif', 'webp']} alt={category.data.title} loading="lazy" decoding="async" class="h-full w-full object-cover transition duration-500 motion-reduce:transition-none group-hover:scale-105" />
+              )}
+            </div>
+            <div class="pt-5">
+              <p class="text-xs font-bold tracking-[0.15em] text-sun">{String(index + 1).padStart(2, '0')}</p>
+              <h3 class="mt-3 text-xl font-semibold leading-7 tracking-[-0.035em] text-ink group-hover:text-accent-1">{category.data.title}</h3>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-steel-pipe-carousel]').forEach((carousel) => {
+    const scroller = carousel.querySelector<HTMLElement>('[data-carousel-scroller]');
+    const previous = carousel.parentElement?.querySelector<HTMLButtonElement>('[data-carousel-prev]');
+    const next = carousel.parentElement?.querySelector<HTMLButtonElement>('[data-carousel-next]');
+
+    if (!scroller || !previous || !next) return;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const updateButtons = () => {
+      previous.disabled = scroller.scrollLeft <= 1;
+      next.disabled = scroller.scrollLeft + scroller.clientWidth >= scroller.scrollWidth - 1;
+    };
+    const scroll = (direction: 1 | -1) => {
+      scroller.scrollBy({ left: direction * Math.round(scroller.clientWidth * 0.9), behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+    };
+
+    previous.addEventListener('click', () => scroll(-1));
+    next.addEventListener('click', () => scroll(1));
+    scroller.addEventListener('scroll', updateButtons, { passive: true });
+    scroller.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        scroll(-1);
+      }
+      if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        scroll(1);
+      }
+    });
+
+    updateButtons();
+    window.addEventListener('resize', updateButtons, { passive: true });
+  });
+</script>

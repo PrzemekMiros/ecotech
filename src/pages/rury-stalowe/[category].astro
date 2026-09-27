@@ -1,0 +1,55 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+
+export async function getStaticPaths() {
+  const categories = await getCollection('steelPipeCategories');
+
+  return categories.map((category) => ({
+    params: { category: category.data.slug },
+    props: { category }
+  }));
+}
+
+interface Props {
+  category: CollectionEntry<'steelPipeCategories'>;
+}
+
+const { category } = Astro.props;
+const { Content } = await render(category);
+const products = (await getCollection('steelPipeProducts'))
+  .filter((product) => product.data.category === category.data.slug)
+  .sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout title={`${category.data.title} | Rury stalowe | Eco Tech Group`} description={category.data.description}>
+  <PageHero title={category.data.title} breadcrumbs={[{ label: 'Rury stalowe', href: '/rury-stalowe' }]} image={category.data.image} imageAlt={category.data.imageAlt ?? category.data.title} />
+
+  <section class="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
+    <div class="max-w-3xl text-lg leading-8 text-ink/75 [&_p]:mt-6"><Content /></div>
+
+    <div class="mt-16 flex items-end justify-between gap-6 border-b border-accent-1/15 pb-5">
+      <div>
+        <p class="eyebrow">Produkty</p>
+        <h2 class="mt-2 text-3xl font-semibold tracking-[-0.04em]">Dostępne rury</h2>
+      </div>
+      <span class="text-sm text-ink/55">{products.length} {products.length === 1 ? 'produkt' : 'produktów'}</span>
+    </div>
+
+    {products.length > 0 ? (
+      <div class="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        {products.map((product) => (
+          <a href={`/rury-stalowe/${category.data.slug}/${product.data.slug}`} class="group border border-accent-1/15 bg-white p-6 transition-colors hover:border-accent-1 hover:bg-mist">
+            {product.data.specification && <p class="text-xs font-bold uppercase tracking-[0.14em] text-accent-1">{product.data.specification}</p>}
+            <h3 class="mt-5 text-xl font-semibold leading-7 tracking-[-0.035em]">{product.data.title}</h3>
+            <p class="mt-3 text-sm leading-6 text-ink/65">{product.data.description}</p>
+            <span class="mt-7 inline-block text-sm font-semibold text-accent-1 group-hover:text-accent-1/75">Szczegóły →</span>
+          </a>
+        ))}
+      </div>
+    ) : (
+      <p class="mt-6 border border-dashed border-accent-1/20 bg-mist p-6 text-sm leading-6 text-ink/65">Produkty w tej kategorii zostaną wkrótce uzupełnione.</p>
+    )}
+  </section>
+</BaseLayout>

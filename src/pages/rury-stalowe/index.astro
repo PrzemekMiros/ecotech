@@ -1,0 +1,38 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+
+const categories = (await getCollection('steelPipeCategories')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout
+  title="Rury stalowe | Eco Tech Group"
+  description="Katalog rur stalowych: rury ze szwem, bez szwu, izolowane, dwudzielne i używane."
+>
+  <PageHero title="Rury stalowe" />
+
+  <section class="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
+    <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {categories.map((category, index) => (
+        <a href={`/rury-stalowe/${category.data.slug}`} class="group overflow-hidden border border-accent-1/15 bg-white transition-colors hover:border-accent-1">
+          <div class="relative aspect-[16/9] overflow-hidden bg-mist">
+            {category.data.image ? (
+              <img src={category.data.image} alt={category.data.imageAlt ?? category.data.title} class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+            ) : (
+              <div class="h-full w-full bg-[linear-gradient(135deg,rgba(29,65,142,0.18),transparent_65%)]"></div>
+            )}
+            <p class="absolute left-6 top-6 text-xs font-bold tracking-[0.15em] text-accent-1">{String(index + 1).padStart(2, '0')}</p>
+          </div>
+          <div class="flex min-h-52 flex-col justify-between p-6">
+            <div>
+              <h2 class="text-2xl font-semibold tracking-[-0.04em]">{category.data.title}</h2>
+            <p class="mt-3 text-sm leading-6 text-ink/65">{category.data.description}</p>
+            </div>
+            <span class="mt-7 text-sm font-semibold text-accent-1 group-hover:text-accent-1/75">Zobacz produkty <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

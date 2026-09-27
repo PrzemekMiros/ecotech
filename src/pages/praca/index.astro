@@ -1,0 +1,37 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+
+const jobs = (await getCollection('jobs')).sort((a, b) => a.data.order - b.data.order);
+const formatDate = new Intl.DateTimeFormat('pl-PL', { day: '2-digit', month: 'long', year: 'numeric' });
+---
+
+<BaseLayout title="Praca | Eco Tech Group" description="Aktualne oferty pracy w Eco Tech Group.">
+  <PageHero title="Praca" />
+
+  <section class="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
+    <div class="max-w-2xl">
+      <p class="eyebrow">Kariera w Eco Tech Group</p>
+      <h2 class="mt-3 text-3xl font-semibold tracking-[-0.04em] md:text-4xl">Aktualne oferty pracy</h2>
+      <p class="mt-5 text-lg leading-8 text-ink/70">Sprawdź dostępne stanowiska i skontaktuj się z nami w sprawie wybranej oferty.</p>
+    </div>
+
+    <div class="mt-12 grid gap-4 md:grid-cols-2">
+      {jobs.map((job) => (
+        <a href={`/praca/${job.data.slug}`} class="group flex min-h-56 flex-col justify-between border border-accent-1/15 bg-white p-6 transition-colors hover:border-accent-1 hover:bg-mist">
+          <div>
+            <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-bold uppercase tracking-[0.12em] text-accent-1">
+              {job.data.location && <span>{job.data.location}</span>}
+              {job.data.location && job.data.pubDate && <span class="size-1 rounded-full bg-sun"></span>}
+              {job.data.pubDate && <time datetime={job.data.pubDate.toISOString()}>{formatDate.format(job.data.pubDate)}</time>}
+            </div>
+            <h2 class="mt-8 text-2xl font-semibold leading-8 tracking-[-0.04em]">{job.data.title}</h2>
+            <p class="mt-3 text-sm leading-6 text-ink/65">{job.data.description}</p>
+          </div>
+          <span class="mt-7 text-sm font-semibold text-accent-1 group-hover:text-accent-1/75">Zobacz ofertę <span aria-hidden="true">→</span></span>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,38 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+
+export async function getStaticPaths() {
+  const services = await getCollection('services');
+
+  return services.map((service) => ({
+    params: { slug: service.data.slug },
+    props: { service }
+  }));
+}
+
+interface Props {
+  service: CollectionEntry<'services'>;
+}
+
+const { service } = Astro.props;
+const { Content } = await render(service);
+---
+
+<BaseLayout title={`${service.data.title} | Eco Tech Group`} description={service.data.description}>
+  <article>
+    <PageHero title={service.data.title} breadcrumbs={[{ label: 'Usługi', href: '/uslugi' }]} />
+
+    <section class="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:grid-cols-[minmax(0,1fr)_18rem] md:px-8 md:py-24">
+      <div class="max-w-3xl text-lg leading-8 text-ink/75 [&_h2]:mt-12 [&_h2]:text-3xl [&_h2]:font-semibold [&_h2]:leading-tight [&_h2]:tracking-[-0.04em] [&_p]:mt-6 [&_ul]:mt-6 [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-6">
+        <Content />
+      </div>
+      <aside class="h-fit border-t-2 border-accent-1 bg-mist p-6">
+        <p class="text-sm font-semibold">Potrzebujesz tej usługi?</p>
+        <p class="mt-3 text-sm leading-6 text-ink/65">Skontaktuj się z nami, aby omówić wymagania i otrzymać wycenę.</p>
+        <a href="/kontakt" class="mt-6 inline-flex bg-accent-1 px-5 py-3 text-sm font-semibold text-white hover:bg-accent-1/85">Wyślij zapytanie</a>
+      </aside>
+    </section>
+  </article>
+</BaseLayout>

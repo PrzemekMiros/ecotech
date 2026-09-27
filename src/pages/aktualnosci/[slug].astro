@@ -1,0 +1,97 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('news');
+  return posts.map((post) => ({ params: { slug: post.data.slug }, props: { post } }));
+}
+
+interface Props {
+  post: CollectionEntry<'news'>;
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const formatDate = new Intl.DateTimeFormat('pl-PL', { day: '2-digit', month: 'long', year: 'numeric' });
+const relatedPosts = (await getCollection('news'))
+  .filter((entry) => entry.id !== post.id)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+---
+
+<BaseLayout title={`${post.data.title} | Eco Tech Group`} description={post.data.description}>
+  <article class="overflow-hidden">
+    <section class="relative isolate min-h-[25rem] bg-[#030b20] text-white">
+      <img src="/img/main/hala-rury-stalowe-wynajem.jpg" alt="Rury stalowe w hali Eco Tech Group" class="absolute inset-0 -z-20 h-full w-full object-cover object-center" />
+      <div class="absolute inset-0 -z-10 bg-[#061126]/75"></div>
+      <div class="absolute inset-0 -z-10 bg-gradient-to-r from-[#061126]/90 via-[#061126]/48 to-transparent"></div>
+
+      <div class="mx-auto flex min-h-[25rem] max-w-7xl items-end px-5 pb-28 pt-36 md:px-8 md:pb-36">
+        <div>
+          <p class="text-xs font-bold uppercase tracking-[0.2em] text-sun">Centrum wiedzy Eco Tech Group</p>
+          <nav class="mt-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-white/70" aria-label="Okruszki nawigacyjne">
+            <a href="/" class="hover:text-white">Strona główna</a><span aria-hidden="true" class="text-white/35">/</span>
+            <a href="/aktualnosci" class="hover:text-white">Aktualności</a><span aria-hidden="true" class="text-white/35">/</span>
+            <span aria-current="page" class="text-white">Artykuł</span>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative z-10 mx-auto -mt-16 max-w-7xl px-5 pb-16 md:-mt-24 md:px-8 md:pb-24">
+      <div class="bg-white shadow-[0_18px_55px_rgba(6,17,38,0.04)]">
+        <div class="grid gap-12 p-6 sm:p-10 lg:grid-cols-[minmax(0,1fr)_17rem] lg:gap-16 lg:p-14">
+          <div class="min-w-0">
+
+            <figure>
+              <img src="/img/main/hero-industrial-pipes.jpg" alt="Przemysłowe rury stalowe" class="aspect-[16/9] w-full object-cover" loading="eager" />
+              <figcaption class="mt-3 text-xs leading-5 text-ink/45">Eco Tech Group — rozwiązania dla przemysłu i budownictwa.</figcaption>
+            </figure>
+
+            <div class="flex flex-wrap items-center gap-3 text-xs font-bold uppercase tracking-[0.16em] text-accent-1">
+              <span>{post.data.category}</span><span class="size-1 rounded-full bg-sun"></span>
+              <time datetime={post.data.pubDate.toISOString()}>{formatDate.format(post.data.pubDate)}</time>
+            </div>
+            <h1 class="mt-6 max-w-4xl text-3xl font-semibold leading-[1.08] tracking-[-0.05em] text-ink sm:text-4xl md:text-5xl">{post.data.title}</h1>
+            <p class="mt-6 max-w-3xl text-lg leading-8 text-ink/65">{post.data.description}</p>
+            <div class="mt-8 flex flex-wrap items-center gap-4 border-y border-ink/10 py-4 text-sm text-ink/60">
+              <span class="font-semibold text-ink">Eco Tech Group</span><span aria-hidden="true" class="size-1 rounded-full bg-sun"></span><span>Szacowany czas czytania: 3 min</span>
+            </div>
+
+            <div class="article-content mt-10 max-w-3xl text-base leading-8 text-ink/75 [&_h2]:mt-12 [&_h2]:text-3xl [&_h2]:font-semibold [&_h2]:leading-tight [&_h2]:tracking-[-0.04em] [&_h3]:mt-8 [&_h3]:text-xl [&_h3]:font-semibold [&_p]:mt-6 [&_ul]:mt-6 [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-6 [&_a]:font-semibold [&_a]:text-accent-1 [&_a]:underline [&_a]:underline-offset-4"><Content /></div>
+
+            <div class="mt-12 border-t border-ink/10 pt-7">
+              <p class="text-sm font-semibold text-ink">Udostępnij artykuł</p>
+              <div class="mt-4 flex flex-wrap gap-3">
+                <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(Astro.url.href)}`} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 border border-ink/15 px-4 py-2.5 text-sm font-semibold text-ink hover:border-accent-1 hover:text-accent-1">LinkedIn <span aria-hidden="true">↗</span></a>
+                <a href={`mailto:?subject=${encodeURIComponent(post.data.title)}&body=${encodeURIComponent(Astro.url.href)}`} class="inline-flex items-center gap-2 border border-ink/15 px-4 py-2.5 text-sm font-semibold text-ink hover:border-accent-1 hover:text-accent-1">Wyślij e-mailem <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </div>
+
+          <aside class="h-fit lg:sticky lg:top-8">
+            <div class="border border-ink/10 p-5">
+              <p class="text-xs font-bold uppercase tracking-[0.16em] text-accent-1">Najnowsze wpisy</p>
+              <div class="mt-4 divide-y divide-ink/10">
+                {relatedPosts.map((related) => (
+                  <a href={`/aktualnosci/${related.data.slug}`} class="group block py-4 first:pt-0">
+                    <p class="text-[0.7rem] font-bold uppercase tracking-[0.14em] text-accent-1/65">{formatDate.format(related.data.pubDate)}</p>
+                    <h2 class="mt-2 text-sm font-semibold leading-5 text-ink transition-colors group-hover:text-accent-1">{related.data.title}</h2>
+                  </a>
+                ))}
+              </div>
+              <a href="/aktualnosci" class="mt-5 inline-flex text-sm font-semibold text-accent-1 hover:text-ink">Zobacz wszystkie <span class="ml-2" aria-hidden="true">→</span></a>
+            </div>
+            <div class="mt-5 bg-accent-1 p-6 text-white">
+              <p class="text-xs font-bold uppercase tracking-[0.16em] text-white/65">Potrzebujesz wsparcia?</p>
+              <h2 class="mt-3 text-xl font-semibold leading-6 tracking-[-0.03em]">Porozmawiajmy o Twojej inwestycji.</h2>
+              <p class="mt-3 text-sm leading-6 text-white/75">Dobierzemy rozwiązanie dopasowane do specyfiki projektu.</p>
+              <a href="/kontakt" class="mt-6 inline-flex bg-white px-4 py-3 text-sm font-semibold text-accent-1 hover:bg-sand">Skontaktuj się <span class="ml-2" aria-hidden="true">→</span></a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </article>
+</BaseLayout>
