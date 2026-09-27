@@ -8,7 +8,7 @@ import workshopImage from '../assets/img/main/eco-tech-o-firmie.jpg';
 ---
 
 <BaseLayout
-  title=" | Eco Tech Group"
+  title=" Hurtownia rur stalowych"
   description="☑️ Hurtownia rur stalowych w Warszawie Eco Tech oferuje największy wybór rur stalowych oraz konstrukcji stalowych. Skontaktuj się z nami +48 508 299 077"
 >
   <section class="relative isolate flex min-h-[100svh] items-center overflow-hidden bg-[#020307] text-white">
@@ -45,6 +45,63 @@ import workshopImage from '../assets/img/main/eco-tech-o-firmie.jpg';
 
   <SteelPipeCarousel />
   <DeliveryMap />
+
+  <section id="kontakt" class="bg-[#0e0f24] py-16 text-white md:py-24">
+    <div class="mx-auto max-w-7xl px-5 md:px-8">
+      <h2 class="text-3xl font-semibold tracking-[-0.04em] md:text-4xl">Skontaktuj się z nami</h2>
+
+      <div class="mt-12 grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] lg:items-start lg:gap-16">
+        <form class="bg-white/[0.045] p-6 sm:p-9 md:p-10" novalidate>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <label class="block sm:col-span-2">
+              <span class="sr-only">Imię i nazwisko</span>
+              <input type="text" name="name" autocomplete="name" placeholder="Imię i nazwisko" class="w-full border border-white/85 bg-transparent px-5 py-4 text-sm text-white outline-none placeholder:text-white/55 focus:border-sun focus:ring-1 focus:ring-sun" />
+            </label>
+            <label class="block">
+              <span class="sr-only">Numer telefonu</span>
+              <input type="tel" name="phone" autocomplete="tel" placeholder="Numer telefonu" class="w-full border border-white/85 bg-transparent px-5 py-4 text-sm text-white outline-none placeholder:text-white/55 focus:border-sun focus:ring-1 focus:ring-sun" />
+            </label>
+            <label class="block">
+              <span class="sr-only">Adres e-mail</span>
+              <input type="email" name="email" autocomplete="email" placeholder="Adres e-mail" class="w-full border border-white/85 bg-transparent px-5 py-4 text-sm text-white outline-none placeholder:text-white/55 focus:border-sun focus:ring-1 focus:ring-sun" />
+            </label>
+            <label class="block">
+              <span class="sr-only">Nazwa firmy</span>
+              <input type="text" name="company" autocomplete="organization" placeholder="Nazwa firmy" class="w-full border border-white/85 bg-transparent px-5 py-4 text-sm text-white outline-none placeholder:text-white/55 focus:border-sun focus:ring-1 focus:ring-sun" />
+            </label>
+            <label class="block">
+              <span class="sr-only">NIP</span>
+              <input type="text" name="nip" inputmode="numeric" placeholder="NIP" class="w-full border border-white/85 bg-transparent px-5 py-4 text-sm text-white outline-none placeholder:text-white/55 focus:border-sun focus:ring-1 focus:ring-sun" />
+            </label>
+            <label class="block sm:col-span-2">
+              <span class="sr-only">Wiadomość</span>
+              <textarea name="message" rows="5" placeholder="Wiadomość" class="w-full resize-y border border-white/85 bg-transparent px-5 py-4 text-sm text-white outline-none placeholder:text-white/55 focus:border-sun focus:ring-1 focus:ring-sun"></textarea>
+            </label>
+          </div>
+
+          <label class="mt-5 flex items-start gap-2 text-sm leading-5 text-white/60">
+            <input type="checkbox" name="privacy" class="mt-0.5 size-4 shrink-0 accent-accent-1" />
+            <span>Wyrażam zgodę na przetwarzanie moich danych osobowych przez Eco Tech Group Sp. z o.o. w celu przesłania na wskazany przeze mnie e-mail informacji handlowych.</span>
+          </label>
+          <button type="button" class="mt-8 w-full bg-accent-1 px-7 py-4 text-sm font-semibold text-white transition-colors hover:bg-accent-1/85">Wyślij formularz</button>
+        </form>
+
+        <div class="pt-1 lg:pt-16">
+          <p class="max-w-xl text-xl font-semibold leading-relaxed tracking-[-0.03em] text-white md:text-2xl">Drogi kliencie, jesteśmy do Twojej dyspozycji od poniedziałku do piątku w godzinach 8:00–16:00. Chętnie doradzimy i odpowiemy na pytania.</p>
+
+          <div class="mt-14 max-w-md">
+            <h3 class="text-2xl font-semibold tracking-[-0.035em]">EcoTech Group Sp. z o.o.</h3>
+            <div class="mt-12 border-l-4 border-accent-1 pl-8">
+              <p class="text-lg text-white/60">Adres</p>
+              <address class="mt-4 text-xl leading-9 not-italic text-white">ul. Mieczysława Pożaryskiego 32<br />04-703 Warszawa</address>
+              <p class="mt-9 text-lg text-white/60">Email</p>
+              <a href="mailto:sprzedaz@ecotechgroup.pl" class="mt-4 inline-block text-xl font-medium text-white hover:text-sun">sprzedaz@ecotechgroup.pl</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="bg-white py-16 md:py-24">
     <div class="mx-auto grid max-w-7xl gap-10 px-5 md:grid-cols-[minmax(0,0.75fr)_minmax(0,1.25fr)] md:gap-16 md:px-8">
