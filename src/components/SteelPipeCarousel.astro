@@ -30,7 +30,7 @@ const fallbackImages = [
     <div class="mt-12" data-steel-pipe-carousel>
       <div data-carousel-scroller tabindex="0" role="region" aria-label="Kategorie rur stalowych" class="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth pb-5 outline-none focus-visible:ring-2 focus-visible:ring-accent-1 focus-visible:ring-offset-4 md:gap-5 [scrollbar-width:thin]">
         {categories.map((category, index) => (
-          <a href={`/rury-stalowe/${category.data.slug}`} class="group w-[82%] shrink-0 snap-start sm:w-[calc(50%-0.625rem)] lg:w-[calc((100%-2.5rem)/3)]">
+          <a href={`/rury-stalowe-${category.data.slug}`} class="group w-[82%] shrink-0 snap-start sm:w-[calc(50%-0.625rem)] lg:w-[calc((100%-2.5rem)/3)]">
             <div class="aspect-[4/3] overflow-hidden bg-mist">
               {category.data.image ? (
                 <img src={category.data.image} alt={category.data.imageAlt ?? category.data.title} loading="lazy" decoding="async" class="h-full w-full object-cover transition duration-500 motion-reduce:transition-none group-hover:scale-105" />

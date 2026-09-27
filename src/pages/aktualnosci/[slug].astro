@@ -22,14 +22,13 @@ const relatedPosts = (await getCollection('news'))
 
 <BaseLayout title={`${post.data.title} | Eco Tech Group`} description={post.data.description}>
   <article class="overflow-hidden">
-    <section class="relative isolate min-h-[25rem] bg-[#030b20] text-white">
+    <section class="relative isolate min-h-[15rem] bg-[#030b20] text-white">
       <img src="/img/main/hala-rury-stalowe-wynajem.jpg" alt="Rury stalowe w hali Eco Tech Group" class="absolute inset-0 -z-20 h-full w-full object-cover object-center" />
       <div class="absolute inset-0 -z-10 bg-[#061126]/75"></div>
       <div class="absolute inset-0 -z-10 bg-gradient-to-r from-[#061126]/90 via-[#061126]/48 to-transparent"></div>
 
-      <div class="mx-auto flex min-h-[25rem] max-w-7xl items-end px-5 pb-28 pt-36 md:px-8 md:pb-36">
+      <div class="mx-auto flex min-h-[15rem] max-w-7xl items-end px-5 pb-28 pt-36 md:px-8 md:pb-32">
         <div>
-          <p class="text-xs font-bold uppercase tracking-[0.2em] text-sun">Centrum wiedzy Eco Tech Group</p>
           <nav class="mt-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-white/70" aria-label="Okruszki nawigacyjne">
             <a href="/" class="hover:text-white">Strona główna</a><span aria-hidden="true" class="text-white/35">/</span>
             <a href="/aktualnosci" class="hover:text-white">Aktualności</a><span aria-hidden="true" class="text-white/35">/</span>
@@ -44,9 +43,8 @@ const relatedPosts = (await getCollection('news'))
         <div class="grid gap-12 p-6 sm:p-10 lg:grid-cols-[minmax(0,1fr)_17rem] lg:gap-16 lg:p-14">
           <div class="min-w-0">
 
-            <figure>
-              <img src="/img/main/hero-industrial-pipes.jpg" alt="Przemysłowe rury stalowe" class="aspect-[16/9] w-full object-cover" loading="eager" />
-              <figcaption class="mt-3 text-xs leading-5 text-ink/45">Eco Tech Group — rozwiązania dla przemysłu i budownictwa.</figcaption>
+            <figure class="mb-8">
+              <img src={post.data.image ?? '/img/main/hero-industrial-pipes.jpg'} alt={post.data.imageAlt ?? post.data.title} class="aspect-[16/9] w-full object-cover" loading="eager" />
             </figure>
 
             <div class="flex flex-wrap items-center gap-3 text-xs font-bold uppercase tracking-[0.16em] text-accent-1">
@@ -59,7 +57,7 @@ const relatedPosts = (await getCollection('news'))
               <span class="font-semibold text-ink">Eco Tech Group</span><span aria-hidden="true" class="size-1 rounded-full bg-sun"></span><span>Szacowany czas czytania: 3 min</span>
             </div>
 
-            <div class="article-content mt-10 max-w-3xl text-base leading-8 text-ink/75 [&_h2]:mt-12 [&_h2]:text-3xl [&_h2]:font-semibold [&_h2]:leading-tight [&_h2]:tracking-[-0.04em] [&_h3]:mt-8 [&_h3]:text-xl [&_h3]:font-semibold [&_p]:mt-6 [&_ul]:mt-6 [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-6 [&_a]:font-semibold [&_a]:text-accent-1 [&_a]:underline [&_a]:underline-offset-4"><Content /></div>
+            <div class="article-content mt-10 max-w-3xl text-base leading-8 text-ink/75 [&_h2]:mt-12 [&_h2]:text-3xl [&_h2]:font-semibold [&_h2]:leading-tight [&_h2]:tracking-[-0.04em] [&_h3]:mt-8 [&_h3]:text-xl [&_h3]:font-semibold [&_p]:mt-6 [&_ul]:mt-6 [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-6 [&_ol]:mt-6 [&_ol]:list-decimal [&_ol]:space-y-2 [&_ol]:pl-6 [&_figure]:mt-8 [&_figure_img]:w-full [&_figure_img]:object-cover [&_table]:mt-8 [&_table]:w-full [&_table]:border-collapse [&_table]:text-sm [&_td]:border [&_td]:border-ink/15 [&_td]:p-3 [&_th]:border [&_th]:border-ink/15 [&_th]:bg-mist [&_th]:p-3 [&_a]:font-semibold [&_a]:text-accent-1 [&_a]:underline [&_a]:underline-offset-4"><Content /></div>
 
             <div class="mt-12 border-t border-ink/10 pt-7">
               <p class="text-sm font-semibold text-ink">Udostępnij artykuł</p>

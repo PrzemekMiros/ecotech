@@ -27,8 +27,8 @@ const pipeCategories = (await getCollection('steelPipeCategories')).sort((a, b) 
     <div class="hidden self-stretch lg:block">
       <div class="flex h-[66px] items-center justify-end gap-7 text-sm font-medium">
         <div class="flex items-center gap-4 text-lg" aria-label="Wybór języka">
-          <a href="#" aria-label="English" class="transition-opacity hover:opacity-70">🇬🇧</a>
-          <a href="#" aria-label="Deutsch" class="transition-opacity hover:opacity-70">🇩🇪</a>
+          <a href="https://ecotech-group.uk/" aria-label="English" class="transition-opacity hover:opacity-70">🇬🇧</a>
+          <a href="https://ecotechgroup.de/" aria-label="Deutsch" class="transition-opacity hover:opacity-70">🇩🇪</a>
         </div>
         <a href="mailto:biuro@ecotechgroup.pl" class="text-white/90 transition-colors hover:text-white">✉ biuro@ecotechgroup.pl</a>
         <a href="/kontakt" class="bg-accent-1 px-9 py-3 text-sm font-semibold tracking-[0.02em] transition-colors hover:bg-accent-1/85">Wyślij zapytanie</a>
@@ -61,7 +61,7 @@ const pipeCategories = (await getCollection('steelPipeCategories')).sort((a, b) 
 
                 <div class="mt-6 grid grid-cols-2 gap-x-10 gap-y-1">
                   {(link.menu === 'pipes' ? pipeCategories : link.menu === 'production' ? productionItems : services).map((item, index) => (
-                    <a href={`${link.href}/${item.data.slug}`} class="flex items-start gap-3 border-b border-ink/8 py-3 text-ink/70 transition-colors hover:border-accent-1 hover:text-accent-1 focus:border-accent-1 focus:text-accent-1">
+                    <a href={`${link.href}/${item.data.slug}`} class="flex items-start gap-3 border-b border-ink/8 py-4 text-ink/70 transition-colors hover:border-accent-1 hover:text-accent-1 focus:border-accent-1 focus:text-accent-1">
                       <span class="pt-0.5 text-xs font-bold tracking-[0.12em] text-accent-1/65">{String(index + 1).padStart(2, '0')}</span>
                       <span class="leading-5">{item.data.title}</span>
                     </a>

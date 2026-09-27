@@ -22,10 +22,10 @@ const { Content } = await render(service);
 
 <BaseLayout title={`${service.data.title} | Eco Tech Group`} description={service.data.description}>
   <article>
-    <PageHero title={service.data.title} breadcrumbs={[{ label: 'Usługi', href: '/uslugi' }]} />
+    <PageHero title={service.data.title} breadcrumbs={[{ label: 'Usługi', href: '/uslugi' }]} image={service.data.image} imageAlt={service.data.imageAlt ?? service.data.title} />
 
     <section class="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:grid-cols-[minmax(0,1fr)_18rem] md:px-8 md:py-24">
-      <div class="max-w-3xl text-lg leading-8 text-ink/75 [&_h2]:mt-12 [&_h2]:text-3xl [&_h2]:font-semibold [&_h2]:leading-tight [&_h2]:tracking-[-0.04em] [&_p]:mt-6 [&_ul]:mt-6 [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-6">
+      <div class="max-w-3xl text-lg leading-8 text-ink/75 [&_h2]:mt-12 [&_h2]:text-3xl [&_h2]:font-semibold [&_h2]:leading-tight [&_h2]:tracking-[-0.04em] [&_h3]:mt-8 [&_h3]:text-xl [&_h3]:font-semibold [&_h4]:mt-6 [&_h4]:font-semibold [&_p]:mt-6 [&_ul]:mt-6 [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-6 [&_figure]:mt-8 [&_figure_img]:w-full [&_figure_img]:object-cover">
         <Content />
       </div>
       <aside class="h-fit border-t-2 border-accent-1 bg-mist p-6">

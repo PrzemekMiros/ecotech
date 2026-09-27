@@ -34,7 +34,7 @@ const formatDate = new Intl.DateTimeFormat('pl-PL', { day: '2-digit', month: 'lo
             {job.data.pubDate && <time datetime={job.data.pubDate.toISOString()}>{formatDate.format(job.data.pubDate)}</time>}
           </div>
         )}
-        <div class="mt-8 text-lg leading-8 text-ink/75 [&_h2]:mt-12 [&_h2]:text-3xl [&_h2]:font-semibold [&_h2]:leading-tight [&_h2]:tracking-[-0.04em] [&_p]:mt-6 [&_ul]:mt-6 [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-6"><Content /></div>
+        <div class="mt-8 text-lg leading-8 text-ink/75 [&_h2]:mt-12 [&_h2]:text-3xl [&_h2]:font-semibold [&_h2]:leading-tight [&_h2]:tracking-[-0.04em] [&_h2:first-child]:mt-0 [&_p]:mt-6 [&_ul]:mt-6 [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-6 [&_hr]:my-10 [&_hr]:border-accent-1/15 [&_.job-details]:my-8 [&_.job-details]:grid [&_.job-details]:gap-4 md:[&_.job-details]:grid-cols-2 [&_.job-details_p]:m-0 [&_.job-details_p]:border-l-2 [&_.job-details_p]:border-sun [&_.job-details_p]:bg-mist [&_.job-details_p]:p-5 [&_.job-details_strong]:block [&_.job-details_strong]:text-sm [&_.job-details_strong]:font-semibold [&_.job-details_strong]:text-accent-1 [&_.job-details_span]:mt-1 [&_.job-details_span]:block"><Content /></div>
       </div>
       <aside class="h-fit border-t-2 border-accent-1 bg-mist p-6">
         <p class="text-sm font-semibold">Zainteresowała Cię oferta?</p>

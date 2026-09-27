@@ -7,7 +7,10 @@ import heroImage from '../assets/img/main/hero-industrial-pipes.jpg';
 import workshopImage from '../assets/img/main/eco-tech-o-firmie.jpg';
 ---
 
-<BaseLayout>
+<BaseLayout
+  title=" | Eco Tech Group"
+  description="☑️ Hurtownia rur stalowych w Warszawie Eco Tech oferuje największy wybór rur stalowych oraz konstrukcji stalowych. Skontaktuj się z nami +48 508 299 077"
+>
   <section class="relative isolate flex min-h-[100svh] items-center overflow-hidden bg-[#020307] text-white">
     <Picture src={heroImage} widths={[640, 960, 1440, 1920]} sizes="100vw" formats={['avif', 'webp']} alt="Hala przemysłowa z rurami stalowymi" class="absolute inset-0 -z-20 h-full w-full object-cover object-center" />
     <div class="mx-auto w-full max-w-7xl px-5 py-24 md:px-8 md:py-32">
@@ -42,5 +45,73 @@ import workshopImage from '../assets/img/main/eco-tech-o-firmie.jpg';
 
   <SteelPipeCarousel />
   <DeliveryMap />
+
+  <section class="bg-white py-16 md:py-24">
+    <div class="mx-auto grid max-w-7xl gap-10 px-5 md:grid-cols-[minmax(0,0.75fr)_minmax(0,1.25fr)] md:gap-16 md:px-8">
+      <div>
+        <p class="eyebrow">Pomoc i informacje</p>
+        <h2 class="mt-3 text-3xl font-semibold tracking-[-0.04em] text-ink md:text-4xl">Najczęściej zadawane pytania</h2>
+        <p class="mt-5 max-w-md text-lg leading-8 text-ink/70">Odpowiedzi na pytania dotyczące dostępności, zamówień, dostawy i rozliczeń.</p>
+        <a href="/kontakt/" class="mt-8 inline-flex bg-accent-1 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent-1/85">Skontaktuj się z nami</a>
+      </div>
+
+      <div class="border-t-2 border-accent-1">
+        <details name="faq" open class="group border-b border-accent-1/15">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-lg font-semibold leading-7 text-ink marker:hidden">
+            Jak sprawdzić dostępność produktu?
+            <span aria-hidden="true" class="flex size-8 shrink-0 items-center justify-center text-xl font-normal text-accent-1 transition-transform group-open:rotate-45">+</span>
+          </summary>
+          <div class="pb-7 pr-12 leading-7 text-ink/70 [&_p]:mt-4 [&_p:first-child]:mt-0 [&_a]:font-semibold [&_a]:text-accent-1 [&_a]:underline [&_a]:underline-offset-4">
+            <p>Jeśli zainteresuje Państwa produkt z naszej oferty, zachęcamy do kontaktu z jednym z naszych specjalistów ds. handlu. Dane znajdą Państwo w zakładce <a href="/kontakt/"><strong>kontakt</strong></a> — dostępny jest tam formularz, a także bezpośrednie adresy mailowe i numery telefonu do poszczególnych osób.</p>
+            <p>W celu sformułowania jak najlepszej odpowiedzi na pytanie potrzebujemy kilku informacji. W treści wiadomości prosimy o podanie opisu materiału: jakiego rodzaju ma to być rura — nowa czy używana, jaka ma być jej średnica, grubość ścianki i rodzaj szwu. Pomocne będzie także określenie ilości materiału, której Państwo potrzebują.</p>
+            <p>W odpowiedzi prześlemy Państwu informację, czy towar jest dostępny od ręki, a także wycenę.</p>
+          </div>
+        </details>
+
+        <details name="faq" class="group border-b border-accent-1/15">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-lg font-semibold leading-7 text-ink marker:hidden">
+            Jak zamówić rury stalowe?
+            <span aria-hidden="true" class="flex size-8 shrink-0 items-center justify-center text-xl font-normal text-accent-1 transition-transform group-open:rotate-45">+</span>
+          </summary>
+          <div class="pb-7 pr-12 leading-7 text-ink/70 [&_p]:mt-4 [&_p:first-child]:mt-0 [&_a]:font-semibold [&_a]:text-accent-1 [&_a]:underline [&_a]:underline-offset-4">
+            <p>Aby złożyć zamówienie, prosimy w pierwszej kolejności o <a href="/kontakt/"><strong>kontakt</strong></a> z jednym z naszych specjalistów ds. handlu. Wówczas otrzymają Państwo szczegółową ofertę z wyceną.</p>
+            <p>Na tej podstawie mogą Państwo zamówić produkty bezpośrednio u naszych doradców.</p>
+          </div>
+        </details>
+
+        <details name="faq" class="group border-b border-accent-1/15">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-lg font-semibold leading-7 text-ink marker:hidden">
+            Jaki jest czas realizacji zamówienia?
+            <span aria-hidden="true" class="flex size-8 shrink-0 items-center justify-center text-xl font-normal text-accent-1 transition-transform group-open:rotate-45">+</span>
+          </summary>
+          <div class="pb-7 pr-12 leading-7 text-ink/70 [&_p]:mt-4 [&_p:first-child]:mt-0">
+            <p>Czas realizacji zależy od wielkości zamówienia. Standardowo jest to do 5 dni roboczych — takie terminy obowiązują w przypadku towaru, do którego przewiezienia wystarczy jeden samochód ciężarowy.</p>
+            <p>Jeśli chcą Państwo zamówić więcej towaru, obsługa logistyczna może być nieco bardziej skomplikowana, co przekłada się na dłuższy czas realizacji. Wówczas termin określamy indywidualnie.</p>
+          </div>
+        </details>
+
+        <details name="faq" class="group border-b border-accent-1/15">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-lg font-semibold leading-7 text-ink marker:hidden">
+            Jak wygląda transport zamówień?
+            <span aria-hidden="true" class="flex size-8 shrink-0 items-center justify-center text-xl font-normal text-accent-1 transition-transform group-open:rotate-45">+</span>
+          </summary>
+          <div class="pb-7 pr-12 leading-7 text-ink/70 [&_p]:mt-4 [&_p:first-child]:mt-0 [&_a]:font-semibold [&_a]:text-accent-1 [&_a]:underline [&_a]:underline-offset-4">
+            <p>Zamówienie mogą Państwo odebrać bezpośrednio z naszego magazynu znajdującego się pod adresem: ul. Piaskowa 4, 05-311 Kobierne. Możemy również pomóc Państwu w organizacji <a href="/dostawa-rur-stalowych/"><strong>transportu</strong></a>. Realizujemy zamówienia na terenie całej Polski. Cena usługi jest zależna od odległości, a także od wielkości zamówienia.</p>
+          </div>
+        </details>
+
+        <details name="faq" class="group border-b border-accent-1/15">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-lg font-semibold leading-7 text-ink marker:hidden">
+            Jakie sposoby rozliczenia oferujemy?
+            <span aria-hidden="true" class="flex size-8 shrink-0 items-center justify-center text-xl font-normal text-accent-1 transition-transform group-open:rotate-45">+</span>
+          </summary>
+          <div class="pb-7 pr-12 leading-7 text-ink/70 [&_p]:mt-4 [&_p:first-child]:mt-0">
+            <p>Stałym klientom oferujemy możliwość płatności w wyznaczonym terminie po realizacji zamówienia. Obowiązuje ona do określonych limitów finansowych.</p>
+            <p>W przypadku nowych klientów dokonujących pierwszych transakcji wymagamy przedpłaty. Po weryfikacji rankingu firmy możemy także zaproponować indywidualnie dobrany sposób płatności.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
 
 </BaseLayout>

@@ -7,14 +7,14 @@ const jobs = (await getCollection('jobs')).sort((a, b) => a.data.order - b.data.
 const formatDate = new Intl.DateTimeFormat('pl-PL', { day: '2-digit', month: 'long', year: 'numeric' });
 ---
 
-<BaseLayout title="Praca | Eco Tech Group" description="Aktualne oferty pracy w Eco Tech Group.">
+<BaseLayout title="Praca | Eco Tech Group" description="Aktualne oferty pracy w Eco Tech Group">
   <PageHero title="Praca" />
 
   <section class="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
     <div class="max-w-2xl">
       <p class="eyebrow">Kariera w Eco Tech Group</p>
       <h2 class="mt-3 text-3xl font-semibold tracking-[-0.04em] md:text-4xl">Aktualne oferty pracy</h2>
-      <p class="mt-5 text-lg leading-8 text-ink/70">Sprawdź dostępne stanowiska i skontaktuj się z nami w sprawie wybranej oferty.</p>
+      <p class="mt-5 text-lg leading-8 text-ink/70">Rozwijaj się z nami w branży stalowej. Szukamy osób zaangażowanych, samodzielnych i otwartych na wyzwania. Oferujemy stabilne zatrudnienie, realne możliwości rozwoju oraz pracę w zgranym zespole.</p>
     </div>
 
     <div class="mt-12 grid gap-4 md:grid-cols-2">

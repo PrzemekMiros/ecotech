@@ -22,7 +22,7 @@ const category = categories.find((item) => item.data.slug === product.data.categ
 const { Content } = await render(product);
 const breadcrumbs = [
   { label: 'Rury stalowe', href: '/rury-stalowe' },
-  { label: category?.data.title ?? 'Kategoria', href: `/rury-stalowe/${product.data.category}` }
+  { label: category?.data.title ?? 'Kategoria', href: `/rury-stalowe-${product.data.category}` }
 ];
 ---
 

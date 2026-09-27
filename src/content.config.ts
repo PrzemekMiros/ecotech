@@ -9,7 +9,9 @@ const news = defineCollection({
     slug: z.string(),
     category: z.enum(['Aktualności', 'Rynek', 'Wiedza']),
     source: z.string().url(),
-    description: z.string()
+    description: z.string(),
+    image: z.string().url().optional(),
+    imageAlt: z.string().optional()
   })
 });
 
@@ -21,7 +23,9 @@ const services = defineCollection({
     slug: z.string(),
     description: z.string(),
     source: z.string().url(),
-    order: z.number()
+    order: z.number(),
+    image: z.string().url().optional(),
+    imageAlt: z.string().optional()
   })
 });
 
@@ -33,7 +37,9 @@ const production = defineCollection({
     slug: z.string(),
     description: z.string(),
     source: z.string().url(),
-    order: z.number()
+    order: z.number(),
+    image: z.string().url().optional(),
+    imageAlt: z.string().optional()
   })
 });
 

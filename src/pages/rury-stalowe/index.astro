@@ -15,7 +15,7 @@ const categories = (await getCollection('steelPipeCategories')).sort((a, b) => a
   <section class="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
     <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
       {categories.map((category, index) => (
-        <a href={`/rury-stalowe/${category.data.slug}`} class="group overflow-hidden border border-accent-1/15 bg-white transition-colors hover:border-accent-1">
+        <a href={`/rury-stalowe-${category.data.slug}`} class="group overflow-hidden border border-accent-1/15 bg-white transition-colors hover:border-accent-1">
           <div class="relative aspect-[16/9] overflow-hidden bg-mist">
             {category.data.image ? (
               <img src={category.data.image} alt={category.data.imageAlt ?? category.data.title} class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
