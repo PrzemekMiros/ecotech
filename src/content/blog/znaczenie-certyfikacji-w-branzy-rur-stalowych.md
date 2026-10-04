@@ -5,7 +5,7 @@ slug: "znaczenie-certyfikacji-w-branzy-rur-stalowych"
 category: "Aktualności"
 source: "https://ecotechgroup.pl/znaczenie-certyfikacji-w-branzy-rur-stalowych/"
 description: "W dynamicznie rozwijającej się branży przemysłowej i budowlanej rury stalowe stanowią jeden z najważniejszych materiałów konstrukcyjnych. Znajdują zastosowanie w takich dziedzinach jak…"
-image: "https://ecotechgroup.pl/wp-content/uploads/2023/03/PHOTO-2023-03-20-22-34-28-compress.jpg"
+image: "/img/posts/2023/03/PHOTO-2023-03-20-22-34-28-compress.jpg"
 imageAlt: "PHOTO-2023-03-20-22-34-28"
 ---
 

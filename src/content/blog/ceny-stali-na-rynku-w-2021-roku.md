@@ -5,7 +5,7 @@ slug: "ceny-stali-na-rynku-w-2021-roku"
 category: "Aktualności"
 source: "https://ecotechgroup.pl/ceny-stali-na-rynku-w-2021-roku/"
 description: "Rok 2021 to czas, w którym światowa gospodarka odzyskuje równowagę po zawirowaniach spowodowanych pandemią koronawirusa. Jest to widoczne również w branży budowlanej. Zobaczmy, jak…"
-image: "https://ecotechgroup.pl/wp-content/uploads/2021/08/rodzaje3-compress.jpg"
+image: "/img/posts/2021/08/rodzaje3-compress.jpg"
 imageAlt: "rodzaje3"
 ---
 
@@ -25,15 +25,15 @@ imageAlt: "rodzaje3"
 
 
 
-<figure class="wp-block-image size-large"><a href="https://ecotechgroup.pl/wp-content/uploads/2021/08/ceny-blachy-zimnowalcowanej.png"><img src="https://ecotechgroup.pl/wp-content/uploads/2021/08/ceny-blachy-zimnowalcowanej-840x480.png" alt="" class="wp-image-15596" /></a></figure>
+<figure class="wp-block-image size-large"><a href="/img/posts/2021/08/ceny-blachy-zimnowalcowanej.png"><img src="/img/posts/2021/08/ceny-blachy-zimnowalcowanej-840x480.png" alt="" class="wp-image-15596" /></a></figure>
 
 
 
-<figure class="wp-block-image size-large"><a href="https://ecotechgroup.pl/wp-content/uploads/2021/08/ceny-preta-ciagnionego.png"><img src="https://ecotechgroup.pl/wp-content/uploads/2021/08/ceny-preta-ciagnionego-840x480.png" alt="" class="wp-image-15597" /></a></figure>
+<figure class="wp-block-image size-large"><a href="/img/posts/2021/08/ceny-preta-ciagnionego.png"><img src="/img/posts/2021/08/ceny-preta-ciagnionego-840x480.png" alt="" class="wp-image-15597" /></a></figure>
 
 
 
-<figure class="wp-block-image size-large"><a href="https://ecotechgroup.pl/wp-content/uploads/2021/08/ceny-rury-spawanej.png"><img src="https://ecotechgroup.pl/wp-content/uploads/2021/08/ceny-rury-spawanej-840x480.png" alt="" class="wp-image-15598" /></a><figcaption class="wp-element-caption"><br></figcaption></figure>
+<figure class="wp-block-image size-large"><a href="/img/posts/2021/08/ceny-rury-spawanej.png"><img src="/img/posts/2021/08/ceny-rury-spawanej-840x480.png" alt="" class="wp-image-15598" /></a><figcaption class="wp-element-caption"><br></figcaption></figure>
 
 
 

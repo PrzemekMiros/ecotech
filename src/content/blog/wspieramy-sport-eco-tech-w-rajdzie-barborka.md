@@ -5,7 +5,7 @@ slug: "wspieramy-sport-eco-tech-w-rajdzie-barborka"
 category: "Aktualności"
 source: "https://ecotechgroup.pl/wspieramy-sport-eco-tech-w-rajdzie-barborka/"
 description: "W naszej firmie szanujemy ludzi z pasją. Szczególnie jeśli są tak inspirujący jak nasza Gosia Prus , która z końcem 2022 r. wzięła udział w 60 Rajdzie Barbórka. Ta kobieta-petarda, nie…"
-image: "https://ecotechgroup.pl/wp-content/uploads/2023/03/eco-tech-rajd-compress.jpg"
+image: "/img/posts/2023/03/eco-tech-rajd-compress.jpg"
 imageAlt: "eco-tech-rajd"
 ---
 
@@ -23,16 +23,16 @@ imageAlt: "eco-tech-rajd"
 
 
 
-<figure class="gb-block-image gb-block-image-28f16618"><img class="gb-image gb-image-28f16618" src="https://ecotechgroup.pl/wp-content/uploads/2023/03/eco-tech-rajd-31-compress.jpeg" alt="" title="eco-tech-rajd-barbórka" /></figure>
+<figure class="gb-block-image gb-block-image-28f16618"><img class="gb-image gb-image-28f16618" src="/img/posts/2023/03/eco-tech-rajd-31-compress.jpeg" alt="" title="eco-tech-rajd-barbórka" /></figure>
 
 
 
 
 
-<figure class="gb-block-image gb-block-image-6c5111b4"><img class="gb-image gb-image-6c5111b4" src="https://ecotechgroup.pl/wp-content/uploads/2023/03/eco-tech-rajd-2.jpeg" alt="" title="eco tech rajd barbórka" /></figure>
+<figure class="gb-block-image gb-block-image-6c5111b4"><img class="gb-image gb-image-6c5111b4" src="/img/posts/2023/03/eco-tech-rajd-2.jpeg" alt="" title="eco tech rajd barbórka" /></figure>
 
 
 
 
 
-<figure class="gb-block-image gb-block-image-22194e31"><img class="gb-image gb-image-22194e31" src="https://ecotechgroup.pl/wp-content/uploads/2023/03/eco-tech-rajd-1.jpeg" alt="" title="eco tech rajd" /></figure>
+<figure class="gb-block-image gb-block-image-22194e31"><img class="gb-image gb-image-22194e31" src="/img/posts/2023/03/eco-tech-rajd-1.jpeg" alt="" title="eco tech rajd" /></figure>

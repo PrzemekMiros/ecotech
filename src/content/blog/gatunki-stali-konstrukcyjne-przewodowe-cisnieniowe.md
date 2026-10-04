@@ -5,7 +5,7 @@ slug: "gatunki-stali-konstrukcyjne-przewodowe-cisnieniowe"
 category: "Aktualności"
 source: "https://ecotechgroup.pl/gatunki-stali-konstrukcyjne-przewodowe-cisnieniowe/"
 description: "Stal to jeden z najważniejszych materiałów inżynieryjnych, które znajdują zastosowanie w różnych dziedzinach przemysłu, w tym w budownictwie, motoryzacji, lotnictwie czy energetyce. W…"
-image: "https://ecotechgroup.pl/wp-content/uploads/2023/03/magazyn1-compress.jpg"
+image: "/img/posts/2023/03/magazyn1-compress.jpg"
 imageAlt: "magazyn(1)"
 ---
 

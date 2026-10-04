@@ -5,7 +5,7 @@ slug: "rozpory-rurowe-systemowe"
 description: "Rozpory rurowe to wyroby stalowe niezwykle przydatne podczas wykonywania wykopów pod różnorodne konstrukcje. Ich rolą jest bowiem zabezpieczanie wykopu. Dzięki temu, że rozpory rurowe…"
 source: "https://ecotechgroup.pl/produkty/rozpory-rurowe-systemowe/"
 order: 2
-image: "https://ecotechgroup.pl/wp-content/uploads/2022/06/Rozparcia-do-scian-szczelinowych-compress.jpg"
+image: "/img/posts/2022/06/Rozparcia-do-scian-szczelinowych-compress.jpg"
 imageAlt: "||||"
 ---
 
@@ -29,7 +29,7 @@ imageAlt: "||||"
 
 
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/Rozparcia-do-scian-szczelinowych-13-840x480-1.jpg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/Rozparcia-do-scian-szczelinowych-13-840x480-1.jpg" alt="" class="wp-image-15444"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/img/posts/2022/06/Rozparcia-do-scian-szczelinowych-13-840x480-1.jpg"><img src="/img/posts/2022/06/Rozparcia-do-scian-szczelinowych-13-840x480-1.jpg" alt="" class="wp-image-15444"/></a></figure>
 </div>
 </div>
 
@@ -41,7 +41,7 @@ imageAlt: "||||"
 
 <div class="wp-block-columns reverse-mob">
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/Rozparcia-do-scian-szczelinowych-8.jpg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/Rozparcia-do-scian-szczelinowych-8.jpg" alt="" class="wp-image-15445"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/img/posts/2022/06/Rozparcia-do-scian-szczelinowych-8.jpg"><img src="/img/posts/2022/06/Rozparcia-do-scian-szczelinowych-8.jpg" alt="" class="wp-image-15445"/></a></figure>
 </div>
 
 
@@ -65,6 +65,6 @@ imageAlt: "||||"
 
 
 
-<div class="wp-block-cover is-light"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-16715" alt="" src="https://ecotechgroup.pl/wp-content/uploads/2022/11/Rozpory-rurowe-scaled.jpg" style="object-position:100% 100%" data-object-fit="cover" data-object-position="100% 100%"/><div class="wp-block-cover__inner-container">
+<div class="wp-block-cover is-light"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-16715" alt="" src="/img/posts/2022/11/Rozpory-rurowe-scaled.jpg" style="object-position:100% 100%" data-object-fit="cover" data-object-position="100% 100%"/><div class="wp-block-cover__inner-container">
 <p class="has-text-align-center has-large-font-size"></p>
 </div></div>

@@ -5,7 +5,7 @@ slug: "giecie-rur-stalowych-na-goraco"
 description: "Witamy w świecie gięcia rur stalowych , gdzie nowoczesna technologia spotyka się z precyzją i elastycznością. Łączymy doświadczenie i innowacje, oferując kompleksowe rozwiązania dla…"
 source: "https://ecotechgroup.pl/uslugi/giecie-rur-stalowych-na-goraco/"
 order: 1
-image: "https://ecotechgroup.pl/wp-content/uploads/2024/02/ecotech-giecie-rur-3.jpg"
+image: "/img/posts/2024/02/ecotech-giecie-rur-3.jpg"
 imageAlt: "|||||||||"
 ---
 
@@ -61,13 +61,13 @@ imageAlt: "|||||||||"
 
 <div class="wp-block-columns">
 <div class="wp-block-column mob-none">
-<figure class="wp-block-image size-large"><a href="https://ecotechgroup.pl/wp-content/uploads/2024/02/ecotech-giecie-rur-8.jpg"><img src="https://ecotechgroup.pl/wp-content/uploads/2024/02/ecotech-giecie-rur-8-840x480.jpg" alt="" class="wp-image-17560"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/img/posts/2024/02/ecotech-giecie-rur-8.jpg"><img src="/img/posts/2024/02/ecotech-giecie-rur-8-840x480.jpg" alt="" class="wp-image-17560"/></a></figure>
 </div>
 
 
 
 <div class="wp-block-column">
-<figure class="wp-block-image size-large"><a href="https://ecotechgroup.pl/wp-content/uploads/2024/02/ecotech-giecie-rur-5.jpg"><img src="https://ecotechgroup.pl/wp-content/uploads/2024/02/ecotech-giecie-rur-5-680x480.jpg" alt="" class="wp-image-17559"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/img/posts/2024/02/ecotech-giecie-rur-5.jpg"><img src="/img/posts/2024/02/ecotech-giecie-rur-5-680x480.jpg" alt="" class="wp-image-17559"/></a></figure>
 </div>
 </div>
 
@@ -133,7 +133,7 @@ imageAlt: "|||||||||"
 
 
 <div class="wp-block-column">
-<figure class="gb-block-image gb-block-image-f681cfdc"><img class="gb-image gb-image-f681cfdc" src="https://ecotechgroup.pl/wp-content/uploads/2024/02/ecotech-giecie-rur-10-840x480.jpg"/></figure>
+<figure class="gb-block-image gb-block-image-f681cfdc"><img class="gb-image gb-image-f681cfdc" src="/img/posts/2024/02/ecotech-giecie-rur-10-840x480.jpg"/></figure>
 </div>
 </div>
 
@@ -186,19 +186,19 @@ imageAlt: "|||||||||"
 <div class="wp-block-columns">
 <div class="wp-block-column" style="flex-basis:100%">
 <figure class="wp-block-gallery has-nested-images columns-4 is-cropped">
-<figure class="wp-block-image size-large"><a href="https://ecotechgroup.pl/wp-content/uploads/2024/02/ecotech-giecie-rur-4.jpg"><img src="https://ecotechgroup.pl/wp-content/uploads/2024/02/ecotech-giecie-rur-4-840x480.jpg" alt="" class="wp-image-17579"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/img/posts/2024/02/ecotech-giecie-rur-4.jpg"><img src="/img/posts/2024/02/ecotech-giecie-rur-4-840x480.jpg" alt="" class="wp-image-17579"/></a></figure>
 
 
 
-<figure class="wp-block-image size-large"><a href="https://ecotechgroup.pl/wp-content/uploads/2024/02/ecotech-giecie-rur-9.jpg"><img src="https://ecotechgroup.pl/wp-content/uploads/2024/02/ecotech-giecie-rur-9-840x480.jpg" alt="" class="wp-image-17580"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/img/posts/2024/02/ecotech-giecie-rur-9.jpg"><img src="/img/posts/2024/02/ecotech-giecie-rur-9-840x480.jpg" alt="" class="wp-image-17580"/></a></figure>
 
 
 
-<figure class="wp-block-image size-large"><a href="https://ecotechgroup.pl/wp-content/uploads/2024/02/ecotech-giecie-rur-6.jpg"><img src="https://ecotechgroup.pl/wp-content/uploads/2024/02/ecotech-giecie-rur-6-786x480.jpg" alt="" class="wp-image-17571"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/img/posts/2024/02/ecotech-giecie-rur-6.jpg"><img src="/img/posts/2024/02/ecotech-giecie-rur-6-786x480.jpg" alt="" class="wp-image-17571"/></a></figure>
 
 
 
-<figure class="wp-block-image size-large"><a href="https://ecotechgroup.pl/wp-content/uploads/2024/02/ecotech-giecie-rur-5.jpg"><img src="https://ecotechgroup.pl/wp-content/uploads/2024/02/ecotech-giecie-rur-5-680x480.jpg" alt="" class="wp-image-17559"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/img/posts/2024/02/ecotech-giecie-rur-5.jpg"><img src="/img/posts/2024/02/ecotech-giecie-rur-5-680x480.jpg" alt="" class="wp-image-17559"/></a></figure>
 </figure>
 </div>
 </div>

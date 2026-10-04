@@ -5,7 +5,7 @@ slug: "montaz-rur-stalowych-dwudzielnych"
 description: "Jeśli posiadają Państwo instalacje rurowe wymagające dodatkowego zabezpieczenia, montaż rur dwudzielnych jest usługą, którą warto się zainteresować. Rury stalowe dwudzielne , zwane…"
 source: "https://ecotechgroup.pl/uslugi/montaz-rur-stalowych-dwudzielnych/"
 order: 5
-image: "https://ecotechgroup.pl/wp-content/uploads/2022/12/montaz-rur-stalowych-dwudzielnych-compress.jpeg"
+image: "/img/posts/2022/12/montaz-rur-stalowych-dwudzielnych-compress.jpeg"
 imageAlt: "||||||"
 ---
 
@@ -29,7 +29,7 @@ imageAlt: "||||||"
 
 
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/PHOTO-2021-08-18-13-03-00-2-840x480-1.jpg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/PHOTO-2021-08-18-13-03-00-2-840x480-1.jpg" alt="" class="wp-image-15487"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/img/posts/2022/06/PHOTO-2021-08-18-13-03-00-2-840x480-1.jpg"><img src="/img/posts/2022/06/PHOTO-2021-08-18-13-03-00-2-840x480-1.jpg" alt="" class="wp-image-15487"/></a></figure>
 </div>
 </div>
 
@@ -37,7 +37,7 @@ imageAlt: "||||||"
 
 <div class="wp-block-columns reverse-mob">
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/PHOTO-2021-08-18-13-03-00-4-768x480-1.jpg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/PHOTO-2021-08-18-13-03-00-4-768x480-1.jpg" alt="" class="wp-image-15488"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/img/posts/2022/06/PHOTO-2021-08-18-13-03-00-4-768x480-1.jpg"><img src="/img/posts/2022/06/PHOTO-2021-08-18-13-03-00-4-768x480-1.jpg" alt="" class="wp-image-15488"/></a></figure>
 </div>
 
 
@@ -63,24 +63,24 @@ imageAlt: "||||||"
 
 <div class="wp-block-columns">
 <div class="wp-block-column">
-<figure class="wp-block-image size-large"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/rura-stalowa-dwudzielna-13-compress.jpg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/rura-stalowa-dwudzielna-13-840x480.jpg" alt="" class="wp-image-15533"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/img/posts/2022/06/rura-stalowa-dwudzielna-13-compress.jpg"><img src="/img/posts/2022/06/rura-stalowa-dwudzielna-13-840x480.jpg" alt="" class="wp-image-15533"/></a></figure>
 </div>
 
 
 
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/PHOTO-2021-08-18-13-03-003-768x480-1.jpg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/PHOTO-2021-08-18-13-03-003-768x480-1.jpg" alt="" class="wp-image-15489"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/img/posts/2022/06/PHOTO-2021-08-18-13-03-003-768x480-1.jpg"><img src="/img/posts/2022/06/PHOTO-2021-08-18-13-03-003-768x480-1.jpg" alt="" class="wp-image-15489"/></a></figure>
 </div>
 
 
 
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/PHOTO-2021-08-18-13-03-001-768x480-1.jpg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/PHOTO-2021-08-18-13-03-001-768x480-1.jpg" alt="" class="wp-image-15491"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/img/posts/2022/06/PHOTO-2021-08-18-13-03-001-768x480-1.jpg"><img src="/img/posts/2022/06/PHOTO-2021-08-18-13-03-001-768x480-1.jpg" alt="" class="wp-image-15491"/></a></figure>
 </div>
 
 
 
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/PHOTO-2021-08-18-13-03-00-4-768x480-2.jpg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/PHOTO-2021-08-18-13-03-00-4-768x480-2.jpg" alt="" class="wp-image-15492"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/img/posts/2022/06/PHOTO-2021-08-18-13-03-00-4-768x480-2.jpg"><img src="/img/posts/2022/06/PHOTO-2021-08-18-13-03-00-4-768x480-2.jpg" alt="" class="wp-image-15492"/></a></figure>
 </div>
 </div>

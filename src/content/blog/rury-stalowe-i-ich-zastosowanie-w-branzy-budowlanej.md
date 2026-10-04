@@ -5,7 +5,7 @@ slug: "rury-stalowe-i-ich-zastosowanie-w-branzy-budowlanej"
 category: "Aktualności"
 source: "https://ecotechgroup.pl/rury-stalowe-i-ich-zastosowanie-w-branzy-budowlanej/"
 description: "Rury stalowe - ze względu na specyfikę wykonania i różnorodność ukształtowania, typów czy właściwości technicznych to jeden z najpopularniejszych materiałów budowlanych. Należy jednak…"
-image: "https://ecotechgroup.pl/wp-content/uploads/2023/03/PHOTO-2023-03-20-22-34-281-compress.jpg"
+image: "/img/posts/2023/03/PHOTO-2023-03-20-22-34-281-compress.jpg"
 imageAlt: "PHOTO-2023-03-20-22-34-28(1)"
 ---
 

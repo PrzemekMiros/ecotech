@@ -5,7 +5,7 @@ slug: "ceny-stali-na-rynku-w-2022-roku"
 category: "Aktualności"
 source: "https://ecotechgroup.pl/ceny-stali-na-rynku-w-2022-roku/"
 description: "Ceny stali na rynku od połowy 2020 roku były obiektem dynamicznego wzrostu, a sytuacja ta utrzymała się również w 2022 roku. Pomimo oczekiwań dotyczących równowagi gospodarki światowej…"
-image: "https://ecotechgroup.pl/wp-content/uploads/2023/07/ceny-stali-2022-compress.jpg"
+image: "/img/posts/2023/07/ceny-stali-2022-compress.jpg"
 imageAlt: "ceny-stali-2022"
 ---
 

@@ -5,7 +5,7 @@ slug: "sposob-produkcji-rur-grubosciennych-i-cienkosciennych"
 category: "Aktualności"
 source: "https://ecotechgroup.pl/sposob-produkcji-rur-grubosciennych-i-cienkosciennych/"
 description: "Grubość ścian to jedno z kryteriów, według których klasyfikuje się rury stalowe. Rury cienkościenne i grubościenne różnią się właściwościami, a to przekłada się na ich odmienne…"
-image: "https://ecotechgroup.pl/wp-content/uploads/2026/04/Majdan1.png"
+image: "/img/posts/2026/04/Majdan1.png"
 imageAlt: "Rury cienkościenne vs grubościenne - kluczowe różnice"
 ---
 

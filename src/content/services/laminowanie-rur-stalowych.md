@@ -5,7 +5,7 @@ slug: "laminowanie-rur-stalowych"
 description: "W Eco-Tech laminowanie rur stalowych odbywa się z użyciem laminatu żywiczno-szklanego. Wysoka jakość laminatu oraz starannie przeprowadzone laminowanie rur stalowych to gwarancja bardzo…"
 source: "https://ecotechgroup.pl/uslugi/laminowanie-rur-stalowych/"
 order: 7
-image: "https://ecotechgroup.pl/wp-content/uploads/2022/12/eco-tech-laminowanie-compress.webp"
+image: "/img/posts/2022/12/eco-tech-laminowanie-compress.webp"
 imageAlt: "||"
 ---
 
@@ -29,7 +29,7 @@ imageAlt: "||"
 
 
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/laminowanie-rur-ecotech-840x480-1.jpg" alt="" class="wp-image-15383"/></figure>
+<figure class="wp-block-image size-full"><img src="/img/posts/2022/06/laminowanie-rur-ecotech-840x480-1.jpg" alt="" class="wp-image-15383"/></figure>
 
 
 
@@ -41,7 +41,7 @@ imageAlt: "||"
 
 <div class="wp-block-columns reverse-mob">
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/laminowanie-rur-stalowych-ecotech-840x480-1.jpg" alt="" class="wp-image-15384"/></figure>
+<figure class="wp-block-image size-full"><img src="/img/posts/2022/06/laminowanie-rur-stalowych-ecotech-840x480-1.jpg" alt="" class="wp-image-15384"/></figure>
 </div>
 
 

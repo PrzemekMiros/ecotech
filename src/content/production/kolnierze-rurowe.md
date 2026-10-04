@@ -5,7 +5,7 @@ slug: "kolnierze-rurowe"
 description: "Kołnierze rurowe to kolejne wysokojakościowe wyroby z katalogu hurtowni stali Eco-Tech. Udostępniamy do sprzedaży szeroką gamę wzorów kołnierzy. Wszystkie wykazują zgodność z wymogami…"
 source: "https://ecotechgroup.pl/produkty/kolnierze-rurowe/"
 order: 6
-image: "https://ecotechgroup.pl/wp-content/uploads/2022/12/eco-tech-kolnierze-rurowe-compress.jpg"
+image: "/img/posts/2022/12/eco-tech-kolnierze-rurowe-compress.jpg"
 imageAlt: "|||"
 ---
 
@@ -53,6 +53,6 @@ imageAlt: "|||"
 
 
 
-<div class="wp-block-cover is-light"><span aria-hidden="true" class="wp-block-cover__background has-white-background-color has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-16710" alt="" src="https://ecotechgroup.pl/wp-content/uploads/2022/11/kolnierze-scaled.jpg" style="object-position:92% 92%" data-object-fit="cover" data-object-position="92% 92%"/><div class="wp-block-cover__inner-container">
+<div class="wp-block-cover is-light"><span aria-hidden="true" class="wp-block-cover__background has-white-background-color has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-16710" alt="" src="/img/posts/2022/11/kolnierze-scaled.jpg" style="object-position:92% 92%" data-object-fit="cover" data-object-position="92% 92%"/><div class="wp-block-cover__inner-container">
 <p class="has-text-align-center has-large-font-size"></p>
 </div></div>

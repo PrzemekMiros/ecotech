@@ -5,7 +5,7 @@ slug: "normy-rur-stalowych"
 category: "Aktualności"
 source: "https://ecotechgroup.pl/normy-rur-stalowych/"
 description: "Normy PN-EN10210, PN-EN10219, PN-EN10217, PN-EN10216 to ważne standardy w branży stalowej, które definiują wymagania dotyczące produkcji, testowania i dostawy rur stalowych i ich części.…"
-image: "https://ecotechgroup.pl/wp-content/uploads/2023/03/PHOTO-2023-03-20-22-34-28-compress.jpg"
+image: "/img/posts/2023/03/PHOTO-2023-03-20-22-34-28-compress.jpg"
 imageAlt: "PHOTO-2023-03-20-22-34-28"
 ---
 
@@ -13,7 +13,7 @@ imageAlt: "PHOTO-2023-03-20-22-34-28"
 
 
 
-<figure class="gb-block-image gb-block-image-f3360aa5"><img class="gb-image gb-image-f3360aa5" src="https://ecotechgroup.pl/wp-content/uploads/2023/03/struktura-standardow-rur-stalowych.png" alt="" title="struktura-standardow-rur-stalowych" /></figure>
+<figure class="gb-block-image gb-block-image-f3360aa5"><img class="gb-image gb-image-f3360aa5" src="/img/posts/2023/03/struktura-standardow-rur-stalowych.png" alt="" title="struktura-standardow-rur-stalowych" /></figure>
 
 
 

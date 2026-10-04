@@ -5,7 +5,7 @@ slug: "jakie-gatunki-stali-wykorzystuje-sie-do-produkcji-rur"
 category: "Aktualności"
 source: "https://ecotechgroup.pl/jakie-gatunki-stali-wykorzystuje-sie-do-produkcji-rur/"
 description: "Stal jest wytrzymała, odporna na ściskanie, rozciąganie i działanie czynników mechanicznych, a przy tym ma odpowiednią sprężystość oraz elastyczność. Dlatego właśnie ona jest popularnym…"
-image: "https://ecotechgroup.pl/wp-content/uploads/2022/07/banner-signature-compress.jpg"
+image: "/img/posts/2022/07/banner-signature-compress.jpg"
 imageAlt: "banner-signature"
 ---
 
@@ -145,7 +145,7 @@ imageAlt: "banner-signature"
 
 
 
-<figure class="wp-block-image size-full"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/09/tabela-wymiarow.png" alt="" class="wp-image-16620" /></figure>
+<figure class="wp-block-image size-full"><img src="/img/posts/2022/09/tabela-wymiarow.png" alt="" class="wp-image-16620" /></figure>
 
 
 

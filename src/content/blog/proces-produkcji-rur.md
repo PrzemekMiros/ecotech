@@ -5,7 +5,7 @@ slug: "proces-produkcji-rur"
 category: "Aktualności"
 source: "https://ecotechgroup.pl/proces-produkcji-rur/"
 description: "Rury stalowe to elementy o nieskomplikowanej konstrukcji. Może się wydawać, że ich produkcja jest równie prosta. W rzeczywistości jest jednak inaczej – proces produkcji rur wymaga użycia…"
-image: "https://ecotechgroup.pl/wp-content/uploads/2022/05/rury-stalowe-spawanie-compress.jpg"
+image: "/img/posts/2022/05/rury-stalowe-spawanie-compress.jpg"
 imageAlt: "rury-stalowe-spawanie"
 ---
 

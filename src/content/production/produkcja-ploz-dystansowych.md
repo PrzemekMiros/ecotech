@@ -5,7 +5,7 @@ slug: "produkcja-ploz-dystansowych"
 description: "Stalowe płozy dystansowe przygotowujemy pod konkretne zamówienie. Aby przystąpić do produkcji potrzebujemy jedynie specyfikacji wyrobu, która dostarczana jest przez Klienta. Skorzystanie…"
 source: "https://ecotechgroup.pl/produkty/produkcja-ploz-dystansowych/"
 order: 1
-image: "https://ecotechgroup.pl/wp-content/uploads/2022/06/plozy-dystansowe-compress.jpg"
+image: "/img/posts/2022/06/plozy-dystansowe-compress.jpg"
 imageAlt: "||||"
 ---
 
@@ -25,7 +25,7 @@ imageAlt: "||||"
 
 
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/11/ploza-3-scaled.jpg" alt="" class="wp-image-16698"/></figure>
+<figure class="wp-block-image size-full"><img src="/img/posts/2022/11/ploza-3-scaled.jpg" alt="" class="wp-image-16698"/></figure>
 </div>
 </div>
 
@@ -61,7 +61,7 @@ imageAlt: "||||"
 
 
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/11/ploza-1-scaled.jpg" alt="" class="wp-image-16696"/></figure>
+<figure class="wp-block-image size-full"><img src="/img/posts/2022/11/ploza-1-scaled.jpg" alt="" class="wp-image-16696"/></figure>
 </div>
 </div>
 
@@ -79,7 +79,7 @@ imageAlt: "||||"
 
 
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/11/ploza-2-scaled.jpg" alt="" class="wp-image-16697"/></figure>
+<figure class="wp-block-image size-full"><img src="/img/posts/2022/11/ploza-2-scaled.jpg" alt="" class="wp-image-16697"/></figure>
 </div>
 </div>
 
@@ -101,7 +101,7 @@ imageAlt: "||||"
 
 
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/11/ploza-2-scaled.jpg" alt="" class="wp-image-16697"/></figure>
+<figure class="wp-block-image size-full"><img src="/img/posts/2022/11/ploza-2-scaled.jpg" alt="" class="wp-image-16697"/></figure>
 </div>
 </div>
 

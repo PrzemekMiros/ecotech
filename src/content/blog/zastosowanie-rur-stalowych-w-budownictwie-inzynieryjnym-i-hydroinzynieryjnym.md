@@ -5,7 +5,7 @@ slug: "zastosowanie-rur-stalowych-w-budownictwie-inzynieryjnym-i-hydroinzynieryj
 category: "Aktualności"
 source: "https://ecotechgroup.pl/zastosowanie-rur-stalowych-w-budownictwie-inzynieryjnym-i-hydroinzynieryjnym/"
 description: "Budownictwo inżynieryjne i hydro inżynieryjne to szczególne obszary budownictwa. Obejmują wznoszenie obiektów oraz konstrukcji, które muszą być przygotowane na duże obciążenia i które…"
-image: "https://ecotechgroup.pl/wp-content/uploads/2021/08/hydrostation-rhodopi-mountains-bulgaria-1-compress.jpg"
+image: "/img/posts/2021/08/hydrostation-rhodopi-mountains-bulgaria-1-compress.jpg"
 imageAlt: "hydrostation-rhodopi-mountains-bulgaria"
 ---
 

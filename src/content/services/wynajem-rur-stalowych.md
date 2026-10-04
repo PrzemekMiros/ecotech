@@ -5,7 +5,7 @@ slug: "wynajem-rur-stalowych"
 description: "Takie rozwiązanie sprawdzi się wszędzie tam, gdzie liczą się czas i koszty ."
 source: "https://ecotechgroup.pl/uslugi/wynajem-rur-stalowych/"
 order: 2
-image: "https://ecotechgroup.pl/wp-content/uploads/2022/12/eco-tech-rury-stalowe-compress.webp"
+image: "/img/posts/2022/12/eco-tech-rury-stalowe-compress.webp"
 imageAlt: "||||||||"
 ---
 
@@ -41,13 +41,13 @@ imageAlt: "||||||||"
 
 <div class="wp-block-columns">
 <div class="wp-block-column">
-<figure class="wp-block-image size-large"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/07/wynajem-stalowych-rur.jpeg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/07/wynajem-stalowych-rur-840x480.jpeg" alt="" class="wp-image-16006"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/img/posts/2022/07/wynajem-stalowych-rur.jpeg"><img src="/img/posts/2022/07/wynajem-stalowych-rur-840x480.jpeg" alt="" class="wp-image-16006"/></a></figure>
 </div>
 
 
 
 <div class="wp-block-column mob-none">
-<figure class="wp-block-image size-large"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/07/ruy-stalowe-wynajem.jpeg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/07/ruy-stalowe-wynajem-840x480.jpeg" alt="" class="wp-image-16005"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/img/posts/2022/07/ruy-stalowe-wynajem.jpeg"><img src="/img/posts/2022/07/ruy-stalowe-wynajem-840x480.jpeg" alt="" class="wp-image-16005"/></a></figure>
 </div>
 </div>
 
@@ -133,13 +133,13 @@ imageAlt: "||||||||"
 
 <div class="wp-block-columns">
 <div class="wp-block-column mob-none">
-<figure class="wp-block-image size-large"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/07/wynajem-rur.jpeg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/07/wynajem-rur-840x480.jpeg" alt="" class="wp-image-16007"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/img/posts/2022/07/wynajem-rur.jpeg"><img src="/img/posts/2022/07/wynajem-rur-840x480.jpeg" alt="" class="wp-image-16007"/></a></figure>
 </div>
 
 
 
 <div class="wp-block-column">
-<figure class="wp-block-image size-large"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/07/wynajem-rur-syalowych.jpeg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/07/wynajem-rur-syalowych-840x480.jpeg" alt="" class="wp-image-16008"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/img/posts/2022/07/wynajem-rur-syalowych.jpeg"><img src="/img/posts/2022/07/wynajem-rur-syalowych-840x480.jpeg" alt="" class="wp-image-16008"/></a></figure>
 </div>
 </div>
 
@@ -199,13 +199,13 @@ imageAlt: "||||||||"
 
 <div class="wp-block-columns">
 <div class="wp-block-column mob-none">
-<figure class="wp-block-image size-large"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/07/wynajem-rur-ecotech.jpeg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/07/wynajem-rur-ecotech-840x480.jpeg" alt="" class="wp-image-16029"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/img/posts/2022/07/wynajem-rur-ecotech.jpeg"><img src="/img/posts/2022/07/wynajem-rur-ecotech-840x480.jpeg" alt="" class="wp-image-16029"/></a></figure>
 </div>
 
 
 
 <div class="wp-block-column">
-<figure class="wp-block-image size-large"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/07/wynajemrur.jpeg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/07/wynajemrur-840x480.jpeg" alt="" class="wp-image-16030"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/img/posts/2022/07/wynajemrur.jpeg"><img src="/img/posts/2022/07/wynajemrur-840x480.jpeg" alt="" class="wp-image-16030"/></a></figure>
 </div>
 </div>
 

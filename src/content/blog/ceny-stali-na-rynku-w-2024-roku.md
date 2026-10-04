@@ -5,7 +5,7 @@ slug: "ceny-stali-na-rynku-w-2024-roku"
 category: "Aktualności"
 source: "https://ecotechgroup.pl/ceny-stali-na-rynku-w-2024-roku/"
 description: "Rok 2024 stawia przed nami wiele pytań dotyczących cen stali , które odgrywają kluczową rolę w różnych sektorach – od budownictwa po przemysł maszynowy. Ważnym aspektem jest również…"
-image: "https://ecotechgroup.pl/wp-content/uploads/2024/10/1191.jpg"
+image: "/img/posts/2024/10/1191.jpg"
 imageAlt: "119(1)"
 ---
 

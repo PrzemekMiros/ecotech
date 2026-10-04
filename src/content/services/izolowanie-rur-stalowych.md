@@ -5,7 +5,7 @@ slug: "izolowanie-rur-stalowych"
 description: "W naszej ofercie znajdą Państwo pełen wachlarz izolacji dla rur stalowych w zakresie średnic od 159-2400mm. Izolowanie rur stalowych to doskonały sposób na zwiększenie ich odporności na…"
 source: "https://ecotechgroup.pl/uslugi/izolowanie-rur-stalowych/"
 order: 8
-image: "https://ecotechgroup.pl/wp-content/uploads/2022/12/eco-tech-izolowanie-rur-compress.jpeg"
+image: "/img/posts/2022/12/eco-tech-izolowanie-rur-compress.jpeg"
 imageAlt: "|||||||"
 ---
 
@@ -29,7 +29,7 @@ imageAlt: "|||||||"
 
 
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/izolowanie-rur-stalowych-3-840x480-1.jpeg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/izolowanie-rur-stalowych-3-840x480-1.jpeg" alt="" class="wp-image-15386"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/img/posts/2022/06/izolowanie-rur-stalowych-3-840x480-1.jpeg"><img src="/img/posts/2022/06/izolowanie-rur-stalowych-3-840x480-1.jpeg" alt="" class="wp-image-15386"/></a></figure>
 </div>
 </div>
 
@@ -37,7 +37,7 @@ imageAlt: "|||||||"
 
 <div class="wp-block-columns reverse-mob">
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/izolowanie-rur-stalowych-840x480-1.jpeg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/izolowanie-rur-stalowych-840x480-1.jpeg" alt="" class="wp-image-15387"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/img/posts/2022/06/izolowanie-rur-stalowych-840x480-1.jpeg"><img src="/img/posts/2022/06/izolowanie-rur-stalowych-840x480-1.jpeg" alt="" class="wp-image-15387"/></a></figure>
 </div>
 
 
@@ -121,13 +121,13 @@ imageAlt: "|||||||"
 
 <div class="wp-block-columns">
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/izolowanie-rur-stalowych-6-840x480-1.jpeg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/izolowanie-rur-stalowych-6-840x480-1.jpeg" alt="" class="wp-image-15388"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/img/posts/2022/06/izolowanie-rur-stalowych-6-840x480-1.jpeg"><img src="/img/posts/2022/06/izolowanie-rur-stalowych-6-840x480-1.jpeg" alt="" class="wp-image-15388"/></a></figure>
 </div>
 
 
 
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/izolowanie-rur-stalowych-4-840x480-1.jpeg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/izolowanie-rur-stalowych-4-840x480-1.jpeg" alt="" class="wp-image-15389"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/img/posts/2022/06/izolowanie-rur-stalowych-4-840x480-1.jpeg"><img src="/img/posts/2022/06/izolowanie-rur-stalowych-4-840x480-1.jpeg" alt="" class="wp-image-15389"/></a></figure>
 </div>
 </div>
 
@@ -185,13 +185,13 @@ imageAlt: "|||||||"
 
 <div class="wp-block-columns">
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/rury-stalowe-840x480-1.png"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/rury-stalowe-840x480-1.png" alt="" class="wp-image-15390"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/img/posts/2022/06/rury-stalowe-840x480-1.png"><img src="/img/posts/2022/06/rury-stalowe-840x480-1.png" alt="" class="wp-image-15390"/></a></figure>
 </div>
 
 
 
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/eco-tech-banner-1-840x480-1.jpg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/eco-tech-banner-1-840x480-1.jpg" alt="" class="wp-image-15392"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/img/posts/2022/06/eco-tech-banner-1-840x480-1.jpg"><img src="/img/posts/2022/06/eco-tech-banner-1-840x480-1.jpg" alt="" class="wp-image-15392"/></a></figure>
 </div>
 </div>
 

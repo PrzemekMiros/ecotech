@@ -5,7 +5,7 @@ slug: "gosia-prus-na-rajdzie-barborka"
 category: "Aktualności"
 source: "https://ecotechgroup.pl/gosia-prus-na-rajdzie-barborka/"
 description: "Rajd Barbórka to nie tylko sportowe wydarzenie – to święto, które łączy profesjonalistów i pasjonatów motor sportu w sercu Warszawy. Wąskie miejskie trasy, niezapomniane Kryterium Karowa…"
-image: "https://ecotechgroup.pl/wp-content/uploads/2025/01/Barburka-251.jpeg"
+image: "/img/posts/2025/01/Barburka-251.jpeg"
 imageAlt: "Barburka 25(1)"
 ---
 
@@ -19,37 +19,37 @@ imageAlt: "Barburka 25(1)"
 
 
 
-<figure class="wp-block-image size-full"><img src="https://ecotechgroup.pl/wp-content/uploads/2025/01/Barburka-2025.jpeg" alt="" class="wp-image-17977" /></figure>
+<figure class="wp-block-image size-full"><img src="/img/posts/2025/01/Barburka-2025.jpeg" alt="" class="wp-image-17977" /></figure>
 
 
 
 
 
-<figure class="wp-block-image size-full"><img src="https://ecotechgroup.pl/wp-content/uploads/2025/01/Barburka-251.jpeg" alt="" class="wp-image-17976" /></figure>
+<figure class="wp-block-image size-full"><img src="/img/posts/2025/01/Barburka-251.jpeg" alt="" class="wp-image-17976" /></figure>
 
 
 
 
 
-<figure class="wp-block-image size-full"><img src="https://ecotechgroup.pl/wp-content/uploads/2025/01/rajd-barborka-gosia-prus-4.jpg" alt="" class="wp-image-17982" /></figure>
+<figure class="wp-block-image size-full"><img src="/img/posts/2025/01/rajd-barborka-gosia-prus-4.jpg" alt="" class="wp-image-17982" /></figure>
 
 
 
 
 
-<figure class="wp-block-image size-full"><img src="https://ecotechgroup.pl/wp-content/uploads/2025/01/rajd-barborka-gosia-prus-3.jpg" alt="" class="wp-image-17985" /></figure>
+<figure class="wp-block-image size-full"><img src="/img/posts/2025/01/rajd-barborka-gosia-prus-3.jpg" alt="" class="wp-image-17985" /></figure>
 
 
 
 
 
-<figure class="wp-block-image size-full"><img src="https://ecotechgroup.pl/wp-content/uploads/2025/01/rajd-barborka-gosia-prus-2.jpg" alt="" class="wp-image-17984" /></figure>
+<figure class="wp-block-image size-full"><img src="/img/posts/2025/01/rajd-barborka-gosia-prus-2.jpg" alt="" class="wp-image-17984" /></figure>
 
 
 
 
 
-<figure class="wp-block-image size-full"><img src="https://ecotechgroup.pl/wp-content/uploads/2025/01/rajd-barborka-gosia-prus-1.jpg" alt="" class="wp-image-17983" /></figure>
+<figure class="wp-block-image size-full"><img src="/img/posts/2025/01/rajd-barborka-gosia-prus-1.jpg" alt="" class="wp-image-17983" /></figure>
 
 
 

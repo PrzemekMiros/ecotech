@@ -5,7 +5,7 @@ slug: "typy-powlok-antykorozyjnych-dla-rur-stalowych"
 category: "Aktualności"
 source: "https://ecotechgroup.pl/typy-powlok-antykorozyjnych-dla-rur-stalowych/"
 description: "Zabezpieczenie antykorozyjne powierzchni rur stalowych zależy od technologii aplikacji (np. malowanie, taśmowanie) oraz środowiska pracy. Systemy antykorozyjne muszą uwzględniać…"
-image: "https://ecotechgroup.pl/wp-content/uploads/2025/05/45891.jpg"
+image: "/img/posts/2025/05/45891.jpg"
 imageAlt: "4589(1)"
 ---
 
@@ -13,7 +13,7 @@ imageAlt: "4589(1)"
 
 
 
-<figure class="gb-block-image gb-block-image-2f47bb01"><img class="gb-image gb-image-2f47bb01" src="https://ecotechgroup.pl/wp-content/uploads/2025/05/powloki-antykorozyjne-info-1.png" alt="" title="powloki-antykorozyjne-info" /></figure>
+<figure class="gb-block-image gb-block-image-2f47bb01"><img class="gb-image gb-image-2f47bb01" src="/img/posts/2025/05/powloki-antykorozyjne-info-1.png" alt="" title="powloki-antykorozyjne-info" /></figure>
 
 
 

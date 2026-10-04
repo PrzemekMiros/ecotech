@@ -5,7 +5,7 @@ slug: "produkcja-i-walcowanie-blach"
 description: "Produkcja i walcowanie blach to usługa, której realizacja pozwala nam wytworzyć dla Państwa rury oraz zbiorniki stalowe o niestandardowych średnicach oraz grubości ścianek."
 source: "https://ecotechgroup.pl/produkty/produkcja-i-walcowanie-blach/"
 order: 10
-image: "https://ecotechgroup.pl/wp-content/uploads/2022/12/ecotech-walcowanie-blach-1-compress.jpg"
+image: "/img/posts/2022/12/ecotech-walcowanie-blach-1-compress.jpg"
 imageAlt: "||"
 ---
 
@@ -29,7 +29,7 @@ imageAlt: "||"
 
 
 <div class="wp-block-column">
-<figure class="wp-block-image size-large"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/ecotech-group-zwijanie-rur-walcowanie-blach-galeria_3-1-e1630363946522.jpg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/ecotech-group-zwijanie-rur-walcowanie-blach-galeria_3-1-e1630363946522-767x480.jpg" alt="" class="wp-image-15610"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/img/posts/2022/06/ecotech-group-zwijanie-rur-walcowanie-blach-galeria_3-1-e1630363946522.jpg"><img src="/img/posts/2022/06/ecotech-group-zwijanie-rur-walcowanie-blach-galeria_3-1-e1630363946522-767x480.jpg" alt="" class="wp-image-15610"/></a></figure>
 </div>
 </div>
 
@@ -37,7 +37,7 @@ imageAlt: "||"
 
 <div class="wp-block-columns reverse-mob">
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/rury-zwijane-z-blachy-840x480-1.jpeg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/rury-zwijane-z-blachy-840x480-1.jpeg" alt="" class="wp-image-15437"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/img/posts/2022/06/rury-zwijane-z-blachy-840x480-1.jpeg"><img src="/img/posts/2022/06/rury-zwijane-z-blachy-840x480-1.jpeg" alt="" class="wp-image-15437"/></a></figure>
 </div>
 
 

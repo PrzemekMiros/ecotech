@@ -5,7 +5,7 @@ slug: "paloscianki-rurowe-combiwall"
 description: "To solidne produkty, stworzone z myślą o długiej eksploatacji które doskonale sprawdzą się w zapobieganiu osuwania się gruntu. Dzięki temu, że nasz asortyment obfituje w palościanki o…"
 source: "https://ecotechgroup.pl/produkty/paloscianki-rurowe-combiwall/"
 order: 4
-image: "https://ecotechgroup.pl/wp-content/uploads/2022/12/eco-tech-paloscianki-compress.jpg"
+image: "/img/posts/2022/12/eco-tech-paloscianki-compress.jpg"
 imageAlt: "|||"
 ---
 
@@ -41,7 +41,7 @@ imageAlt: "|||"
 
 
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/Spawanie-zamkow-do-rur-stalowych-_-Pale-Combiwall-_-Spawanie-rur-stalowych-_-Pale-stalowe-_-Rury-stalowe-_-Grodzice-stalowe-z-rurami-Eco-Tech-Sp.-z-o.o.-840x480-1.jpg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/Spawanie-zamkow-do-rur-stalowych-_-Pale-Combiwall-_-Spawanie-rur-stalowych-_-Pale-stalowe-_-Rury-stalowe-_-Grodzice-stalowe-z-rurami-Eco-Tech-Sp.-z-o.o.-840x480-1.jpg" alt="" class="wp-image-15408"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/img/posts/2022/06/Spawanie-zamkow-do-rur-stalowych-_-Pale-Combiwall-_-Spawanie-rur-stalowych-_-Pale-stalowe-_-Rury-stalowe-_-Grodzice-stalowe-z-rurami-Eco-Tech-Sp.-z-o.o.-840x480-1.jpg"><img src="/img/posts/2022/06/Spawanie-zamkow-do-rur-stalowych-_-Pale-Combiwall-_-Spawanie-rur-stalowych-_-Pale-stalowe-_-Rury-stalowe-_-Grodzice-stalowe-z-rurami-Eco-Tech-Sp.-z-o.o.-840x480-1.jpg" alt="" class="wp-image-15408"/></a></figure>
 </div>
 </div>
 
@@ -59,6 +59,6 @@ imageAlt: "|||"
 
 
 
-<div class="wp-block-cover is-light"><span aria-hidden="true" class="wp-block-cover__background has-white-background-color has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-16693" alt="" src="https://ecotechgroup.pl/wp-content/uploads/2022/11/combiwall-scaled.jpg" style="object-position:100% 100%" data-object-fit="cover" data-object-position="100% 100%"/><div class="wp-block-cover__inner-container">
+<div class="wp-block-cover is-light"><span aria-hidden="true" class="wp-block-cover__background has-white-background-color has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-16693" alt="" src="/img/posts/2022/11/combiwall-scaled.jpg" style="object-position:100% 100%" data-object-fit="cover" data-object-position="100% 100%"/><div class="wp-block-cover__inner-container">
 <p class="has-text-align-center has-large-font-size"></p>
 </div></div>

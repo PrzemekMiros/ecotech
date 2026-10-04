@@ -5,7 +5,7 @@ slug: "produkcja-kominow-stalowych-przemyslowych"
 description: "Produkcja kominów przemysłowych to oferta skierowana między innymi do oczyszczalni, elektrowni, piekarni przemysłowych, ale także firm działających w przemyśle motoryzacyjnym, spożywczym…"
 source: "https://ecotechgroup.pl/produkty/produkcja-kominow-stalowych-przemyslowych/"
 order: 9
-image: "https://ecotechgroup.pl/wp-content/uploads/2022/12/eco-tech-kominy-przemyslowe-compress.jpg"
+image: "/img/posts/2022/12/eco-tech-kominy-przemyslowe-compress.jpg"
 imageAlt: "|||||||"
 ---
 
@@ -23,13 +23,13 @@ imageAlt: "|||||||"
 
 <div class="wp-block-columns">
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/produkcja-kominow-stalowych-840x480-1.jpg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/produkcja-kominow-stalowych-840x480-1.jpg" alt="" class="wp-image-15430"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/img/posts/2022/06/produkcja-kominow-stalowych-840x480-1.jpg"><img src="/img/posts/2022/06/produkcja-kominow-stalowych-840x480-1.jpg" alt="" class="wp-image-15430"/></a></figure>
 </div>
 
 
 
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/produkcja-kominow-stalowych-2-840x480-1.jpg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/produkcja-kominow-stalowych-2-840x480-1.jpg" alt="" class="wp-image-15431"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/img/posts/2022/06/produkcja-kominow-stalowych-2-840x480-1.jpg"><img src="/img/posts/2022/06/produkcja-kominow-stalowych-2-840x480-1.jpg" alt="" class="wp-image-15431"/></a></figure>
 </div>
 </div>
 
@@ -111,13 +111,13 @@ imageAlt: "|||||||"
 <div class="wp-block-column">
 <div class="wp-block-columns">
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/kominy-stalowe-przemyslowe-2-840x480-1.jpg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/kominy-stalowe-przemyslowe-2-840x480-1.jpg" alt="" class="wp-image-15432"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/img/posts/2022/06/kominy-stalowe-przemyslowe-2-840x480-1.jpg"><img src="/img/posts/2022/06/kominy-stalowe-przemyslowe-2-840x480-1.jpg" alt="" class="wp-image-15432"/></a></figure>
 </div>
 
 
 
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/kominy-stalowe-przemyslowe-6-840x480-1.jpg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/kominy-stalowe-przemyslowe-6-840x480-1.jpg" alt="" class="wp-image-15433"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/img/posts/2022/06/kominy-stalowe-przemyslowe-6-840x480-1.jpg"><img src="/img/posts/2022/06/kominy-stalowe-przemyslowe-6-840x480-1.jpg" alt="" class="wp-image-15433"/></a></figure>
 </div>
 </div>
 </div>
@@ -165,6 +165,6 @@ imageAlt: "|||||||"
 
 
 
-<div class="wp-block-cover is-light"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-16713" alt="" src="https://ecotechgroup.pl/wp-content/uploads/2022/11/Komin-stalowy-eco-tech-scaled.jpg" style="object-position:100% 100%" data-object-fit="cover" data-object-position="100% 100%"/><div class="wp-block-cover__inner-container">
+<div class="wp-block-cover is-light"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-16713" alt="" src="/img/posts/2022/11/Komin-stalowy-eco-tech-scaled.jpg" style="object-position:100% 100%" data-object-fit="cover" data-object-position="100% 100%"/><div class="wp-block-cover__inner-container">
 <p class="has-text-align-center has-large-font-size"></p>
 </div></div>

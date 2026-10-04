@@ -5,7 +5,7 @@ slug: "klasyfikacja-rur-stalowych-wedlug-zastosowania"
 category: "Aktualności"
 source: "https://ecotechgroup.pl/klasyfikacja-rur-stalowych-wedlug-zastosowania/"
 description: "Rury stalowe są bardzo ważnym elementem funkcjonowania praktycznie wszystkich zakładów przemysłowych. Z uwagi na swoją specyfikacje są stosowane w różnych dziedzinach przemysł. Rury…"
-image: "https://ecotechgroup.pl/wp-content/uploads/2021/04/rury-stalowe-2-compress.jpg"
+image: "/img/posts/2021/04/rury-stalowe-2-compress.jpg"
 imageAlt: "rury-stalowe-2"
 ---
 

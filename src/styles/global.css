@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
+
+:root {
+  --step--2: clamp(0.64rem, 0.6556rem + -0.0201vw, 0.651rem);
+  --step--1: clamp(0.7813rem, 0.7736rem + 0.0341vw, 0.8rem);
+  --step-0: clamp(0.9375rem, 0.9119rem + 0.1136vw, 1rem);
+  --step-1: clamp(1.125rem, 1.0739rem + 0.2273vw, 1.25rem);
+  --step-2: clamp(1.35rem, 1.2631rem + 0.3864vw, 1.5625rem);
+  --step-3: clamp(1.62rem, 1.4837rem + 0.6057vw, 1.9531rem);
+  --step-4: clamp(1.944rem, 1.7405rem + 0.9044vw, 2.4414rem);
+  --step-5: clamp(2.3328rem, 2.0387rem + 1.3072vw, 3.0518rem);
+  --step-6: clamp(2.7994rem, 2.384rem + 1.8461vw, 3.8147rem);
+  --step-7: clamp(3.3592rem, 2.7828rem + 2.5621vw, 4.7684rem);
+}
+
 @theme {
   --color-accent-1: #1d418e;
   --color-ink: #112117;
@@ -9,11 +23,33 @@
   --color-sand: #f4f4f4;
   --color-sun: #d9b554;
   --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+
+  /* Fluid Utopia scale: 360px–1240px viewport, 15px–16px base. */
+  --text-xs: var(--step--2);
+  --text-xs--line-height: 1rem;
+  --text-sm: var(--step--1);
+  --text-sm--line-height: 1.25rem;
+  --text-base: var(--step-0);
+  --text-base--line-height: 1.6rem;
+  --text-lg: var(--step-1);
+  --text-lg--line-height: 1.8rem;
+  --text-xl: var(--step-2);
+  --text-xl--line-height: 2rem;
+  --text-2xl: var(--step-3);
+  --text-2xl--line-height: 2.25rem;
+  --text-3xl: var(--step-4);
+  --text-3xl--line-height: 2.5rem;
+  --text-4xl: var(--step-5);
+  --text-4xl--line-height: 3rem;
+  --text-5xl: var(--step-6);
+  --text-5xl--line-height: 3.25rem;
+  --text-6xl: var(--step-7);
+  --text-6xl--line-height: 4rem;
 }
 
 @layer base {
   html { scroll-behavior: smooth; }
-  body { @apply bg-sand text-ink antialiased; }
+  body { @apply bg-sand text-ink antialiased; font-size: var(--step-0); line-height: 1.6; }
   a { @apply transition-colors; }
 }
 
@@ -43,7 +79,7 @@
     background-size: 36px 36px;
   }
   .eyebrow { @apply text-xs font-bold uppercase tracking-[0.18em] text-accent-1; }
-  .display { @apply text-4xl font-semibold leading-[1.03] tracking-[-0.05em] md:text-6xl; }
+  .display { @apply text-4xl font-semibold leading-[1.03] tracking-[-0.05em] md:text-5xl; }
 }
 
 .map-wrap {

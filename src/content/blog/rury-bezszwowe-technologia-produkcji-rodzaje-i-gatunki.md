@@ -5,7 +5,7 @@ slug: "rury-bezszwowe-technologia-produkcji-rodzaje-i-gatunki"
 category: "Aktualności"
 source: "https://ecotechgroup.pl/rury-bezszwowe-technologia-produkcji-rodzaje-i-gatunki/"
 description: "Rury bezszwowe to elementy składające się na wiele instalacji, które towarzyszą nam w codziennym życiu, choć nie zawsze mamy tego świadomość. Jeszcze mniej osób wie, w jaki sposób…"
-image: "https://ecotechgroup.pl/wp-content/uploads/2022/06/rodzaje-compress.jpg"
+image: "/img/posts/2022/06/rodzaje-compress.jpg"
 imageAlt: "rodzaje"
 ---
 

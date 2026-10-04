@@ -5,7 +5,7 @@ slug: "pale-rurowe"
 description: "Pale rurowe dostępne w ofercie Eco-Tech zapewniają możliwość błyskawicznego montażu. Cechują się także dużą nośnością, która potwierdzona została w ramach przeprowadzonych dynamicznych…"
 source: "https://ecotechgroup.pl/produkty/pale-rurowe/"
 order: 5
-image: "https://ecotechgroup.pl/wp-content/uploads/2022/12/eco-tech-paloscianki-compress.jpg"
+image: "/img/posts/2022/12/eco-tech-paloscianki-compress.jpg"
 imageAlt: "||||||||||"
 ---
 
@@ -25,7 +25,7 @@ imageAlt: "||||||||||"
 
 
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/Pale-stalowe111134.jpg" alt="" class="wp-image-15405"/></figure>
+<figure class="wp-block-image size-full"><img src="/img/posts/2022/06/Pale-stalowe111134.jpg" alt="" class="wp-image-15405"/></figure>
 </div>
 </div>
 
@@ -39,6 +39,6 @@ imageAlt: "||||||||||"
 
 
 
-<div class="wp-block-cover is-light"><span aria-hidden="true" class="wp-block-cover__background has-white-background-color has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-16671" alt="" src="https://ecotechgroup.pl/wp-content/uploads/2022/11/Pale-rurowe-Pale-stalowe--scaled.jpg" style="object-position:49% 100%" data-object-fit="cover" data-object-position="49% 100%"/><div class="wp-block-cover__inner-container">
+<div class="wp-block-cover is-light"><span aria-hidden="true" class="wp-block-cover__background has-white-background-color has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-16671" alt="" src="/img/posts/2022/11/Pale-rurowe-Pale-stalowe--scaled.jpg" style="object-position:49% 100%" data-object-fit="cover" data-object-position="49% 100%"/><div class="wp-block-cover__inner-container">
 <p class="has-text-align-center has-large-font-size"></p>
 </div></div>

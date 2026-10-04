@@ -5,7 +5,7 @@ slug: "produkcja-podpor-mostowych"
 description: "W ofercie Eco-Tech znajdą Państwo wyroby stalowe, mogące posłużyć do stworzenia solidnych podpór mostowych. Oferujemy produkty, które nadadzą się zarówno do budowy podpór tymczasowych…"
 source: "https://ecotechgroup.pl/produkty/produkcja-podpor-mostowych/"
 order: 3
-image: "https://ecotechgroup.pl/wp-content/uploads/2022/12/eco-tech-podpory-mostowe-compress.jpg"
+image: "/img/posts/2022/12/eco-tech-podpory-mostowe-compress.jpg"
 imageAlt: "||||||"
 ---
 
@@ -37,7 +37,7 @@ imageAlt: "||||||"
 
 
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/klatki-mostowe-840x480-1.jpg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/klatki-mostowe-840x480-1.jpg" alt="" class="wp-image-15422"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/img/posts/2022/06/klatki-mostowe-840x480-1.jpg"><img src="/img/posts/2022/06/klatki-mostowe-840x480-1.jpg" alt="" class="wp-image-15422"/></a></figure>
 </div>
 </div>
 
@@ -45,7 +45,7 @@ imageAlt: "||||||"
 
 <div class="wp-block-columns reverse-mob">
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/Klatki-mostowe-_-Podpory-mostowe-_-Podparcia-rurowe-_-Podporcia-rurowe-_-Klatki-wykonane-z-Rur-stalowych-_-Rury-stalowe-_-Eco-Tech-Sp.-zo.o.-Warszawa-840x480-1.jpg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/Klatki-mostowe-_-Podpory-mostowe-_-Podparcia-rurowe-_-Podporcia-rurowe-_-Klatki-wykonane-z-Rur-stalowych-_-Rury-stalowe-_-Eco-Tech-Sp.-zo.o.-Warszawa-840x480-1.jpg" alt="" class="wp-image-15423"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/img/posts/2022/06/Klatki-mostowe-_-Podpory-mostowe-_-Podparcia-rurowe-_-Podporcia-rurowe-_-Klatki-wykonane-z-Rur-stalowych-_-Rury-stalowe-_-Eco-Tech-Sp.-zo.o.-Warszawa-840x480-1.jpg"><img src="/img/posts/2022/06/Klatki-mostowe-_-Podpory-mostowe-_-Podparcia-rurowe-_-Podporcia-rurowe-_-Klatki-wykonane-z-Rur-stalowych-_-Rury-stalowe-_-Eco-Tech-Sp.-zo.o.-Warszawa-840x480-1.jpg" alt="" class="wp-image-15423"/></a></figure>
 </div>
 
 
@@ -93,7 +93,7 @@ imageAlt: "||||||"
 
 
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/Klatki-mostowe-_-Podpory-mostowe-_-Podparcia-rurowe-_-Podporcia-rurowe-_-Klatki-wykonane-z-Rur-stalowych-_-Rury-stalowe-_-Eco-Tech-Sp.-zo.o.-800x480-1.jpg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/Klatki-mostowe-_-Podpory-mostowe-_-Podparcia-rurowe-_-Podporcia-rurowe-_-Klatki-wykonane-z-Rur-stalowych-_-Rury-stalowe-_-Eco-Tech-Sp.-zo.o.-800x480-1.jpg" alt="" class="wp-image-15424"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/img/posts/2022/06/Klatki-mostowe-_-Podpory-mostowe-_-Podparcia-rurowe-_-Podporcia-rurowe-_-Klatki-wykonane-z-Rur-stalowych-_-Rury-stalowe-_-Eco-Tech-Sp.-zo.o.-800x480-1.jpg"><img src="/img/posts/2022/06/Klatki-mostowe-_-Podpory-mostowe-_-Podparcia-rurowe-_-Podporcia-rurowe-_-Klatki-wykonane-z-Rur-stalowych-_-Rury-stalowe-_-Eco-Tech-Sp.-zo.o.-800x480-1.jpg" alt="" class="wp-image-15424"/></a></figure>
 </div>
 </div>
 
@@ -103,6 +103,6 @@ imageAlt: "||||||"
 
 
 
-<div class="wp-block-cover is-light"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-16708" alt="" src="https://ecotechgroup.pl/wp-content/uploads/2022/11/podpory-scaled.jpg" style="object-position:100% 100%" data-object-fit="cover" data-object-position="100% 100%"/><div class="wp-block-cover__inner-container">
+<div class="wp-block-cover is-light"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-16708" alt="" src="/img/posts/2022/11/podpory-scaled.jpg" style="object-position:100% 100%" data-object-fit="cover" data-object-position="100% 100%"/><div class="wp-block-cover__inner-container">
 <p class="has-text-align-center has-large-font-size"></p>
 </div></div>

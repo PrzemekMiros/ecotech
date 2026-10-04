@@ -74,7 +74,7 @@ const relatedPosts = (await getCollection('news'))
               <div class="mt-4 divide-y divide-ink/10">
                 {relatedPosts.map((related) => (
                   <a href={`/aktualnosci/${related.data.slug}`} class="group block py-4 first:pt-0">
-                    <p class="text-[0.7rem] font-bold uppercase tracking-[0.14em] text-accent-1/65">{formatDate.format(related.data.pubDate)}</p>
+                    <p class="text-xs font-bold uppercase tracking-[0.14em] text-accent-1/65">{formatDate.format(related.data.pubDate)}</p>
                     <h2 class="mt-2 text-sm font-semibold leading-5 text-ink transition-colors group-hover:text-accent-1">{related.data.title}</h2>
                   </a>
                 ))}

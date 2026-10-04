@@ -5,7 +5,7 @@ slug: "ceny-stali-znow-w-gore-chwilowy-wzrost-czy-nowy-poziom-cenowy"
 category: "Aktualności"
 source: "https://ecotechgroup.pl/ceny-stali-znow-w-gore-chwilowy-wzrost-czy-nowy-poziom-cenowy/"
 description: "Co to oznacza dla firm budowlanych w drugiej połowie 2026 roku."
-image: "https://ecotechgroup.pl/wp-content/uploads/2026/06/ceny-stali.png"
+image: "/img/posts/2026/06/ceny-stali.png"
 imageAlt: "ceny-stali"
 ---
 

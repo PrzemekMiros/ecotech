@@ -5,7 +5,7 @@ slug: "malowanie-rur-od-wewnatrz"
 description: "Usługę malowania rur stalowych od wewnątrz realizujemy z wykorzystaniem nowoczesnego sprzętu. Zapewnia on doskonałe efekty, w postaci równomiernie nałożonej farby i dokładnego pokrycia…"
 source: "https://ecotechgroup.pl/uslugi/malowanie-rur-od-wewnatrz/"
 order: 6
-image: "https://ecotechgroup.pl/wp-content/uploads/2022/12/eco-tech-malowanie-rur.jpeg"
+image: "/img/posts/2022/12/eco-tech-malowanie-rur.jpeg"
 imageAlt: "|"
 ---
 
@@ -29,7 +29,7 @@ imageAlt: "|"
 
 
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/malowanie-rur-2-840x480-1.jpeg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/malowanie-rur-2-840x480-1.jpeg" alt="" class="wp-image-15381"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/img/posts/2022/06/malowanie-rur-2-840x480-1.jpeg"><img src="/img/posts/2022/06/malowanie-rur-2-840x480-1.jpeg" alt="" class="wp-image-15381"/></a></figure>
 </div>
 </div>
 
@@ -37,7 +37,7 @@ imageAlt: "|"
 
 <div class="wp-block-columns reverse-mob">
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/malowanie-rur-840x480-1.jpeg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/malowanie-rur-840x480-1.jpeg" alt="" class="wp-image-15380"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/img/posts/2022/06/malowanie-rur-840x480-1.jpeg"><img src="/img/posts/2022/06/malowanie-rur-840x480-1.jpeg" alt="" class="wp-image-15380"/></a></figure>
 </div>
 
 

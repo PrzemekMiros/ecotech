@@ -5,7 +5,7 @@ slug: "produkcja-zbiornikow-stalowych"
 description: "Produkcja zbiorników stalowych to usługa skierowana do zakładów przemysłowych, stacji uzdatniania wody, stacji energetycznych, kotłowni, obiektów budowlanych i wszystkich, którzy…"
 source: "https://ecotechgroup.pl/produkty/produkcja-zbiornikow-stalowych/"
 order: 8
-image: "https://ecotechgroup.pl/wp-content/uploads/2022/12/eco-tech-zbiorniki-stalowe-compress.jpg"
+image: "/img/posts/2022/12/eco-tech-zbiorniki-stalowe-compress.jpg"
 imageAlt: "|||||"
 ---
 
@@ -29,7 +29,7 @@ imageAlt: "|||||"
 
 
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/produkcja-zbiornikow-stalowych-840x480-1.jpeg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/produkcja-zbiornikow-stalowych-840x480-1.jpeg" alt="" class="wp-image-15439"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/img/posts/2022/06/produkcja-zbiornikow-stalowych-840x480-1.jpeg"><img src="/img/posts/2022/06/produkcja-zbiornikow-stalowych-840x480-1.jpeg" alt="" class="wp-image-15439"/></a></figure>
 </div>
 </div>
 
@@ -37,7 +37,7 @@ imageAlt: "|||||"
 
 <div class="wp-block-columns reverse-mob">
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/produkcja-zbiornikow-stalowych-ecotech-group-840x480-1.jpeg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/produkcja-zbiornikow-stalowych-ecotech-group-840x480-1.jpeg" alt="" class="wp-image-15440"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/img/posts/2022/06/produkcja-zbiornikow-stalowych-ecotech-group-840x480-1.jpeg"><img src="/img/posts/2022/06/produkcja-zbiornikow-stalowych-ecotech-group-840x480-1.jpeg" alt="" class="wp-image-15440"/></a></figure>
 </div>
 
 
@@ -163,12 +163,12 @@ imageAlt: "|||||"
 
 <div class="wp-block-columns">
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/ecotech-group-silosy_galeria-2-767x480-1.jpg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/ecotech-group-silosy_galeria-2-767x480-1.jpg" alt="" class="wp-image-15441"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/img/posts/2022/06/ecotech-group-silosy_galeria-2-767x480-1.jpg"><img src="/img/posts/2022/06/ecotech-group-silosy_galeria-2-767x480-1.jpg" alt="" class="wp-image-15441"/></a></figure>
 </div>
 
 
 
 <div class="wp-block-column">
-<figure class="wp-block-image size-full"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/ecotech-group-zbiorniki-stalowe_3-767x480-1.jpg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/ecotech-group-zbiorniki-stalowe_3-767x480-1.jpg" alt="" class="wp-image-15442"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/img/posts/2022/06/ecotech-group-zbiorniki-stalowe_3-767x480-1.jpg"><img src="/img/posts/2022/06/ecotech-group-zbiorniki-stalowe_3-767x480-1.jpg" alt="" class="wp-image-15442"/></a></figure>
 </div>
 </div>

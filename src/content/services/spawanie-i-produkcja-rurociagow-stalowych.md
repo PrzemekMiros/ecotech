@@ -5,7 +5,7 @@ slug: "spawanie-i-produkcja-rurociagow-stalowych"
 description: "Posiadamy zespół wykwalifikowanych i doświadczonych spawaczy, którzy stosują sprawdzone metody. Przy spawaniu rurociągów krótszych preferujemy metodę TIG, która zapewnia konstrukcji…"
 source: "https://ecotechgroup.pl/uslugi/spawanie-i-produkcja-rurociagow-stalowych/"
 order: 3
-image: "https://ecotechgroup.pl/wp-content/uploads/2022/12/spawanie-konstrukcji-compress.jpeg"
+image: "/img/posts/2022/12/spawanie-konstrukcji-compress.jpeg"
 imageAlt: "|||"
 ---
 
@@ -29,7 +29,7 @@ imageAlt: "|||"
 
 
 <div class="wp-block-column">
-<figure class="wp-block-image size-large"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/spawanie1-1.jpg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/spawanie1-1-840x480.jpg" alt="" class="wp-image-15502"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/img/posts/2022/06/spawanie1-1.jpg"><img src="/img/posts/2022/06/spawanie1-1-840x480.jpg" alt="" class="wp-image-15502"/></a></figure>
 </div>
 </div>
 
@@ -37,7 +37,7 @@ imageAlt: "|||"
 
 <div class="wp-block-columns reverse-mob">
 <div class="wp-block-column">
-<figure class="wp-block-image size-large"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/rury-stalowe-spawanie.jpg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/rury-stalowe-spawanie-840x480.jpg" alt="" class="wp-image-15501"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/img/posts/2022/06/rury-stalowe-spawanie.jpg"><img src="/img/posts/2022/06/rury-stalowe-spawanie-840x480.jpg" alt="" class="wp-image-15501"/></a></figure>
 </div>
 
 

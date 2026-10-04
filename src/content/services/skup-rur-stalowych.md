@@ -5,7 +5,7 @@ slug: "skup-rur-stalowych"
 description: "Eco-Tech od wielu lat prowadzi również skup rur stalowych . Chętnie nabędziemy każde wyroby tego typu, niezależnie od ich rodzaju oraz wymiarów. Sprzedaż rur w skupie rur stalowych to…"
 source: "https://ecotechgroup.pl/uslugi/skup-rur-stalowych/"
 order: 4
-image: "https://ecotechgroup.pl/wp-content/uploads/2022/12/eco-tech-skup-rur-compress.webp"
+image: "/img/posts/2022/12/eco-tech-skup-rur-compress.webp"
 imageAlt: "||"
 ---
 
@@ -29,7 +29,7 @@ imageAlt: "||"
 
 
 <div class="wp-block-column">
-<figure class="wp-block-image size-large"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/ecotech-group-rury-stalowe-ze-szwem-spiralnym_2-1.jpg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/ecotech-group-rury-stalowe-ze-szwem-spiralnym_2-1-767x480.jpg" alt="" class="wp-image-15504"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/img/posts/2022/06/ecotech-group-rury-stalowe-ze-szwem-spiralnym_2-1.jpg"><img src="/img/posts/2022/06/ecotech-group-rury-stalowe-ze-szwem-spiralnym_2-1-767x480.jpg" alt="" class="wp-image-15504"/></a></figure>
 </div>
 </div>
 
@@ -37,7 +37,7 @@ imageAlt: "||"
 
 <div class="wp-block-columns reverse-mob">
 <div class="wp-block-column">
-<figure class="wp-block-image size-large"><a href="https://ecotechgroup.pl/wp-content/uploads/2022/06/ecotech-group-rury-stalowe-ze-szwem-wzdluznym_1.jpg"><img src="https://ecotechgroup.pl/wp-content/uploads/2022/06/ecotech-group-rury-stalowe-ze-szwem-wzdluznym_1-767x480.jpg" alt="" class="wp-image-15505"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/img/posts/2022/06/ecotech-group-rury-stalowe-ze-szwem-wzdluznym_1.jpg"><img src="/img/posts/2022/06/ecotech-group-rury-stalowe-ze-szwem-wzdluznym_1-767x480.jpg" alt="" class="wp-image-15505"/></a></figure>
 </div>
 
 

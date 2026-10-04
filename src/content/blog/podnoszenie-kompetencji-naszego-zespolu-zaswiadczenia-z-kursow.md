@@ -5,7 +5,7 @@ slug: "podnoszenie-kompetencji-naszego-zespolu-zaswiadczenia-z-kursow"
 category: "Aktualności"
 source: "https://ecotechgroup.pl/podnoszenie-kompetencji-naszego-zespolu-zaswiadczenia-z-kursow/"
 description: "Zapraszamy do zapoznania się z certyfikatami i zaświadczeniami z odbytych szkoleń przez nasz zespół, które świadczą o zaangażowaniu i rozwijaniu umiejętności żeby jak najlepiej sprostać…"
-image: "https://ecotechgroup.pl/wp-content/uploads/2023/02/o-firmie.png"
+image: "/img/posts/2023/02/o-firmie.png"
 imageAlt: "o-firmie"
 ---
 

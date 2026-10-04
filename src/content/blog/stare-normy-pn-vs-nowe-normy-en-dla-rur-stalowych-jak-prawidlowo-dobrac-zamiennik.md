@@ -5,7 +5,7 @@ slug: "stare-normy-pn-vs-nowe-normy-en-dla-rur-stalowych-jak-prawidlowo-dobrac-z
 category: "Aktualności"
 source: "https://ecotechgroup.pl/stare-normy-pn-vs-nowe-normy-en-dla-rur-stalowych-jak-prawidlowo-dobrac-zamiennik/"
 description: "W dokumentacji technicznej, projektach wykonawczych i starszych specyfikacjach materiałowych nadal można spotkać oznaczenia dawnych Polskich Norm, takie jak PN-80/H-74219, PN-74/H-74200…"
-image: "https://ecotechgroup.pl/wp-content/uploads/2026/06/stre-normy-vs-nowe.png"
+image: "/img/posts/2026/06/stre-normy-vs-nowe.png"
 imageAlt: "stre-normy-vs-nowe"
 ---
 

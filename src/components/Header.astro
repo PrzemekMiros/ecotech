@@ -16,6 +16,8 @@ const pathname = Astro.url.pathname;
 const services = (await getCollection('services')).sort((a, b) => a.data.order - b.data.order);
 const productionItems = (await getCollection('production')).sort((a, b) => a.data.order - b.data.order);
 const pipeCategories = (await getCollection('steelPipeCategories')).sort((a, b) => a.data.order - b.data.order);
+const itemHref = (menu: 'pipes' | 'services' | 'production', baseHref: string, slug: string) =>
+  menu === 'pipes' ? `/rury-stalowe-${slug}` : `${baseHref}/${slug}`;
 ---
 
 <header class="absolute inset-x-0 top-0 z-30 text-white">
@@ -61,7 +63,7 @@ const pipeCategories = (await getCollection('steelPipeCategories')).sort((a, b) 
 
                 <div class="mt-6 grid grid-cols-2 gap-x-10 gap-y-1">
                   {(link.menu === 'pipes' ? pipeCategories : link.menu === 'production' ? productionItems : services).map((item, index) => (
-                    <a href={`${link.href}/${item.data.slug}`} class="flex items-start gap-3 border-b border-ink/8 py-4 text-ink/70 transition-colors hover:border-accent-1 hover:text-accent-1 focus:border-accent-1 focus:text-accent-1">
+                    <a href={itemHref(link.menu, link.href, item.data.slug)} class="flex items-start gap-3 border-b border-ink/8 py-4 text-ink/70 transition-colors hover:border-accent-1 hover:text-accent-1 focus:border-accent-1 focus:text-accent-1">
                       <span class="pt-0.5 text-xs font-bold tracking-[0.12em] text-accent-1/65">{String(index + 1).padStart(2, '0')}</span>
                       <span class="leading-5">{item.data.title}</span>
                     </a>
@@ -103,7 +105,7 @@ const pipeCategories = (await getCollection('steelPipeCategories')).sort((a, b) 
               <div class="pb-5">
                 <a href="/rury-stalowe" class="mb-2 block text-sm font-semibold text-sun">Wszystkie kategorie →</a>
                 <div class="grid gap-1 sm:grid-cols-2">
-                  {pipeCategories.map((category) => <a href={`/rury-stalowe/${category.data.slug}`} class="block py-2 text-sm text-ink/65 hover:text-accent-1">{category.data.title}</a>)}
+                  {pipeCategories.map((category) => <a href={itemHref('pipes', '/rury-stalowe', category.data.slug)} class="block py-2 text-sm text-ink/65 hover:text-accent-1">{category.data.title}</a>)}
                 </div>
               </div>
             </details>

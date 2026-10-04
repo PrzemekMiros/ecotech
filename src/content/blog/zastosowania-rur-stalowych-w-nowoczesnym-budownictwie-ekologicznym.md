@@ -5,7 +5,7 @@ slug: "zastosowania-rur-stalowych-w-nowoczesnym-budownictwie-ekologicznym"
 category: "Aktualności"
 source: "https://ecotechgroup.pl/zastosowania-rur-stalowych-w-nowoczesnym-budownictwie-ekologicznym/"
 description: "W dobie rosnącej świadomości ekologicznej i konieczności ograniczania negatywnego wpływu budownictwa na środowisko, rury stalowe zyskują na znaczeniu jako materiał konstrukcyjny i…"
-image: "https://ecotechgroup.pl/wp-content/uploads/2021/11/wymiary-rur-stalowych-1-compress.jpg"
+image: "/img/posts/2021/11/wymiary-rur-stalowych-1-compress.jpg"
 imageAlt: "wymiary-rur-stalowych"
 ---
 

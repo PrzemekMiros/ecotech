@@ -5,7 +5,7 @@ slug: "sposoby-laczenia-rur-w-zaleznosci-od-ich-rodzaju"
 category: "Aktualności"
 source: "https://ecotechgroup.pl/sposoby-laczenia-rur-w-zaleznosci-od-ich-rodzaju/"
 description: "Od tego, czy rury zostaną ze sobą połączone we właściwy sposób, zależy jakość działania całej instalacji. Jeśli połączenie zostanie wykonane niestarannie lub z wykorzystaniem…"
-image: "https://ecotechgroup.pl/wp-content/uploads/2022/06/spawanie1-1-compress.jpg"
+image: "/img/posts/2022/06/spawanie1-1-compress.jpg"
 imageAlt: "spawanie1-1"
 ---
 

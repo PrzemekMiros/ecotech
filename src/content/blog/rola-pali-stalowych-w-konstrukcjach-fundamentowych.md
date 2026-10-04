@@ -5,7 +5,7 @@ slug: "rola-pali-stalowych-w-konstrukcjach-fundamentowych"
 category: "Aktualności"
 source: "https://ecotechgroup.pl/rola-pali-stalowych-w-konstrukcjach-fundamentowych/"
 description: "Gdy mowa o budowie fundamentów, zwykle w naszej głowie rysuje się obraz płyt fundamentowych i prętów zbrojeniowych. Tymczasem konstrukcje fundamentowe równie dobrze mogą być tworzone z…"
-image: "https://ecotechgroup.pl/wp-content/uploads/2022/06/Spawanie-zamkow-do-rur-stalowych-_-Pale-Combiwall-_-Spawanie-rur-stalowych-_-Pale-stalowe-_-Rury-stalowe-_-Grodzice-stalowe-z-rurami-Eco-Tech-Sp.-z-o.o.-840x480-1-compress.jpg"
+image: "/img/posts/2022/06/Spawanie-zamkow-do-rur-stalowych-_-Pale-Combiwall-_-Spawanie-rur-stalowych-_-Pale-stalowe-_-Rury-stalowe-_-Grodzice-stalowe-z-rurami-Eco-Tech-Sp.-z-o.o.-840x480-1-compress.jpg"
 imageAlt: "Spawanie-zamkow-do-rur-stalowych-_-Pale-Combiwall-_-Spawanie-rur-stalowych-_-Pale-stalowe-_-Rury-stalowe-_-Grodzice-stalowe-z-rurami-Eco-Tech-Sp.-z-o.o.--840x480"
 ---
 
