@@ -1,0 +1,157 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+
+const browserLinks = [
+  ['Chrome', 'https://support.google.com/chrome/answer/95647'],
+  ['Opera', 'https://help.opera.com/en/latest/web-preferences/#cookies'],
+  ['Firefox', 'https://support.mozilla.org/pl/kb/ciasteczka'],
+  ['Edge', 'https://support.microsoft.com/pl-pl/microsoft-edge/usuwanie-plik%C3%B3w-cookie-w-przegl%C4%85darce-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09'],
+  ['Safari', 'https://support.apple.com/pl-pl/guide/safari/sfri11471/mac']
+];
+---
+
+<BaseLayout title="Polityka prywatności | Eco Tech Group" description="Polityka prywatności serwisu Eco Tech Group.">
+  <PageHero title="Polityka prywatności" />
+
+  <article class="mx-auto max-w-4xl px-5 py-16 md:px-8 md:py-24">
+    <div class="privacy-content">
+      <p class="lead">Niniejsza Polityka Prywatności określa zasady zapisywania i uzyskiwania dostępu do danych na urządzeniach Użytkowników korzystających z Serwisu, a także zasady gromadzenia i przetwarzania danych osobowych podanych dobrowolnie za pośrednictwem narzędzi dostępnych w Serwisie.</p>
+      <p>Polityka Prywatności stanowi integralną część Regulaminu Serwisu i określa zasady, prawa oraz obowiązki Użytkowników korzystających z Serwisu.</p>
+
+      <section>
+        <h2>§1 Definicje</h2>
+        <dl>
+          <dt>Serwis</dt><dd>serwis internetowy „Eco Tech Group” działający pod adresem <a href="https://ecotechgroup.pl/">https://ecotechgroup.pl/</a>.</dd>
+          <dt>Administrator Serwisu / Danych</dt><dd>Eco Tech Group Sp. z o.o., ul. Mieczysława Pożaryskiego 32, 04-703 Warszawa, NIP: 675 145 528 52, KRS: 000 038 60 48, świadcząca usługi drogą elektroniczną za pośrednictwem Serwisu.</dd>
+          <dt>Użytkownik</dt><dd>osoba fizyczna, dla której Administrator świadczy usługi drogą elektroniczną za pośrednictwem Serwisu.</dd>
+          <dt>Urządzenie</dt><dd>elektroniczne urządzenie wraz z oprogramowaniem, za pośrednictwem którego Użytkownik uzyskuje dostęp do Serwisu.</dd>
+          <dt>Cookies</dt><dd>dane tekstowe gromadzone w formie plików zamieszczanych na Urządzeniu Użytkownika.</dd>
+          <dt>RODO</dt><dd>Rozporządzenie Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r.</dd>
+          <dt>Dane osobowe</dt><dd>informacje o zidentyfikowanej lub możliwej do zidentyfikowania osobie fizycznej.</dd>
+          <dt>Przetwarzanie</dt><dd>operacja lub zestaw operacji wykonywanych na danych osobowych lub zestawach danych osobowych, w sposób zautomatyzowany lub niezautomatyzowany.</dd>
+          <dt>Profilowanie</dt><dd>zautomatyzowane przetwarzanie danych służące ocenie czynników osobowych osoby fizycznej.</dd>
+          <dt>Zgoda</dt><dd>dobrowolne, konkretne, świadome i jednoznaczne okazanie woli osoby, której dane dotyczą.</dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>§2 Inspektor Ochrony Danych</h2>
+        <p>Na podstawie art. 37 RODO Administrator nie powołał Inspektora Ochrony Danych. W sprawach dotyczących przetwarzania danych, w tym danych osobowych, należy kontaktować się bezpośrednio z Administratorem.</p>
+      </section>
+
+      <section>
+        <h2>§3 Rodzaje plików Cookies</h2>
+        <ul>
+          <li><strong>Cookies wewnętrzne</strong> – pliki zamieszczane i odczytywane przez system teleinformatyczny Serwisu.</li>
+          <li><strong>Cookies zewnętrzne</strong> – pliki zamieszczane i odczytywane przez systemy teleinformatyczne Serwisów zewnętrznych.</li>
+          <li><strong>Cookies sesyjne</strong> – usuwane po zakończeniu sesji danego Urządzenia.</li>
+          <li><strong>Cookies trwałe</strong> – przechowywane do czasu ich ręcznego usunięcia albo zgodnie z konfiguracją przeglądarki Użytkownika.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>§4 Bezpieczeństwo składowania danych</h2>
+        <p>Mechanizmy zapisu, odczytu i wymiany danych pomiędzy plikami Cookies a Serwisem są realizowane przez wbudowane mechanizmy przeglądarek. Nie pozwalają one na pobieranie innych danych z Urządzenia Użytkownika ani danych innych odwiedzanych witryn.</p>
+        <p>Administrator dokłada starań, aby stosowane Cookies były bezpieczne dla Urządzeń Użytkowników. Administrator weryfikuje partnerów zewnętrznych, jednak nie posiada pełnej kontroli nad zawartością plików Cookies pochodzących od tych partnerów.</p>
+        <h3>Kontrola plików Cookies</h3>
+        <p>Użytkownik może w dowolnym momencie zmienić ustawienia dotyczące zapisywania, usuwania i dostępu do plików Cookies oraz usunąć zapisane pliki za pomocą ustawień swojej przeglądarki lub Urządzenia.</p>
+        <ul>
+          {browserLinks.map(([label, href]) => <li><a href={href} target="_blank" rel="noopener noreferrer">Zarządzanie plikami Cookies w przeglądarce {label}</a></li>)}
+        </ul>
+        <p>Bezpieczeństwo danych zależy również od działań Użytkownika. Administrator stosuje odpowiednie zabezpieczenia fizyczne i organizacyjne, aby chronić dobrowolnie podane dane osobowe przed utratą oraz nieuprawnionym dostępem.</p>
+      </section>
+
+      <section>
+        <h2>§5 Cele wykorzystywania plików Cookies</h2>
+        <ul>
+          <li>usprawnienie i ułatwienie dostępu do Serwisu;</li>
+          <li>personalizacja Serwisu dla Użytkowników;</li>
+          <li>prowadzenie statystyk, w tym statystyk odwiedzin i rodzaju urządzeń;</li>
+          <li>świadczenie usług społecznościowych.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>§6 Cele przetwarzania danych osobowych</h2>
+        <p>Dane osobowe dobrowolnie podane przez Użytkowników mogą być przetwarzane w celu realizacji usług elektronicznych, komunikacji Administratora z Użytkownikami w sprawach związanych z Serwisem i ochroną danych oraz realizacji prawnie uzasadnionego interesu Administratora.</p>
+        <p>Dane gromadzone anonimowo i automatycznie mogą być przetwarzane w celu prowadzenia statystyk oraz realizacji prawnie uzasadnionego interesu Administratora.</p>
+      </section>
+
+      <section>
+        <h2>§7 Pliki Cookies Serwisów zewnętrznych</h2>
+        <p>Administrator może wykorzystywać skrypty JavaScript i komponenty webowe partnerów, którzy mogą umieszczać własne pliki Cookies na Urządzeniu Użytkownika. Użytkownik może samodzielnie zdecydować o dozwolonych plikach Cookies w ustawieniach przeglądarki.</p>
+        <p>W Serwisie mogą być wykorzystywane usługi Facebook, Instagram oraz Google Analytics. Usługi podmiotów trzecich pozostają poza kontrolą Administratora i mogą zmieniać zasady świadczenia usług, polityki prywatności lub sposób wykorzystywania plików Cookies.</p>
+      </section>
+
+      <section>
+        <h2>§8 Rodzaje gromadzonych danych</h2>
+        <p>Serwis może automatycznie i anonimowo gromadzić m.in.: adres IP, typ przeglądarki, rozdzielczość ekranu, przybliżoną lokalizację, otwierane podstrony, czas wizyty, rodzaj systemu operacyjnego, adres strony odsyłającej, język przeglądarki, prędkość łącza i dostawcę usług internetowych.</p>
+        <p>Dane osobowe mogą być podawane dobrowolnie przy korzystaniu z usług Serwisu, w tym w formularzach kontaktowych, zapisie do newslettera lub przy dodawaniu komentarza. Część danych nieidentyfikujących może być przechowywana w plikach Cookies albo przekazywana dostawcy usług statystycznych.</p>
+      </section>
+
+      <section>
+        <h2>§9 Dostęp do danych osobowych przez podmioty trzecie</h2>
+        <p>Co do zasady jedynym odbiorcą danych osobowych podawanych przez Użytkowników jest Administrator. Dane nie są przekazywane ani odsprzedawane podmiotom trzecim, z wyjątkiem podmiotów świadczących usługi niezbędne do prowadzenia Serwisu na podstawie stosownych umów.</p>
+        <p>Serwis może korzystać z usług dmsales.com należącego do DBMS sp. z o.o. oraz z usług hostingowych Lh.pl. Dane przetwarzane w ramach usług hostingowych są przechowywane w infrastrukturze zlokalizowanej w Polsce. Dostęp do danych może nastąpić w związku z pracami serwisowymi i jest regulowany umową z usługodawcą.</p>
+      </section>
+
+      <section>
+        <h2>§10 Sposób przetwarzania danych osobowych</h2>
+        <p>Dane osobowe podane dobrowolnie nie będą przekazywane poza Unię Europejską, wykorzystywane do zautomatyzowanego podejmowania decyzji ani odsprzedawane podmiotom trzecim, z wyjątkiem sytuacji wynikających z indywidualnego działania Użytkownika, np. publikacji komentarza.</p>
+        <p>Anonimowe dane statystyczne mogą być przekazywane poza Unię Europejską. Nie są wykorzystywane do zautomatyzowanego podejmowania decyzji ani odsprzedawane podmiotom trzecim.</p>
+      </section>
+
+      <section>
+        <h2>§11 Podstawy prawne przetwarzania danych osobowych</h2>
+        <p>Administrator przetwarza dane na podstawie RODO, w szczególności art. 6 ust. 1 lit. a (zgoda), lit. b (wykonanie umowy lub działania przed jej zawarciem) oraz lit. f (prawnie uzasadniony interes). Podstawę stanowią również właściwe przepisy polskiego prawa, w tym ustawa o ochronie danych osobowych i Prawo telekomunikacyjne.</p>
+      </section>
+
+      <section>
+        <h2>§12 Okres przetwarzania danych osobowych</h2>
+        <p>Dane dobrowolnie podane przez Użytkowników są co do zasady przechowywane przez okres świadczenia danej usługi, a następnie usuwane lub anonimizowane w okresie do 30 dni od zakończenia jej świadczenia.</p>
+        <p>Jeżeli jest to konieczne dla ochrony prawnie uzasadnionych interesów Administratora, dane mogą być przechowywane nie dłużej niż przez 3 lata od żądania ich usunięcia. Anonimowe dane statystyczne mogą być przechowywane przez czas nieoznaczony.</p>
+      </section>
+
+      <section>
+        <h2>§13 Prawa Użytkowników</h2>
+        <p>Użytkownikowi przysługuje prawo dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia danych, wniesienia sprzeciwu oraz złożenia skargi do organu nadzorczego. Żądania należy kierować do Administratora.</p>
+      </section>
+
+      <section>
+        <h2>§14 Kontakt do Administratora</h2>
+        <ul>
+          <li>adres pocztowy: Eco Tech Group Sp. z o.o., ul. Mieczysława Pożaryskiego 32, 04-703 Warszawa;</li>
+          <li>e-mail: <a href="mailto:sprzedaz@ecotechgroup.pl">sprzedaz@ecotechgroup.pl</a>;</li>
+          <li>telefon: <a href="tel:+48690090949">+48 690 090 949</a>;</li>
+          <li>formularz kontaktowy: <a href="/kontakt/">/kontakt/</a>.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>§15–§17 Postanowienia końcowe</h2>
+        <p>Ograniczenie zapisu lub dostępu do plików Cookies może spowodować nieprawidłowe działanie niektórych funkcji Serwisu. Administrator nie odpowiada za nieprawidłowe działanie funkcji Serwisu wynikające z ograniczenia przez Użytkownika możliwości zapisywania lub odczytu Cookies.</p>
+        <p>Serwis może zawierać odnośniki do witryn zewnętrznych. Administrator nie odpowiada za zawartość, bezpieczeństwo ani zasady przetwarzania danych w tych witrynach.</p>
+        <p>Administrator może zmieniać Politykę Prywatności. Zmiany dotyczące danych osobowych będą komunikowane Użytkownikom posiadającym konto lub zapisanym do newslettera drogą e-mailową, gdy będzie to wymagane. Aktualna treść Polityki jest publikowana na tej stronie i obowiązuje od chwili publikacji.</p>
+      </section>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .privacy-content { color: color-mix(in srgb, var(--color-ink) 76%, transparent); }
+  .privacy-content .lead { font-size: var(--step-1); line-height: 1.75; color: var(--color-ink); }
+  .privacy-content section { margin-top: 3.5rem; }
+  .privacy-content h2 { color: var(--color-ink); font-size: var(--step-2); font-weight: 600; letter-spacing: -0.035em; }
+  .privacy-content h3 { margin-top: 1.75rem; color: var(--color-ink); font-size: var(--step-1); font-weight: 600; }
+  .privacy-content p { margin-top: 1rem; line-height: 1.75; }
+  .privacy-content ul { margin-top: 1rem; list-style: disc; padding-left: 1.25rem; }
+  .privacy-content li { margin-top: 0.55rem; line-height: 1.65; }
+  .privacy-content dl { display: grid; grid-template-columns: minmax(0, 11rem) minmax(0, 1fr); margin-top: 1.25rem; border-top: 1px solid color-mix(in srgb, var(--color-ink) 12%, transparent); }
+  .privacy-content dt, .privacy-content dd { border-bottom: 1px solid color-mix(in srgb, var(--color-ink) 12%, transparent); padding: 1rem 0; }
+  .privacy-content dt { color: var(--color-ink); font-weight: 600; }
+  .privacy-content dd { line-height: 1.65; }
+  .privacy-content a { color: var(--color-accent-1); font-weight: 600; text-decoration: underline; text-underline-offset: 0.2em; }
+  .privacy-content a:hover { color: var(--color-ink); }
+  @media (max-width: 40rem) { .privacy-content dl { display: block; } .privacy-content dt { border-bottom: 0; padding-bottom: 0; } .privacy-content dd { margin-top: 0.35rem; } }
+</style>

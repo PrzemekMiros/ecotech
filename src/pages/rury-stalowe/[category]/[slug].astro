@@ -1,7 +1,9 @@
 ---
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import PageHero from '../../../components/PageHero.astro';
+import ContactFormHandler from '../../../components/ContactFormHandler.astro';
+
+export const prerender = true;
 
 export async function getStaticPaths() {
   const products = await getCollection('steelPipeProducts');
@@ -20,23 +22,329 @@ const { product } = Astro.props;
 const categories = await getCollection('steelPipeCategories');
 const category = categories.find((item) => item.data.slug === product.data.category);
 const { Content } = await render(product);
-const breadcrumbs = [
-  { label: 'Rury stalowe', href: '/rury-stalowe' },
-  { label: category?.data.title ?? 'Kategoria', href: `/rury-stalowe-${product.data.category}` }
+const technicalSummary = product.data.technicalSummary ?? product.data.description;
+const technicalParameters = [
+  ...(product.data.specification ? [{ label: 'Wymiar', value: product.data.specification }] : []),
+  ...(product.data.steelGrade ? [{ label: 'Gatunek stali', value: product.data.steelGrade }] : []),
+  ...(product.data.productionMethod ? [{ label: 'Metoda produkcji', value: product.data.productionMethod }] : []),
+  ...(product.data.intendedUse ? [{ label: 'Przeznaczenie', value: product.data.intendedUse }] : []),
+  ...product.data.technicalParameters
 ];
+const productSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: product.data.title,
+  description: technicalSummary,
+  sku: product.data.slug,
+  category: category?.data.title,
+  additionalProperty: technicalParameters.map((parameter) => ({
+    '@type': 'PropertyValue',
+    name: parameter.label,
+    value: parameter.value
+  }))
+};
 ---
 
-<BaseLayout title={`${product.data.title} | Eco Tech Group`} description={product.data.description}>
-  <article>
-    <PageHero title={product.data.title} breadcrumbs={breadcrumbs} />
+<BaseLayout title={`${product.data.title} | Eco Tech Group`} description={technicalSummary}>
+  <article class="product-page bg-white pt-32 text-ink lg:pt-38">
+    <div class="mx-auto max-w-7xl px-5 md:px-8">
+      <nav class="flex flex-wrap items-center gap-x-2 gap-y-1 py-6 text-sm text-ink/55" aria-label="Okruszki nawigacyjne">
+        <a href="/" class="hover:text-accent-1">Strona główna</a>
+        <span aria-hidden="true">/</span>
+        <a href="/rury-stalowe" class="hover:text-accent-1">Rury stalowe</a>
+        <span aria-hidden="true">/</span>
+        <a href={`/rury-stalowe-${product.data.category}`} class="hover:text-accent-1">{category?.data.title ?? 'Kategoria'}</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page" class="text-ink/70">{product.data.title}</span>
+      </nav>
+    </div>
 
-    <section class="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:grid-cols-[minmax(0,1fr)_18rem] md:px-8 md:py-24">
-      <div class="max-w-3xl text-ink/75 [&_h2]:mt-12 [&_h2]:text-3xl [&_h2]:font-semibold [&_h2]:tracking-[-0.04em] [&_p]:mt-6 [&_ul]:mt-6 [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-6"><Content /></div>
-      <aside class="h-fit border-t-2 border-accent-1 bg-mist p-6">
-        <p class="text-sm font-semibold">Zapytaj o produkt</p>
-        <p class="mt-3 text-sm leading-6 text-ink/65">Skontaktuj się z nami, aby potwierdzić dostępność i otrzymać wycenę.</p>
-        <a href="/kontakt" class="mt-6 inline-flex bg-accent-1 px-5 py-3 text-sm font-semibold text-white hover:bg-accent-1/85">Wyślij zapytanie</a>
+    <div class="mx-auto grid max-w-7xl lg:grid-cols-[minmax(0,1fr)_25rem] xl:grid-cols-[minmax(0,1fr)_28rem]">
+      <section class="px-5 pb-16 pt-4 md:px-8 lg:px-10 lg:pb-24">
+        <div class="mx-auto max-w-4xl">
+          <div class="grid gap-8 md:grid-cols-[15rem_minmax(0,1fr)] lg:grid-cols-[17rem_minmax(0,1fr)]">
+            <figure class="overflow-hidden border border-ink/10 bg-sand">
+              {category?.data.image ? (
+                <img src={category.data.image} alt={category.data.imageAlt ?? category.data.title} class="h-full min-h-56 w-full object-cover" />
+              ) : (
+                <div class="grid min-h-56 place-items-center bg-mist p-8 text-center text-sm text-ink/55">Zdjęcie produktu</div>
+              )}
+            </figure>
+
+            <div>
+              <p class="eyebrow">{category?.data.title ?? 'Rury stalowe'}</p>
+              <h1 class="mt-3 text-2xl font-semibold leading-tight tracking-[-0.04em] text-ink md:text-3xl">{product.data.title}</h1>
+              <p class="mt-6 max-w-2xl text-base leading-7 text-ink/65">{product.data.description}</p>
+              <a href="#formularz-zapytania" class="mt-5 inline-flex text-sm font-semibold text-accent-1 hover:text-ink">Sprawdź dostępność i wycenę →</a>
+
+              <dl class="mt-7 border-t border-ink/15 pt-5 text-sm leading-6 text-ink/70">
+                <div class="flex flex-wrap gap-x-2"><dt class="font-semibold text-ink">Kategoria:</dt><dd>{category?.data.title ?? 'Rury stalowe'}</dd></div>
+                {product.data.specification && <div class="mt-1 flex flex-wrap gap-x-2"><dt class="font-semibold text-ink">Wymiar:</dt><dd>{product.data.specification}</dd></div>}
+              </dl>
+            </div>
+          </div>
+
+          <section class="mt-12 border-l-4 border-accent-1 bg-mist px-6 py-6 md:px-8" aria-labelledby="technical-summary-heading">
+            <p class="eyebrow">Krótki opis techniczny</p>
+            <h2 id="technical-summary-heading" class="mt-2 text-xl font-semibold tracking-[-0.035em]">Najważniejsze informacje o produkcie</h2>
+            <p class="mt-3 max-w-3xl leading-7 text-ink/75">{technicalSummary}</p>
+          </section>
+
+          <section class="mt-12" aria-labelledby="product-details-heading">
+            <h2 id="product-details-heading" class="sr-only">Szczegóły produktu</h2>
+            <div class="product-tabs" data-product-tabs>
+              <label class="block sm:hidden">
+                <span class="sr-only">Wybierz sekcję informacji o produkcie</span>
+                <select class="product-tab-select" data-product-tab-select aria-label="Wybierz sekcję informacji o produkcie">
+                  <option value="tab-parameters">Parametry techniczne</option>
+                  <option value="tab-description">Opis</option>
+                  <option value="tab-quality">Gwarancja / Atesty</option>
+                  <option value="tab-documents">Pliki do pobrania</option>
+                  <option value="tab-reviews">Opinie</option>
+                </select>
+              </label>
+              <div class="hidden overflow-x-auto border-b border-ink/15 sm:flex" role="tablist" aria-label="Informacje o produkcie">
+                <button class="product-tab is-active" id="tab-parameters" type="button" role="tab" aria-selected="true" aria-controls="panel-parameters">Parametry techniczne</button>
+                <button class="product-tab" id="tab-description" type="button" role="tab" aria-selected="false" aria-controls="panel-description" tabindex="-1">Opis</button>
+                <button class="product-tab" id="tab-quality" type="button" role="tab" aria-selected="false" aria-controls="panel-quality" tabindex="-1">Gwarancja / Atesty</button>
+                <button class="product-tab" id="tab-documents" type="button" role="tab" aria-selected="false" aria-controls="panel-documents" tabindex="-1">Pliki do pobrania</button>
+                <button class="product-tab" id="tab-reviews" type="button" role="tab" aria-selected="false" aria-controls="panel-reviews" tabindex="-1">Opinie</button>
+              </div>
+
+              <div class="pt-8" id="panel-parameters" role="tabpanel" aria-labelledby="tab-parameters">
+                <dl class="border border-ink/10">
+                  {technicalParameters.map((parameter, index) => (
+                    <div class:list={['grid md:grid-cols-[11.5rem_minmax(0,1fr)]', index > 0 && 'border-t border-ink/10', index % 2 === 1 && 'bg-sand']}>
+                      <dt class="border-b border-ink/10 px-5 py-4 text-sm font-semibold md:border-b-0 md:border-r">{parameter.label}</dt>
+                      <dd class="px-5 py-4 text-sm leading-6 text-ink/75">{parameter.value}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+
+              <div class="pt-8" id="panel-description" role="tabpanel" aria-labelledby="tab-description" hidden>
+                <div class="product-rich-content max-w-3xl text-ink/75"><Content /></div>
+              </div>
+
+              <div class="pt-8" id="panel-quality" role="tabpanel" aria-labelledby="tab-quality" hidden>
+                <div class="max-w-3xl border border-accent-1/15 bg-mist p-6">
+                  <h3 class="text-lg font-semibold tracking-[-0.03em]">Dokumentacja jakościowa dla zamówienia</h3>
+                  <p class="mt-3 text-sm leading-6 text-ink/70">{product.data.qualityStatement ?? 'Parametry jakościowe i dokumenty odbiorowe są potwierdzane dla konkretnej partii materiału oraz wymagań zamówienia.'}</p>
+                  <p class="mt-3 text-sm leading-6 text-ink/70">Przed zakupem potwierdzimy zgodność wymaganej normy, gatunku stali i dokumentów z warunkami Twojego projektu.</p>
+                </div>
+              </div>
+
+              <div class="pt-8" id="panel-documents" role="tabpanel" aria-labelledby="tab-documents" hidden>
+                {product.data.documents.length > 0 ? (
+                  <ul class="max-w-3xl divide-y divide-ink/10 border-y border-ink/10">
+                    {product.data.documents.map((document) => (
+                      <li>
+                        <a class="flex items-center justify-between gap-4 px-1 py-4 font-semibold text-accent-1 hover:text-ink" href={document.url} target="_blank" rel="noopener noreferrer">
+                          <span>{document.title}</span>
+                          <span class="shrink-0 text-xs font-bold uppercase tracking-[0.12em]">{document.type} PDF ↗</span>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <div class="max-w-3xl border border-dashed border-ink/20 bg-white p-6">
+                    <h3 class="font-semibold">Dokumenty dla konkretnej partii</h3>
+                    <p class="mt-2 text-sm leading-6 text-ink/70">Poproś o deklarację, atest lub kartę techniczną odpowiadającą wybranej specyfikacji.</p>
+                    <a class="mt-4 inline-flex text-sm font-semibold text-accent-1 hover:text-ink" href="#formularz-zapytania">Zapytaj o dokumenty →</a>
+                  </div>
+                )}
+              </div>
+
+              <div class="pt-8" id="panel-reviews" role="tabpanel" aria-labelledby="tab-reviews" hidden>
+                <div class="max-w-3xl border border-dashed border-ink/20 bg-white p-6">
+                  <h3 class="font-semibold">Opinie o produkcie</h3>
+                  <p class="mt-2 text-sm leading-6 text-ink/70">Opinie dla tego produktu nie zostały jeszcze opublikowane.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <aside id="formularz-zapytania" class="bg-[#f1f4f6] px-5 py-9 md:px-8 lg:px-10 lg:py-12">
+        <form class="contact-form mx-auto max-w-md" novalidate>
+          <h2 class="text-2xl font-semibold tracking-[-0.04em] text-ink">Zapytaj o dostępność</h2>
+          <p class="mt-3 text-sm leading-6 text-ink/65">Prześlij parametry potrzebne do przygotowania oferty. Odpowiemy z dostępnością i wyceną.</p>
+
+          <div class="mt-7 grid gap-3 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+            <label class="block md:col-span-2 lg:col-span-1 xl:col-span-2">
+              <span class="sr-only">Produkt</span>
+              <input type="text" name="product" value={product.data.title} readonly aria-label="Wybrany produkt" class="w-full truncate border border-ink/15 bg-white px-4 py-4 text-base text-ink/75 outline-none sm:text-sm" />
+            </label>
+            <label class="block md:col-span-2 lg:col-span-1 xl:col-span-2">
+              <span class="sr-only">Imię i nazwisko</span>
+              <input type="text" name="name" autocomplete="name" placeholder="Imię i nazwisko" class="w-full border border-ink/15 bg-white px-4 py-4 text-base text-ink outline-none placeholder:text-ink/45 focus:border-accent-1 focus:ring-1 focus:ring-accent-1 sm:text-sm" />
+            </label>
+            <label class="block">
+              <span class="sr-only">Numer telefonu</span>
+              <input type="tel" name="phone" autocomplete="tel" placeholder="Numer telefonu" class="w-full border border-ink/15 bg-white px-4 py-4 text-base text-ink outline-none placeholder:text-ink/45 focus:border-accent-1 focus:ring-1 focus:ring-accent-1 sm:text-sm" />
+            </label>
+            <label class="block">
+              <span class="sr-only">Adres e-mail</span>
+              <input type="email" name="email" autocomplete="email" placeholder="Adres e-mail" class="w-full border border-ink/15 bg-white px-4 py-4 text-base text-ink outline-none placeholder:text-ink/45 focus:border-accent-1 focus:ring-1 focus:ring-accent-1 sm:text-sm" />
+            </label>
+            <label class="block md:col-span-2 lg:col-span-1 xl:col-span-2">
+              <span class="sr-only">Nazwa firmy</span>
+              <input type="text" name="company" autocomplete="organization" placeholder="Nazwa firmy" class="w-full border border-ink/15 bg-white px-4 py-4 text-base text-ink outline-none placeholder:text-ink/45 focus:border-accent-1 focus:ring-1 focus:ring-accent-1 sm:text-sm" />
+            </label>
+            <label class="block md:col-span-2 lg:col-span-1 xl:col-span-2">
+              <span class="sr-only">NIP</span>
+              <input type="text" name="nip" inputmode="numeric" placeholder="NIP" class="w-full border border-ink/15 bg-white px-4 py-4 text-base text-ink outline-none placeholder:text-ink/45 focus:border-accent-1 focus:ring-1 focus:ring-accent-1 sm:text-sm" />
+            </label>
+            <label class="block md:col-span-2 lg:col-span-1 xl:col-span-2">
+              <span class="sr-only">Wiadomość</span>
+              <textarea name="message" rows="5" placeholder="Twoja wiadomość" class="w-full resize-y border border-ink/15 bg-white px-4 py-4 text-base text-ink outline-none placeholder:text-ink/45 focus:border-accent-1 focus:ring-1 focus:ring-accent-1 sm:text-sm"></textarea>
+            </label>
+          </div>
+
+          <label class="mt-5 flex items-start gap-3 text-sm leading-5 text-ink/55">
+            <input type="checkbox" name="privacy" class="mt-0.5 size-5 shrink-0 accent-accent-1" />
+            <span>Wyrażam zgodę na przetwarzanie moich danych osobowych w celu udzielenia odpowiedzi na zapytanie.</span>
+          </label>
+          <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />
+          <p class="contact-form-status mt-4 text-sm text-ink/70" aria-live="polite"></p>
+          <button type="submit" class="mt-6 w-full bg-accent-1 px-8 py-4 text-base font-semibold text-white transition-colors hover:bg-accent-1/85 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto sm:text-sm">Wyślij zapytanie</button>
+        </form>
       </aside>
-    </section>
+    </div>
   </article>
+  <script type="application/ld+json" set:html={JSON.stringify(productSchema)}></script>
+  <ContactFormHandler />
 </BaseLayout>
+
+<script>
+  const tabGroups = document.querySelectorAll<HTMLElement>('[data-product-tabs]');
+
+  tabGroups.forEach((group) => {
+    const tabs = Array.from(group.querySelectorAll<HTMLButtonElement>('[role="tab"]'));
+    const tabSelect = group.querySelector<HTMLSelectElement>('[data-product-tab-select]');
+    const panels = tabs.map((tab) => document.getElementById(tab.getAttribute('aria-controls') ?? '')).filter((panel): panel is HTMLElement => Boolean(panel));
+
+    const activateTab = (activeTab: HTMLButtonElement) => {
+      tabs.forEach((tab) => {
+        const isActive = tab === activeTab;
+        tab.classList.toggle('is-active', isActive);
+        tab.setAttribute('aria-selected', String(isActive));
+        tab.tabIndex = isActive ? 0 : -1;
+      });
+      panels.forEach((panel) => {
+        panel.hidden = panel.id !== activeTab.getAttribute('aria-controls');
+      });
+      if (tabSelect) tabSelect.value = activeTab.id;
+    };
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => activateTab(tab));
+      tab.addEventListener('keydown', (event) => {
+        if (!['ArrowRight', 'ArrowLeft', 'Home', 'End'].includes(event.key)) return;
+        event.preventDefault();
+        const nextIndex = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 : (index + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+        tabs[nextIndex].focus();
+        activateTab(tabs[nextIndex]);
+      });
+    });
+
+    tabSelect?.addEventListener('change', () => {
+      const tab = tabs.find((item) => item.id === tabSelect.value);
+      if (tab) activateTab(tab);
+    });
+  });
+</script>
+
+<style is:global>
+  body:has(.product-page) > header {
+    background: #fff;
+    color: var(--color-ink);
+  }
+
+  body:has(.product-page) > header img {
+    filter: brightness(0) saturate(100%);
+  }
+
+  body:has(.product-page) > header a {
+    color: var(--color-ink);
+  }
+
+  body:has(.product-page) > header a.bg-accent-1 {
+    color: #fff;
+  }
+
+  body:has(.product-page) > header nav {
+    border-color: color-mix(in srgb, var(--color-ink) 15%, transparent);
+  }
+
+  body:has(.product-page) > header svg path[fill] {
+    fill: var(--color-ink) !important;
+  }
+</style>
+
+<style>
+  .product-tab-select {
+    width: 100%;
+    min-height: 3.25rem;
+    appearance: none;
+    border: 1px solid color-mix(in srgb, var(--color-ink) 18%, transparent);
+    border-radius: 0;
+    background-color: var(--color-sand);
+    background-image: linear-gradient(45deg, transparent 50%, var(--color-accent-1) 50%), linear-gradient(135deg, var(--color-accent-1) 50%, transparent 50%);
+    background-position: calc(100% - 1.15rem) calc(50% - 0.15rem), calc(100% - 0.85rem) calc(50% - 0.15rem);
+    background-size: 0.35rem 0.35rem, 0.35rem 0.35rem;
+    background-repeat: no-repeat;
+    padding: 0.75rem 2.75rem 0.75rem 1rem;
+    color: var(--color-ink);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .product-tab-select:focus-visible {
+    outline: 2px solid var(--color-sun);
+    outline-offset: 2px;
+  }
+
+  .product-tab {
+    border: 1px solid transparent;
+    border-bottom: 0;
+    padding: 0.9rem 1.1rem;
+    color: color-mix(in srgb, var(--color-ink) 65%, transparent);
+    font-size: var(--step--1);
+    font-weight: 600;
+    line-height: 1.25;
+    white-space: nowrap;
+  }
+
+  .product-tab:hover,
+  .product-tab:focus-visible {
+    color: var(--color-accent-1);
+  }
+
+  .product-tab:focus-visible {
+    outline: 2px solid var(--color-sun);
+    outline-offset: -2px;
+  }
+
+  .product-tab.is-active {
+    border-color: color-mix(in srgb, var(--color-ink) 15%, transparent);
+    background: var(--color-sand);
+    color: var(--color-ink);
+  }
+
+  .product-rich-content :global(p + p) { margin-top: 1rem; }
+  .product-rich-content :global(h2),
+  .product-rich-content :global(h3) {
+    margin-top: 1.75rem;
+    color: var(--color-ink);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+  }
+  .product-rich-content :global(h2) { font-size: var(--step-2); }
+  .product-rich-content :global(ul) {
+    margin-top: 1rem;
+    list-style: disc;
+    padding-left: 1.25rem;
+  }
+</style>

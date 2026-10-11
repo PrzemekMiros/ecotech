@@ -3,6 +3,7 @@ import { Picture } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SteelPipeCarousel from '../components/SteelPipeCarousel.astro';
 import DeliveryMap from '../components/DeliveryMap.astro';
+import ContactFormHandler from '../components/ContactFormHandler.astro';
 import heroImage from '../assets/img/main/hero-industrial-pipes.jpg';
 import workshopImage from '../assets/img/main/eco-tech-o-firmie.jpg';
 import hallImage from '../assets/img/main/hala-rury-stalowe-wynajem.jpg';
@@ -92,7 +93,7 @@ import logosImage from '../assets/img/main/logos-desktop.webp';
   <section id="kontakt" class="bg-[#0e0f24] py-16 text-white md:py-24">
     <div class="mx-auto max-w-7xl px-5 md:px-8">
       <div class="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] lg:items-start lg:gap-16">
-        <form class="bg-white/[0.045] p-6 sm:p-9 md:p-10" novalidate>
+        <form class="contact-form bg-white/[0.045] p-6 sm:p-9 md:p-10" novalidate>
           <div class="grid gap-4 sm:grid-cols-2">
             <label class="block sm:col-span-2">
               <span class="sr-only">Imię i nazwisko</span>
@@ -124,7 +125,9 @@ import logosImage from '../assets/img/main/logos-desktop.webp';
             <input type="checkbox" name="privacy" class="mt-0.5 size-4 shrink-0 accent-accent-1" />
             <span>Wyrażam zgodę na przetwarzanie moich danych osobowych przez Eco Tech Group Sp. z o.o. w celu przesłania na wskazany przeze mnie e-mail informacji handlowych.</span>
           </label>
-          <button type="button" class="mt-8 w-full bg-accent-1 px-7 py-4 text-sm font-semibold text-white transition-colors hover:bg-accent-1/85">Wyślij formularz</button>
+          <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />
+          <p class="contact-form-status mt-4 text-sm text-white/80" aria-live="polite"></p>
+          <button type="submit" class="mt-8 w-full bg-accent-1 px-7 py-4 text-sm font-semibold text-white transition-colors hover:bg-accent-1/85 disabled:cursor-not-allowed disabled:opacity-60">Wyślij formularz</button>
         </form>
 
         <div class="pt-1 lg:pt-16">
@@ -212,4 +215,5 @@ import logosImage from '../assets/img/main/logos-desktop.webp';
     </div>
   </section>
 
+  <ContactFormHandler />
 </BaseLayout>

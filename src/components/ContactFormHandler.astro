@@ -1,0 +1,40 @@
+<script>
+  document.querySelectorAll<HTMLFormElement>('.contact-form').forEach((form) => {
+    if (form.dataset.initialised) return;
+    form.dataset.initialised = 'true';
+    const button = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+    const status = form.querySelector<HTMLElement>('.contact-form-status');
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      try {
+        data.source = sessionStorage.getItem('ecotech-lead-source') || '';
+      } catch {
+        data.source = '';
+      }
+      const required = ['name', 'message'];
+      const hasContact = String(data.email || '').trim() || String(data.phone || '').trim();
+      if (required.some((field) => !String(data[field] || '').trim()) || !hasContact || !data.privacy) {
+        if (status) status.textContent = 'Podaj imię, wiadomość, e-mail lub telefon oraz zaakceptuj zgodę.';
+        return;
+      }
+
+      if (button) button.disabled = true;
+      if (status) status.textContent = 'Wysyłanie…';
+      try {
+        const response = await fetch('/api/firmao-lead', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data),
+        });
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok) throw new Error(result.message || 'Nie udało się wysłać formularza.');
+        form.reset();
+        if (status) status.textContent = result.message || 'Dziękujemy — zapytanie zostało wysłane.';
+      } catch (error) {
+        if (status) status.textContent = error instanceof Error ? error.message : 'Nie udało się wysłać formularza.';
+      } finally {
+        if (button) button.disabled = false;
+      }
+    });
+  });
+</script>

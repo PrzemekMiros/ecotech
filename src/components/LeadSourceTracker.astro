@@ -1,0 +1,43 @@
+<script>
+  const storageKey = 'ecotech-lead-source';
+
+  type LeadSource = {
+    channel: 'ads' | 'organic' | 'referral' | 'direct';
+    landingPage: string;
+    referrerHost: string;
+    utmSource: string;
+    utmMedium: string;
+    utmCampaign: string;
+    utmTerm: string;
+    utmContent: string;
+  };
+
+  const trim = (value: string | null, maximum = 160) => (value || '').trim().slice(0, maximum);
+
+  function getSource(): LeadSource {
+    const params = new URLSearchParams(window.location.search);
+    const referrer = new URL(document.referrer || window.location.origin);
+    const referrerHost = document.referrer && referrer.host !== window.location.host ? referrer.host : '';
+    const utmMedium = trim(params.get('utm_medium'));
+    const isPaid = /cpc|ppc|paid|display|affiliate|paid_social/i.test(utmMedium)
+      || ['gclid', 'gbraid', 'wbraid', 'fbclid', 'msclkid', 'ttclid'].some((key) => params.has(key));
+    const isSearch = /(^|\.)(google|bing|yahoo|duckduckgo|yandex)\./i.test(referrerHost);
+
+    return {
+      channel: isPaid ? 'ads' : isSearch ? 'organic' : referrerHost ? 'referral' : 'direct',
+      landingPage: window.location.pathname.slice(0, 300),
+      referrerHost,
+      utmSource: trim(params.get('utm_source')),
+      utmMedium,
+      utmCampaign: trim(params.get('utm_campaign')),
+      utmTerm: trim(params.get('utm_term')),
+      utmContent: trim(params.get('utm_content')),
+    };
+  }
+
+  try {
+    if (!sessionStorage.getItem(storageKey)) sessionStorage.setItem(storageKey, JSON.stringify(getSource()));
+  } catch {
+    // Source attribution is optional; blocking storage must not block form submission.
+  }
+</script>

@@ -2,6 +2,8 @@
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
+export const prerender = true;
+
 export async function getStaticPaths() {
   const posts = await getCollection('news');
   return posts.map((post) => ({ params: { slug: post.data.slug }, props: { post } }));

@@ -90,6 +90,20 @@ const steelPipeProducts = defineCollection({
     category: z.string(),
     description: z.string(),
     specification: z.string().optional(),
+    technicalSummary: z.string().min(40).optional(),
+    steelGrade: z.string().optional(),
+    productionMethod: z.string().optional(),
+    intendedUse: z.string().optional(),
+    technicalParameters: z.array(z.object({
+      label: z.string(),
+      value: z.string()
+    })).default([]),
+    qualityStatement: z.string().optional(),
+    documents: z.array(z.object({
+      title: z.string(),
+      url: z.string().url(),
+      type: z.enum(['DoP', 'Atest', 'Certyfikat', 'Karta techniczna'])
+    })).default([]),
     order: z.number()
   })
 });

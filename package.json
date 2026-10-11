@@ -6,9 +6,11 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "start": "node ./dist/server/entry.mjs"
   },
   "dependencies": {
+    "@astrojs/node": "^9.5.5",
     "@astrojs/sitemap": "^3.2.1",
     "@tailwindcss/vite": "^4.1.0",
     "astro": "^5.5.0",

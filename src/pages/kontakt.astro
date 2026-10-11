@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactFormHandler from '../components/ContactFormHandler.astro';
 import PageHero from '../components/PageHero.astro';
 
 const mapQuery = 'Eco Tech Group Sp. z o.o., Mieczysława Pożaryskiego 32, 04-703 Warszawa';
@@ -44,7 +45,7 @@ Jesteśmy dostępni od poniedziałku do piątku w godzinach 8:00 - 16:00.</p>
     </section>
 
     <div class="mt-12 grid overflow-hidden border border-accent-1/15 bg-white lg:grid-cols-2">
-      <form class="p-6 sm:p-8 lg:p-10" novalidate>
+      <form class="contact-form p-6 sm:p-8 lg:p-10" novalidate>
         <div class="flex items-center justify-between gap-5 border-b border-ink/10 pb-6">
           <div>
             <p class="mt-2 text-sm leading-6 text-ink/60">Wypełnij formularz — wrócimy z odpowiedzią.</p>
@@ -85,7 +86,9 @@ Jesteśmy dostępni od poniedziałku do piątku w godzinach 8:00 - 16:00.</p>
           <input type="checkbox" name="privacy" class="mt-0.5 size-4 accent-accent-1" />
           <span>Wyrażam zgodę na przetwarzanie moich danych osobowych w celu udzielenia odpowiedzi na zapytanie.</span>
         </label>
-        <button type="button" class="mt-6 bg-accent-1 px-7 py-4 text-sm font-semibold text-white transition-colors hover:bg-accent-1/85">Wyślij formularz</button>
+        <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />
+        <p class="contact-form-status mt-4 text-sm text-ink/70" aria-live="polite"></p>
+        <button type="submit" class="mt-6 bg-accent-1 px-7 py-4 text-sm font-semibold text-white transition-colors hover:bg-accent-1/85 disabled:cursor-not-allowed disabled:opacity-60">Wyślij formularz</button>
       </form>
 
       <div class="relative min-h-[32rem] overflow-hidden bg-mist lg:min-h-full">
@@ -98,4 +101,5 @@ Jesteśmy dostępni od poniedziałku do piątku w godzinach 8:00 - 16:00.</p>
       </div>
     </div>
   </section>
+  <ContactFormHandler />
 </BaseLayout>
