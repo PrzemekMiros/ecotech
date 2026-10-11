@@ -1,22 +1,28 @@
 ---
 title: "Rura stalowa bez szwu fi 133,9 x 4,5 mm"
 slug: "rura-stalowa-bez-szwu-fi-133-9-x-4-5-mm"
+sku: "692"
 category: "bez-szwu"
-description: "Rura stalowa bez szwu o średnicy 133,9 mm i grubości ścianki 4,5 mm."
-specification: "Ø 133,9 mm × 4,5 mm"
-technicalSummary: "Rura stalowa bez szwu o średnicy zewnętrznej 133,9 mm i grubości ścianki 4,5 mm. Wykonywana metodą walcowania na gorąco; gatunek stali oraz norma wykonania są dobierane do specyfikacji zamówienia i potwierdzane dla konkretnej partii. Przeznaczona do konstrukcji stalowych i instalacji o wymaganiach określonych w projekcie."
-steelGrade: "Dobierany do wymagań projektu i zamówionej normy"
-productionMethod: "Walcowanie na gorąco — rura bez szwu"
-intendedUse: "Konstrukcje stalowe oraz instalacje przemysłowe"
+description: "Rura stalowa bez szwu fi 133,9 x 4,5 mm - najwyższa jakość w konkurencyjnej cenie. Sprawdź dostępność poprzez formularz kontaktowy lub telefonicznie  +48 508 299 077"
+specification: "133,9mm x 4,5mm"
+technicalSummary: "Rura stalowa bez szwu fi 133,9 x 4,5 mm. Parametry techniczne obejmują: Średnica: 133,9mm; Norma: PN-EN 10210, PN-EN 10217, PN-EN 10219; Ścianka: 4,5mm; Gatunek: P235, P355, S235, S275, S355, S420, S460; Długość: 12mb, 6mb. Dostępność, wymagania jakościowe i warunki dostawy potwierdzamy dla wybranej specyfikacji w odpowiedzi na zapytanie."
+steelGrade: "P235, P355, S235, S275, S355, S420, S460"
 technicalParameters:
-  - label: "Średnica zewnętrzna"
-    value: "133,9 mm"
-  - label: "Grubość ścianki"
-    value: "4,5 mm"
-  - label: "Rodzaj"
-    value: "Rura stalowa bez szwu"
-qualityStatement: "Dokumenty jakościowe, w tym atest materiałowy, są weryfikowane dla konkretnej partii i zakresu zamówienia."
-order: 1
+  - label: "Średnica"
+    value: "133,9mm"
+  - label: "Norma"
+    value: "PN-EN 10210, PN-EN 10217, PN-EN 10219"
+  - label: "Ścianka"
+    value: "4,5mm"
+  - label: "Gatunek"
+    value: "P235, P355, S235, S275, S355, S420, S460"
+  - label: "Długość"
+    value: "12mb, 6mb"
+order: 3
 ---
 
-Rura o podanym wymiarze może być dobierana do konstrukcji stalowych oraz instalacji przemysłowych. Przed złożeniem zamówienia należy potwierdzić wymaganą normę, gatunek stali, długość handlową i warunki dostawy.
+Posiadamy flotę pojazdów przeznaczonych do transportu rur stalowych, dzięki czemu dostawa jest zawsze na czas.
+
+
+
+Zapewniamy transport na terenie Unii Europejskiej.

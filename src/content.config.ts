@@ -87,6 +87,7 @@ const steelPipeProducts = defineCollection({
   schema: z.object({
     title: z.string(),
     slug: z.string(),
+    sku: z.string().optional(),
     category: z.string(),
     description: z.string(),
     specification: z.string().optional(),

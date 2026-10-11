@@ -35,7 +35,7 @@ const productSchema = {
   '@type': 'Product',
   name: product.data.title,
   description: technicalSummary,
-  sku: product.data.slug,
+  sku: product.data.sku ?? product.data.slug,
   category: category?.data.title,
   additionalProperty: technicalParameters.map((parameter) => ({
     '@type': 'PropertyValue',
@@ -78,6 +78,7 @@ const productSchema = {
               <a href="#formularz-zapytania" class="mt-5 inline-flex text-sm font-semibold text-accent-1 hover:text-ink">Sprawdź dostępność i wycenę →</a>
 
               <dl class="mt-7 border-t border-ink/15 pt-5 text-sm leading-6 text-ink/70">
+                {product.data.sku && <div class="flex flex-wrap gap-x-2"><dt class="font-semibold text-ink">SKU:</dt><dd>{product.data.sku}</dd></div>}
                 <div class="flex flex-wrap gap-x-2"><dt class="font-semibold text-ink">Kategoria:</dt><dd>{category?.data.title ?? 'Rury stalowe'}</dd></div>
                 {product.data.specification && <div class="mt-1 flex flex-wrap gap-x-2"><dt class="font-semibold text-ink">Wymiar:</dt><dd>{product.data.specification}</dd></div>}
               </dl>
