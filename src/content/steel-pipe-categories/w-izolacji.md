@@ -12,7 +12,7 @@ Rury stalowe w izolacji wykazują doskonałe przystosowanie do pracy w trudnych 
 
 Z racji wysokiej odporności na korozję są chętnie wykorzystywane w budowie podziemnych rurociągów. Ich wytrzymałość wynika z pokrycia specjalnymi warstwami izolacyjnymi.
 
-<div class="grid gap-4 sm:grid-cols-2">
+<div class="my-8 grid gap-4 sm:grid-cols-2">
   <figure><img src="/img/posts/2022/06/izolowanie-rur-stalowych-2-660x365.jpeg" alt="Izolowanie rur stalowych" /></figure>
   <figure><img src="/img/posts/2022/06/rury-stalowe-660x365.png" alt="Rury stalowe izolowane" /></figure>
 </div>

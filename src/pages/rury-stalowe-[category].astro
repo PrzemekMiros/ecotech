@@ -42,7 +42,7 @@ const products = (await getCollection('steelPipeProducts'))
           <h1 class="text-3xl font-semibold leading-tight tracking-[-0.045em] text-[#142b3a] md:text-4xl">{category.data.title}</h1>
           <div class="category-content mt-10 max-w-3xl"><Content /></div>
 
-          <div class="mt-16 flex items-end justify-between gap-6 border-b border-accent-1/15 pb-5">
+          <div class="mt-16 flex items-end justify-between gap-6 pb-5">
             <div>
               <p class="eyebrow">Produkty</p>
               <h2 class="mt-2 text-2xl font-semibold tracking-[-0.04em] text-[#142b3a]">Dostępne rury</h2>
@@ -88,7 +88,7 @@ const products = (await getCollection('steelPipeProducts'))
 
 <style is:global>
   body:has(.pipe-category-page) > header { background: #fff; color: var(--color-ink); }
-  body:has(.pipe-category-page) > header img { filter: brightness(0) saturate(100%); }
+  body:has(.pipe-category-page) > header .site-logo--light { filter: brightness(0) saturate(100%); }
   body:has(.pipe-category-page) > header a { color: var(--color-ink); }
   body:has(.pipe-category-page) > header a.bg-accent-1 { color: #fff; }
   body:has(.pipe-category-page) > header nav { border-color: color-mix(in srgb, var(--color-ink) 15%, transparent); }
@@ -126,6 +126,7 @@ const products = (await getCollection('steelPipeProducts'))
   }
   .category-content :global(li + li) { margin-top: 0.45rem; }
   .category-content :global(figure) { margin-top: 1.75rem; }
+  .category-content :global(div.grid > figure) { margin-top: 0; overflow: hidden; aspect-ratio: 16 / 9; }
   .category-content :global(figure img) { height: 100%; width: 100%; object-fit: cover; }
   .category-content :global(table) { margin-top: 1.75rem; width: 100%; border-collapse: collapse; font-size: 0.95rem; }
   .category-content :global(th),

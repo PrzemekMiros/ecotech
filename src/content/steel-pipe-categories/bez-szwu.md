@@ -10,7 +10,7 @@ order: 3
 
 Rury stalowe bez szwu są wyrobami, które wyróżniają się wyższym poziomem wytrzymałości w porównaniu z rurami ze szwem. Dzięki temu stanowią doskonały komponent konstrukcji narażonych na duże obciążenia mechaniczne. Ich wyjątkowe właściwości sprawiają również, że są idealne do budowy instalacji, w których istotne jest minimalizowanie ryzyka awaryjności, takich jak instalacje wodne czy grzewcze — zwłaszcza te, w których transportowane są gazy lub ciecze pod ciśnieniem.
 
-<div class="grid gap-4 sm:grid-cols-2">
+<div class="my-8 grid gap-4 sm:grid-cols-2">
   <figure><img src="/img/posts/2022/06/rury-stalowe-bez-szwu-1-compress.jpg" alt="Rury stalowe bez szwu" /></figure>
   <figure><img src="/img/posts/2022/06/rury-stalowe-bez-szwu-compress.jpeg" alt="Rury stalowe bez szwu w magazynie" /></figure>
 </div>

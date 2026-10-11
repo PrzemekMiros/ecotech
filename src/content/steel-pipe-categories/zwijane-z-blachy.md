@@ -10,7 +10,10 @@ order: 6
 
 Rury stalowe zwijane z blachy to wyroby, które zwykle cechują się dużą średnicą. Można je spotkać w wielu projektach budowlanych, a także w przemyśle gazowym, naftowym, morskim, energetycznym i petrochemicznym.
 
-<figure><img src="/img/posts/2022/06/ecotech-group-zwijanie-rur-walcowanie-blach-galeria_3-660x365-1.jpg" alt="Walcowanie blach na rury stalowe" /></figure>
+<div class="my-8 grid gap-4 sm:grid-cols-2">
+  <figure><img src="/img/posts/2022/06/ecotech-group-zwijanie-rur-walcowanie-blach-galeria_3-660x365-1.jpg" alt="Walcowanie blach na rury stalowe" /></figure>
+  <figure><img src="/img/posts/2022/06/rury-zwijane-z-blachy-840x480-1.jpeg" alt="Produkcja rur zwijanych z blachy" /></figure>
+</div>
 
 Specyficzną właściwością rur stalowych zwijanych z blachy jest proces produkcyjny, który pozwala wytwarzać wyroby o zróżnicowanych kształtach i promieniach. Łączenie blach może odbywać się za pomocą spawania podłużnego lub spiralnego.
 

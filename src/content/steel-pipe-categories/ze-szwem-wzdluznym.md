@@ -14,6 +14,11 @@ Rury stalowe ze szwem wzdłużnym z powodzeniem mogą być wykorzystywane w kons
 
 Zróżnicowane gatunki stali wykorzystane do produkcji oraz pokrycie rur dodatkowymi warstwami ochronnymi decyduje o ich przeznaczeniu do pracy w specyficznych warunkach. Każda rura stalowa ze szwem wzdłużnym posiada starannie wykonany spaw, który skutecznie zapobiega jej rozszczelnieniu. Zapraszamy do przejrzenia pełnego katalogu rur stalowych ze szwem wzdłużnym.
 
+<div class="my-8 grid gap-4 sm:grid-cols-2">
+  <figure><img src="/img/posts/2022/06/ecotech-group-rury-stalowe-ze-szwem-wzdluznym_1-767x480.jpg" alt="Rury stalowe ze szwem wzdłużnym" /></figure>
+  <figure><img src="/img/posts/2022/06/rury-stalowe-spawanie-840x480.jpg" alt="Spawanie rur stalowych" /></figure>
+</div>
+
 ## Zakres produkcji rur ze szwem wzdłużnym:
 
 - rury w zakresie średnic zewnętrznych od 21,3 mm do 3048mm

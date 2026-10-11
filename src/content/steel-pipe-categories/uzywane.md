@@ -12,6 +12,11 @@ W ofercie Eco-Tech dostępne jest całe spektrum używanych rur stalowych o zró
 
 Na magazynie znajduje się ponad 800 ton rur stalowych z demontażu, w zakresie średnic od 159 do 2020 mm.
 
+<div class="my-8 grid gap-4 sm:grid-cols-2">
+  <figure><img src="/img/pipes/ecotech-group-rury-stalowe-uzywane.webp" alt="Używane rury stalowe na placu składowym" /></figure>
+  <figure><img src="/img/posts/2022/12/eco-tech-skup-rur-compress.webp" alt="Rury stalowe z demontażu" /></figure>
+</div>
+
 - O dopuszczeniu rur używanych do sprzedaży decydują ich pierwotne atesty oraz wnikliwa selekcja. Dzięki temu rury stalowe z demontażu mogą być bezpiecznie wykorzystywane w nowych projektach.
 
 ## Rury stalowe z demontażu

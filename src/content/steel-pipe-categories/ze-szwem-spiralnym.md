@@ -10,9 +10,10 @@ order: 2
 
 Rury stalowe ze szwem spiralnym to wyroby cechujące się wyższym poziomem wytrzymałości w porównaniu z rurami spawanymi wzdłużnie. Znajdują wykorzystanie głównie w instalacjach ciśnieniowych, systemach ciepłowniczych, systemach chłodzenia czy rurociągach przemysłowych, ale także w branży mleczarskiej i przemyśle spożywczym, rafineryjnym oraz chemicznym.
 
--   ![Rury stalowe ze szwem spiralnym](/img/pipes/Rury-stalowe-ze-szwem-spiralnym.webp)
-
--   [![Rury stalowe ze szwem spiralnym](https://ecotechgroup.pl/wp-content/uploads/2022/06/rury-stalowe-ze-szwem-spiralnym-compress.webp)](https://ecotechgroup.pl/wp-content/uploads/2022/06/rury-stalowe-ze-szwem-spiralnym-compress.webp)
+<div class="my-8 grid gap-4 sm:grid-cols-2">
+  <figure><img src="/img/pipes/Rury-stalowe-ze-szwem-spiralnym.webp" alt="Rury stalowe ze szwem spiralnym" /></figure>
+  <figure><img src="/img/posts/2022/06/ecotech-group-rury-stalowe-ze-szwem-spiralnym_2-1-767x480.jpg" alt="Rury stalowe ze szwem spiralnym w magazynie" /></figure>
+</div>
 
 Ze względu na spaw, który obniża ich wartość estetyczną, rury stalowe ze szwem spiralnym polecane są do wykorzystania w niewidocznych instalacjach.
 

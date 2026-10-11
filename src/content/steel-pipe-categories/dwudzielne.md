@@ -32,7 +32,7 @@ Dzięki bezpośredniej współpracy z producentami oferujemy rury dwudzielne wyk
 
 Chcesz skutecznie zabezpieczyć instalację przed wpływem czynników zewnętrznych? Rury stalowe dwudzielne pozwalają wykonać montaż łatwo, bez konieczności wprowadzania w projekcie poważnych zmian. Skontaktuj się z nami, aby dobrać odpowiedni rozmiar rur i uzyskać praktyczną pomoc.
 
-<div class="grid gap-4 sm:grid-cols-2">
+<div class="my-8 grid gap-4 sm:grid-cols-2">
   <figure><img src="/img/posts/2024/10/rury-dudzielne-6.jpg" alt="Rury stalowe dwudzielne" /></figure>
   <figure><img src="/img/posts/2024/10/rury-dudzielne-2.jpg" alt="Rury stalowe dwudzielne" /></figure>
   <figure><img src="/img/posts/2024/10/rury-dudzielne-5.jpg" alt="Rury stalowe dwudzielne" /></figure>
