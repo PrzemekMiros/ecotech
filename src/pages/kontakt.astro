@@ -19,6 +19,17 @@ const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${enco
 Jesteśmy dostępni od poniedziałku do piątku w godzinach 8:00 - 16:00.</p>
     </div>
 
+    <section class="mt-8 grid max-w-3xl gap-px overflow-hidden border border-accent-1/15 bg-accent-1/15 sm:grid-cols-2" aria-label="Kontakt e-mail">
+      <a href="mailto:bradwhite@o2.pl" data-tracked-email="bradwhite@o2.pl" class="bg-white px-6 py-5 transition-colors hover:bg-sand">
+        <span class="block text-xs font-bold uppercase tracking-[0.14em] text-ink/55">E-mail</span>
+        <span class="mt-2 block text-base font-semibold text-accent-1">bradwhite@o2.pl</span>
+      </a>
+      <a href="mailto:kontakt@futurewebstudio.pl" data-tracked-email="kontakt@futurewebstudio.pl" class="bg-white px-6 py-5 transition-colors hover:bg-sand">
+        <span class="block text-xs font-bold uppercase tracking-[0.14em] text-ink/55">E-mail</span>
+        <span class="mt-2 block text-base font-semibold text-accent-1">kontakt@futurewebstudio.pl</span>
+      </a>
+    </section>
+
     <section class="mt-10 border border-ink/10 bg-sand text-center md:mt-12 bg-white" aria-labelledby="minimum-logistyczne">
       <h2 id="minimum-logistyczne" class="px-5 py-6 text-xl font-semibold tracking-[-0.035em] text-ink md:py-7 md:text-2xl">Minimum logistyczne - sprzedaż detaliczna</h2>
 
@@ -102,4 +113,47 @@ Jesteśmy dostępni od poniedziałku do piątku w godzinach 8:00 - 16:00.</p>
     </div>
   </section>
   <ContactFormHandler />
+  <script>
+    type EmailLeadSource = {
+      channel?: string;
+      landingPage?: string;
+      referrerHost?: string;
+      utmSource?: string;
+      utmMedium?: string;
+      utmCampaign?: string;
+      utmTerm?: string;
+      utmContent?: string;
+    };
+
+    function readEmailLeadSource(): EmailLeadSource {
+      try {
+        return JSON.parse(sessionStorage.getItem('ecotech-lead-source') || '{}') as EmailLeadSource;
+      } catch {
+        return {};
+      }
+    }
+
+    document.querySelectorAll<HTMLAnchorElement>('[data-tracked-email]').forEach((link) => {
+      link.addEventListener('click', (event) => {
+        const email = link.dataset.trackedEmail;
+        if (!email) return;
+        event.preventDefault();
+
+        const source = readEmailLeadSource();
+        const details = [
+          `Kanał: ${source.channel || 'nieznany'}`,
+          ...(source.landingPage ? [`Strona wejścia: ${source.landingPage}`] : []),
+          ...(source.referrerHost ? [`Referrer: ${source.referrerHost}`] : []),
+          ...(source.utmSource ? [`UTM source: ${source.utmSource}`] : []),
+          ...(source.utmMedium ? [`UTM medium: ${source.utmMedium}`] : []),
+          ...(source.utmCampaign ? [`UTM campaign: ${source.utmCampaign}`] : []),
+          ...(source.utmTerm ? [`UTM term: ${source.utmTerm}`] : []),
+          ...(source.utmContent ? [`UTM content: ${source.utmContent}`] : []),
+        ];
+        const subject = `Zapytanie ze strony — ${source.channel || 'źródło nieznane'}`;
+        const body = ['Dzień dobry,', '', '', '--- Informacje o źródle wiadomości ---', ...details].join('\n');
+        window.location.href = `mailto:${encodeURIComponent(email)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      });
+    });
+  </script>
 </BaseLayout>

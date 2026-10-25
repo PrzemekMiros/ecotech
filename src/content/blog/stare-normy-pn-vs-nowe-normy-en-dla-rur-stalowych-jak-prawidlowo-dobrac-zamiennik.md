@@ -7,6 +7,17 @@ source: "https://ecotechgroup.pl/stare-normy-pn-vs-nowe-normy-en-dla-rur-stalowy
 description: "W dokumentacji technicznej, projektach wykonawczych i starszych specyfikacjach materiałowych nadal można spotkać oznaczenia dawnych Polskich Norm, takie jak PN-80/H-74219, PN-74/H-74200…"
 image: "/img/posts/2026/06/stre-normy-vs-nowe.png"
 imageAlt: "stre-normy-vs-nowe"
+faq:
+  - question: "Czy stara norma PN ma zawsze jeden bezpośredni zamiennik w normach PN-EN?"
+    answer: "Nie. Dobór zamiennika zależy od zastosowania rury, sposobu wykonania, gatunku stali, warunków pracy, tolerancji oraz wymaganych dokumentów odbiorowych. Ten sam wyrób opisany starą normą może wymagać odniesienia do różnych norm PN-EN."
+  - question: "Od czego zacząć dobór zamiennika rury stalowej?"
+    answer: "Najpierw należy ustalić funkcję rury: konstrukcyjną, ciśnieniową, przewodową, instalacyjną lub mechaniczną. Następnie trzeba porównać wymiary, gatunek stali, rodzaj wykonania, warunki pracy i wymagania dokumentacji technicznej."
+  - question: "Które normy PN-EN najczęściej bierze się pod uwagę przy zamianie starych norm?"
+    answer: "W zależności od zastosowania analizuje się między innymi PN-EN 10216 dla rur bez szwu do zastosowań ciśnieniowych, PN-EN 10217 dla rur ze szwem do zastosowań ciśnieniowych, PN-EN 10210 i PN-EN 10219 dla konstrukcji oraz PN-EN 10255 dla rur do spawania i gwintowania."
+  - question: "Czy rura o tych samych wymiarach jest automatycznie zamiennikiem technicznym?"
+    answer: "Nie. Oprócz średnicy i grubości ścianki trzeba sprawdzić między innymi tolerancje, masę, sposób wykonania, rodzaj szwu, stan dostawy, badania odbiorowe i wymagania dotyczące powierzchni."
+  - question: "Jaki dokument potwierdza zgodność dostarczonej rury z wymaganiami?"
+    answer: "W praktyce często wymagane jest świadectwo odbioru zgodne z EN 10204, najczęściej typu 3.1, a w bardziej wymagających zastosowaniach typu 3.2. Dokument powinien odpowiadać wymaganiom projektu i zamówienia."
 ---
 
 <p>W dokumentacji technicznej, projektach wykonawczych i starszych specyfikacjach materiałowych nadal można spotkać oznaczenia dawnych Polskich Norm, takie jak PN-80/H-74219, PN-74/H-74200 czy PN-79/H-74244. Dla inwestorów, wykonawców i działów zakupów rodzi to praktyczne pytanie: jak dobrać współczesny zamiennik rury stalowej według norm PN-EN, aby zachować wymagane parametry techniczne i nie popełnić błędu przy zamówieniu?</p>

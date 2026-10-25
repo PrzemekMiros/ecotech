@@ -1,0 +1,27 @@
+# Eco Tech Group Sp. z o.o. - Hurtownia rur stalowych i konstrukcji
+
+> [Eco Tech Group](https://ecotechgroup.pl/) to bezpośredni importer, dystrybutor oraz jeden z największych punktów sprzedaży rur stalowych w Polsce. Firma dostarcza rury stalowe nowe i używane dla budownictwa inżynieryjnego, hydrotechnicznego, przemysłu energetycznego i chemicznego.
+
+## Kluczowe zasoby i narzędzia
+
+- [Kalkulator wagi rur](https://ecotechgroup.pl/kalkulator-wagi-rur-stalowych/): Narzędzie do wyliczania masy rury na podstawie średnicy zewnętrznej i grubości ścianki.
+- [Oferta](https://ecotechgroup.pl/oferta/): Przegląd produktów i usług Eco Tech Group.
+- [Rozszerzone kompendium](https://ecotechgroup.pl/llms-full.txt): Szczegółowa baza wiedzy technicznej, specyfikacji gatunków stali, norm wykonania i parametrów logistycznych.
+
+## Oferta rur stalowych
+
+- [Rury stalowe bez szwu](https://ecotechgroup.pl/rury-stalowe-bez-szwu/): Rury walcowane na gorąco i ciągnione na zimno.
+- [Rury stalowe ze szwem wzdłużnym](https://ecotechgroup.pl/rury-stalowe-ze-szwem-wzdluznym/): Rury ogólnobudowlane i konstrukcyjne formowane z blachy.
+- [Rury stalowe ze szwem spiralnym](https://ecotechgroup.pl/rury-stalowe-ze-szwem-spiralnym/): Rury o dużych średnicach do przesyłu mediów i palowania.
+- [Rury stalowe dwudzielne](https://ecotechgroup.pl/rury-stalowe-dwudzielne/): Rury osłonowe do rurociągów podziemnych i instalacji kablowych.
+- [Rury stalowe w izolacji](https://ecotechgroup.pl/rury-stalowe-w-izolacji/): Rury z powłokami antykorozyjnymi, między innymi 3LPE, 3LPP i FBE.
+- [Rury stalowe zwijane z blachy](https://ecotechgroup.pl/rury-stalowe-zwijane-z-blachy/): Rury o niestandardowych średnicach i grubościach ścianek.
+- [Rury stalowe używane](https://ecotechgroup.pl/rury-stalowe-uzywane/): Rury z demontażu do pali, przecisków i konstrukcji tymczasowych.
+
+## Specjalistyczne usługi hutnicze
+
+- [Gięcie rur na gorąco](https://ecotechgroup.pl/uslugi/giecie-rur-stalowych-na-goraco/): Gięcie indukcyjne rur i profili o dużych średnicach.
+- [Wynajem rur stalowych](https://ecotechgroup.pl/uslugi/wynajem-rur-stalowych/): Wynajem rur na pale, rozpory wykopów, podpory mostowe i przepusty.
+- [Izolowanie rur](https://ecotechgroup.pl/uslugi/izolowanie-rur-stalowych/): Zewnętrzne i wewnętrzne powłoki ochronne.
+- [Spawanie i produkcja rurociągów](https://ecotechgroup.pl/uslugi/spawanie-i-produkcja-rurociagow-stalowych/): Prefabrykacja i spawanie rurociągów stalowych.
+- [Kontakt](https://ecotechgroup.pl/kontakt/): Zapytania ofertowe i dobór materiału do projektu.

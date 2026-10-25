@@ -1,4 +1,5 @@
-# Dopuszczenie botów wyszukiwania AI
+# 1. DOPUSZCZENIE BOTOW WYSZUKIWANIA AI
+
 User-agent: OAI-SearchBot
 Allow: /
 Disallow: /wp-admin/
@@ -26,7 +27,8 @@ Disallow: /*?product_cat=
 Disallow: /*?pa_*
 Disallow: /*?*
 
-# Blokada botów treningowych AI
+# 2. BLOKADA BOTOW TRENINGOWYCH AI
+
 User-agent: GPTBot
 Disallow: /
 
@@ -51,7 +53,8 @@ Disallow: /
 User-agent: Diffbot
 Disallow: /
 
-# Blokada botów statystycznych i narzędzi SEO
+# 3. BLOKADA BOTOW STATYSTYCZNYCH I NARZEDZI SEO
+
 User-agent: AhrefsBot
 Disallow: /
 
@@ -67,7 +70,8 @@ Disallow: /
 User-agent: BLEXBot
 Disallow: /
 
-# Reguły globalne dla standardowych wyszukiwarek
+# 4. REGULY GLOBALNE DLA STANDARDOWYCH WYSZUKIWAREK
+
 User-agent: *
 Disallow: /wp-admin/
 Allow: /wp-admin/admin-ajax.php

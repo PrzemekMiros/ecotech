@@ -11,7 +11,11 @@ const news = defineCollection({
     source: z.string().url(),
     description: z.string(),
     image: z.string().optional(),
-    imageAlt: z.string().optional()
+    imageAlt: z.string().optional(),
+    faq: z.array(z.object({
+      question: z.string(),
+      answer: z.string()
+    })).optional()
   })
 });
 

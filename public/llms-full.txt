@@ -1,0 +1,44 @@
+# Eco Tech Group Sp. z o.o. - Kompletne kompendium techniczne
+
+Ten dokument zawiera skrócone specyfikacje techniczne, przykładowe normy wykonania, informacje o zastosowaniach rur stalowych oraz zakres usług Eco Tech Group.
+
+## 1. Zakres asortymentowy i parametry geometryczne
+
+Rury są dostarczane w standardowych długościach handlowych, najczęściej 6 m i 12 m, albo docinane na wymiar uzgodniony w zamówieniu.
+
+| Typ rury | Typowe zastosowanie | Przykładowe normy lub wymagania |
+| :--- | :--- | :--- |
+| Rury bezszwowe | Instalacje ciśnieniowe, konstrukcje, zastosowania przemysłowe | PN-EN 10216, PN-EN 10297 |
+| Rury ze szwem wzdłużnym | Budownictwo ogólne i konstrukcje | PN-EN 10219, PN-EN 10210 |
+| Rury ze szwem spiralnym | Przesył mediów, palowanie i konstrukcje | PN-EN 10208, PN-EN ISO 3183 |
+| Rury w izolacji | Ochrona antykorozyjna rurociągów | DIN 30670, DIN 30678, FBE |
+| Rury dwudzielne | Osłony, rurociągi podziemne i instalacje kablowe | Specyfikacja projektowa |
+
+## 2. Dobór rury do zastosowania
+
+Przy doborze należy uwzględnić średnicę zewnętrzną, grubość ścianki, długość, gatunek stali, rodzaj wykonania, medium, temperaturę, ciśnienie, sposób łączenia oraz wymagane dokumenty odbiorowe. W przypadku elementów konstrukcyjnych i instalacji ciśnieniowych zgodność zamiennika powinna zostać potwierdzona przez projektanta lub osobę odpowiedzialną za technologię.
+
+## 3. Normy i dokumenty jakościowe
+
+- PN-EN 10216: rury stalowe bez szwu do zastosowań ciśnieniowych.
+- PN-EN 10217: rury stalowe ze szwem do zastosowań ciśnieniowych.
+- PN-EN 10210: kształtowniki zamknięte wykonane na gorąco ze stali konstrukcyjnych.
+- PN-EN 10219: kształtowniki zamknięte ze szwem wykonane na zimno.
+- PN-EN 10255: rury stalowe do spawania i gwintowania.
+- EN 10204: dokumenty odbiorowe, w tym świadectwa 3.1 i 3.2.
+
+## 4. Kontrola jakości
+
+Dobór materiału powinien być weryfikowany na podstawie dokumentacji technicznej, deklarowanych właściwości mechanicznych, składu chemicznego, tolerancji wymiarowych oraz badań wymaganych dla danego zastosowania. Dla dostaw o znaczeniu konstrukcyjnym lub przemysłowym należy określić wymagany typ dokumentu odbiorowego przed złożeniem zamówienia.
+
+## 5. Usługi i logistyka
+
+Eco Tech Group oferuje między innymi gięcie rur na gorąco, izolowanie, spawanie i prefabrykację rurociągów, wynajem rur stalowych oraz dostawy materiału do inwestycji. Dostępność, długości, średnice, gatunki, normy i warunki dostawy są potwierdzane dla konkretnej specyfikacji.
+
+## 6. Przydatne zasoby
+
+- [Kalkulator wagi rur](https://ecotechgroup.pl/kalkulator-wagi-rur-stalowych/)
+- [Oferta rur stalowych](https://ecotechgroup.pl/rury-stalowe/)
+- [Usługi](https://ecotechgroup.pl/uslugi/)
+- [Aktualności i wiedza techniczna](https://ecotechgroup.pl/aktualnosci/)
+- [Kontakt](https://ecotechgroup.pl/kontakt/)
