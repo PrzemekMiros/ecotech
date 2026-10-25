@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+export const prerender = false;
+
+Astro.response.status = 503;
+Astro.response.headers.set('Retry-After', '3600');
+Astro.response.headers.set('X-Robots-Tag', 'noindex, nofollow, noarchive');
+Astro.response.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate');
+---
+
+<BaseLayout
+  title="Prace konserwacyjne | Eco Tech Group"
+  description="Eco Tech Group prowadzi chwilowe prace techniczne. Serwis będzie ponownie dostępny wkrótce."
+>
+  <main class="mx-auto flex min-h-[calc(100vh-15rem)] max-w-7xl items-center justify-center px-5 py-20 md:px-8 md:py-28" aria-labelledby="maintenance-title">
+    <section class="w-full max-w-3xl border border-accent-1/15 bg-white p-8 text-center shadow-[0_18px_55px_rgba(6,17,38,0.04)] sm:p-14">
+      <p class="text-sm font-bold uppercase tracking-[0.2em] text-sun">503 · Service Unavailable</p>
+      <h1 id="maintenance-title" class="mt-4 text-3xl font-semibold leading-tight tracking-[-0.045em] text-accent-1 sm:text-4xl">Trwają prace techniczne</h1>
+      <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-ink/70">Aktualizujemy platformę technologiczną Eco Tech Group, aby zapewnić najwyższą jakość danych technicznych i parametrów asortymentowych. Zapraszamy ponownie za chwilę.</p>
+    </section>
+  </main>
+</BaseLayout>

@@ -1,0 +1,219 @@
+---
+import { Picture } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SteelPipeCarousel from '../components/SteelPipeCarousel.astro';
+import DeliveryMap from '../components/DeliveryMap.astro';
+import ContactFormHandler from '../components/ContactFormHandler.astro';
+import heroImage from '../assets/img/main/hero-industrial-pipes.jpg';
+import workshopImage from '../assets/img/main/eco-tech-o-firmie.jpg';
+import hallImage from '../assets/img/main/hala-rury-stalowe-wynajem.jpg';
+import logosImage from '../assets/img/main/logos-desktop.webp';  
+---
+
+<BaseLayout
+  title=" Hurtownia rur stalowych"
+  description="☑️ Hurtownia rur stalowych w Warszawie Eco Tech oferuje największy wybór rur stalowych oraz konstrukcji stalowych. Skontaktuj się z nami +48 508 299 077"
+>
+  <section class="relative isolate flex min-h-[100svh] items-center overflow-hidden bg-[#020307] text-white">
+    <Picture src={heroImage} widths={[640, 960, 1440, 1920]} sizes="100vw" formats={['avif', 'webp']} alt="Hala przemysłowa z rurami stalowymi" class="absolute inset-0 -z-20 h-full w-full object-cover object-center" />
+    <div class="mx-auto w-full max-w-7xl px-5 py-24 md:px-8 md:py-32">
+      <div class="max-w-4xl">
+        <p class="text-lg text-white/85 md:text-2xl">Ponad 15 lat doświadczenia</p>
+        <h1 class="mt-8 max-w-5xl text-5xl font-semibold leading-[0.98] tracking-[-0.055em] text-white">Dystrybutor rur stalowych</h1>
+        <p class="mt-8 max-w-2xl text-white/75">Hurtownia rur stalowych Eco-Tech to importer, dystrybutor oraz jeden z największych punktów sprzedających rury stalowe w Polsce. Oferujemy również usługi związane z obróbką i konserwacją rur stalowych oraz produkujemy wyroby ze stali.</p> 
+        <div class="mt-10 flex flex-wrap gap-4">
+          <a class="px-7 py-4 text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white/10 md:px-9 md:py-5 md:text-base" href="/rury-stalowe/">Oferta rur stalowych</a>
+          <a class="bg-accent-1 px-7 py-4 text-sm font-semibold text-white transition-colors hover:bg-accent-1/85 md:px-9 md:py-5 md:text-base" href="/kontakt/">Skontaktuj się z nami</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#020307] text-white">
+    <div class="mx-auto grid max-w-7xl gap-12 px-5 pb-20 md:grid-cols-2 md:items-start md:px-8 md:pb-28">
+      <div class="max-w-xl">
+        <h2 class="text-2xl font-semibold tracking-[-0.04em] md:text-3xl">Oferta EcoTech</h2>
+        <div class="mt-8 space-y-7 text-base leading-7 text-white/75">
+          <p>Duże doświadczenie oraz znajomość branży pozwala nam wyjść przed szereg konkurencji, ponieważ doskonale znamy potrzeby rynku. By na nie odpowiedzieć, weszliśmy we współpracę z kilkudziesięcioma producentami wyrobów stalowych z Polski i zagranicy. Jako nieliczni na rynku możemy zaoferować produkty najwyższej jakości w konkurencyjnych cenach. </p>
+          <p>Doskonała znajomość branży hutniczej w Polsce i na świecie pomogła nam wypracować autorski model obsługi klientów, którzy mają szansę znaleźć w naszej ofercie tego, czego potrzebują. Skupienie na jakości w obsłudze dużych zamówień pomaga nam spełniać najbardziej wygórowane oczekiwania klienta, dostarczając mu wyroby indywidualnie dopasowane do jego zapotrzebowania.</p>
+        </div>
+      </div>
+      <div class="relative z-10 md:-mb-44">
+        <Picture src={workshopImage} widths={[640, 960, 1440]} sizes="(min-width: 768px) 50vw, 100vw" formats={['avif', 'webp']} alt="Technik EcoTech Group obsługujący maszynę w hali" loading="lazy" class="h-full min-h-[28rem] w-full object-cover md:min-h-[40rem]" />
+      </div>
+    </div>
+  </section>
+
+  <SteelPipeCarousel />
+
+  <section class="relative isolate overflow-hidden bg-[#020b1c] py-20 text-white md:py-28">
+    <Picture src={hallImage} widths={[640, 960, 1440, 1920]} sizes="100vw" formats={['avif', 'webp']} alt="Rury stalowe w hali Eco Tech Group" loading="lazy" class="absolute inset-0 -z-20 h-full w-full object-cover object-center opacity-35" />
+    <div class="absolute inset-0 -z-10 bg-[#01091c]/90"></div>
+
+    <div class="mx-auto max-w-7xl px-5 md:px-8">
+      <h2 class="text-center text-2xl font-semibold tracking-[-0.04em] md:text-3xl">Dlaczego warto nam zaufać?</h2>
+
+      <div class="mt-14 grid gap-12 md:grid-cols-3 md:gap-14">
+        <div>
+          <svg viewBox="0 0 48 48" class="size-14 fill-none stroke-current text-white" stroke-width="2.5" aria-hidden="true">
+            <circle cx="24" cy="21" r="12"></circle><path d="m16 31-3 12 7-4 4 5 4-5 7 4-3-12"></path><path d="m19.5 21 3 3 5.5-6"></path>
+          </svg>
+          <h3 class="mt-8 text-xl font-semibold tracking-[-0.035em]">Ponadprzeciętna jakość</h3>
+          <p class="mt-8 max-w-sm text-white/70">Oferujemy produkty pochodzące od największych producentów rur stalowych na świecie. Potwierdzeniem tego są certyfikaty, które dołączamy do zamówień.</p>
+        </div>
+
+        <div>
+          <svg viewBox="0 0 48 48" class="size-14 fill-current text-white" aria-hidden="true">
+            <circle cx="24" cy="12" r="8"></circle><path d="M10 40c0-9 6-16 14-16s14 7 14 16v4H10z"></path><path d="M24 27v14" stroke="#020b1c" stroke-width="2.5"></path><path d="M24 27h4l-4 6-4-6z" fill="#020b1c"></path>
+          </svg>
+          <h3 class="mt-8 text-xl font-semibold tracking-[-0.035em]">Coś więcej niż sprzedaż</h3>
+          <p class="mt-8 max-w-sm text-white/70">Oprócz sprzedaży zajmujemy się również wykonawstwem konstrukcji stalowych, konserwowaniem, demontowaniem, skupowaniem i cięciem rur stalowych.</p>
+        </div>
+
+        <div>
+          <svg viewBox="0 0 48 48" class="size-14 fill-none stroke-current text-white" stroke-width="2.5" aria-hidden="true">
+            <path d="M7 8h27v32H7z"></path><path d="M13 15h15v5H13z"></path><path d="M39 8h4v11h-4zM38 22h5v18h-5z"></path><path d="m37 44 6-6"></path>
+          </svg>
+          <h3 class="mt-8 text-xl font-semibold tracking-[-0.035em]">Dedykowany doradca</h3>
+          <p class="mt-8 max-w-sm text-white/70">W ramach współpracy każdy klient otrzymuje dedykowanego doradcę, który przygotowując ofertę - dopasowuje ją do potrzeb klienta i wskazuje alternatywne, bardziej opłacalne rozwiązania.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <DeliveryMap />
+
+  <section class="bg-white py-16 text-white md:py-21">
+    <div class="mx-auto max-w-7xl px-5 md:px-8">
+              <h2 class="mb-8 text-3xl font-semibold text-center text-ink md:text-4xl">Zaufali nam</h2>
+              <Picture src={logosImage} widths={[640, 960, 1440]} sizes="(min-width: 768px) 50vw, 100vw" formats={['avif', 'webp']} alt="" loading="lazy" class="w-full" />
+    </div>
+  </section>
+
+  <section id="kontakt" class="bg-[#0e0f24] py-16 text-white md:py-24">
+    <div class="mx-auto max-w-7xl px-5 md:px-8">
+      <div class="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] lg:items-start lg:gap-16">
+        <form class="contact-form bg-white/[0.045] p-6 sm:p-9 md:p-10" novalidate>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <label class="block sm:col-span-2">
+              <span class="sr-only">Imię i nazwisko</span>
+              <input type="text" name="name" autocomplete="name" placeholder="Imię i nazwisko" class="w-full border border-white/85 bg-transparent px-5 py-4 text-sm text-white outline-none placeholder:text-white/55 focus:border-sun focus:ring-1 focus:ring-sun" />
+            </label>
+            <label class="block">
+              <span class="sr-only">Numer telefonu</span>
+              <input type="tel" name="phone" autocomplete="tel" placeholder="Numer telefonu" class="w-full border border-white/85 bg-transparent px-5 py-4 text-sm text-white outline-none placeholder:text-white/55 focus:border-sun focus:ring-1 focus:ring-sun" />
+            </label>
+            <label class="block">
+              <span class="sr-only">Adres e-mail</span>
+              <input type="email" name="email" autocomplete="email" placeholder="Adres e-mail" class="w-full border border-white/85 bg-transparent px-5 py-4 text-sm text-white outline-none placeholder:text-white/55 focus:border-sun focus:ring-1 focus:ring-sun" />
+            </label>
+            <label class="block">
+              <span class="sr-only">Nazwa firmy</span>
+              <input type="text" name="company" autocomplete="organization" placeholder="Nazwa firmy" class="w-full border border-white/85 bg-transparent px-5 py-4 text-sm text-white outline-none placeholder:text-white/55 focus:border-sun focus:ring-1 focus:ring-sun" />
+            </label>
+            <label class="block">
+              <span class="sr-only">NIP</span>
+              <input type="text" name="nip" inputmode="numeric" placeholder="NIP" class="w-full border border-white/85 bg-transparent px-5 py-4 text-sm text-white outline-none placeholder:text-white/55 focus:border-sun focus:ring-1 focus:ring-sun" />
+            </label>
+            <label class="block sm:col-span-2">
+              <span class="sr-only">Wiadomość</span>
+              <textarea name="message" rows="5" placeholder="Wiadomość" class="w-full resize-y border border-white/85 bg-transparent px-5 py-4 text-sm text-white outline-none placeholder:text-white/55 focus:border-sun focus:ring-1 focus:ring-sun"></textarea>
+            </label>
+          </div>
+
+          <label class="mt-5 flex items-start gap-2 text-sm leading-5 text-white/60">
+            <input type="checkbox" name="privacy" class="mt-0.5 size-4 shrink-0 accent-accent-1" />
+            <span>Wyrażam zgodę na przetwarzanie moich danych osobowych przez Eco Tech Group Sp. z o.o. w celu przesłania na wskazany przeze mnie e-mail informacji handlowych.</span>
+          </label>
+          <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />
+          <p class="contact-form-status mt-4 text-sm text-white/80" aria-live="polite"></p>
+          <button type="submit" class="mt-8 w-full bg-accent-1 px-7 py-4 text-sm font-semibold text-white transition-colors hover:bg-accent-1/85 disabled:cursor-not-allowed disabled:opacity-60">Wyślij formularz</button>
+        </form>
+
+        <div class="pt-1 lg:pt-16">
+          <p class="max-w-xl text-lg font-semibold leading-relaxed tracking-[-0.03em] text-white md:text-xl">Drogi kliencie, jesteśmy do Twojej dyspozycji od poniedziałku do piątku w godzinach 8:00–16:00. Chętnie doradzimy i odpowiemy na pytania.</p>
+
+          <div class="mt-14 max-w-md">
+            <h3 class="text-lg font-semibold tracking-[-0.035em]">EcoTech Group Sp. z o.o.</h3>
+            <div class="mt-12 border-l-4 border-accent-1 pl-8">
+              <p class="text-md text-white/60">Adres</p>
+              <address class="mt-4 text-lg leading-9 not-italic text-white">ul. Mieczysława Pożaryskiego 32<br />04-703 Warszawa</address>
+              <p class="mt-9 text-md text-white/60">Email</p>
+              <a href="mailto:sprzedaz@ecotechgroup.pl" class="mt-4 inline-block text-lg font-medium text-white hover:text-sun">sprzedaz@ecotechgroup.pl</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-16 md:py-24">
+    <div class="mx-auto grid max-w-7xl gap-10 px-5 md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] md:gap-16 md:px-8">
+      <div>
+        <p class="eyebrow">Pomoc i informacje</p>
+        <h2 class="mt-3 text-3xl font-semibold tracking-[-0.04em] text-ink md:text-4xl">Najczęściej zadawane pytania</h2>
+        <p class="mt-5 max-w-md text-lg leading-8 text-ink/70">Odpowiedzi na pytania dotyczące dostępności, zamówień, dostawy i rozliczeń.</p>
+        <a href="/kontakt/" class="mt-8 inline-flex bg-accent-1 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-accent-1/85">Skontaktuj się z nami</a>
+      </div>
+
+      <div class="border-t-2 border-accent-1">
+        <details name="faq" open class="group border-b border-accent-1/15">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-lg font-semibold leading-7 text-ink marker:hidden">
+            Jak sprawdzić dostępność produktu?
+            <span aria-hidden="true" class="flex size-8 shrink-0 items-center justify-center text-xl font-normal text-accent-1 transition-transform group-open:rotate-45">+</span>
+          </summary>
+          <div class="pb-7 pr-12 leading-7 text-ink/70 [&_p]:mt-4 [&_p:first-child]:mt-0 [&_a]:font-semibold [&_a]:text-accent-1 [&_a]:underline [&_a]:underline-offset-4">
+            <p>Jeśli zainteresuje Państwa produkt z naszej oferty, zachęcamy do kontaktu z jednym z naszych specjalistów ds. handlu. Dane znajdą Państwo w zakładce <a href="/kontakt/"><strong>kontakt</strong></a> — dostępny jest tam formularz, a także bezpośrednie adresy mailowe i numery telefonu do poszczególnych osób.</p>
+            <p>W celu sformułowania jak najlepszej odpowiedzi na pytanie potrzebujemy kilku informacji. W treści wiadomości prosimy o podanie opisu materiału: jakiego rodzaju ma to być rura — nowa czy używana, jaka ma być jej średnica, grubość ścianki i rodzaj szwu. Pomocne będzie także określenie ilości materiału, której Państwo potrzebują.</p>
+            <p>W odpowiedzi prześlemy Państwu informację, czy towar jest dostępny od ręki, a także wycenę.</p>
+          </div>
+        </details>
+
+        <details name="faq" class="group border-b border-accent-1/15">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-lg font-semibold leading-7 text-ink marker:hidden">
+            Jak zamówić rury stalowe?
+            <span aria-hidden="true" class="flex size-8 shrink-0 items-center justify-center text-xl font-normal text-accent-1 transition-transform group-open:rotate-45">+</span>
+          </summary>
+          <div class="pb-7 pr-12 leading-7 text-ink/70 [&_p]:mt-4 [&_p:first-child]:mt-0 [&_a]:font-semibold [&_a]:text-accent-1 [&_a]:underline [&_a]:underline-offset-4">
+            <p>Aby złożyć zamówienie, prosimy w pierwszej kolejności o <a href="/kontakt/"><strong>kontakt</strong></a> z jednym z naszych specjalistów ds. handlu. Wówczas otrzymają Państwo szczegółową ofertę z wyceną.</p>
+            <p>Na tej podstawie mogą Państwo zamówić produkty bezpośrednio u naszych doradców.</p>
+          </div>
+        </details>
+
+        <details name="faq" class="group border-b border-accent-1/15">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-lg font-semibold leading-7 text-ink marker:hidden">
+            Jaki jest czas realizacji zamówienia?
+            <span aria-hidden="true" class="flex size-8 shrink-0 items-center justify-center text-xl font-normal text-accent-1 transition-transform group-open:rotate-45">+</span>
+          </summary>
+          <div class="pb-7 pr-12 leading-7 text-ink/70 [&_p]:mt-4 [&_p:first-child]:mt-0">
+            <p>Czas realizacji zależy od wielkości zamówienia. Standardowo jest to do 5 dni roboczych — takie terminy obowiązują w przypadku towaru, do którego przewiezienia wystarczy jeden samochód ciężarowy.</p>
+            <p>Jeśli chcą Państwo zamówić więcej towaru, obsługa logistyczna może być nieco bardziej skomplikowana, co przekłada się na dłuższy czas realizacji. Wówczas termin określamy indywidualnie.</p>
+          </div>
+        </details>
+
+        <details name="faq" class="group border-b border-accent-1/15">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-lg font-semibold leading-7 text-ink marker:hidden">
+            Jak wygląda transport zamówień?
+            <span aria-hidden="true" class="flex size-8 shrink-0 items-center justify-center text-xl font-normal text-accent-1 transition-transform group-open:rotate-45">+</span>
+          </summary>
+          <div class="pb-7 pr-12 leading-7 text-ink/70 [&_p]:mt-4 [&_p:first-child]:mt-0 [&_a]:font-semibold [&_a]:text-accent-1 [&_a]:underline [&_a]:underline-offset-4">
+            <p>Zamówienie mogą Państwo odebrać bezpośrednio z naszego magazynu znajdującego się pod adresem: ul. Piaskowa 4, 05-311 Kobierne. Możemy również pomóc Państwu w organizacji <a href="/dostawa-rur-stalowych/"><strong>transportu</strong></a>. Realizujemy zamówienia na terenie całej Polski. Cena usługi jest zależna od odległości, a także od wielkości zamówienia.</p>
+          </div>
+        </details>
+
+        <details name="faq" class="group border-b border-accent-1/15">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-lg font-semibold leading-7 text-ink marker:hidden">
+            Jakie sposoby rozliczenia oferujemy?
+            <span aria-hidden="true" class="flex size-8 shrink-0 items-center justify-center text-xl font-normal text-accent-1 transition-transform group-open:rotate-45">+</span>
+          </summary>
+          <div class="pb-7 pr-12 leading-7 text-ink/70 [&_p]:mt-4 [&_p:first-child]:mt-0">
+            <p>Stałym klientom oferujemy możliwość płatności w wyznaczonym terminie po realizacji zamówienia. Obowiązuje ona do określonych limitów finansowych.</p>
+            <p>W przypadku nowych klientów dokonujących pierwszych transakcji wymagamy przedpłaty. Po weryfikacji rankingu firmy możemy także zaproponować indywidualnie dobrany sposób płatności.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <ContactFormHandler />
+</BaseLayout>

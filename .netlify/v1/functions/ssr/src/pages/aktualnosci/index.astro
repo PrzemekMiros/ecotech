@@ -1,0 +1,44 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+
+const posts = (await getCollection('news')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const formatDate = new Intl.DateTimeFormat('pl-PL', { day: '2-digit', month: 'long', year: 'numeric' });
+const featuredImages = {
+  Aktualności: { src: '/img/main/eco-tech-o-firmie.jpg', alt: 'Eco Tech Group' },
+  Rynek: { src: '/img/main/hero-industrial-pipes.jpg', alt: 'Rury stalowe w przemyśle' },
+  Wiedza: { src: '/img/main/hala-rury-stalowe-wynajem.jpg', alt: 'Rury stalowe w hali' }
+};
+---
+
+<BaseLayout title="Aktualności | Eco Tech Group" description="Najnowsze informacje, wiedza branżowa i aktualności Eco Tech Group.">
+  <PageHero title="Aktualności" />
+
+  <section class="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
+    <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {posts.map((post) => {
+        const featuredImage = post.data.image
+          ? { src: post.data.image, alt: post.data.imageAlt ?? post.data.title }
+          : featuredImages[post.data.category];
+
+        return (
+        <a href={`/aktualnosci/${post.data.slug}`} class="group flex min-h-80 flex-col overflow-hidden border border-accent-1/15 bg-white transition-colors hover:border-accent-1 hover:bg-mist">
+          <img src={featuredImage.src} alt={featuredImage.alt} class="aspect-[16/8.5] w-full object-cover transition duration-500 group-hover:scale-[1.03]" loading="lazy" />
+          <div class="flex flex-1 flex-col justify-between p-6">
+            <div>
+            <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.12em] text-accent-1">
+              <span>{post.data.category}</span>
+              <span class="size-1 rounded-full bg-sun"></span>
+              <time datetime={post.data.pubDate.toISOString()}>{formatDate.format(post.data.pubDate)}</time>
+            </div>
+            <h2 class="mt-5 text-lg font-semibold tracking-[-0.04em]">{post.data.title}</h2>
+            </div>
+            <span class="mt-7 text-sm font-semibold text-accent-1 group-hover:text-accent-1/75">Czytaj artykuł <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+        );
+      })}
+    </div>
+  </section>
+</BaseLayout>
