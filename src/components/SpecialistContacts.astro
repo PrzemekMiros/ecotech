@@ -1,0 +1,57 @@
+---
+const languages = {
+  en: 'Angielski', de: 'Niemiecki', da: 'Duński'
+};
+const sections = [
+  {
+    id: 'branza-gazowa', title: 'Branża gazowa', description: '',
+    people: [
+      { name: 'Michał Pilarczyk', role: 'Specjalista ds. handlowych', email: 'michal@ecotechgroup.pl', phone: '+48 506 902 126', image: 'Michal-Pilarczyk.png', languages: ['en'] }
+    ]
+  },
+  {
+    id: 'rynki-miedzynarodowe', title: 'Rynki międzynarodowe',
+    description: 'Skontaktuj się z naszym zespołem odpowiedzialnym za sprzedaż eksportową i obsługę klientów zagranicznych.',
+    people: [
+      { name: 'Krzysztof Śluzek', role: 'Handel zagraniczny (rynki zachodnie i wschodnie)', email: 'krzysztof@ecotechgroup.pl', phone: '+48 504 347 960', image: 'Krzysztof-Sluzek.png', languages: ['en', 'de'] },
+      { name: 'Hanna Kalusok', role: 'Handel zagraniczny (rynki zachodnie)', email: 'hanna.kalusok@ecotechgroup.pl', phone: '+48 503 082 320', image: 'Hanna_Kalusok.png', languages: ['en', 'de', 'da'] },
+      { name: 'Marta Olk', role: 'Export Manager (rynki zachodnie i wschodnie)', email: 'marta.olk@ecotechgroup.pl', phone: '+48 882 378 136', image: 'Marta_Olk.png', languages: ['en'] }
+    ]
+  }
+];
+---
+
+<div class="mt-16 space-y-16 md:mt-20 md:space-y-20">
+  {sections.map(section => (
+    <section aria-labelledby={section.id}>
+      <h2 id={section.id} class="text-xl font-semibold text-ink md:text-2xl">{section.title}</h2>
+      {section.description && <p class="mt-5 max-w-4xl text-base leading-7 text-ink/75">{section.description}</p>}
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+        {section.people.map(person => (
+          <article class="rounded border border-ink/15 bg-white px-5 py-10 text-center lg:px-6 lg:py-12">
+            <img src={`/img/contact/${person.image}`} alt={person.name} width="128" height="128" class="mx-auto size-28 rounded-full border-2 border-accent-1 object-cover" loading="lazy" />
+            <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+              <h3 class="text-lg font-semibold text-ink">{person.name}</h3>
+              <span class="inline-flex items-center gap-2">
+                {person.languages.map(language => <img src={`/img/contact/${language}.png`} alt={languages[language as keyof typeof languages]} title={languages[language as keyof typeof languages]} width="26" height="18" class="h-[18px] w-[26px] object-cover" loading="lazy" />)}
+              </span>
+            </div>
+            <p class="mt-5 text-base font-semibold leading-6 text-accent-1">{person.role}</p>
+            <a href={`mailto:${person.email}`} class="mt-4 block break-words text-base leading-7 text-ink/70 hover:text-accent-1">{person.email}</a>
+            <a href={`tel:${person.phone.replace(/\s/g, '')}`} class="mt-4 block text-base leading-7 text-ink/70 hover:text-accent-1">{person.phone}</a>
+          </article>
+        ))}
+      </div>
+    </section>
+  ))}
+  <div class="space-y-5 text-xl font-semibold text-ink md:text-2xl">
+    <a href="tel:+48508299077" class="flex items-center gap-4 hover:text-accent-1">
+      <svg viewBox="0 0 24 24" class="size-6 shrink-0 fill-none stroke-accent-1" stroke-width="1.8" aria-hidden="true"><path d="m5 3 4 1 1 5-3 2a15 15 0 0 0 6 6l2-3 5 1 1 4c0 2-2 3-4 2C9 19 5 15 3 7c-1-2 0-4 2-4Z" /></svg>
+      +48 508 299 077
+    </a>
+    <a href="mailto:sprzedaz@ecotechgroup.pl" class="flex items-center gap-4 hover:text-accent-1">
+      <svg viewBox="0 0 24 24" class="size-6 shrink-0 fill-none stroke-accent-1" stroke-width="1.8" aria-hidden="true"><path d="M3 5h18v14H3z" /><path d="m3 5 9 8 9-8" /></svg>
+      <span class="min-w-0 break-words">sprzedaz@ecotechgroup.pl</span>
+    </a>
+  </div>
+</div>

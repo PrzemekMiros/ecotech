@@ -1,0 +1,71 @@
+---
+import { getCollection } from 'astro:content';
+
+const [products, categories] = await Promise.all([
+  getCollection('steelPipeProducts'),
+  getCollection('steelPipeCategories')
+]);
+const attributes = [
+  { name: 'diameter', label: 'Średnica', unit: 'mm' },
+  { name: 'wall', label: 'Ścianka', unit: 'mm' },
+  { name: 'length', label: 'Długość', unit: 'm' },
+  { name: 'grade', label: 'Gatunek', unit: '' },
+  { name: 'standard', label: 'Norma', unit: '' }
+];
+const filters = attributes.map(attribute => {
+  const values = new Set<string>();
+  for (const product of products) {
+    for (const parameter of product.data.technicalParameters) {
+      if (parameter.label !== attribute.label) continue;
+      // Commas inside decimal dimensions are not list separators.
+      for (const part of parameter.value.split(/,\s+|;/)) {
+        const value = part.trim();
+        if (value) values.add(value);
+      }
+    }
+  }
+  return {
+    ...attribute,
+    values: [...values].sort((a, b) => {
+      if (attribute.unit) return parseFloat(a.replace(',', '.')) - parseFloat(b.replace(',', '.'));
+      return a.localeCompare(b, 'pl', { numeric: true });
+    })
+  };
+});
+---
+
+<aside class="h-fit rounded-md border border-accent-1/20 bg-white p-5 lg:sticky lg:top-8 lg:p-6" aria-labelledby="pipe-filters-heading">
+  <h2 id="pipe-filters-heading" class="text-xl font-semibold text-ink">Znajdź rurę stalową</h2>
+  <form class="mt-6 space-y-5" aria-label="Filtry rur stalowych">
+    <div>
+      <label for="pipe-type" class="sr-only">Rodzaj</label>
+      <select id="pipe-type" name="type">
+        <option value="">Rodzaj</option>
+        {categories.sort((a, b) => a.data.order - b.data.order).map(category => (
+          <option value={category.data.slug}>{category.data.title.replace(/^Rury stalowe\s+/i, '')}</option>
+        ))}
+      </select>
+    </div>
+    {filters.map(filter => (
+      <div>
+        <label for={`pipe-${filter.name}`} class="sr-only">{filter.label}{filter.unit && ` [${filter.unit}]`}</label>
+        <select id={`pipe-${filter.name}`} name={filter.name}>
+          <option value="">{filter.label}{filter.unit && ` [${filter.unit}]`}</option>
+          {filter.values.map(value => <option value={value}>{value}</option>)}
+        </select>
+      </div>
+    ))}
+    <div class="space-y-3 border-t border-ink/10 pt-5">
+      <button type="button" class="w-full rounded border border-accent-1 bg-accent-1 px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-1/85">Filtruj</button>
+      <button type="reset" class="w-full rounded border border-ink/20 px-4 py-3 text-sm font-semibold text-ink/70 transition-colors hover:bg-mist">Wyczyść filtry</button>
+    </div>
+  </form>
+</aside>
+
+<style>
+  select {
+    width: 100%; min-width: 0; border: 1px solid #d8dde6; border-radius: .25rem;
+    background-color: white; padding: .75rem .5rem; color: var(--color-ink); font-size: .875rem;
+  }
+  select:focus-visible { outline: 2px solid var(--color-accent-1); outline-offset: 2px; }
+</style>

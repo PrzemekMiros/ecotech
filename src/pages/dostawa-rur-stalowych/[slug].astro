@@ -27,7 +27,7 @@ const { Content } = await render(delivery);
     <PageHero title={delivery.data.title} breadcrumbs={[{ label: 'Dostawa rur stalowych', href: '/dostawa-rur-stalowych' }]} />
 
     <section class="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:grid-cols-[minmax(0,1fr)_18rem] md:px-8 md:py-24">
-      <div class="max-w-3xl text-lg leading-8 text-ink/75 [&_h2]:mt-12 [&_h2]:text-3xl [&_h2]:font-semibold [&_h2]:leading-tight [&_h2]:tracking-[-0.04em] [&_p]:mt-6"><Content /></div>
+      <div class="delivery-content min-w-0 max-w-3xl text-base leading-7 text-ink/75 [&_h2]:mt-10 [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:leading-tight [&_h2]:tracking-[-0.04em] [&_p]:mt-6"><Content /></div>
       <aside class="h-fit border-t-2 border-accent-1 bg-mist p-6">
         <p class="text-sm font-semibold">Potrzebujesz dostawy?</p>
         <p class="mt-3 text-sm leading-6 text-ink/65">Skontaktuj się z nami, aby ustalić dostępność materiału, transport i termin dostawy.</p>
@@ -36,3 +36,18 @@ const { Content } = await render(delivery);
     </section>
   </article>
 </BaseLayout>
+
+<style>
+  .delivery-content :global(h3) { margin-top: 1.75rem; font-size: 1.25rem; font-weight: 600; line-height: 1.4; }
+  .delivery-content :global(ul), .delivery-content :global(ol) { margin-top: 1.5rem; padding-left: 1.5rem; }
+  .delivery-content :global(ul) { list-style: disc; }
+  .delivery-content :global(ol) { list-style: decimal; }
+  .delivery-content :global(li + li) { margin-top: .5rem; }
+  .delivery-content :global(a) { color: var(--color-accent-1); text-decoration: underline; text-underline-offset: 3px; }
+  .delivery-content :global(figure) { margin-top: 2rem; max-width: 100%; overflow-x: auto; }
+  .delivery-content :global(table) { width: 100%; border-collapse: collapse; font-size: .875rem; line-height: 1.6; }
+  .delivery-content :global(td), .delivery-content :global(th) { min-width: 7rem; border: 1px solid #d8dde6; padding: .75rem; vertical-align: top; }
+  .delivery-content :global(th) { background: var(--color-mist); text-align: left; }
+  .delivery-content :global(blockquote) { margin-top: 2rem; border-left: 3px solid var(--color-accent-1); padding-left: 1.25rem; }
+  .delivery-content :global(iframe) { display: block; width: 100%; max-width: 100%; margin-top: 2rem; border: 0; }
+</style>

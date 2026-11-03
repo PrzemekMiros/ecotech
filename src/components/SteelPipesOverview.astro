@@ -1,0 +1,122 @@
+---
+const dimensions = [
+  ['114,3', '3,2', '10,0'], ['133,9', '3,2', '10,0'], ['139,7', '3,2', '10,0'],
+  ['159,0', '3,2', '10,0'], ['168,3', '3,2', '10,0'], ['219,0', '3,6', '12,5'],
+  ['244,5', '4,0', '16,0'], ['273,0', '4,5', '16,0'], ['323,9', '4,5', '16,0'],
+  ['355,6', '4,5', '16,0'], ['406,4', '5,0', '16,0'], ['457,0', '5,0', '16,0'],
+  ['508,0', '6,3', '20,0'], ['530,0', '6,3', '20,0'], ['559,0', '6,3', '20,0'],
+  ['610,0', '6,3', '20,0'], ['620,0', '6,3', '20,0'], ['660,0', '6,3', '20,0'],
+  ['711,0', '6,3', '20,0'], ['720,0', '6,3', '20,0'], ['762,0', '6,3', '20,0'],
+  ['813,0', '8,0', '20,0'], ['820,0', '8,0', '20,0'], ['864,0', '8,0', '20,0'],
+  ['914,0', '8,0', '20,0'], ['920,0', '8,0', '20,0'], ['1020,0', '8,0', '30,0'],
+  ['1016,0', '8,0', '30,0'], ['1067,0', '8,0', '30,0'], ['1220,0', '8,0', '30,0'],
+  ['1420,0', '8,0', '30,0'], ['1520,0', '8,0', '30,0'], ['1620,0', '8,0', '30,0'],
+  ['1720,0', '8,0', '30,0'], ['1820,0', '8,0', '30,0'], ['2020,0', '8,0', '30,0']
+];
+const faq = [
+  { question: 'Jak wytwarzane są rury stalowe?', answer: 'Proces obejmuje przygotowanie stali, formowanie rury, obróbkę wykończeniową oraz badania jakościowe. Rury ze szwem powstają przez formowanie i spawanie blachy lub taśmy, a rury bez szwu przez obróbkę pełnego wsadu stalowego. Zależnie od specyfikacji stosuje się także obróbkę cieplną i powłoki antykorozyjne.' },
+  { question: 'Jakie substancje można przesyłać przez rury stalowe?', answer: 'Rury stalowe służą do transportu wody, pary wodnej, ropy naftowej, olejów, gazu i innych mediów przemysłowych. Dobór rury zależy od rodzaju medium, ciśnienia, temperatury, materiału i wymaganej ochrony powierzchni.' },
+  { question: 'Do czego stosuje się rury stalowe?', answer: 'Rury wykorzystuje się w konstrukcjach budowlanych i mostowych, instalacjach wodociągowych i kanalizacyjnych, rurociągach przemysłowych, energetyce, ciepłownictwie oraz przemyśle chemicznym i petrochemicznym. Mogą też pełnić funkcję elementów ogrodzeń, barierek i małej architektury.' },
+  { question: 'W jakich normach wykonywane są rury stalowe?', answer: 'W zależności od zastosowania oferta obejmuje wyroby według PN-EN 10210 i PN-EN 10219 dla kształtowników konstrukcyjnych oraz PN-EN 10216 i PN-EN 10217 dla rur do zastosowań ciśnieniowych. Właściwą część normy i wymagania dostawy ustalamy dla konkretnego wyrobu.' },
+  { question: 'W jakich gatunkach dostępne są rury stalowe?', answer: 'W ofercie występują gatunki konstrukcyjne z rodzin S235, S355, S420 i S460, ciśnieniowe z rodzin P235, P265, P355 i P420 oraz przewodowe z rodzin L360, L420 i L460. Pełne oznaczenie gatunku, stan dostawy i dostępność potwierdzamy przy zamówieniu.' },
+  { question: 'W jakich długościach występują rury stalowe?', answer: 'Najczęściej oferowane są długości około 6 lub 12 m. Możliwość dostarczenia innych długości lub docięcia rur ustalamy na podstawie wymagań projektu i specyfikacji wyrobu.' },
+  { question: 'Z jakim szwem występują rury?', answer: 'Rury ze szwem wzdłużnym mają spoinę biegnącą wzdłuż rury, a rury ze szwem spiralnym – spoinę przebiegającą spiralnie. Rury bez szwu nie mają spoiny łączącej krawędzie blachy.' }
+];
+const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(item => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) };
+---
+
+<div class="pipe-overview mt-16 border-t border-ink/10 pt-12 text-base leading-7 text-ink/75">
+  <section aria-labelledby="oferta-rur">
+    <h2 id="oferta-rur">Oferta rur stalowych i zabezpieczeń antykorozyjnych</h2>
+    <p>Oferujemy rury ze szwem oraz bez szwu w szerokim zakresie średnic, od 88,9 do 3600 mm. Zakres grubości ścianki zależy od rodzaju i technologii wykonania rury. Dobieramy materiał do wymagań konstrukcyjnych, ciśnieniowych i przewodowych, a dostępność konkretnego wymiaru potwierdzamy przy zapytaniu.</p>
+    <p>Wykonujemy również zabezpieczenie antykorozyjne powierzchni rur. W ofercie znajdują się:</p>
+    <ul>
+      <li>rury z zewnętrzną izolacją 3LPE,</li>
+      <li>rury zabezpieczone zewnętrznie i wewnętrznie farbą epoksydową,</li>
+      <li>rury ocynkowane.</li>
+    </ul>
+    <p>Rodzaj powłoki i wymagania dotyczące jej wykonania dopasowujemy do zamówienia. Sprawdź nasze usługi <a href="/uslugi/izolowanie-rur-stalowych">izolowania rur stalowych</a> i <a href="/uslugi/malowanie-rur-od-wewnatrz">malowania rur od wewnątrz</a>.</p>
+  </section>
+
+  <section aria-labelledby="zastosowanie-rur">
+    <h2 id="zastosowanie-rur">Zastosowanie rur stalowych w konstrukcjach</h2>
+    <p>Rury stalowe znajdują zastosowanie w budownictwie hydrotechnicznym, drogowym, przemysłowym i energetycznym, a także w przemyśle motoryzacyjnym, ciepłowniczym, chemicznym i petrochemicznym.</p>
+    <div class="grid gap-8 md:grid-cols-2">
+      <div>
+        <h3>Konstrukcje budowlane</h3>
+        <p>Rury są wykorzystywane jako elementy szkieletów budynków, konstrukcji mostów oraz instalacji wodociągowych, kanalizacyjnych i przemysłowych. Służą również do wykonywania ogrodzeń, barierek, przegród i elementów dekoracyjnych nowoczesnej architektury.</p>
+      </div>
+      <div>
+        <h3>Infrastruktura przemysłowa</h3>
+        <p>W przemyśle rury służą do transportu surowców, płynów i gazów, w tym pary wodnej, gorącej wody, ropy naftowej oraz gazu ziemnego. Stosuje się je także w przewodach kominowych, instalacjach przeciwpożarowych i systemach odprowadzania ścieków oraz wód opadowych.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="produkcja-rur">
+    <h2 id="produkcja-rur">Proces produkcji rur stalowych</h2>
+    <div class="grid gap-8 md:grid-cols-2">
+      <div>
+        <h3>Obróbka na gorąco</h3>
+        <p>Produkcja rur bez szwu może obejmować podgrzanie stalowego wsadu, jego dziurowanie i walcowanie. Kolejne etapy, takie jak kalibracja i obróbka cieplna, pozwalają uzyskać wymagane wymiary oraz właściwości mechaniczne wyrobu.</p>
+      </div>
+      <div>
+        <h3>Formowanie i obróbka na zimno</h3>
+        <p>Rury ze szwem powstają przez formowanie blachy lub taśmy i połączenie jej krawędzi spoiną wzdłużną albo spiralną. Obróbka na zimno jest również stosowana do uzyskiwania wymaganej dokładności wymiarowej. Technologię dobiera się do rodzaju rury i jej przeznaczenia.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="wymiary-rur">
+    <h2 id="wymiary-rur">Dostępne wymiary rur stalowych</h2>
+    <p>Przy doborze rury należy określić średnicę zewnętrzną, grubość ścianki i długość, a także wymagane tolerancje wymiarowe. Dopuszczalne odchyłki sprawdza się w normie oraz specyfikacji konkretnego wyrobu.</p>
+    <p>Poniższe zestawienie przedstawia orientacyjne zakresy z oferty. Nie oznacza dostępności każdej kombinacji średnicy, grubości ścianki i gatunku stali. Oznaczenie DN nie jest dokładną średnicą zewnętrzną — więcej informacji znajdziesz w artykule <a href="/aktualnosci/dn-nps-i-srednica-zewnetrzna-rury-dlaczego-te-wartosci-nie-sa-tym-samym">DN, NPS i średnica zewnętrzna rury</a>.</p>
+    <div class="mt-6 overflow-x-auto" tabindex="0" role="region" aria-label="Tabela wymiarów rur stalowych">
+      <table class="w-full min-w-[480px] border-collapse text-left text-sm">
+        <caption class="pb-4 text-left text-lg font-semibold text-ink">Tabela średnic zewnętrznych i grubości ścianek</caption>
+        <thead><tr><th scope="col">Średnica zewnętrzna [mm]</th><th scope="col">Minimalna grubość ścianki [mm]</th><th scope="col">Maksymalna grubość ścianki [mm]</th></tr></thead>
+        <tbody>{dimensions.map(row => <tr>{row.map(value => <td>{value}</td>)}</tr>)}</tbody>
+      </table>
+    </div>
+    <p>Do oszacowania masy materiału skorzystaj z <a href="/kalkulator-wagi-rur-stalowych">kalkulatora wagi rur stalowych</a>.</p>
+  </section>
+
+  <section aria-labelledby="zalety-rur">
+    <h2 id="zalety-rur">Zalety rur stalowych</h2>
+    <h3>Trwałość i wytrzymałość</h3>
+    <p>Właściwości mechaniczne stali umożliwiają wykorzystanie rur w konstrukcjach przenoszących obciążenia oraz instalacjach przemysłowych. Dobór gatunku, wymiarów i sposobu wykonania do projektu ma znaczenie dla trwałości i niezawodności całego układu.</p>
+    <h3>Ochrona przed korozją</h3>
+    <p>Ocynkowanie, izolacja 3LPE lub powłoka epoksydowa pozwalają ograniczyć korozję i wydłużyć okres użytkowania rur. Zabezpieczenie dobiera się do warunków otoczenia, medium i sposobu eksploatacji.</p>
+  </section>
+
+  <section aria-labelledby="zamowienie-rur">
+    <h2 id="zamowienie-rur">Jak zamówić rury stalowe?</h2>
+    <p>Prześlij wymagania techniczne: średnicę zewnętrzną, grubość ścianki, długość, gatunek stali, normę wykonania i rodzaj szwu. Podaj też ilość materiału, miejsce dostawy oraz wymagania dotyczące cięcia, powłok i dokumentacji. Na tej podstawie przygotujemy ofertę i ustalimy warunki realizacji.</p>
+    <a href="/kontakt#formularz-kontaktowy" class="mt-6 inline-flex bg-accent-1 px-6 py-3 font-semibold text-white no-underline hover:bg-accent-1/85">Wyślij zapytanie o rury stalowe</a>
+  </section>
+
+  <section aria-labelledby="faq-rury">
+    <h2 id="faq-rury">Najczęściej zadawane pytania</h2>
+    <div class="mt-6 divide-y divide-ink/10 border-y border-ink/10">
+      {faq.map(item => (
+        <details class="py-5">
+          <summary class="cursor-pointer font-semibold text-ink">{item.question}</summary>
+          <p>{item.answer}</p>
+        </details>
+      ))}
+    </div>
+  </section>
+</div>
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+<style>
+  .pipe-overview section + section { margin-top: 3rem; }
+  .pipe-overview h2 { font-size: var(--text-2xl); font-weight: 600; line-height: 1.3; color: var(--color-ink); }
+  .pipe-overview h3 { margin-top: 1.5rem; font-size: var(--text-lg); font-weight: 600; color: var(--color-ink); }
+  .pipe-overview p { margin-top: 1rem; }
+  .pipe-overview ul { margin-top: 1rem; padding-left: 1.5rem; list-style: disc; }
+  .pipe-overview li + li { margin-top: .5rem; }
+  .pipe-overview a:not(.no-underline) { color: var(--color-accent-1); text-decoration: underline; text-underline-offset: 3px; }
+  .pipe-overview th, .pipe-overview td { border: 1px solid #d8dde6; padding: .75rem 1rem; }
+  .pipe-overview th { background: var(--color-mist); color: var(--color-ink); }
+</style>
