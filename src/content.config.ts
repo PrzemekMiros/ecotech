@@ -1,13 +1,13 @@
 import { defineCollection, z } from 'astro:content';
-import { glob } from 'astro/loaders';
+import { contentLoader } from './loaders/sanity';
 
 const news = defineCollection({
-  loader: glob({ base: './src/content/blog', pattern: '**/*.md' }),
+  loader: contentLoader('news', './src/content/blog'),
   schema: z.object({
     title: z.string(),
     pubDate: z.coerce.date(),
     slug: z.string(),
-    category: z.enum(['Aktualności', 'Rynek', 'Wiedza']),
+    category: z.enum(['Aktualności', 'Rynek', 'Wiedza', 'Właściwości mechaniczne stali', 'Wymiary rur stalowych']),
     source: z.string().url(),
     description: z.string(),
     image: z.string().optional(),
@@ -20,7 +20,7 @@ const news = defineCollection({
 });
 
 const services = defineCollection({
-  loader: glob({ base: './src/content/services', pattern: '**/*.md' }),
+  loader: contentLoader('services', './src/content/services'),
   schema: z.object({
     title: z.string(),
     pubDate: z.coerce.date(),
@@ -34,7 +34,7 @@ const services = defineCollection({
 });
 
 const production = defineCollection({
-  loader: glob({ base: './src/content/production', pattern: '**/*.md' }),
+  loader: contentLoader('production', './src/content/production'),
   schema: z.object({
     title: z.string(),
     pubDate: z.coerce.date(),
@@ -48,7 +48,7 @@ const production = defineCollection({
 });
 
 const jobs = defineCollection({
-  loader: glob({ base: './src/content/jobs', pattern: '**/*.md' }),
+  loader: contentLoader('jobs', './src/content/jobs'),
   schema: z.object({
     title: z.string(),
     slug: z.string(),
@@ -61,7 +61,7 @@ const jobs = defineCollection({
 });
 
 const delivery = defineCollection({
-  loader: glob({ base: './src/content/delivery', pattern: '**/*.md' }),
+  loader: contentLoader('delivery', './src/content/delivery'),
   schema: z.object({
     title: z.string(),
     city: z.string(),
@@ -74,7 +74,7 @@ const delivery = defineCollection({
 });
 
 const steelPipeCategories = defineCollection({
-  loader: glob({ base: './src/content/steel-pipe-categories', pattern: '**/*.md' }),
+  loader: contentLoader('steelPipeCategories', './src/content/steel-pipe-categories'),
   schema: z.object({
     title: z.string(),
     slug: z.string(),
@@ -87,7 +87,7 @@ const steelPipeCategories = defineCollection({
 });
 
 const steelPipeProducts = defineCollection({
-  loader: glob({ base: './src/content/steel-pipe-products', pattern: '**/*.md' }),
+  loader: contentLoader('steelPipeProducts', './src/content/steel-pipe-products'),
   schema: z.object({
     title: z.string(),
     slug: z.string(),

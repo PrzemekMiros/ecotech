@@ -7,14 +7,26 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "start": "node ./dist/server/entry.mjs"
+    "start": "node ./dist/server/entry.mjs",
+    "studio": "sanity dev",
+    "studio:build": "sanity build sanity-dist",
+    "studio:deploy": "sanity deploy sanity-dist",
+    "sanity:export": "node scripts/export-sanity.mjs"
   },
   "dependencies": {
     "@astrojs/netlify": "^6.6.5",
     "@astrojs/node": "^9.5.5",
     "@astrojs/sitemap": "^3.2.1",
+    "@sanity/client": "^6.29.1",
     "@tailwindcss/vite": "^4.1.0",
     "astro": "^5.5.0",
     "tailwindcss": "^4.1.0"
+  },
+  "devDependencies": {
+    "gray-matter": "^4.0.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sanity": "^3.99.0",
+    "styled-components": "^6.6.0"
   }
 }

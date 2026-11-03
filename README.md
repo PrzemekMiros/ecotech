@@ -21,3 +21,7 @@ Zmienne nie mogą mieć prefiksu `PUBLIC_`; są odczytywane wyłącznie przez en
 
 Formularze wymagają hostingu obsługującego Node.js. Po wdrożeniu skonfiguruj te same trzy zmienne środowiskowe w panelu hostingu, zbuduj stronę poleceniem `npm run build` i uruchom ją przez `npm run start`.
 
+
+## Sanity CMS
+
+Konfiguracja panelu, import obecnych treści i publikacja: [sanity/README.md](sanity/README.md).
