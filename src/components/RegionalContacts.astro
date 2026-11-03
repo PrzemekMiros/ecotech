@@ -1,0 +1,82 @@
+---
+import mapSvg from '../assets/contact-regions.svg?raw';
+import regions from '../data/regional-contacts.json';
+---
+
+<section class="mt-12 border-t border-ink/10 pt-10" aria-labelledby="regional-contacts-title" data-regional-contacts>
+  <h2 id="regional-contacts-title" class="text-xl font-semibold text-ink md:text-2xl">Znajdź opiekuna swojego regionu</h2>
+  <p class="mt-3 text-base leading-7 text-ink/70">Wybierz województwo na mapie lub z listy, aby skontaktować się z naszym zespołem handlowym.</p>
+  <div class="mt-8 grid items-start gap-8 lg:grid-cols-2 lg:gap-12">
+    <div class="regional-map mx-auto w-full max-w-[612px]" set:html={mapSvg} />
+    <div class="min-w-0 bg-mist/50 p-5 sm:p-8">
+      <label for="contact-region" class="block text-sm font-semibold text-ink">Województwo</label>
+      <select id="contact-region" class="mt-3 w-full border border-ink/20 bg-white px-4 py-3 text-base text-ink">
+        {Object.entries(regions).map(([id, region]) => <option value={id} selected={id === 'PL-MZ'}>{region.region}</option>)}
+      </select>
+      <div class="mt-6" aria-live="polite" aria-atomic="true">
+        {Object.entries(regions).map(([id, region]) => (
+          <div data-region-panel={id} hidden={id !== 'PL-MZ'}>
+            <h3 class="sr-only">{region.region}</h3>
+            <div class="divide-y divide-ink/10">
+              {region.reps.map(person => (
+                <article class="flex gap-4 py-6 first:pt-0 last:pb-0">
+                  <img src={person.avatar} alt={person.name} width="88" height="88" class="size-16 shrink-0 rounded-full object-cover sm:size-22" loading="lazy" />
+                  <div class="min-w-0">
+                    <h4 class="text-lg font-semibold text-ink">{person.name}</h4>
+                    <p class="mt-1 text-sm leading-6 text-accent-1">{person.role}</p>
+                    <a href={`mailto:${person.email}`} class="mt-2 block break-words text-sm leading-6 text-ink/75 hover:text-accent-1">{person.email}</a>
+                    <a href={`tel:${person.phone.replace(/\s/g, '')}`} class="mt-1 block text-sm leading-6 text-ink/75 hover:text-accent-1">{person.phone}</a>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .regional-map :global(svg) { width: 100%; height: auto; }
+  .regional-map :global(.mph-region) { stroke: white; stroke-width: 1.5; cursor: pointer; transition: fill 150ms; }
+  .regional-map :global(.mph-region:hover),
+  .regional-map :global(.mph-region:focus),
+  .regional-map :global(.mph-region.is-active) { fill: #214a9b !important; }
+  .regional-map :global(.mph-region:focus-visible) { stroke: #e7b13c; stroke-width: 3; outline: none; }
+  .regional-map :global(.mph-region-label) { font-size: 10px; fill: #25354a; pointer-events: none; }
+  .regional-map :global(.mph-region-label.is-active) { fill: white; }
+</style>
+
+<script>
+  function initRegionalContacts() {
+    document.querySelectorAll<HTMLElement>('[data-regional-contacts]').forEach(root => {
+      if (root.dataset.initialized) return;
+      root.dataset.initialized = 'true';
+      const select = root.querySelector<HTMLSelectElement>('select');
+      if (!select) return;
+      const paths = root.querySelectorAll<SVGPathElement>('.mph-region');
+      const activate = (id: string) => {
+        select.value = id;
+        root.querySelectorAll<HTMLElement>('[data-region-panel]').forEach(panel => { panel.hidden = panel.dataset.regionPanel !== id; });
+        paths.forEach(path => {
+          path.classList.toggle('is-active', path.id === id);
+          path.setAttribute('aria-pressed', String(path.id === id));
+        });
+        root.querySelectorAll<SVGTextElement>('.mph-region-label').forEach(label => label.classList.toggle('is-active', label.dataset.regionId === id));
+      };
+      paths.forEach(path => {
+        path.setAttribute('role', 'button');
+        path.setAttribute('aria-label', path.getAttribute('title') ?? path.id);
+        path.addEventListener('click', () => activate(path.id));
+        path.addEventListener('keydown', event => {
+          if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); activate(path.id); }
+        });
+      });
+      select.addEventListener('change', () => activate(select.value));
+      activate(select.value);
+    });
+  }
+  initRegionalContacts();
+  document.addEventListener('astro:page-load', initRegionalContacts);
+</script>
