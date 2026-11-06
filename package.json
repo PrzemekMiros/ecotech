@@ -7,6 +7,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "check:agents": "node scripts/check-agent-access.mjs",
     "start": "node ./dist/server/entry.mjs",
     "studio": "sanity dev",
     "studio:build": "sanity build sanity-dist",

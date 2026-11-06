@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { Picture } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from './PageHero.astro';
 import { itemListSchema } from '../lib/structured-data';
@@ -38,7 +39,15 @@ const featuredImages = {
 
         return (
         <a href={`/aktualnosci/${post.data.slug}`} class="group flex min-h-80 flex-col overflow-hidden border border-accent-1/15 bg-white transition-colors hover:border-accent-1 hover:bg-mist">
-          <img src={featuredImage.src} alt={featuredImage.alt} class="aspect-[16/8.5] w-full object-cover transition duration-500 group-hover:scale-[1.03]" loading="lazy" />
+          <Picture
+            src={featuredImage.src} alt={featuredImage.alt}
+            width={1280} height={680}
+            widths={[320, 480, 640, 960, 1280]}
+            sizes="(min-width: 1280px) 395px, (min-width: 1024px) calc((100vw - 96px) / 3), (min-width: 768px) calc((100vw - 80px) / 2), calc(100vw - 40px)"
+            formats={['avif', 'webp']} fallbackFormat="jpg"
+            class="aspect-[16/8.5] w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+            loading="lazy"
+          />
           <div class="flex flex-1 flex-col justify-between p-6">
             <div>
             <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.12em] text-accent-1">

@@ -25,7 +25,7 @@ const products = (await getCollection('steelPipeProducts'))
   .sort((a, b) => a.data.order - b.data.order);
 ---
 
-<BaseLayout title={`${category.data.title} | Rury stalowe | Eco Tech Group`} description={category.data.description} structuredData={[{
+<BaseLayout title={`${category.data.title} | Rury stalowe | Eco Tech Group`} description={category.data.description} image={category.data.image} imageAlt={category.data.imageAlt} structuredData={[{
   '@type': 'ItemList', name: category.data.title, numberOfItems: products.length,
   itemListElement: products.map(({ data }, index) => ({
     '@type': 'ListItem', position: index + 1, name: data.title,

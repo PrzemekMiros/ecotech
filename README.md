@@ -42,3 +42,15 @@ Wspólny layout generuje graf Organization, WebSite i WebPage (lub ContactPage, 
 Nie dodajemy domyślnych cen, ocen, stanów magazynowych ani dat aktualizacji. Przy wycofywaniu oferty pracy należy również usunąć jej publikację. JSON-LD jest bezpiecznie serializowany i używa adresów domeny produkcyjnej. Po wdrożeniu sprawdź reprezentatywne URL w Schema Markup Validator i Google Rich Results Test. Poprawna składnia Schema.org nie gwarantuje rozszerzonego wyniku Google (np. produkty bez cen/ofert lub ocen mogą nie kwalifikować się do tego wyniku).
 
 W layoucie pozostaje istniejąca globalna dyrektywa `noindex`; wdrożenie JSON-LD nie zmienia ustawień indeksowania.
+
+## Markdown i wykrywanie zasobów przez agentów
+
+Konfiguracja wersji 1.0.0 znajduje się w `src/lib/agent-resources.ts`, middleware i endpointach `/index.md` oraz `/docs/agents.md`. Źródła Markdown są w `src/data/home.md` i `src/data/agents.md`; aktualizuj przegląd przy zmianach oferty lub danych kontaktowych na stronie głównej.
+
+Strona główna zwraca `Link` z relacjami `alternate`, `describedby` i `service-doc` zgodnie z [RFC 8288](https://www.rfc-editor.org/rfc/rfc8288) i [rejestrem IANA](https://www.iana.org/assignments/link-relations/). Dokumentacja opisuje dostęp HTTP do treści; nie deklarujemy nieistniejącego katalogu API. Nagłówki strony renderowanej przez SSR są ustawiane w middleware, a nie w regułach Netlify przeznaczonych tylko dla plików statycznych.
+
+`GET /` i artykuły przyjmują `Accept: text/markdown`; `HEAD` zwraca te same metadane bez treści. Obie reprezentacje mają `Vary: Accept, User-Agent`, a cache CDN dla tych tras jest wyłączony, aby nie mieszać HTML i Markdown. Zasoby `.md` zwracają `text/markdown; charset=utf-8`. Istniejące reguły `robots.txt`, `noindex` i tryb serwisowy pozostają w mocy.
+
+Walidacja lokalna: `npm run check:agents -- http://localhost:4321`. Po każdym wdrożeniu: `npm run check:agents -- https://ecotechgroup.pl`. Skrypt kończy się błędem przy przekierowaniu, braku Link, niewłaściwym statusie/MIME, braku Markdown albo blokadzie żądań z testowanymi User-Agent. Uruchamiaj również cyklicznie w monitoringu hostingu; test nie wprowadza zmian w witrynie. Nie należy omijać uwierzytelnienia/WAF — zasoby mają być publiczne z założenia.
+
+Po poprawnym teście domeny produkcyjnej ponów audyt w oryginalnym narzędziu AEO i zachowaj raport. Ten skrypt sprawdza transport HTTP i dostęp do zasobów; nie zastępuje zewnętrznego skanera ani weryfikacji z sieci konkretnego dostawcy AI.

@@ -1,5 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
+import { Picture } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { absoluteUrl, pageUrl, organizationId, serializeSchema } from '../../lib/structured-data';
 
@@ -59,7 +60,7 @@ const faqSchema = faq.length > 0 ? {
 } : null;
 ---
 
-<BaseLayout title={`${post.data.title} | Eco Tech Group`} description={post.data.description} structuredData={[{
+<BaseLayout title={`${post.data.title} | Eco Tech Group`} description={post.data.description} image={post.data.image} imageAlt={post.data.imageAlt} ogType="article" publishedTime={post.data.pubDate.toISOString()} articleSection={post.data.category} structuredData={[{
   '@type': 'BlogPosting', headline: post.data.title, description: post.data.description,
   datePublished: post.data.pubDate.toISOString(), inLanguage: 'pl-PL',
   image: absoluteUrl(post.data.image ?? '/img/main/hero-industrial-pipes.jpg'),
@@ -90,7 +91,16 @@ const faqSchema = faq.length > 0 ? {
           <div class="min-w-0">
 
             <figure class="mb-8">
-              <img src={post.data.image ?? '/img/main/hero-industrial-pipes.jpg'} alt={post.data.imageAlt ?? post.data.title} class="aspect-[16/9] w-full object-cover" loading="eager" />
+              <Picture
+                src={post.data.image ?? '/img/main/hero-industrial-pipes.jpg'}
+                alt={post.data.imageAlt ?? post.data.title}
+                width={1600} height={900}
+                widths={[320, 480, 640, 960, 1280, 1600]}
+                sizes="(min-width: 1280px) 768px, (min-width: 1024px) calc(100vw - 512px), (min-width: 768px) calc(100vw - 144px), (min-width: 640px) calc(100vw - 120px), calc(100vw - 88px)"
+                formats={['avif', 'webp']} fallbackFormat="jpg"
+                class="aspect-[16/9] w-full object-cover"
+                loading="eager" fetchpriority="high"
+              />
             </figure>
 
             <div class="flex flex-wrap items-center gap-3 text-xs font-bold uppercase tracking-[0.16em] text-accent-1">

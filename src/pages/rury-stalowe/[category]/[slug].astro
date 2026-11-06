@@ -48,7 +48,7 @@ const productSchema = {
 };
 ---
 
-<BaseLayout title={`${product.data.title} | Eco Tech Group`} description={technicalSummary} structuredData={[productSchema]} breadcrumbs={[
+<BaseLayout title={`${product.data.title} | Eco Tech Group`} description={technicalSummary} image={category?.data.image} imageAlt={category?.data.imageAlt ?? product.data.title} structuredData={[productSchema]} breadcrumbs={[
   { name: 'Rury stalowe', path: '/rury-stalowe' },
   { name: category?.data.title ?? 'Kategoria', path: `/rury-stalowe-${product.data.category}` }
 ]}>

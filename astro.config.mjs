@@ -8,6 +8,9 @@ export default defineConfig({
   site: 'https://ecotechgroup.pl',
   output: 'server',
   adapter: netlify(),
+  image: {
+    remotePatterns: [{ protocol: 'https', hostname: 'cdn.sanity.io' }]
+  },
   integrations: [sitemap({
     filter: (page) => !isExcludedFromIndexing(new URL(page).pathname)
   })],

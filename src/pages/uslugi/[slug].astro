@@ -23,7 +23,7 @@ const { service } = Astro.props;
 const { Content } = await render(service);
 ---
 
-<BaseLayout title={`${service.data.title} | Eco Tech Group`} description={service.data.description} structuredData={[serviceSchema(service.data.title, service.data.description, Astro.url.pathname)]}>
+<BaseLayout title={`${service.data.title} | Eco Tech Group`} description={service.data.description} image={service.data.image} imageAlt={service.data.imageAlt} structuredData={[serviceSchema(service.data.title, service.data.description, Astro.url.pathname)]}>
   <article class="service-page">
     <PageHero title={service.data.title} breadcrumbs={[{ label: 'Usługi', href: '/uslugi' }]} image={service.data.image} imageAlt={service.data.imageAlt ?? service.data.title} />
 
