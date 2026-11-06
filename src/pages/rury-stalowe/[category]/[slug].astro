@@ -22,6 +22,9 @@ interface Props {
 const { product } = Astro.props;
 const categories = await getCollection('steelPipeCategories');
 const category = categories.find((item) => item.data.slug === product.data.category);
+const productImage = product.data.category === 'dwudzielne'
+  ? '/img/pipes/rury-stalowe-dwudzielne.jpg'
+  : '/img/pipes/rura-stalowa.jpg';
 const { Content } = await render(product);
 const technicalSummary = product.data.technicalSummary ?? product.data.description;
 const technicalParameters = [
@@ -35,7 +38,7 @@ const productSchema = {
   '@type': 'Product',
   url: pageUrl(Astro.url.pathname),
   mainEntityOfPage: { '@id': `${pageUrl(Astro.url.pathname)}#webpage` },
-  ...(category?.data.image ? { image: absoluteUrl(category.data.image) } : {}),
+  image: absoluteUrl(productImage),
   name: product.data.title,
   description: technicalSummary,
   sku: product.data.sku,
@@ -48,7 +51,7 @@ const productSchema = {
 };
 ---
 
-<BaseLayout title={`${product.data.title} | Eco Tech Group`} description={technicalSummary} image={category?.data.image} imageAlt={category?.data.imageAlt ?? product.data.title} structuredData={[productSchema]} breadcrumbs={[
+<BaseLayout title={`${product.data.title} | Eco Tech Group`} description={technicalSummary} image={productImage} imageAlt={product.data.title} structuredData={[productSchema]} breadcrumbs={[
   { name: 'Rury stalowe', path: '/rury-stalowe' },
   { name: category?.data.title ?? 'Kategoria', path: `/rury-stalowe-${product.data.category}` }
 ]}>
@@ -70,11 +73,7 @@ const productSchema = {
         <div class="mx-auto max-w-4xl">
           <div class="grid gap-8 md:grid-cols-[15rem_minmax(0,1fr)] lg:grid-cols-[17rem_minmax(0,1fr)]">
             <figure class="overflow-hidden border border-ink/10 bg-sand">
-              {category?.data.image ? (
-                <img src={category.data.image} alt={category.data.imageAlt ?? category.data.title} class="h-full min-h-56 w-full object-cover" />
-              ) : (
-                <div class="grid min-h-56 place-items-center bg-mist p-8 text-center text-sm text-ink/55">Zdjęcie produktu</div>
-              )}
+              <img src={productImage} alt={product.data.title} class="h-full min-h-56 w-full object-cover" />
             </figure>
 
             <div>
