@@ -2,12 +2,13 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
+import { itemListSchema } from '../../lib/structured-data';
 
 const jobs = (await getCollection('jobs')).sort((a, b) => a.data.order - b.data.order);
 const formatDate = new Intl.DateTimeFormat('pl-PL', { day: '2-digit', month: 'long', year: 'numeric' });
 ---
 
-<BaseLayout title="Praca | Eco Tech Group" description="Aktualne oferty pracy w Eco Tech Group">
+<BaseLayout title="Praca | Eco Tech Group" description="Aktualne oferty pracy w Eco Tech Group" structuredData={[itemListSchema('Praca', jobs.map(({ data }) => ({ name: data.title, path: `/praca/${data.slug}` })))]}>
   <PageHero title="Praca" />
 
   <section class="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">

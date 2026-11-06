@@ -4,16 +4,25 @@ import { ClientRouter } from 'astro:transitions';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import LeadSourceTracker from '../components/LeadSourceTracker.astro';
+import { pageGraph, serializeSchema, type SchemaNode, type Breadcrumb } from '../lib/structured-data';
 
 interface Props {
   title?: string;
   description?: string;
+  structuredData?: SchemaNode[];
+  breadcrumbs?: Breadcrumb[];
 }
 
 const {
   title = 'Eco Tech Group | Rury i konstrukcje stalowe',
-  description = 'Rury i konstrukcje stalowe'
+  description = 'Rury i konstrukcje stalowe',
+  structuredData = [],
+  breadcrumbs
 } = Astro.props;
+
+const schema = Astro.response.status < 400 ? pageGraph({
+  pathname: Astro.url.pathname, title, description, entities: structuredData, breadcrumbs
+}) : null;
 
 const pageTransition = {
   forwards: {
@@ -34,6 +43,7 @@ const pageTransition = {
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
+    {schema && <script type="application/ld+json" set:html={serializeSchema(schema)} />}
     <meta name="robots" content="noindex" />
     <link rel="alternate" type="text/markdown" href={Astro.url.href} />
     <title>{title} - EcoTech Group Sp. z o. o.</title>

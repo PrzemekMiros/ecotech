@@ -1,4 +1,5 @@
 ---
+import { serializeSchema } from '../lib/structured-data';
 const dimensions = [
   ['114,3', '3,2', '10,0'], ['133,9', '3,2', '10,0'], ['139,7', '3,2', '10,0'],
   ['159,0', '3,2', '10,0'], ['168,3', '3,2', '10,0'], ['219,0', '3,6', '12,5'],
@@ -107,7 +108,7 @@ const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
     </div>
   </section>
 </div>
-<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+<script type="application/ld+json" set:html={serializeSchema(faqSchema)} />
 
 <style>
   .pipe-overview section + section { margin-top: 3rem; }

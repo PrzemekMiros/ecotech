@@ -1,0 +1,39 @@
+---
+interface Props {
+  href: string;
+  class?: string;
+  masked?: boolean;
+}
+
+const { href, class: className, masked = ['/do-pobrania', '/praca', '/polityka-prywatnosci', '/regulamin', '/regulaminy'].includes(href.replace(/\/$/, '')) } = Astro.props;
+---
+
+{masked ? (
+  <span role="link" tabindex="0" data-navigation-target={href} class:list={[className, 'cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current']}>
+    <slot />
+  </span>
+) : (
+  <a href={href} class={className}><slot /></a>
+)}
+
+<script>
+  // Delegation also handles elements replaced by Astro's ClientRouter.
+  function activate(event: MouseEvent | KeyboardEvent) {
+    if (event.defaultPrevented || !(event.target instanceof Element)) return;
+    const link = event.target.closest<HTMLElement>('[data-navigation-target]');
+    const target = link?.dataset.navigationTarget;
+    if (!target) return;
+    if (event instanceof KeyboardEvent && event.key !== 'Enter') return;
+    if (event instanceof MouseEvent && event.button !== 0 && event.button !== 1) return;
+    event.preventDefault();
+    if (event.ctrlKey || event.metaKey || event.shiftKey || (event instanceof MouseEvent && event.button === 1)) {
+      window.open(target, '_blank', 'noopener,noreferrer');
+    } else {
+      window.location.assign(target);
+    }
+  }
+
+  document.addEventListener('click', activate);
+  document.addEventListener('auxclick', activate);
+  document.addEventListener('keydown', activate);
+</script>

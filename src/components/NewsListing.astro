@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from './PageHero.astro';
+import { itemListSchema } from '../lib/structured-data';
 
 interface Props { category?: 'Właściwości mechaniczne stali' | 'Wymiary rur stalowych' }
 const { category } = Astro.props;
@@ -17,7 +18,7 @@ const featuredImages = {
 };
 ---
 
-<BaseLayout title={`${title} | Eco Tech Group`} description={category ? `Artykuły i wiedza techniczna: ${category.toLowerCase()}. Eco Tech Group.` : 'Najnowsze informacje, wiedza branżowa i aktualności Eco Tech Group.'}>
+<BaseLayout title={`${title} | Eco Tech Group`} description={category ? `Artykuły i wiedza techniczna: ${category.toLowerCase()}. Eco Tech Group.` : 'Najnowsze informacje, wiedza branżowa i aktualności Eco Tech Group.'} structuredData={[itemListSchema(title, posts.map(({ data }) => ({ name: data.title, path: `/aktualnosci/${data.slug}` })))]}>
   <PageHero title={title} />
 
   <section class="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">

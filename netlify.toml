@@ -4,3 +4,15 @@
 
 [build.environment]
   NODE_VERSION = "20.19.6"
+
+[[redirects]]
+  from = "/uslugi/ciecie-plazmowe-cnc-wypalanie-blach-cnc/"
+  to = "https://ecotechgroup.pl/uslugi/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/uslugi/demontaz-rurociagow-stalowych/"
+  to = "https://ecotechgroup.pl/uslugi/"
+  status = 301
+  force = true

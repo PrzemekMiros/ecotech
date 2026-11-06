@@ -2,6 +2,7 @@
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import ContactFormHandler from '../../../components/ContactFormHandler.astro';
+import { absoluteUrl, pageUrl } from '../../../lib/structured-data';
 
 export const prerender = true;
 
@@ -31,11 +32,13 @@ const technicalParameters = [
   ...product.data.technicalParameters
 ];
 const productSchema = {
-  '@context': 'https://schema.org',
   '@type': 'Product',
+  url: pageUrl(Astro.url.pathname),
+  mainEntityOfPage: { '@id': `${pageUrl(Astro.url.pathname)}#webpage` },
+  ...(category?.data.image ? { image: absoluteUrl(category.data.image) } : {}),
   name: product.data.title,
   description: technicalSummary,
-  sku: product.data.sku ?? product.data.slug,
+  sku: product.data.sku,
   category: category?.data.title,
   additionalProperty: technicalParameters.map((parameter) => ({
     '@type': 'PropertyValue',
@@ -45,7 +48,10 @@ const productSchema = {
 };
 ---
 
-<BaseLayout title={`${product.data.title} | Eco Tech Group`} description={technicalSummary}>
+<BaseLayout title={`${product.data.title} | Eco Tech Group`} description={technicalSummary} structuredData={[productSchema]} breadcrumbs={[
+  { name: 'Rury stalowe', path: '/rury-stalowe' },
+  { name: category?.data.title ?? 'Kategoria', path: `/rury-stalowe-${product.data.category}` }
+]}>
   <article class="product-page bg-white pt-32 text-ink lg:pt-38">
     <div class="mx-auto max-w-7xl px-5 md:px-8">
       <nav class="flex flex-wrap items-center gap-x-2 gap-y-1 py-6 text-sm text-ink/55" aria-label="Okruszki nawigacyjne">
@@ -92,7 +98,7 @@ const productSchema = {
           </section>
 
           <section class="mt-12" aria-labelledby="product-details-heading">
-            <h2 id="product-details-heading" class="sr-only">Szczegóły produktu</h2>
+            <h2 id="product-details-heading" class="mb-6 text-xl font-semibold tracking-[-0.035em]">Parametry techniczne i dokumentacja</h2>
             <div class="product-tabs" data-product-tabs>
               <label class="block sm:hidden">
                 <span class="sr-only">Wybierz sekcję informacji o produkcie</span>
@@ -158,7 +164,7 @@ const productSchema = {
 
               <div class="pt-8" id="panel-reviews" role="tabpanel" aria-labelledby="tab-reviews" hidden>
                 <div class="max-w-3xl border border-dashed border-ink/20 bg-white p-6">
-                  <h3 class="font-semibold">Opinie o produkcie</h3>
+                  <p class="font-semibold">Opinie o produkcie</p>
                   <p class="mt-2 text-sm leading-6 text-ink/70">Opinie dla tego produktu nie zostały jeszcze opublikowane.</p>
                 </div>
               </div>
@@ -168,8 +174,8 @@ const productSchema = {
       </section>
 
       <aside id="formularz-zapytania" class="bg-[#f1f4f6] px-5 py-9 md:px-8 lg:px-10 lg:py-12">
-        <form class="contact-form mx-auto max-w-md" novalidate>
-          <h2 class="text-2xl font-semibold tracking-[-0.04em] text-ink">Zapytaj o dostępność</h2>
+        <form class="contact-form mx-auto max-w-md" aria-labelledby="product-inquiry-label" novalidate>
+          <p id="product-inquiry-label" class="text-2xl font-semibold tracking-[-0.04em] text-ink">Zapytaj o dostępność</p>
           <p class="mt-3 text-sm leading-6 text-ink/65">Prześlij parametry potrzebne do przygotowania oferty. Odpowiemy z dostępnością i wyceną.</p>
 
           <div class="mt-7 grid gap-3 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
@@ -214,7 +220,6 @@ const productSchema = {
       </aside>
     </div>
   </article>
-  <script type="application/ld+json" set:html={JSON.stringify(productSchema)}></script>
   <ContactFormHandler />
 </BaseLayout>
 

@@ -2,11 +2,12 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
+import { itemListSchema } from '../../lib/structured-data';
 
 const deliveries = (await getCollection('delivery')).sort((a, b) => a.data.order - b.data.order);
 ---
 
-<BaseLayout title="Dostawa rur stalowych | Eco Tech Group" description="Dostawa rur stalowych do miast w całej Polsce.">
+<BaseLayout title="Dostawa rur stalowych | Eco Tech Group" description="Dostawa rur stalowych do miast w całej Polsce." structuredData={[itemListSchema('Dostawa rur stalowych', deliveries.map(({ data }) => ({ name: data.title, path: `/dostawa-rur-stalowych/${data.slug}` })))]}>
   <PageHero title="Dostawa rur stalowych" />
 
   <section class="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">

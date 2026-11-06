@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
 import OfferTile from '../../components/OfferTile.astro';
+import { itemListSchema } from '../../lib/structured-data';
 
 const services = (await getCollection('services')).sort((a, b) => a.data.order - b.data.order);
 ---
@@ -10,6 +11,7 @@ const services = (await getCollection('services')).sort((a, b) => a.data.order -
 <BaseLayout
   title="Usługi | Eco Tech Group"
   description="Usługi związane z obróbką, produkcją i konserwacją rur stalowych."
+  structuredData={[itemListSchema('Usługi', services.map(({ data }) => ({ name: data.title, path: `/uslugi/${data.slug}` })))]}
 >
   <PageHero title="Usługi" />
 

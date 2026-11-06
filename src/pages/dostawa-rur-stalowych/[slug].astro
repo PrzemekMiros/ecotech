@@ -2,6 +2,7 @@
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
+import { serviceSchema } from '../../lib/structured-data';
 
 export const prerender = true;
 
@@ -22,7 +23,7 @@ const { delivery } = Astro.props;
 const { Content } = await render(delivery);
 ---
 
-<BaseLayout title={`${delivery.data.title} | Eco Tech Group`} description={delivery.data.description}>
+<BaseLayout title={`${delivery.data.title} | Eco Tech Group`} description={delivery.data.description} structuredData={[serviceSchema(delivery.data.title, delivery.data.description, Astro.url.pathname, delivery.data.city)]}>
   <article>
     <PageHero title={delivery.data.title} breadcrumbs={[{ label: 'Dostawa rur stalowych', href: '/dostawa-rur-stalowych' }]} />
 

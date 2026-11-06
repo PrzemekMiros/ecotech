@@ -4,17 +4,38 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
 import SteelPipesOverview from '../../components/SteelPipesOverview.astro';
 import SteelPipeFilters from '../../components/SteelPipeFilters.astro';
+import { itemListSchema } from '../../lib/structured-data';
 
 const categories = (await getCollection('steelPipeCategories')).sort((a, b) => a.data.order - b.data.order);
+const query = (Astro.url.searchParams.get('q') ?? '').trim().slice(0, 200);
+const terms = query.toLocaleLowerCase('pl').split(/\s+/).filter(Boolean);
+const results = query ? (await getCollection('steelPipeProducts')).filter(({ data }) => {
+  const text = `${data.title} ${data.steelGrade ?? ''} ${data.description}`.toLocaleLowerCase('pl');
+  return terms.every((term) => text.includes(term));
+}) : [];
 ---
 
 <BaseLayout
   title="Rury stalowe | Eco Tech Group"
   description="Katalog rur stalowych: rury ze szwem, bez szwu, izolowane, dwudzielne i używane."
+  structuredData={[itemListSchema('Kategorie rur stalowych', categories.map(({ data }) => ({ name: data.title, path: `/rury-stalowe-${data.slug}` })))]}
 >
   <PageHero title="Rury stalowe" />
 
   <section class="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
+    {query && (
+      <section aria-labelledby="search-results-title" class="mb-12">
+        <h2 id="search-results-title" class="text-2xl font-semibold text-accent-1">Wyniki wyszukiwania: {query}</h2>
+        <p class="mt-3">Znaleziono produktów: {results.length}.</p>
+        {results.length ? (
+          <ul class="mt-5 grid gap-3 sm:grid-cols-2">
+            {results.map(({ data }) => (
+              <li><a class="block border border-ink/20 p-4 text-accent-1 underline" href={`/rury-stalowe/${data.category}/${data.slug}/`}>{data.title}</a></li>
+            ))}
+          </ul>
+        ) : <p class="mt-3">Wybierz kategorię poniżej lub <a href="/kontakt/" class="text-accent-1 underline">skontaktuj się z nami</a>, aby dobrać rurę.</p>}
+      </section>
+    )}
     <div class="grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_19rem] lg:gap-10">
     <div class="min-w-0">
     <div class="mb-10 max-w-5xl space-y-4 text-base leading-7 text-ink/75">

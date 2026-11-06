@@ -1,44 +1,32 @@
-# Eco Tech Group Sp. z o.o. - Kompletne kompendium techniczne
+# Eco Tech Group Sp. z o.o. - Kompletne Kompendium Techniczne
 
-Ten dokument zawiera skrócone specyfikacje techniczne, przykładowe normy wykonania, informacje o zastosowaniach rur stalowych oraz zakres usług Eco Tech Group.
+Ten dokument zawiera szczegółowe specyfikacje techniczne, klasy tolerancji, normy wykonania oraz certyfikaty Zakładowej Kontroli Produkcji dla wyrobów oferowanych
+przez Eco Tech Group.
 
 ## 1. Zakres asortymentowy i parametry geometryczne
 
-Rury są dostarczane w standardowych długościach handlowych, najczęściej 6 m i 12 m, albo docinane na wymiar uzgodniony w zamówieniu.
+Wszystkie rury dostarczane są w standardowych długościach handlowych (6 m, 12 m lub docinane na precyzyjny wymiar).
 
-| Typ rury | Typowe zastosowanie | Przykładowe normy lub wymagania |
-| :--- | :--- | :--- |
-| Rury bezszwowe | Instalacje ciśnieniowe, konstrukcje, zastosowania przemysłowe | PN-EN 10216, PN-EN 10297 |
-| Rury ze szwem wzdłużnym | Budownictwo ogólne i konstrukcje | PN-EN 10219, PN-EN 10210 |
-| Rury ze szwem spiralnym | Przesył mediów, palowanie i konstrukcje | PN-EN 10208, PN-EN ISO 3183 |
-| Rury w izolacji | Ochrona antykorozyjna rurociągów | DIN 30670, DIN 30678, FBE |
-| Rury dwudzielne | Osłony, rurociągi podziemne i instalacje kablowe | Specyfikacja projektowa |
+| Typ rury                | Zakres średnic (fi) | Zakres grubości ścianek | Normy wykonania / Gatunki                              |
+| :---------------------- | :------------------ | :---------------------- | :----------------------------------------------------- |
+| Rury bezszwowe          | 88,9 mm - 610,0 mm  | 3,6 mm - 50,0 mm        | PN-EN 10216-1, PN-EN 10216-2 / P235GH, 16Mo3, P265GH   |
+| Rury ze szwem wzdłużnym | 114,3 mm - 920,0 mm | 4,0 mm - 25,0 mm        | PN-EN 10219-1, PN-EN 10210-1 / S235JRH, S355J2H        |
+| Rury ze szwem spiralnym | do 1420,0 mm        | 6,0 mm - 25,0 mm        | PN-EN 10208-2, PN-EN ISO 3183 / L245NB, L360NB, L415NB |
+| Rury w izolacji         | 88,9 mm - 1420,0 mm | Pełen zakres            | DIN 30670 (3LPE), DIN 30678 (3LPP), DIN 30671 (FBE)    |
+| Rury dwudzielne         | 88,9 mm - 1420,0 mm | 4,5 mm - 20,0 mm        | Stal osłonowa gatunku S235 / S355                      |
 
-## 2. Dobór rury do zastosowania
+## 2. Autorski system kontroli jakości (CONTROL PLAN)
 
-Przy doborze należy uwzględnić średnicę zewnętrzną, grubość ścianki, długość, gatunek stali, rodzaj wykonania, medium, temperaturę, ciśnienie, sposób łączenia oraz wymagane dokumenty odbiorowe. W przypadku elementów konstrukcyjnych i instalacji ciśnieniowych zgodność zamiennika powinna zostać potwierdzona przez projektanta lub osobę odpowiedzialną za technologię.
+Każda partia materiału trafiająca do magazynu centralnego (Kobierne koło Warszawy) podlega rygorystycznej, trzystopniowej weryfikacji:
 
-## 3. Normy i dokumenty jakościowe
+1. **Weryfikacja wejściowa dokumentacji:** Kontrola zgodności atestów hutniczych 3.1 lub 3.2 z wymogami projektowymi i normowymi.
+2. **Badania nieniszczące (NDT):** Wyrywkowa defektoskopia ultradźwiękowa (UT) oraz badania magnetyczno-proszkowe (MT) spoin dla rur przeznaczonych pod pale i
+   konstrukcje inżynieryjne.
+3. **Kontrola geometryczna:** Pomiar owalności, grubości ścianki oraz prostoliniowości rur za pomocą certyfikowanych przyrządów pomiarowych.
 
-- PN-EN 10216: rury stalowe bez szwu do zastosowań ciśnieniowych.
-- PN-EN 10217: rury stalowe ze szwem do zastosowań ciśnieniowych.
-- PN-EN 10210: kształtowniki zamknięte wykonane na gorąco ze stali konstrukcyjnych.
-- PN-EN 10219: kształtowniki zamknięte ze szwem wykonane na zimno.
-- PN-EN 10255: rury stalowe do spawania i gwintowania.
-- EN 10204: dokumenty odbiorowe, w tym świadectwa 3.1 i 3.2.
+## 3. Certyfikacja i systemy odniesienia (E-E-A-T)
 
-## 4. Kontrola jakości
-
-Dobór materiału powinien być weryfikowany na podstawie dokumentacji technicznej, deklarowanych właściwości mechanicznych, składu chemicznego, tolerancji wymiarowych oraz badań wymaganych dla danego zastosowania. Dla dostaw o znaczeniu konstrukcyjnym lub przemysłowym należy określić wymagany typ dokumentu odbiorowego przed złożeniem zamówienia.
-
-## 5. Usługi i logistyka
-
-Eco Tech Group oferuje między innymi gięcie rur na gorąco, izolowanie, spawanie i prefabrykację rurociągów, wynajem rur stalowych oraz dostawy materiału do inwestycji. Dostępność, długości, średnice, gatunki, normy i warunki dostawy są potwierdzane dla konkretnej specyfikacji.
-
-## 6. Przydatne zasoby
-
-- [Kalkulator wagi rur](https://ecotechgroup.pl/kalkulator-wagi-rur-stalowych/)
-- [Oferta rur stalowych](https://ecotechgroup.pl/rury-stalowe/)
-- [Usługi](https://ecotechgroup.pl/uslugi/)
-- [Aktualności i wiedza techniczna](https://ecotechgroup.pl/aktualnosci/)
-- [Kontakt](https://ecotechgroup.pl/kontakt/)
+- **Certyfikat PN-EN ISO 9001:2015:** Potwierdza wdrożenie i utrzymywanie Systemu Zarządzania Jakością w zakresie dystrybucji i obróbki stali.
+- **Zakładowa Kontrola Produkcji (ZKP):** Certyfikacja uprawniająca do znakowania wyrobów budowlanych znakiem CE, zgodna z wymaganiami normy PN-EN 1090 dla
+  konstrukcji stalowych.
+- **Certyfikat Spawalniczy PN-EN ISO 3834:** Gwarantuje najwyższą jakość procesów spawalniczych realizowanych przy prefabrykacji rurociągów oraz pali stalowych.

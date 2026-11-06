@@ -1,4 +1,6 @@
 ---
+import NavigationLink from './NavigationLink.astro';
+
 const quickLinks = [
   { href: '/rury-stalowe', label: 'Rury stalowe' },
   { href: '/uslugi', label: 'Usługi' },
@@ -20,21 +22,21 @@ const companyLinks = [
   <div class="mx-auto max-w-7xl px-5 md:px-8">
     <div class="grid border-x border-white/10 md:grid-cols-2 lg:grid-cols-4">
       <section class="border-b border-white/10 px-6 py-10 md:border-r lg:border-b-0 lg:px-8 lg:py-16" aria-labelledby="footer-links">
-        <h2 id="footer-links" class="text-sm font-semibold uppercase tracking-[0.03em] text-white/55">Szybkie linki</h2>
+        <p id="footer-links" class="text-sm font-semibold uppercase tracking-[0.03em] text-white/55">Szybkie linki</p>
         <ul class="mt-6 space-y-3 text-sm leading-5 text-white/75">
           {quickLinks.map((link) => <li><a href={link.href} class="transition-colors hover:text-sun">{link.label}</a></li>)}
         </ul>
       </section>
 
       <section class="border-b border-white/10 px-6 py-10 md:px-8 lg:border-b-0 lg:border-r lg:py-16" aria-labelledby="footer-company">
-        <h2 id="footer-company" class="text-sm font-semibold uppercase tracking-[0.03em] text-white/55">Eco Tech Group</h2>
+        <p id="footer-company" class="text-sm font-semibold uppercase tracking-[0.03em] text-white/55">Eco Tech Group</p>
         <ul class="mt-6 space-y-3 text-sm leading-5 text-white/75">
-          {companyLinks.map((link) => <li><a href={link.href} class="transition-colors hover:text-sun">{link.label}</a></li>)}
+          {companyLinks.map((link) => <li><NavigationLink href={link.href} class="transition-colors hover:text-sun">{link.label}</NavigationLink></li>)}
         </ul>
       </section>
 
       <section class="border-b border-white/10 px-6 py-10 md:border-r md:px-8 lg:border-b-0 lg:py-16" aria-labelledby="footer-contact">
-        <h2 id="footer-contact" class="text-sm font-semibold uppercase tracking-[0.03em] text-white/55">Kontakt</h2>
+        <p id="footer-contact" class="text-sm font-semibold uppercase tracking-[0.03em] text-white/55">Kontakt</p>
         <div class="mt-6 space-y-3 text-sm leading-6 text-white/75">
           <a href="tel:+48508299077" class="block transition-colors hover:text-sun">+48 508 299 077</a>
           <a href="mailto:sprzedaz@ecotechgroup.pl" class="block break-words transition-colors hover:text-sun">sprzedaz@ecotechgroup.pl</a>
@@ -43,7 +45,7 @@ const companyLinks = [
       </section>
 
       <section class="px-6 py-10 md:px-8 lg:py-16" aria-labelledby="footer-address">
-        <h2 id="footer-address" class="text-sm font-semibold uppercase tracking-[0.03em] text-white/55">Siedziba firmy</h2>
+        <p id="footer-address" class="text-sm font-semibold uppercase tracking-[0.03em] text-white/55">Siedziba firmy</p>
         <address class="mt-6 text-sm leading-6 not-italic text-white/75">
           Eco Tech Group Sp. z o.o.<br />
           ul. Mieczysława Pożaryskiego 32<br />
@@ -67,8 +69,8 @@ const companyLinks = [
         </div>
       </div>
       <div class="flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-white/10 px-6 py-5 text-sm text-white/50 md:border-l md:border-t-0 md:px-8">
-        <a href="/polityka-prywatnosci" class="hover:text-white">Polityka prywatności</a>
-        <a href="/kontakt" class="hover:text-white">Pliki cookies</a>
+        <NavigationLink href="/polityka-prywatnosci" class="hover:text-white">Polityka prywatności</NavigationLink>
+        <NavigationLink href="/kontakt" masked class="hover:text-white">Pliki cookies</NavigationLink>
       </div>
     </div>
 

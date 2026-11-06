@@ -1,5 +1,7 @@
 import { getCollection } from 'astro:content';
-import { defineMiddleware } from 'astro:middleware';
+import { defineMiddleware, sequence } from 'astro:middleware';
+import { isExcludedFromIndexing } from './lib/indexing.mjs';
+import { maintenanceResponse } from './lib/maintenance.mjs';
 
 const AI_USER_AGENTS = /(?:GPTBot|ChatGPT-User|ClaudeBot|Claude-SearchBot|PerplexityBot|OAI-SearchBot)/i;
 const BINARY_ASSET = /\.(?:pdf|docx|xlsx|zip)$/i;
@@ -26,21 +28,33 @@ const htmlToMarkdown = (html: string) => decodeHtmlEntities(html)
   .replace(/\n{3,}/g, '\n\n')
   .trim();
 
-export const onRequest = defineMiddleware(async (context, next) => {
-  const { request, url } = context;
-  const maintenanceMode = process.env.MAINTENANCE_MODE?.toLowerCase() === 'true';
-
-  if (maintenanceMode && url.pathname !== '/503') {
-    return context.rewrite(new URL('/503', url));
+const excludeFromIndexing = defineMiddleware(async (context, next) => {
+  const response = await next();
+  if (response.status !== 503 && isExcludedFromIndexing(context.url.pathname)) {
+    response.headers.set('X-Robots-Tag', 'noindex, follow');
   }
+  return response;
+});
+
+const handleRequest = defineMiddleware(async (context, next) => {
+  const { request, url } = context;
+  const maintenanceMode = (process.env.MAINTENANCE_MODE ?? import.meta.env.MAINTENANCE_MODE)?.toLowerCase() === 'true';
+
+  if (maintenanceMode && !context.isPrerendered) {
+    return maintenanceResponse();
+  }
+
+  if (/^\/uslugi\/(?:ciecie-plazmowe-cnc-wypalanie-blach-cnc|demontaz-rurociagow-stalowych)\/?$/.test(url.pathname)) {
+    return context.redirect('https://ecotechgroup.pl/uslugi/', 301);
+  }
+
+  if (context.isPrerendered) return next();
 
   if (BINARY_ASSET.test(url.pathname)) {
     const response = await next();
     response.headers.set('X-Robots-Tag', 'noindex, follow');
     return response;
   }
-
-  if (context.isPrerendered) return next();
 
   const accept = request.headers.get('accept') ?? '';
   const userAgent = request.headers.get('user-agent') ?? '';
@@ -74,3 +88,5 @@ export const onRequest = defineMiddleware(async (context, next) => {
     }
   });
 });
+
+export const onRequest = sequence(excludeFromIndexing, handleRequest);

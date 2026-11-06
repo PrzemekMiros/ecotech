@@ -2,6 +2,7 @@
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
+import { organizationId, pageUrl } from '../../lib/structured-data';
 
 export const prerender = true;
 
@@ -23,7 +24,14 @@ const { Content } = await render(job);
 const formatDate = new Intl.DateTimeFormat('pl-PL', { day: '2-digit', month: 'long', year: 'numeric' });
 ---
 
-<BaseLayout title={`${job.data.title} | Praca | Eco Tech Group`} description={job.data.description}>
+<BaseLayout title={`${job.data.title} | Praca | Eco Tech Group`} description={job.data.description} structuredData={job.data.pubDate && job.data.location ? [{
+  '@type': 'JobPosting', title: job.data.title,
+  description: job.body || job.data.description,
+  datePosted: job.data.pubDate.toISOString(),
+  hiringOrganization: { '@id': organizationId },
+  url: pageUrl(Astro.url.pathname),
+  jobLocation: { '@type': 'Place', address: { '@type': 'PostalAddress', addressLocality: job.data.location, addressCountry: 'PL' } }
+}] : []}>
   <article>
     <PageHero title={job.data.title} breadcrumbs={[{ label: 'Praca', href: '/praca' }]} />
 

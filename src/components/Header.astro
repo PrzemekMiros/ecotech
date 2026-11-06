@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import darkLogo from '../assets/img/logo/EcoTech_Logo_dark.png';
+import NavigationLink from './NavigationLink.astro';
 
 const links = [
   { href: '/rury-stalowe', label: 'Rury stalowe', dropdown: true, menu: 'pipes' },
@@ -76,12 +77,12 @@ const itemHref = (menu: 'pipes' | 'services' | 'production', baseHref: string, s
             </div>
           </div>
         ) : (
-          <a href={link.href} class:list={[
+          <NavigationLink href={link.href} class={[
             'flex items-center gap-2 transition-colors hover:text-white/70',
             pathname === link.href ? 'text-white' : 'text-white/90'
-          ]}>
+          ].join(' ')}>
             {link.label}
-          </a>
+          </NavigationLink>
         ))}
       </nav>
     </div>
@@ -139,9 +140,9 @@ const itemHref = (menu: 'pipes' | 'services' | 'production', baseHref: string, s
             </details>
 
             {links.filter((link) => !link.dropdown).map((link) => (
-              <a href={link.href} class="flex items-center justify-between py-5 text-lg font-semibold hover:text-accent-1">
+              <NavigationLink href={link.href} class="flex items-center justify-between py-5 text-lg font-semibold hover:text-accent-1">
                 {link.label}<span aria-hidden="true" class="text-accent-1/60">→</span>
-              </a>
+              </NavigationLink>
             ))}
           </div>
 

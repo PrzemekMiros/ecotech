@@ -1,12 +1,13 @@
 ---
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { absoluteUrl, pageUrl, organizationId, serializeSchema } from '../../lib/structured-data';
 
 export const prerender = false;
 
 const posts = await getCollection('news');
 const post = posts.find((entry) => entry.data.slug === Astro.params.slug);
-if (!post) throw new Error(`Nie znaleziono artykułu: ${Astro.params.slug}`);
+if (!post) return Astro.rewrite('/404');
 const { Content } = await render(post);
 const formatDate = new Intl.DateTimeFormat('pl-PL', { day: '2-digit', month: 'long', year: 'numeric' });
 const relatedPosts = posts
@@ -58,7 +59,14 @@ const faqSchema = faq.length > 0 ? {
 } : null;
 ---
 
-<BaseLayout title={`${post.data.title} | Eco Tech Group`} description={post.data.description}>
+<BaseLayout title={`${post.data.title} | Eco Tech Group`} description={post.data.description} structuredData={[{
+  '@type': 'BlogPosting', headline: post.data.title, description: post.data.description,
+  datePublished: post.data.pubDate.toISOString(), inLanguage: 'pl-PL',
+  image: absoluteUrl(post.data.image ?? '/img/main/hero-industrial-pipes.jpg'),
+  author: { '@type': 'Person', name: author.name, jobTitle: author.role },
+  publisher: { '@id': organizationId },
+  mainEntityOfPage: { '@id': `${pageUrl(Astro.url.pathname)}#webpage` }
+}]}>
   <article class="overflow-hidden">
     <section class="relative isolate min-h-[15rem] bg-[#030b20] text-white">
       <img src="/img/main/hala-rury-stalowe-wynajem.jpg" alt="Rury stalowe w hali Eco Tech Group" class="absolute inset-0 -z-20 h-full w-full object-cover object-center" />
@@ -249,5 +257,5 @@ const faqSchema = faq.length > 0 ? {
       </div>
     </section>
   </article>
-  {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+  {faqSchema && <script type="application/ld+json" set:html={serializeSchema(faqSchema)} />}
 </BaseLayout>

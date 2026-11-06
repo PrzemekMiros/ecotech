@@ -1,6 +1,7 @@
 ---
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { pageUrl } from '../lib/structured-data';
 
 export const prerender = true;
 
@@ -24,7 +25,13 @@ const products = (await getCollection('steelPipeProducts'))
   .sort((a, b) => a.data.order - b.data.order);
 ---
 
-<BaseLayout title={`${category.data.title} | Rury stalowe | Eco Tech Group`} description={category.data.description}>
+<BaseLayout title={`${category.data.title} | Rury stalowe | Eco Tech Group`} description={category.data.description} structuredData={[{
+  '@type': 'ItemList', name: category.data.title, numberOfItems: products.length,
+  itemListElement: products.map(({ data }, index) => ({
+    '@type': 'ListItem', position: index + 1, name: data.title,
+    url: pageUrl(`/rury-stalowe/${data.category}/${data.slug}`)
+  }))
+}]}>
   <article class="pipe-category-page bg-white pt-32 text-ink lg:pt-38">
     <div class="mx-auto max-w-7xl px-5 md:px-8">
       <nav class="flex flex-wrap items-center gap-x-2 gap-y-1 py-6 text-sm text-ink/55" aria-label="Okruszki nawigacyjne">
@@ -56,7 +63,7 @@ const products = (await getCollection('steelPipeProducts'))
                 <li>
                   <a href={`/rury-stalowe/${category.data.slug}/${product.data.slug}`} class="group grid items-center gap-2 px-4 py-4 transition-colors hover:bg-mist sm:grid-cols-[10rem_minmax(0,1fr)_auto] sm:gap-6 sm:px-5">
                     <span class="text-xs font-bold uppercase tracking-[0.12em] text-accent-1">{product.data.specification ?? 'Rura stalowa'}</span>
-                    <h3 class="text-base font-semibold leading-6 tracking-[-0.02em] text-[#142b3a] group-hover:text-accent-1">{product.data.title}</h3>
+                    <span class="text-base font-semibold leading-6 tracking-[-0.02em] text-[#142b3a] group-hover:text-accent-1">{product.data.title}</span>
                     <span class="hidden text-sm font-semibold text-accent-1 sm:inline">Szczegóły →</span>
                   </a>
                 </li>
@@ -68,8 +75,8 @@ const products = (await getCollection('steelPipeProducts'))
         </section>
 
         <aside class="self-stretch bg-[#f3f5f6] px-6 py-10 md:px-10 lg:min-h-[44rem] lg:py-12">
-          <form class="mx-auto max-w-sm" aria-describedby="filter-unavailable">
-            <h2 class="text-2xl font-semibold tracking-[-0.04em] text-[#142b3a]">Znajdź rurę stalową</h2>
+          <form class="mx-auto max-w-sm" aria-labelledby="category-filter-label" aria-describedby="filter-unavailable">
+            <p id="category-filter-label" class="text-2xl font-semibold tracking-[-0.04em] text-[#142b3a]">Znajdź rurę stalową</p>
             <p id="filter-unavailable" class="mt-3 text-sm leading-6 text-ink/60">Filtr jest obecnie w przygotowaniu. Skontaktuj się z nami, aby dobrać produkt.</p>
             <fieldset disabled class="mt-8 grid gap-4 disabled:opacity-100">
               <label><span class="sr-only">Średnica</span><select class="pipe-filter-input"><option>Średnica</option></select></label>
