@@ -1,0 +1,89 @@
+<script>
+  type WebMcpTool = {
+    name: string;
+    title?: string;
+    description: string;
+    inputSchema: Record<string, unknown>;
+    annotations?: Record<string, boolean>;
+    execute(input: unknown): unknown | Promise<unknown>;
+  };
+
+  type WebMcpRegistry = {
+    registerTool(tool: WebMcpTool): void | Promise<void>;
+  };
+
+  type WebMcpDocument = Document & {
+    readonly modelContext?: WebMcpRegistry;
+    __ecotechWebMcpRegistered?: boolean;
+  };
+
+  const webMcpDocument = document as WebMcpDocument;
+  const registry = webMcpDocument.modelContext;
+
+  if (!webMcpDocument.__ecotechWebMcpRegistered && typeof registry?.registerTool === 'function') {
+    webMcpDocument.__ecotechWebMcpRegistered = true;
+
+    const reportError = (error: unknown) => console.warn('WebMCP tool registration failed.', error);
+
+    void Promise.resolve(registry.registerTool({
+      name: 'ecotech_company_contact',
+      title: 'Dane kontaktowe Eco Tech Group',
+      description: 'Zwraca oficjalne dane kontaktowe Eco Tech Group i adres formularza zapytania ofertowego.',
+      inputSchema: { type: 'object', properties: {}, additionalProperties: false },
+      annotations: { readOnlyHint: true },
+      execute() {
+        return {
+          company: 'Eco Tech Group Sp. z o.o.',
+          email: 'sprzedaz@ecotechgroup.pl',
+          phone: '+48 508 299 077',
+          address: 'ul. Mieczysława Pożaryskiego 32, 04-703 Warszawa, Polska',
+          hours: 'poniedziałek–piątek, 8:00–16:00 Europe/Warsaw',
+          contactUrl: 'https://ecotechgroup.pl/kontakt/'
+        };
+      }
+    })).catch(reportError);
+
+    void Promise.resolve(registry.registerTool({
+      name: 'ecotech_calculate_pipe_weight',
+      title: 'Kalkulator masy rury stalowej',
+      description: 'Oblicza orientacyjną masę jednego metra, jednej rury i całego zestawu rur stalowych na podstawie wymiarów.',
+      inputSchema: {
+        type: 'object',
+        properties: {
+          outerDiameterMm: { type: 'number', exclusiveMinimum: 0, description: 'Średnica zewnętrzna rury w milimetrach.' },
+          wallThicknessMm: { type: 'number', exclusiveMinimum: 0, description: 'Grubość ścianki w milimetrach.' },
+          lengthM: { type: 'number', exclusiveMinimum: 0, description: 'Długość jednej rury w metrach.' },
+          quantity: { type: 'integer', minimum: 1, description: 'Liczba rur.' }
+        },
+        required: ['outerDiameterMm', 'wallThicknessMm', 'lengthM', 'quantity'],
+        additionalProperties: false
+      },
+      annotations: { readOnlyHint: true },
+      execute(input: unknown) {
+        if (!input || typeof input !== 'object') throw new TypeError('Parametry muszą być obiektem.');
+        const values = input as Record<string, unknown>;
+        const diameter = values.outerDiameterMm;
+        const thickness = values.wallThicknessMm;
+        const length = values.lengthM;
+        const quantity = values.quantity;
+        if (![diameter, thickness, length, quantity].every((value) => typeof value === 'number' && Number.isFinite(value) && value > 0)) {
+          throw new RangeError('Wszystkie parametry muszą być dodatnimi liczbami.');
+        }
+        if (!Number.isInteger(quantity)) throw new RangeError('Liczba rur musi być liczbą całkowitą.');
+        if ((thickness as number) * 2 >= (diameter as number)) {
+          throw new RangeError('Grubość ścianki musi być mniejsza niż połowa średnicy zewnętrznej.');
+        }
+        const kgPerMeter = 0.02466 * (thickness as number) * ((diameter as number) - (thickness as number));
+        const kgPerPipe = kgPerMeter * (length as number);
+        return {
+          kgPerMeter: Number(kgPerMeter.toFixed(2)),
+          kgPerPipe: Number(kgPerPipe.toFixed(2)),
+          totalKg: Number((kgPerPipe * (quantity as number)).toFixed(2)),
+          densityKgM3: 7850,
+          approximate: true,
+          calculatorUrl: 'https://ecotechgroup.pl/kalkulator-wagi-rur-stalowych/'
+        };
+      }
+    })).catch(reportError);
+  }
+</script>

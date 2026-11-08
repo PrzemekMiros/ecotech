@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "pipe-weight-calculator",
+      "type": "skill-md",
+      "description": "Oblicz orientacyjną masę rur stalowych z ich średnicy zewnętrznej, grubości ścianki, długości i liczby sztuk. Użyj, gdy użytkownik pyta o wagę pojedynczej rury lub całej partii.",
+      "url": "/.well-known/agent-skills/pipe-weight-calculator/SKILL.md",
+      "digest": "sha256:5fac669073d342f7e12c47fe7bf13c5f1c9240593729bbe874dada0694ff6495"
+    }
+  ]
+}

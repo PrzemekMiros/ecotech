@@ -1,0 +1,37 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Eco Tech Group",
+    "identifier": "did:web:ecotechgroup.pl",
+    "documentationUrl": "https://ecotechgroup.pl/docs/agents.md",
+    "logoUrl": "https://ecotechgroup.pl/img/logo/EcoTech_Logo_white.png"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:ecotechgroup.pl:api:site-info",
+      "displayName": "Eco Tech Group Site Information API",
+      "type": "application/vnd.oai.openapi+json",
+      "url": "https://ecotechgroup.pl/openapi.json",
+      "description": "Publiczny interfejs tylko do odczytu z informacjami o firmie, ofercie i kontakcie.",
+      "capabilities": ["CompanyInformation", "OfferDiscovery", "ContactInformation"],
+      "representativeQueries": [
+        "Jak skontaktować się z Eco Tech Group?",
+        "Jakie rury i usługi oferuje Eco Tech Group?",
+        "W jakich godzinach działa dział sprzedaży Eco Tech Group?"
+      ]
+    },
+    {
+      "identifier": "urn:air:ecotechgroup.pl:skill:pipe-weight-calculator",
+      "displayName": "Kalkulator masy rur stalowych",
+      "type": "application/agent-skills+md",
+      "url": "https://ecotechgroup.pl/.well-known/agent-skills/pipe-weight-calculator/SKILL.md",
+      "description": "Instrukcja obliczania orientacyjnej masy rur stalowych na podstawie wymiarów.",
+      "capabilities": ["SteelPipeWeightCalculation"],
+      "representativeQueries": [
+        "Ile waży metr rury stalowej o podanych wymiarach?",
+        "Oblicz masę partii rur stalowych.",
+        "Jak policzyć wagę rury z jej średnicy i grubości ścianki?"
+      ]
+    }
+  ]
+}

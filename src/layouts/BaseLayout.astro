@@ -4,6 +4,7 @@ import { ClientRouter } from 'astro:transitions';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import LeadSourceTracker from '../components/LeadSourceTracker.astro';
+import WebMcpTools from '../components/WebMcpTools.astro';
 import { absoluteUrl, pageUrl, pageGraph, serializeSchema, type SchemaNode, type Breadcrumb } from '../lib/structured-data';
 
 interface Props {
@@ -76,7 +77,8 @@ const pageTransition = {
     <meta name="twitter:image:alt" content={socialImageAlt} />
     <meta name="generator" content={Astro.generator} />
     {schema && <script type="application/ld+json" set:html={serializeSchema(schema)} />}
-    <meta name="robots" content="noindex" />
+    <link rel="api-catalog" href="/.well-known/api-catalog" type="application/linkset+json" />
+    <link rel="ai-catalog" href="/.well-known/ai-catalog.json" type="application/ai-catalog+json" />
     {(Astro.url.pathname === '/' || /^\/aktualnosci\/[^/]+\/?$/.test(Astro.url.pathname)) && (
       <link rel="alternate" type="text/markdown" href={Astro.url.pathname === '/' ? '/index.md' : Astro.url.href} />
     )}
@@ -85,6 +87,7 @@ const pageTransition = {
   </head>
   <body>
     <LeadSourceTracker />
+    <WebMcpTools />
     <Header />
     <main transition:animate={pageTransition}><slot /></main>
     <Footer />

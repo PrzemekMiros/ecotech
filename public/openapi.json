@@ -1,0 +1,65 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Eco Tech Group Public Information API",
+    "version": "1.0.0",
+    "description": "Publiczny interfejs tylko do odczytu z informacjami o firmie, ofercie i kontakcie. Nie wymaga uwierzytelnienia."
+  },
+  "servers": [{ "url": "https://ecotechgroup.pl" }],
+  "paths": {
+    "/api/site-info": {
+      "get": {
+        "operationId": "getSiteInfo",
+        "summary": "Pobierz informacje o Eco Tech Group",
+        "description": "Zwraca podstawowe informacje o firmie, obszarach oferty i oficjalnych kanałach kontaktu.",
+        "responses": {
+          "200": {
+            "description": "Informacje publiczne",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/SiteInfo" }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "SiteInfo": {
+        "type": "object",
+        "required": ["name", "description", "website", "offer", "contact"],
+        "properties": {
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "website": { "type": "string", "format": "uri" },
+          "offer": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/Link" }
+          },
+          "contact": { "$ref": "#/components/schemas/Contact" }
+        }
+      },
+      "Link": {
+        "type": "object",
+        "required": ["name", "url"],
+        "properties": {
+          "name": { "type": "string" },
+          "url": { "type": "string", "format": "uri" }
+        }
+      },
+      "Contact": {
+        "type": "object",
+        "required": ["email", "phone", "address", "hours", "url"],
+        "properties": {
+          "email": { "type": "string", "format": "email" },
+          "phone": { "type": "string" },
+          "address": { "type": "string" },
+          "hours": { "type": "string" },
+          "url": { "type": "string", "format": "uri" }
+        }
+      }
+    }
+  }
+}

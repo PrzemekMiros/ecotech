@@ -5,7 +5,10 @@ export const agentLinks = [
   '</index.md>; rel="alternate"; type="text/markdown"',
   '</llms.txt>; rel="describedby"; type="text/plain"',
   '</llms-full.txt>; rel="describedby"; type="text/plain"',
-  '</docs/agents.md>; rel="service-doc"; type="text/markdown"'
+  '</docs/agents.md>; rel="service-doc"; type="text/markdown"',
+  '</.well-known/api-catalog>; rel="api-catalog"; type="application/linkset+json"',
+  '</openapi.json>; rel="service-desc"; type="application/vnd.oai.openapi+json"',
+  '</.well-known/ai-catalog.json>; rel="ai-catalog"; type="application/ai-catalog+json"'
 ].join(', ');
 
 export { homeMarkdown, documentation };

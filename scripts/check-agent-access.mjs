@@ -10,9 +10,12 @@ const get = async (path, options = {}) => {
 try {
   const html = await get('/', { headers: { Accept: 'text/html' } });
   assert.match(html.headers.get('content-type') ?? '', /^text\/html/i);
+  assert.doesNotMatch(await html.clone().text(), /<meta\s+name=["']robots["']\s+content=["'][^"']*noindex/i, 'Homepage must be indexable');
   const links = html.headers.get('link') ?? '';
-  for (const path of ['/index.md', '/llms.txt', '/llms-full.txt', '/docs/agents.md']) assert.ok(links.includes(`<${path}>`), `Missing Link: ${path}`);
+  for (const path of ['/index.md', '/llms.txt', '/llms-full.txt', '/docs/agents.md', '/.well-known/api-catalog', '/openapi.json', '/.well-known/ai-catalog.json']) assert.ok(links.includes(`<${path}>`), `Missing Link: ${path}`);
   assert.ok(links.includes('rel="service-doc"'));
+  assert.ok(links.includes('rel="api-catalog"'));
+  assert.ok(links.includes('rel="ai-catalog"'));
   for (const accept of ['text/markdown', 'text/html;q=0.5, text/markdown;q=1']) {
     const response = await get('/', { headers: { Accept: accept } });
     assert.match(response.headers.get('content-type') ?? '', /^text\/markdown/i);
@@ -31,6 +34,33 @@ try {
       assert.match(await response.text(), /^# /, `${path}: expected Markdown, not an authentication or WAF page`);
     }
   }
+  const robots = await get('/robots.txt');
+  const robotsBody = await robots.text();
+  assert.match(robotsBody, /Content-Signal:\s*search=yes,\s*ai-input=yes,\s*ai-train=no/i);
+  assert.match(robotsBody, /Agentmap:\s*https:\/\/ecotechgroup\.pl\/\.well-known\/ai-catalog\.json/i);
+
+  const apiCatalog = await get('/.well-known/api-catalog');
+  assert.match(apiCatalog.headers.get('content-type') ?? '', /^application\/linkset\+json/i);
+  assert.ok(Array.isArray((await apiCatalog.json()).linkset));
+  const apiCatalogHead = await get('/.well-known/api-catalog', { method: 'HEAD' });
+  assert.equal(await apiCatalogHead.text(), '');
+
+  const aiCatalog = await get('/.well-known/ai-catalog.json');
+  assert.match(aiCatalog.headers.get('content-type') ?? '', /^application\/ai-catalog\+json/i);
+  assert.equal(aiCatalog.headers.get('access-control-allow-origin'), '*');
+  const aiCatalogBody = await aiCatalog.json();
+  assert.equal(aiCatalogBody.specVersion, '1.0');
+  assert.ok(aiCatalogBody.entries.length >= 1);
+
+  const poppy = await get('/.well-known/poppy.json');
+  const poppyBody = await poppy.json();
+  assert.equal(poppyBody.organization.domain, 'ecotechgroup.pl');
+  assert.ok(poppyBody.web);
+
+  const skills = await get('/.well-known/agent-skills/index.json');
+  const skillsBody = await skills.json();
+  assert.equal(skillsBody.$schema, 'https://schemas.agentskills.io/discovery/0.2.0/schema.json');
+  assert.ok(skillsBody.skills.length >= 1);
   console.log(`PASS: ${base.origin} — discovery, Markdown, HTML, HEAD, resources and agent access`);
 } catch (error) {
   console.error(`FAIL: ${base.origin} — ${error.message}`);
