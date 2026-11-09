@@ -2,6 +2,9 @@
 title: "DN, NPS i średnica zewnętrzna rury – dlaczego te wartości nie są tym samym?"
 pubDate: "2026-11-03"
 slug: "dn-nps-i-srednica-zewnetrzna-rury-dlaczego-te-wartosci-nie-sa-tym-samym"
+dateModified: "2026-11-09"
+keyTakeaways: ["DN i NPS są oznaczeniami nominalnymi, a nie bezpośrednim pomiarem średnicy zewnętrznej.","Specyfikacja wymiarowa powinna określać średnicę zewnętrzną OD i grubość ścianki WT.","Dla przekroju kołowego średnicę wewnętrzną oblicza się jako ID = OD − 2 × WT."]
+glossary: [{"term":"DN","definition":"Oznaczenie nominalnej wielkości elementu rurociągu, niebędące bezpośrednio zmierzoną średnicą."},{"term":"NPS","definition":"Nominal Pipe Size: nominalne oznaczenie wielkości rury stosowane w systemie amerykańskim."},{"term":"OD","definition":"Outside Diameter: średnica zewnętrzna rury."},{"term":"WT","definition":"Wall Thickness: grubość ścianki rury."}]
 category: "Wymiary rur stalowych"
 source: "https://ecotechgroup.pl/dn-nps-i-srednica-zewnetrzna-rury-dlaczego-te-wartosci-nie-sa-tym-samym/"
 description: "Czym różnią się DN, NPS i średnica zewnętrzna rury? Poznaj oznaczenia OD, ID i SCH, tabelę wymiarów oraz zasady przygotowania zapytania ofertowego."

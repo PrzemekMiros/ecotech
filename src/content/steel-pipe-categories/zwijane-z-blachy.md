@@ -1,6 +1,16 @@
 ---
 title: "Rury stalowe zwijane z blachy"
 slug: "zwijane-z-blachy"
+tldr: "Rury stalowe zwijane z blachy są oferowane także w wykonaniach dopasowanych do projektu. Do zapytania dołącz średnicę, grubość blachy, długość, gatunek stali i rysunek. Poniżej znajdziesz listing, a pod nim opis wykonania oraz zakres produkcji. Możliwość realizacji konkretnej konfiguracji, dokumentację i termin potwierdzamy indywidualnie."
+faq:
+  - question: "Czy można zamówić rurę według własnego rysunku?"
+    answer: "Oferta obejmuje odcinki o parametrach uzgodnionych dla zamówienia. Prześlij rysunek z wymiarami, tolerancjami, gatunkiem stali i wymaganiami dotyczącymi połączeń, aby potwierdzić możliwość wykonania."
+  - question: "Czy można wykorzystać materiał powierzony?"
+    answer: "Tak, opis zakresu produkcji przewiduje wykonanie z materiału własnego lub powierzonego przez zamawiającego. Przed dostawą blach należy uzgodnić jej parametry, dokumentację i warunki przyjęcia."
+  - question: "Gdzie sprawdzić zakres produkcji rur zwijanych?"
+    answer: "Zestawienie średnic, grubości blach i długości znajduje się pod listingiem. Podane wartości opisują zakres oferty; możliwość połączenia wszystkich parametrów w jednym wyrobie wymaga potwierdzenia."
+  - question: "Co dołączyć do zapytania o dokumentację wyrobu?"
+    answer: "Podaj wymagane dokumenty dla materiału i gotowego wyrobu oraz wymagania odbiorowe projektu. Zakres dokumentacji należy uzgodnić przed realizacją, razem z technologią wykonania i gatunkiem stali."
 description: "Rury stalowe zwijane z blachy o dużych średnicach, wykonywane zgodnie z parametrami konkretnego projektu."
 image: "/img/pipes/rury-stalowe-zwijane-z-blachy.webp"
 imageAlt: "Rury stalowe zwijane z blachy"

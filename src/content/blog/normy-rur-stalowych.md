@@ -2,6 +2,10 @@
 title: "Normy rur stalowych"
 pubDate: 2023-03-12
 slug: "normy-rur-stalowych"
+dateModified: "2026-11-09"
+keyTakeaways: ["Artykuł zestawia rodziny EN 10210, EN 10219, EN 10216 i EN 10217.","Normy wyrobów opisują nie tylko wymiary, lecz także wymagania dotyczące wykonania, badań i dostawy.","Normę należy powiązać z zastosowaniem rury i sposobem jej wykonania, a nie wybierać tylko po średnicy."]
+glossary: [{"term":"Norma wyrobu","definition":"Dokument określający wymagania dla danego rodzaju wyrobu, np. wykonania, właściwości i odbioru."},{"term":"Tolerancja wymiarowa","definition":"Dopuszczalny zakres odchylenia wymiaru od wartości określonej w specyfikacji."},{"term":"Badania odbiorowe","definition":"Badania służące sprawdzeniu wymagań określonych dla wyrobu lub zamówionej partii."}]
+faq: [{"question":"Jakie rodziny norm porównuje tekst?","answer":"Artykuł zestawia rodziny EN 10210, EN 10219, EN 10216 i EN 10217."},{"question":"Czy norma dotyczy wyłącznie wymiaru?","answer":"Normy wyrobów opisują nie tylko wymiary, lecz także wymagania dotyczące wykonania, badań i dostawy."},{"question":"Od czego rozpocząć wybór normy?","answer":"Normę należy powiązać z zastosowaniem rury i sposobem jej wykonania, a nie wybierać tylko po średnicy."}]
 category: "Aktualności"
 source: "https://ecotechgroup.pl/normy-rur-stalowych/"
 description: "Normy PN-EN10210, PN-EN10219, PN-EN10217, PN-EN10216 to ważne standardy w branży stalowej, które definiują wymagania dotyczące produkcji, testowania i dostawy rur stalowych i ich części.…"

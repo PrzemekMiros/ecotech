@@ -2,6 +2,11 @@
 title: "Ceny stali znów w górę. Chwilowy wzrost czy nowy poziom cenowy?"
 pubDate: 2026-04-12
 slug: "ceny-stali-znow-w-gore-chwilowy-wzrost-czy-nowy-poziom-cenowy"
+dateModified: "2026-11-09"
+keyTakeaways: ["Komentarz o rynku w 2026 roku przygotował Adam Iwanowski z Działu Zakupów EcoTech.","W komentarzu porównano notowania złomu, pręta zbrojeniowego i blachy gorącowalcowanej HRC.","Ceny terminowe przedstawiają oczekiwania rynku; nie są gwarancją przyszłej ceny zakupu rur."]
+glossary: [{"term":"HRC","definition":"Skrót od Hot Rolled Coil: blacha lub taśma gorącowalcowana w kręgach."},{"term":"Contango","definition":"Sytuacja, w której cena kontraktu z późniejszym terminem jest wyższa od ceny bieżącej; nie gwarantuje późniejszej ceny zakupu."},{"term":"Kontrakt terminowy","definition":"Instrument odnoszący się do przyszłego terminu rozliczenia, wykorzystywany m.in. do obserwacji oczekiwań cenowych."}]
+faq: [{"question":"Kto przygotował komentarz rynkowy?","answer":"Komentarz o rynku w 2026 roku przygotował Adam Iwanowski z Działu Zakupów EcoTech."},{"question":"Jakie segmenty rynku są analizowane?","answer":"W komentarzu porównano notowania złomu, pręta zbrojeniowego i blachy gorącowalcowanej HRC."},{"question":"Czy notowania terminowe gwarantują przyszłą cenę?","answer":"Ceny terminowe przedstawiają oczekiwania rynku; nie są gwarancją przyszłej ceny zakupu rur."}]
+archiveNote: "Dane i prognozy w tej publikacji odnoszą się do 2026 roku i okresu opisanego w tekście. Aktualizacja redakcyjna porządkuje wnioski, FAQ i słownik; nie stanowi aktualizacji notowań ani oferty cenowej."
 category: "Aktualności"
 source: "https://ecotechgroup.pl/ceny-stali-znow-w-gore-chwilowy-wzrost-czy-nowy-poziom-cenowy/"
 description: "Co to oznacza dla firm budowlanych w drugiej połowie 2026 roku."

@@ -2,6 +2,10 @@
 title: "Wigilia firmowa - 2023"
 pubDate: 2023-12-28
 slug: "wigilia-firmowa-2023"
+dateModified: "2026-11-09"
+keyTakeaways: ["Wpis przedstawia wigilię firmową Eco Tech Group w 2023 roku.","Relacja została opublikowana 28 grudnia 2023 roku.","Publikacja ma formę krótkiej relacji firmowej z materiałem fotograficznym."]
+glossary: [{"term":"Relacja firmowa","definition":"Publikacja dokumentująca wydarzenie związane z działalnością lub zespołem firmy."},{"term":"Integracja zespołu","definition":"Działania i spotkania wspierające relacje między członkami zespołu."}]
+faq: [{"question":"Czego dotyczy publikacja?","answer":"Wpis przedstawia wigilię firmową Eco Tech Group w 2023 roku."},{"question":"Kiedy opublikowano relację?","answer":"Relacja została opublikowana 28 grudnia 2023 roku."},{"question":"Jaki charakter ma zawartość wpisu?","answer":"Publikacja ma formę krótkiej relacji firmowej z materiałem fotograficznym."}]
 category: "Aktualności"
 source: "https://ecotechgroup.pl/wigilia-firmowa-2023/"
 description: ""

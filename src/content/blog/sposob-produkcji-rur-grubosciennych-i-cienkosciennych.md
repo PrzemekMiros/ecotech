@@ -2,6 +2,10 @@
 title: "Rury cienkościenne vs grubościenne - kluczowe różnice"
 pubDate: 2026-05-12
 slug: "sposob-produkcji-rur-grubosciennych-i-cienkosciennych"
+dateModified: "2026-11-09"
+keyTakeaways: ["Artykuł porównuje rury cienkościenne i grubościenne pod względem wykonania oraz zastosowań.","Grubość ścianki i średnica zewnętrzna są odrębnymi wymiarami rury.","Wybór ścianki należy powiązać z warunkami pracy, wymiarami, materiałem i wymaganiami projektu."]
+glossary: [{"term":"WT","definition":"Wall Thickness: grubość ścianki rury."},{"term":"OD","definition":"Outside Diameter: średnica zewnętrzna rury."},{"term":"Masa liniowa","definition":"Masa jednostki długości rury, najczęściej podawana w kilogramach na metr."}]
+faq: [{"question":"Co porównuje artykuł?","answer":"Artykuł porównuje rury cienkościenne i grubościenne pod względem wykonania oraz zastosowań."},{"question":"Czy mała grubość ścianki oznacza małą średnicę?","answer":"Grubość ścianki i średnica zewnętrzna są odrębnymi wymiarami rury."},{"question":"Od czego zależy wybór grubości ścianki?","answer":"Wybór ścianki należy powiązać z warunkami pracy, wymiarami, materiałem i wymaganiami projektu."}]
 category: "Aktualności"
 source: "https://ecotechgroup.pl/sposob-produkcji-rur-grubosciennych-i-cienkosciennych/"
 description: "Grubość ścian to jedno z kryteriów, według których klasyfikuje się rury stalowe. Rury cienkościenne i grubościenne różnią się właściwościami, a to przekłada się na ich odmienne…"
@@ -58,4 +62,3 @@ imageAlt: "Rury cienkościenne vs grubościenne - kluczowe różnice"
 
 
 <p>Podstawowa wiedza o różnicach pomiędzy rurami grubościennymi a cienkościennymi jest bardzo przydatna przy wyborze odpowiednich rur stalowych do konkretnego projektu. W razie wątpliwości specjaliści EcoTech mogą pomóc w doborze rozwiązania dopasowanego do planowanego zastosowania i wymagań technicznych.</p>
-

@@ -2,6 +2,10 @@
 title: "Wspieramy sport - Eco Tech w rajdzie Barbórka"
 pubDate: 2023-03-11
 slug: "wspieramy-sport-eco-tech-w-rajdzie-barborka"
+dateModified: "2026-11-09"
+keyTakeaways: ["Eco-Tech opisuje swoje wsparcie dla Gosi Prus podczas 60. Rajdu Barbórka.","Relacja odnosi się do startu pod koniec 2022 roku.","W tekście wskazano logo Eco-Tech na samochodzie Mitsubishi Lancer Evo 10."]
+glossary: [{"term":"Sponsoring sportowy","definition":"Wsparcie zawodnika lub wydarzenia połączone z prezentacją sponsora."},{"term":"Rajd samochodowy","definition":"Wydarzenie motorsportowe, w którym rywalizują załogi samochodowe na wyznaczonej trasie."}]
+faq: [{"question":"Kogo Eco-Tech wspierał podczas rajdu?","answer":"Eco-Tech opisuje swoje wsparcie dla Gosi Prus podczas 60. Rajdu Barbórka."},{"question":"Kiedy odbył się wspomniany start?","answer":"Relacja odnosi się do startu pod koniec 2022 roku."},{"question":"Jak zaprezentowano udział sponsora?","answer":"W tekście wskazano logo Eco-Tech na samochodzie Mitsubishi Lancer Evo 10."}]
 category: "Aktualności"
 source: "https://ecotechgroup.pl/wspieramy-sport-eco-tech-w-rajdzie-barborka/"
 description: "W naszej firmie szanujemy ludzi z pasją. Szczególnie jeśli są tak inspirujący jak nasza Gosia Prus , która z końcem 2022 r. wzięła udział w 60 Rajdzie Barbórka. Ta kobieta-petarda, nie…"

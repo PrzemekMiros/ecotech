@@ -2,6 +2,10 @@
 title: "Rury stalowe i ich zastosowanie w branży budowlanej"
 pubDate: 2026-02-01
 slug: "rury-stalowe-i-ich-zastosowanie-w-branzy-budowlanej"
+dateModified: "2026-11-09"
+keyTakeaways: ["Tekst opisuje rury ze szwem, bezszwowe i w izolacji stosowane w budownictwie.","Przydatność rury zależy od jej wymiarów, materiału, technologii wykonania i warunków pracy.","Wymagania dla elementu konstrukcyjnego i instalacji mogą się różnić, dlatego dobór powinien wynikać z projektu."]
+glossary: [{"term":"Rura konstrukcyjna","definition":"Rura przeznaczona do zastosowania jako element konstrukcji."},{"term":"Izolacja rury","definition":"Warstwa zabezpieczająca rurę; jej funkcja i wymagania zależą od zastosowanego systemu."},{"term":"Szew rury","definition":"Połączenie krawędzi materiału powstałe podczas wytwarzania rury spawanej lub zgrzewanej."}]
+faq: [{"question":"Jakie rury zestawiono w artykule?","answer":"Tekst opisuje rury ze szwem, bezszwowe i w izolacji stosowane w budownictwie."},{"question":"Co decyduje o przydatności rury do zadania?","answer":"Przydatność rury zależy od jej wymiarów, materiału, technologii wykonania i warunków pracy."},{"question":"Dlaczego nie ma jednego wariantu do wszystkich konstrukcji?","answer":"Wymagania dla elementu konstrukcyjnego i instalacji mogą się różnić, dlatego dobór powinien wynikać z projektu."}]
 category: "Aktualności"
 source: "https://ecotechgroup.pl/rury-stalowe-i-ich-zastosowanie-w-branzy-budowlanej/"
 description: "Rury stalowe - ze względu na specyfikę wykonania i różnorodność ukształtowania, typów czy właściwości technicznych to jeden z najpopularniejszych materiałów budowlanych. Należy jednak…"

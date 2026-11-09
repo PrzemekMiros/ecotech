@@ -30,7 +30,7 @@ const results = query ? (await getCollection('steelPipeProducts')).filter(({ dat
         {results.length ? (
           <ul class="mt-5 grid gap-3 sm:grid-cols-2">
             {results.map(({ data }) => (
-              <li><a class="block border border-ink/20 p-4 text-accent-1 underline" href={`/rury-stalowe/${data.category}/${data.slug}/`}>{data.title}</a></li>
+              <li><a class="block border border-ink/20 p-4 text-accent-1 underline" href={`/${data.slug}/`}>{data.title}</a></li>
             ))}
           </ul>
         ) : <p class="mt-3">Wybierz kategorię poniżej lub <a href="/kontakt/" class="text-accent-1 underline">skontaktuj się z nami</a>, aby dobrać rurę.</p>}

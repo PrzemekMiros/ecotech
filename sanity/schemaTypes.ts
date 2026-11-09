@@ -27,6 +27,11 @@ const document = (name: string, title: string, fields: ReturnType<typeof defineF
 
 export const schemaTypes = [
   document('news', 'Aktualności', [date(), source(), ...images,
+    defineField({ name: 'dateModified', title: 'Data modyfikacji treści', type: 'date', description: 'Zmieniaj po redakcji treści, nie przy każdym wdrożeniu.' }),
+    defineField({ name: 'keyTakeaways', title: 'Kluczowe wnioski', type: 'array', of: [{ type: 'string' }], validation: rule => rule.min(3).max(4) }),
+    objectArray('glossary', 'Słownik tematyczny', [field('term', 'Pojęcie', 'string', true), field('definition', 'Definicja', 'text', true)]),
+    field('archiveNote', 'Informacja o historycznym charakterze danych', 'text'),
+    defineField({ name: 'howTo', title: 'Instrukcja krok po kroku (tylko dla poradników)', type: 'object', fields: [field('name', 'Tytuł instrukcji', 'string', true), objectArray('steps', 'Kroki', [field('name', 'Nazwa kroku', 'string', true), field('text', 'Treść kroku', 'text', true)])] }),
     defineField({ name: 'category', title: 'Kategoria', type: 'string', options: { list: ['Aktualności', 'Rynek', 'Wiedza', 'Właściwości mechaniczne stali', 'Wymiary rur stalowych'] }, validation: rule => rule.required() }),
     objectArray('faq', 'Pytania i odpowiedzi', [field('question', 'Pytanie', 'string', true), field('answer', 'Odpowiedź', 'text', true)]),
   ]),
@@ -34,7 +39,10 @@ export const schemaTypes = [
   document('production', 'Produkcja', [date(), source(), order, ...images]),
   document('jobs', 'Oferty pracy', [date(false), source(false), order, field('location', 'Lokalizacja')]),
   document('delivery', 'Dostawa', [date(), source(), order, field('city', 'Miasto', 'string', true)]),
-  document('steelPipeCategories', 'Kategorie rur', [source(), order, ...images]),
+  document('steelPipeCategories', 'Kategorie rur', [source(), order, ...images,
+    defineField({ name: 'tldr', title: 'TL;DR nad listą produktów', type: 'text', rows: 4, description: 'Krótkie podsumowanie. Rozwinięcie w polu Treść wyświetla się pod produktami.', validation: rule => rule.min(40).max(700) }),
+    objectArray('faq', 'FAQ pod treścią kategorii', [field('question', 'Pytanie', 'string', true), field('answer', 'Odpowiedź', 'text', true)]),
+  ]),
   document('steelPipeProducts', 'Produkty — rury', [
     order, field('sku', 'SKU'),
     defineField({ name: 'category', title: 'Kategoria', type: 'string', description: 'Wpisz dokładny slug kategorii rur.', validation: rule => rule.required() }),

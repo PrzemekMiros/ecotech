@@ -1,6 +1,16 @@
 ---
 title: "Rury stalowe ze szwem spiralnym"
 slug: "ze-szwem-spiralnym"
+tldr: "Rury stalowe ze szwem spiralnym są oferowane w różnych średnicach, grubościach ścianek i gatunkach stali. Wybór wariantu należy powiązać z wymaganiami projektu i dokumentacją materiałową. Poniżej znajdziesz produkty, a pod listingiem zakres produkcji oraz wykaz norm. Dostępność, konfigurację i termin dostawy trzeba potwierdzić w zapytaniu."
+faq:
+  - question: "Gdzie sprawdzić zakres wymiarów rur spiralnych?"
+    answer: "Zakres średnic, grubości ścianek i długości opisano pod listingiem w sekcji dotyczącej produkcji. Parametry konkretnego wariantu sprawdź również na karcie produktu i potwierdź w zapytaniu ofertowym."
+  - question: "Jak wskazać normę rury ze szwem spiralnym?"
+    answer: "W zapytaniu podaj normę i gatunek stali wynikające z dokumentacji projektu. Wykaz pod listingiem obejmuje różne zastosowania i nie oznacza, że każdy produkt spełnia wszystkie wymienione wymagania jednocześnie."
+  - question: "Jakie dane są potrzebne do wyceny?"
+    answer: "Podaj średnicę zewnętrzną, ściankę, długość, ilość, gatunek stali i normę. Dołącz wymagania dotyczące badań, dokumentów odbiorowych, zabezpieczenia powierzchni oraz miejsca dostawy."
+  - question: "Co zrobić, gdy potrzebnego wymiaru nie ma na liście?"
+    answer: "Prześlij specyfikację do działu sprzedaży. Listing nie zastępuje uzgodnienia zakresu wykonania; możliwość dostarczenia nietypowego wariantu i termin wymagają indywidualnego potwierdzenia."
 description: "Rury stalowe ze szwem spiralnym przeznaczone do wymagających zastosowań."
 image: "/img/pipes/Rury-stalowe-ze-szwem-spiralnym.webp"
 imageAlt: "Rury stalowe ze szwem spiralnym"

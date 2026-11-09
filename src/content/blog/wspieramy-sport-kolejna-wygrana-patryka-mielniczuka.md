@@ -2,6 +2,10 @@
 title: "Wspieramy sport - kolejna wygrana Patryka Mielniczuka"
 pubDate: 2024-01-05
 slug: "wspieramy-sport-kolejna-wygrana-patryka-mielniczuka"
+dateModified: "2026-11-09"
+keyTakeaways: ["Wpis dotyczy Patryka Mielniczuka, sportowca wspieranego przez Eco-Tech.","Relacja informuje o trzeciej wygranej w jego zawodowym rekordzie w momencie publikacji.","Według wpisu Eco-Tech wspierał Patryka od początku jego zawodowej kariery."]
+glossary: [{"term":"Sponsoring sportowy","definition":"Wsparcie zawodnika lub wydarzenia połączone z prezentacją sponsora."},{"term":"Rekord zawodowy","definition":"Zestawienie wyników zawodnika w zawodowej rywalizacji w danym momencie."}]
+faq: [{"question":"Kogo dotyczy sportowa relacja?","answer":"Wpis dotyczy Patryka Mielniczuka, sportowca wspieranego przez Eco-Tech."},{"question":"Jaki wynik opisano w publikacji?","answer":"Relacja informuje o trzeciej wygranej w jego zawodowym rekordzie w momencie publikacji."},{"question":"Od kiedy firma deklaruje wsparcie zawodnika?","answer":"Według wpisu Eco-Tech wspierał Patryka od początku jego zawodowej kariery."}]
 category: "Aktualności"
 source: "https://ecotechgroup.pl/wspieramy-sport-kolejna-wygrana-patryka-mielniczuka/"
 description: "Kolejna wygrana naszego kolegi Patryka Mielniczuka . Z Patrykiem jesteśmy związani już od początku jego zawodowej kariery, sponsorowaliśmy go od jego pierwszego zawodowego zwycięstwa. A…"

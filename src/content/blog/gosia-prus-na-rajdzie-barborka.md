@@ -2,6 +2,10 @@
 title: "Gosia Prus na Rajdzie Barbórka"
 pubDate: 2024-12-28
 slug: "gosia-prus-na-rajdzie-barborka"
+dateModified: "2026-11-09"
+keyTakeaways: ["Publikacja z grudnia 2024 roku opisuje Rajd Barbórka w Warszawie.","Wpis przedstawia udział Gosi Prus, wspieranej przez EcoTech.","W tekście podkreślono miejskie trasy i Kryterium Karowa."]
+glossary: [{"term":"Rajd samochodowy","definition":"Wydarzenie motorsportowe, w którym rywalizują załogi samochodowe na wyznaczonej trasie."},{"term":"Kryterium Karowa","definition":"Widowiskowa część warszawskiego Rajdu Barbórka rozgrywana na ulicy Karowej."}]
+faq: [{"question":"Jakiego wydarzenia dotyczy wpis?","answer":"Publikacja z grudnia 2024 roku opisuje Rajd Barbórka w Warszawie."},{"question":"Kto jest bohaterką relacji?","answer":"Wpis przedstawia udział Gosi Prus, wspieranej przez EcoTech."},{"question":"Co wyróżniono w opisie rajdu?","answer":"W tekście podkreślono miejskie trasy i Kryterium Karowa."}]
 category: "Aktualności"
 source: "https://ecotechgroup.pl/gosia-prus-na-rajdzie-barborka/"
 description: "Rajd Barbórka to nie tylko sportowe wydarzenie – to święto, które łączy profesjonalistów i pasjonatów motor sportu w sercu Warszawy. Wąskie miejskie trasy, niezapomniane Kryterium Karowa…"

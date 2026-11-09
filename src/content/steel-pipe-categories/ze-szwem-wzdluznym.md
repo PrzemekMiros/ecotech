@@ -1,6 +1,16 @@
 ---
 title: "Rury stalowe ze szwem wzdłużnym"
 slug: "ze-szwem-wzdluznym"
+tldr: "Rury stalowe ze szwem wzdłużnym do zastosowań konstrukcyjnych i instalacyjnych. Dobór obejmuje wymiary, gatunek stali, normę wykonania i wymagane zabezpieczenie powierzchni. Poniżej znajdziesz warianty produktów; szerszy opis, zakres produkcji i zestawienie norm znajdują się pod listingiem. Dostępność oraz dokumenty potwierdzamy dla konkretnego zamówienia."
+faq:
+  - question: "Jak wybrać rurę ze szwem wzdłużnym do projektu?"
+    answer: "Porównaj wymagania projektu z wymiarem, gatunkiem stali, normą i dokumentacją konkretnej rury. Sam kierunek szwu nie zastępuje weryfikacji parametrów wymaganych dla danego zastosowania."
+  - question: "Gdzie znajdę oferowane wymiary i gatunki stali?"
+    answer: "Warianty produktów znajdują się w listingu, a opis zakresu produkcji i gatunków stali pod nim. Dostępność wybranej kombinacji wymiarów i gatunku należy potwierdzić przed zamówieniem."
+  - question: "Czy można uwzględnić zabezpieczenie powierzchni?"
+    answer: "Opis oferty przewiduje dodatkowe warstwy ochronne. W zapytaniu określ wymagany rodzaj zabezpieczenia i warunki pracy rury, aby uzgodnić wykonanie odpowiadające specyfikacji projektu."
+  - question: "Jakie dokumenty wskazać w zapytaniu?"
+    answer: "Wymień dokumenty odbiorowe i badania wymagane przez projekt lub zamawiającego. Ich zakres należy uzgodnić dla konkretnego produktu i partii, wraz z normą wykonania oraz gatunkiem stali."
 description: "Rury stalowe ze szwem wzdłużnym do zastosowań konstrukcyjnych i instalacyjnych."
 image: "/img/posts/2022/06/ecotech-group-rury-stalowe-ze-szwem-wzdluznym_1.jpg"
 imageAlt: "Rury stalowe ze szwem wzdłużnym"

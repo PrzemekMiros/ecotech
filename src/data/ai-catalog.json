@@ -8,6 +8,14 @@
   },
   "entries": [
     {
+      "identifier": "urn:air:ecotechgroup.pl:mcp:website",
+      "displayName": "Eco Tech Group MCP",
+      "type": "application/mcp-server-card+json",
+      "url": "https://ecotechgroup.pl/.well-known/mcp/server-card.json",
+      "description": "Publiczny serwer MCP tylko do odczytu: kontakt i kalkulator masy rur.",
+      "capabilities": ["ContactInformation", "SteelPipeWeightCalculation"]
+    },
+    {
       "identifier": "urn:air:ecotechgroup.pl:api:site-info",
       "displayName": "Eco Tech Group Site Information API",
       "type": "application/vnd.oai.openapi+json",

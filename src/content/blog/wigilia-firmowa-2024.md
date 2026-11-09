@@ -2,6 +2,10 @@
 title: "Wigilia firmowa - 2024"
 pubDate: 2025-01-07
 slug: "wigilia-firmowa-2024"
+dateModified: "2026-11-09"
+keyTakeaways: ["Pracownicy Eco Tech spotkali się na kolacji wigilijnej 13 grudnia 2024 roku.","W relacji jako miejsce spotkania wskazano hotel Mercure Wiązowna Brant.","Prezes Szymon Wiewiórowski podsumował rok i podziękował zespołowi za współpracę."]
+glossary: [{"term":"Integracja zespołu","definition":"Działania i spotkania wspierające relacje między członkami zespołu."},{"term":"Podsumowanie roku","definition":"Omówienie wydarzeń i działań z kończącego się okresu."}]
+faq: [{"question":"Kiedy odbyło się opisane spotkanie?","answer":"Pracownicy Eco Tech spotkali się na kolacji wigilijnej 13 grudnia 2024 roku."},{"question":"Gdzie zorganizowano wydarzenie?","answer":"W relacji jako miejsce spotkania wskazano hotel Mercure Wiązowna Brant."},{"question":"Co było częścią spotkania?","answer":"Prezes Szymon Wiewiórowski podsumował rok i podziękował zespołowi za współpracę."}]
 category: "Aktualności"
 source: "https://ecotechgroup.pl/wigilia-firmowa-2024/"
 description: "13 grudnia pracownicy Eco Tech Sp. z o.o. spotkali się, jak co roku, na kolacji wigilijnej. Tym razem świętowaliśmy w przytulnej, pięknie udekorowanej na tę okazję sali hotelu Mercure…"

@@ -1,6 +1,16 @@
 ---
 title: "Rury stalowe dwudzielne"
 slug: "dwudzielne"
+tldr: "Rury stalowe dwudzielne służą do osłony istniejących przewodów i instalacji. Przy doborze podaj wymiary chronionego przewodu, długość osłony i warunki montażu. Poniżej znajdziesz warianty produktów, a pod listingiem opis konstrukcji i zastosowań. Sposób połączenia, zabezpieczenie powierzchni oraz dostępność wymagają potwierdzenia dla konkretnego projektu."
+faq:
+  - question: "Jak dobrać wymiar osłony dwudzielnej?"
+    answer: "W zapytaniu podaj wymiar zewnętrzny chronionego przewodu, oczekiwaną długość osłony oraz wymagania projektu dotyczące luzu montażowego i grubości ścianki. Dołącz rysunek, jeśli osłona ma pasować do istniejącej instalacji."
+  - question: "Jakie informacje o montażu dołączyć do zapytania?"
+    answer: "Opisz dostęp do przewodu, miejsce montażu i przewidywany sposób połączenia części osłony. Zaznacz wymagania dotyczące zabezpieczenia powierzchni. Rozwiązanie montażowe powinno być uzgodnione dla danej instalacji."
+  - question: "Czy można zapytać o nietypowy wymiar rury dwudzielnej?"
+    answer: "Tak, opis oferty przewiduje wykonania dostosowane do projektu. Prześlij rysunek, wymiary, gatunek stali i liczbę odcinków, aby ustalić możliwość wykonania oraz warunki dostawy."
+  - question: "Czy wszystkie warianty z listy są od ręki?"
+    answer: "Dostępność wybranego wymiaru i termin realizacji należy potwierdzić w zapytaniu. Wskaż potrzebną ilość i miejsce dostawy; sam wpis w katalogu nie stanowi rezerwacji materiału."
 description: "Rury stalowe dwudzielne do ochrony istniejących przewodów, rurociągów i instalacji."
 image: "/img/pipes/rury-dwudzielne-na-samochodzie.webp"
 imageAlt: "Rury stalowe dwudzielne na samochodzie"

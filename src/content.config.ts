@@ -6,6 +6,14 @@ const news = defineCollection({
   schema: z.object({
     title: z.string(),
     pubDate: z.coerce.date(),
+    dateModified: z.coerce.date().optional(),
+    keyTakeaways: z.array(z.string().min(1)).min(3).max(4).optional(),
+    glossary: z.array(z.object({ term: z.string().min(1), definition: z.string().min(1) })).default([]),
+    archiveNote: z.string().optional(),
+    howTo: z.object({
+      name: z.string().min(1),
+      steps: z.array(z.object({ name: z.string().min(1), text: z.string().min(1) })).min(2)
+    }).optional(),
     slug: z.string(),
     category: z.enum(['Aktualności', 'Rynek', 'Wiedza', 'Właściwości mechaniczne stali', 'Wymiary rur stalowych']),
     source: z.string().url(),
@@ -79,6 +87,11 @@ const steelPipeCategories = defineCollection({
     title: z.string(),
     slug: z.string(),
     description: z.string(),
+    tldr: z.string().min(40).max(700).optional(),
+    faq: z.array(z.object({
+      question: z.string().min(1),
+      answer: z.string().min(1)
+    })).default([]),
     image: z.string().optional(),
     imageAlt: z.string().optional(),
     source: z.string().url(),

@@ -2,6 +2,9 @@
 title: "Granica plastyczności a wytrzymałość na rozciąganie – który parametr jest ważniejszy przy doborze rury?"
 pubDate: "2026-11-03"
 slug: "granica-plastycznosci-a-wytrzymalosc-na-rozciaganie-ktory-parametr-jest-wazniejszy-przy-doborze-rury"
+dateModified: "2026-11-09"
+keyTakeaways: ["Granica plastyczności i wytrzymałość na rozciąganie opisują różne etapy zachowania materiału podczas obciążania.","Dobór ścianki uwzględnia także średnicę, warunki pracy, naddatki, połączenia i wymagania projektu.","Właściwości materiału należy porównać z wymaganiami projektu, normą wyrobu i dokumentacją konkretnej partii."]
+glossary: [{"term":"Granica plastyczności","definition":"Poziom naprężenia związany z początkiem trwałych odkształceń materiału."},{"term":"Wytrzymałość na rozciąganie","definition":"Największe naprężenie nominalne uzyskane w próbie rozciągania, odniesione do początkowego przekroju próbki."},{"term":"CEV","definition":"Równoważnik węgla: wskaźnik wykorzystywany przy ocenie spawalności stali."}]
 category: "Właściwości mechaniczne stali"
 source: "https://ecotechgroup.pl/granica-plastycznosci-a-wytrzymalosc-na-rozciaganie-ktory-parametr-jest-wazniejszy-przy-doborze-rury/"
 description: "Granica plastyczności Re i wytrzymałość na rozciąganie Rm przy doborze rury. Znaczenie grubości ścianki, udarności, CEV i świadectwa odbioru 3.1."

@@ -2,6 +2,10 @@
 title: "Znaczenie certyfikacji w branży rur stalowych"
 pubDate: 2025-01-25
 slug: "znaczenie-certyfikacji-w-branzy-rur-stalowych"
+dateModified: "2026-11-09"
+keyTakeaways: ["Dokumentacja wyrobu pomaga porównać oferowany materiał z wymaganiami projektu i zamówienia.","Artykuł omawia wymagania dla rur używanych między innymi w budownictwie, energetyce i instalacjach przemysłowych.","Należy sprawdzić zakres potwierdzonych parametrów i badań dla konkretnego wyrobu oraz jego przeznaczenia."]
+glossary: [{"term":"Dokument odbiorowy","definition":"Dokument zawierający informacje o zgodności wyrobu i, zależnie od typu, wyniki wymaganych badań."},{"term":"Norma wyrobu","definition":"Dokument określający wymagania dla danego rodzaju wyrobu, np. wykonania, właściwości i odbioru."},{"term":"Badania odbiorowe","definition":"Badania służące sprawdzeniu wymagań określonych dla wyrobu lub zamówionej partii."}]
+faq: [{"question":"Dlaczego dokumentacja jest istotna przy zakupie rur?","answer":"Dokumentacja wyrobu pomaga porównać oferowany materiał z wymaganiami projektu i zamówienia."},{"question":"Jakie obszary zastosowań porównano?","answer":"Artykuł omawia wymagania dla rur używanych między innymi w budownictwie, energetyce i instalacjach przemysłowych."},{"question":"Co zweryfikować poza nazwą normy?","answer":"Należy sprawdzić zakres potwierdzonych parametrów i badań dla konkretnego wyrobu oraz jego przeznaczenia."}]
 category: "Aktualności"
 source: "https://ecotechgroup.pl/znaczenie-certyfikacji-w-branzy-rur-stalowych/"
 description: "W dynamicznie rozwijającej się branży przemysłowej i budowlanej rury stalowe stanowią jeden z najważniejszych materiałów konstrukcyjnych. Znajdują zastosowanie w takich dziedzinach jak…"

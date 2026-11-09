@@ -29,9 +29,15 @@ const products = (await getCollection('steelPipeProducts'))
   '@type': 'ItemList', name: category.data.title, numberOfItems: products.length,
   itemListElement: products.map(({ data }, index) => ({
     '@type': 'ListItem', position: index + 1, name: data.title,
-    url: pageUrl(`/rury-stalowe/${data.category}/${data.slug}`)
+    url: pageUrl(`/${data.slug}/`)
   }))
-}]}>
+}, ...(category.data.faq.length ? [{
+  '@type': 'FAQPage',
+  mainEntity: category.data.faq.map(({ question, answer }) => ({
+    '@type': 'Question', name: question,
+    acceptedAnswer: { '@type': 'Answer', text: answer }
+  }))
+}] : [])]}>
   <article class="pipe-category-page bg-white pt-32 text-ink lg:pt-38">
     <div class="mx-auto max-w-7xl px-5 md:px-8">
       <nav class="flex flex-wrap items-center gap-x-2 gap-y-1 py-6 text-sm text-ink/55" aria-label="Okruszki nawigacyjne">
@@ -47,30 +53,53 @@ const products = (await getCollection('steelPipeProducts'))
       <div class="grid lg:grid-cols-[minmax(0,1fr)_23rem] lg:gap-14">
         <section class="min-w-0 pb-16 pt-4 lg:pb-24">
           <h1 class="text-3xl font-semibold leading-tight tracking-[-0.045em] text-[#142b3a] md:text-4xl">{category.data.title}</h1>
-          <div class="category-content mt-10 max-w-3xl"><Content /></div>
+          <section id="podsumowanie" class="mt-6 max-w-3xl border-l-4 border-accent-1 bg-mist px-5 py-5" aria-labelledby="category-summary-title">
+            <h2 id="category-summary-title" class="text-sm font-semibold uppercase tracking-wider text-accent-1">W skrócie — TL;DR</h2>
+            <p class="mt-3 text-base leading-7 text-ink/75">{category.data.tldr ?? category.data.description}</p>
+            <a href="#poradnik-kategorii" class="mt-3 inline-block text-sm font-semibold text-accent-1 underline underline-offset-4">Przejdź do poradnika i FAQ ↓</a>
+          </section>
 
-          <div class="mt-16 flex items-end justify-between gap-6 pb-5">
-            <div>
-              <p class="eyebrow">Produkty</p>
-              <h2 class="mt-2 text-2xl font-semibold tracking-[-0.04em] text-[#142b3a]">Dostępne rury</h2>
+          <section id="produkty" aria-labelledby="category-products-title">
+            <div class="mt-10 flex items-end justify-between gap-6 pb-5">
+              <div>
+                <p class="eyebrow">Produkty</p>
+                <h2 id="category-products-title" class="mt-2 text-2xl font-semibold tracking-[-0.04em] text-[#142b3a]">Dostępne rury</h2>
+              </div>
+              <span class="text-sm text-ink/55">{products.length} {products.length === 1 ? 'produkt' : 'produktów'}</span>
             </div>
-            <span class="text-sm text-ink/55">{products.length} {products.length === 1 ? 'produkt' : 'produktów'}</span>
-          </div>
 
-          {products.length > 0 ? (
-            <ul class="mt-6 divide-y divide-ink/10 border-y border-ink/10">
-              {products.map((product) => (
-                <li>
-                  <a href={`/rury-stalowe/${category.data.slug}/${product.data.slug}`} class="group grid items-center gap-2 px-4 py-4 transition-colors hover:bg-mist sm:grid-cols-[10rem_minmax(0,1fr)_auto] sm:gap-6 sm:px-5">
-                    <span class="text-xs font-bold uppercase tracking-[0.12em] text-accent-1">{product.data.specification ?? 'Rura stalowa'}</span>
-                    <span class="text-base font-semibold leading-6 tracking-[-0.02em] text-[#142b3a] group-hover:text-accent-1">{product.data.title}</span>
-                    <span class="hidden text-sm font-semibold text-accent-1 sm:inline">Szczegóły →</span>
-                  </a>
-                </li>
+            {products.length > 0 ? (
+              <ul class="mt-6 divide-y divide-ink/10 border-y border-ink/10">
+                {products.map((product) => (
+                  <li>
+                    <a href={`/${product.data.slug}/`} class="group grid items-center gap-2 px-4 py-4 transition-colors hover:bg-mist sm:grid-cols-[10rem_minmax(0,1fr)_auto] sm:gap-6 sm:px-5">
+                      <span class="text-xs font-bold uppercase tracking-[0.12em] text-accent-1">{product.data.specification ?? 'Rura stalowa'}</span>
+                      <span class="text-base font-semibold leading-6 tracking-[-0.02em] text-[#142b3a] group-hover:text-accent-1">{product.data.title}</span>
+                      <span class="hidden text-sm font-semibold text-accent-1 sm:inline">Szczegóły →</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p class="mt-6 border border-dashed border-accent-1/20 bg-mist p-6 text-sm leading-6 text-ink/65">Produkty w tej kategorii zostaną wkrótce uzupełnione.</p>
+            )}
+          </section>
+
+          <section id="poradnik-kategorii" class="mt-16 border-t border-ink/15 pt-8" aria-labelledby="category-guide-title">
+            <h2 id="category-guide-title" class="text-2xl font-semibold tracking-[-0.04em] text-[#142b3a]">{category.data.title} — charakterystyka i dobór</h2>
+            <div class="category-content mt-6 max-w-3xl"><Content /></div>
+          </section>
+
+          {category.data.faq.length > 0 && (
+            <section id="faq-kategorii" class="category-content mt-12 max-w-3xl" aria-labelledby="category-faq-title">
+              <h2 id="category-faq-title">Najczęściej zadawane pytania</h2>
+              {category.data.faq.map(({ question, answer }) => (
+                <details>
+                  <summary>{question}</summary>
+                  <p class="mt-3">{answer}</p>
+                </details>
               ))}
-            </ul>
-          ) : (
-            <p class="mt-6 border border-dashed border-accent-1/20 bg-mist p-6 text-sm leading-6 text-ink/65">Produkty w tej kategorii zostaną wkrótce uzupełnione.</p>
+            </section>
           )}
         </section>
 
@@ -104,6 +133,8 @@ const products = (await getCollection('steelPipeProducts'))
 
 <style>
   .category-content { color: #586d85; }
+  #produkty, #poradnik-kategorii, #faq-kategorii { scroll-margin-top: 8rem; }
+  .category-content :global(table) { display: block; overflow-x: auto; }
   .category-content :global(p),
   .category-content :global(li) {
     font-size: clamp(0.9375rem, 0.91rem + 0.15vw, 1rem);

@@ -1,6 +1,16 @@
 ---
 title: "Rury stalowe bez szwu"
 slug: "bez-szwu"
+tldr: "Rury stalowe bez szwu do zastosowań konstrukcyjnych i instalacyjnych. Dobór konkretnej rury wymaga określenia średnicy, grubości ścianki, gatunku stali oraz wymagań projektu. Poniżej znajdziesz warianty produktów; zestawienia norm, gatunków i zastosowań umieściliśmy pod listą. Dostępność i dokumentację należy potwierdzić dla wybranej specyfikacji."
+faq:
+  - question: "Jakie dane podać w zapytaniu o rurę bez szwu?"
+    answer: "Podaj średnicę zewnętrzną, grubość ścianki, długość i liczbę odcinków. Dołącz wymagany gatunek stali, normę wykonania, zastosowanie oraz oczekiwane dokumenty odbiorowe. Pozwoli to porównać ofertę z wymaganiami projektu."
+  - question: "Gdzie znaleźć normy i gatunki rur bez szwu?"
+    answer: "Zestawienia znajdują się w części „Specyfikacja techniczna” pod listingiem produktów. Obejmują różne zastosowania; właściwą normę i gatunek trzeba wskazać dla konkretnego zamówienia, a nie wybierać wyłącznie na podstawie wymiaru."
+  - question: "Czy oferta obejmuje rury bez szwu nowe i używane?"
+    answer: "Opis kategorii obejmuje zarówno rury nowe, jak i używane. W zapytaniu zaznacz, który wariant Cię interesuje. Stan materiału, dostępność wybranego wymiaru i dokumentację należy potwierdzić przed zamówieniem."
+  - question: "Jak sprawdzić dostępność konkretnego wymiaru?"
+    answer: "Otwórz kartę produktu z listy i prześlij zapytanie, podając ilość oraz wymagany termin. Lista przedstawia warianty oferty, a nie potwierdzenie aktualnego stanu magazynowego."
 description: "Rury stalowe bez szwu do instalacji i konstrukcji pracujących pod dużym obciążeniem oraz ciśnieniem."
 image: "/img/pipes/Rury-stalowe-bez-szwu.webp"
 imageAlt: "Rury stalowe bez szwu"

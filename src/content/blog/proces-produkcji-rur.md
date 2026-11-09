@@ -2,6 +2,10 @@
 title: "Proces produkcji rur"
 pubDate: 2022-05-26
 slug: "proces-produkcji-rur"
+dateModified: "2026-11-09"
+keyTakeaways: ["Artykuł porównuje wytwarzanie rur ze szwem wzdłużnym, spiralnym oraz rur bezszwowych.","W opisie procesu rury ze szwem powstają przez formowanie materiału i łączenie jego krawędzi.","Tekst rozróżnia także obróbkę na gorąco, na zimno i ciągnienie rur."]
+glossary: [{"term":"Szew rury","definition":"Połączenie krawędzi materiału powstałe podczas wytwarzania rury spawanej lub zgrzewanej."},{"term":"Walcowanie","definition":"Kształtowanie materiału przez nacisk obracających się walców."},{"term":"Ciągnienie","definition":"Proces kształtowania przekroju wyrobu przez przeciąganie go przez narzędzie."}]
+faq: [{"question":"Jakie technologie produkcji porównano?","answer":"Artykuł porównuje wytwarzanie rur ze szwem wzdłużnym, spiralnym oraz rur bezszwowych."},{"question":"Jak powstają rury ze szwem?","answer":"W opisie procesu rury ze szwem powstają przez formowanie materiału i łączenie jego krawędzi."},{"question":"Co poza obecnością szwu różnicuje produkcję?","answer":"Tekst rozróżnia także obróbkę na gorąco, na zimno i ciągnienie rur."}]
 category: "Aktualności"
 source: "https://ecotechgroup.pl/proces-produkcji-rur/"
 description: "Rury stalowe to elementy o nieskomplikowanej konstrukcji. Może się wydawać, że ich produkcja jest równie prosta. W rzeczywistości jest jednak inaczej – proces produkcji rur wymaga użycia…"

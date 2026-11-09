@@ -2,6 +2,10 @@
 title: "Sposoby łączenia rur w zależności od ich rodzaju"
 pubDate: 2022-10-26
 slug: "sposoby-laczenia-rur-w-zaleznosci-od-ich-rodzaju"
+dateModified: "2026-11-09"
+keyTakeaways: ["W artykule omówiono połączenia gwintowane, spawane i kołnierzowe.","Metodę łączenia dobiera się do materiału rur, geometrii i warunków pracy instalacji.","Połączenia kołnierzowe umożliwiają rozłączenie elementów, co może ułatwić naprawę lub wymianę odcinka instalacji."]
+glossary: [{"term":"Kołnierz rurowy","definition":"Element umożliwiający skręcane połączenie rury z innym elementem instalacji."},{"term":"Spawanie","definition":"Proces trwałego łączenia materiałów z zastosowaniem odpowiedniej technologii cieplnej."},{"term":"Połączenie gwintowane","definition":"Połączenie wykorzystujące współpracujące gwinty elementów instalacji."}]
+faq: [{"question":"Jakie sposoby łączenia rur stalowych opisano?","answer":"W artykule omówiono połączenia gwintowane, spawane i kołnierzowe."},{"question":"Co ma znaczenie przy wyborze połączenia?","answer":"Metodę łączenia dobiera się do materiału rur, geometrii i warunków pracy instalacji."},{"question":"Jaką zaletę serwisową mają połączenia kołnierzowe?","answer":"Połączenia kołnierzowe umożliwiają rozłączenie elementów, co może ułatwić naprawę lub wymianę odcinka instalacji."}]
 category: "Aktualności"
 source: "https://ecotechgroup.pl/sposoby-laczenia-rur-w-zaleznosci-od-ich-rodzaju/"
 description: "Od tego, czy rury zostaną ze sobą połączone we właściwy sposób, zależy jakość działania całej instalacji. Jeśli połączenie zostanie wykonane niestarannie lub z wykorzystaniem…"

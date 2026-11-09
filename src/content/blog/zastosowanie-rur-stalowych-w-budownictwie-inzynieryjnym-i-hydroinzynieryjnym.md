@@ -2,6 +2,10 @@
 title: "Zastosowanie rur stalowych w budownictwie inżynieryjnym i hydro inżynieryjnym"
 pubDate: 2023-08-25
 slug: "zastosowanie-rur-stalowych-w-budownictwie-inzynieryjnym-i-hydroinzynieryjnym"
+dateModified: "2026-11-09"
+keyTakeaways: ["Artykuł przedstawia wykorzystanie rur w przewiertach, przeciskach, rozporach i palach.","Przewierty i przeciski umożliwiają wykonywanie przejść podziemnych bez otwartego wykopu na całej trasie.","Osłona instalacji, rozpora i pal pełnią różne funkcje, dlatego ich parametry wynikają z odrębnych wymagań projektowych."]
+glossary: [{"term":"Technologia bezwykopowa","definition":"Sposób wykonania instalacji podziemnej bez otwartego wykopu na całej jej trasie."},{"term":"Rozpora","definition":"Element konstrukcyjny przenoszący siły ściskające i podpierający inne elementy."},{"term":"Pal rurowy","definition":"Element posadowienia wykonany z rury, przekazujący obciążenia konstrukcji na grunt."}]
+faq: [{"question":"Jakie zastosowania infrastrukturalne opisano?","answer":"Artykuł przedstawia wykorzystanie rur w przewiertach, przeciskach, rozporach i palach."},{"question":"Co wyróżnia metody bezwykopowe?","answer":"Przewierty i przeciski umożliwiają wykonywanie przejść podziemnych bez otwartego wykopu na całej trasie."},{"question":"Czy wszystkie te zastosowania wymagają takich samych rur?","answer":"Osłona instalacji, rozpora i pal pełnią różne funkcje, dlatego ich parametry wynikają z odrębnych wymagań projektowych."}]
 category: "Aktualności"
 source: "https://ecotechgroup.pl/zastosowanie-rur-stalowych-w-budownictwie-inzynieryjnym-i-hydroinzynieryjnym/"
 description: "Budownictwo inżynieryjne i hydro inżynieryjne to szczególne obszary budownictwa. Obejmują wznoszenie obiektów oraz konstrukcji, które muszą być przygotowane na duże obciążenia i które…"

@@ -1,4 +1,5 @@
 ---
+import { getImageDimensions } from '../lib/image-dimensions.mjs';
 interface Props {
   href: string;
   title: string;
@@ -6,11 +7,13 @@ interface Props {
   imageAlt?: string;
 }
 const { href, title, image, imageAlt } = Astro.props;
+const imageSrc = image ?? '/img/main/hero-industrial-pipes.jpg';
+const dimensions = getImageDimensions(imageSrc);
 ---
 
 <a href={href} class="offer-tile group flex h-full flex-col focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-1">
   <div class="aspect-[1.9/1] overflow-hidden bg-mist">
-    <img src={image ?? '/img/main/hero-industrial-pipes.jpg'} alt={imageAlt ?? title} class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" />
+    <img src={imageSrc} width={dimensions.width} height={dimensions.height} alt={imageAlt ?? title} class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" />
   </div>
   <div class="relative -mt-10 ml-4 grid flex-1 grid-cols-[minmax(0,1fr)_auto] items-stretch sm:ml-7">
     <div class="flex min-h-36 items-center bg-accent-1 px-5 py-7 text-white transition-colors group-hover:bg-accent-1/90 sm:px-7">

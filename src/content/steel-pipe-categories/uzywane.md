@@ -1,6 +1,16 @@
 ---
 title: "Rury stalowe używane"
 slug: "uzywane"
+tldr: "Rury stalowe używane z demontażu są dostępne w różnych wymiarach i wariantach wykonania. Przy wyborze trzeba uwzględnić wymagania projektu, stan konkretnej partii oraz dostępne dokumenty. Poniżej znajduje się listing produktów, a pod nim opis zastosowań i zestawienia wymiarów. Aktualną dostępność i warunki dostawy potwierdzamy w odpowiedzi na zapytanie."
+faq:
+  - question: "Co sprawdzić przed zakupem rur używanych?"
+    answer: "Należy ustalić wymiary i stan oferowanej partii, dostępność dokumentacji oraz zgodność z wymaganiami projektu. W zapytaniu określ zastosowanie i wymagania odbiorowe, aby oferta dotyczyła właściwego materiału."
+  - question: "Czy tabela wymiarów oznacza bieżący stan magazynowy?"
+    answer: "Nie. Tabela przedstawia zakres wymiarów opisany w ofercie. Dostępność konkretnej średnicy, ścianki, długości i ilości trzeba potwierdzić dla aktualnej partii materiału."
+  - question: "Czy do używanych rur dostępne są atesty?"
+    answer: "W opisie oferty wskazano pierwotne atesty jako element kwalifikacji materiału. Zakres dokumentacji należy jednak potwierdzić dla konkretnej partii. Jeśli dokument jest wymagany w projekcie, zaznacz to przed zamówieniem."
+  - question: "Jak przygotować zapytanie o rury z demontażu?"
+    answer: "Podaj średnicę, grubość ścianki, długości, ilość i planowane zastosowanie. Wskaż dopuszczalny stan powierzchni, wymagania dotyczące dokumentów oraz miejsce dostawy."
 description: "Używane rury stalowe z demontażu, dostępne w szerokim zakresie średnic i wymiarów."
 source: "https://ecotechgroup.pl/rury-stalowe-uzywane/"
 image: "/img/pipes/ecotech-group-rury-stalowe-uzywane.webp"

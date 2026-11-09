@@ -1,4 +1,4 @@
-# POLITYKA DLA WSZYSTKICH ROBOTOW, W TYM WYSZUKIWAREK AI
+# REGULY DOMYSLNE DLA ROBOTOW
 
 User-agent: *
 Allow: /
@@ -21,6 +21,37 @@ Content-Signal: search=yes, ai-input=yes, ai-train=no
 
 # Katalog zasobow dla agentow (ARD / AI Catalog).
 Agentmap: https://ecotechgroup.pl/.well-known/ai-catalog.json
+
+# BOTY WYSZUKIWANIA AI
+# Grupy szczegolowe nie dziedzicza regul User-agent: *.
+# Zachowujemy te same ograniczenia dla adresow technicznych i parametrow.
+
+User-agent: OAI-SearchBot
+User-agent: Claude-SearchBot
+User-agent: PerplexityBot
+Allow: /
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+Disallow: */feed/
+Disallow: /?s=
+Disallow: /search/
+Disallow: /*?swoof=
+Disallow: /*?really_curr_tax=
+Disallow: /*?product_cat=
+Disallow: /*?pa_*
+Disallow: /*?gclid=
+Disallow: /*?fbclid=
+Disallow: /*?utm_*
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+# BLOKADA BOTOW TRENINGOWYCH AI
+
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Google-Extended
+User-agent: CCBot
+User-agent: Bytespider
+Disallow: /
 
 # BLOKADA BOTOW STATYSTYCZNYCH I NARZEDZI SEO
 

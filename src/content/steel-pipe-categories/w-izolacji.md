@@ -1,6 +1,22 @@
 ---
 title: "Rury stalowe w izolacji"
 slug: "w-izolacji"
+tldr: "Rury stalowe w izolacji z powłokami dobieranymi do zastosowania i warunków pracy. W zapytaniu określ wymiary rury, wymagany system zabezpieczenia oraz warunki montażu. Poniżej znajdziesz listing produktów, a pod nim opis oferowanych powłok, zakres wykonania i FAQ. Specyfikację izolacji, dokumenty oraz termin realizacji potwierdzamy dla konkretnego zamówienia."
+faq:
+  - question: "Jaka jest najlepsza izolacja na rury stalowe?"
+    answer: "Najlepsza izolacja dla rur stalowych zależy od konkretnej aplikacji i warunków środowiskowych. Warto skonsultować się z naszym ekspertem, aby dobrać odpowiednią izolację do danej inwestycji."
+  - question: "Jaką grubość powinna mieć izolacja na rury?"
+    answer: "Grubość izolacji zależy od temperatury otoczenia, temperatury transportowanego medium oraz poziomu izolacji wymaganego do utrzymania odpowiedniej efektywności energetycznej."
+  - question: "Jak zakładać otuliny na rury?"
+    answer: "Należy odpowiednio przygotować powierzchnię rury, odmierzyć właściwą długość otuliny i równomiernie owinąć ją wokół rury, dbając o szczelne połączenia."
+  - question: "Jak połączyć rury stalowe w izolacji?"
+    answer: "Rury można łączyć przez spawanie, gwintowanie lub stosowanie złączek. Przy spawaniu miejsce łączenia można zabezpieczyć taśmą izolacyjną."
+  - question: "Jakie zabezpieczenia antykorozyjne są dostępne dla rur stalowych?"
+    answer: "Najczęściej stosuje się powłoki epoksydowe, izolację nawojową lub fabryczną 3LPE, powłoki asfaltowo-bitumiczne typu ABIZOL oraz, rzadziej, powłoki cynkowe."
+  - question: "Ile trwa przygotowanie rur w izolacji?"
+    answer: "Czas realizacji zamówienia rur w izolacji 3LPE zależy od liczby zleceń w zakładzie i ilości zamówionego materiału. Zwykle wynosi około 14 dni roboczych."
+  - question: "Czy można izolować rury zgodnie z EN 12068 oraz DIN 30670?"
+    answer: "Tak. Norma EN 12068 dotyczy izolacji nawojowej, a DIN 30670 izolacji wytłaczanej."
 description: "Rury stalowe w izolacji do pracy w wymagających warunkach oraz ochrony antykorozyjnej rurociągów."
 image: "/img/pipes/rury-stalowe-w-izolacji.webp"
 imageAlt: "Rury stalowe w izolacji"
@@ -73,40 +89,3 @@ Potwierdzają to:
 - atest na izolację;
 - atesty PZH;
 - atesty na wykonanie izolacji.
-
-## Najczęściej zadawane pytania
-
-<details>
-  <summary>Jaka jest najlepsza izolacja na rury stalowe?</summary>
-  <p>Najlepsza izolacja dla rur stalowych zależy od konkretnej aplikacji i warunków środowiskowych. Warto skonsultować się z naszym ekspertem, aby dobrać odpowiednią izolację do danej inwestycji.</p>
-</details>
-
-<details>
-  <summary>Jaką grubość powinna mieć izolacja na rury?</summary>
-  <p>Grubość izolacji zależy od temperatury otoczenia, temperatury transportowanego medium oraz poziomu izolacji wymaganego do utrzymania odpowiedniej efektywności energetycznej.</p>
-</details>
-
-<details>
-  <summary>Jak zakładać otuliny na rury?</summary>
-  <p>Należy odpowiednio przygotować powierzchnię rury, odmierzyć właściwą długość otuliny i równomiernie owinąć ją wokół rury, dbając o szczelne połączenia.</p>
-</details>
-
-<details>
-  <summary>Jak połączyć rury stalowe w izolacji?</summary>
-  <p>Rury można łączyć przez spawanie, gwintowanie lub stosowanie złączek. Przy spawaniu miejsce łączenia można zabezpieczyć taśmą izolacyjną.</p>
-</details>
-
-<details>
-  <summary>Jakie zabezpieczenia antykorozyjne są dostępne dla rur stalowych?</summary>
-  <p>Najczęściej stosuje się powłoki epoksydowe, izolację nawojową lub fabryczną 3LPE, powłoki asfaltowo-bitumiczne typu ABIZOL oraz, rzadziej, powłoki cynkowe.</p>
-</details>
-
-<details>
-  <summary>Ile trwa przygotowanie rur w izolacji?</summary>
-  <p>Czas realizacji zamówienia rur w izolacji 3LPE zależy od liczby zleceń w zakładzie i ilości zamówionego materiału. Zwykle wynosi około 14 dni roboczych.</p>
-</details>
-
-<details>
-  <summary>Czy można izolować rury zgodnie z EN 12068 oraz DIN 30670?</summary>
-  <p>Tak. Norma EN 12068 dotyczy izolacji nawojowej, a DIN 30670 izolacji wytłaczanej.</p>
-</details>

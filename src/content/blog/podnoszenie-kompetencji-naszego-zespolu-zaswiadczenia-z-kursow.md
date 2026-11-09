@@ -2,6 +2,10 @@
 title: "Podnoszenie kompetencji naszego zespołu - Zaświadczenia z kursów"
 pubDate: 2024-01-28
 slug: "podnoszenie-kompetencji-naszego-zespolu-zaswiadczenia-z-kursow"
+dateModified: "2026-11-09"
+keyTakeaways: ["Wpis prezentuje zaświadczenia ze szkoleń dotyczących technologii IT, dronów i bezpieczeństwa w budownictwie.","Wśród udostępnionych materiałów znajdują się zaświadczenia z listopada 2023 roku.","Są to materiały dotyczące rozwoju kompetencji zespołu, a nie certyfikaty konkretnych rur."]
+glossary: [{"term":"Zaświadczenie ze szkolenia","definition":"Dokument potwierdzający wskazany w nim udział w szkoleniu lub jego ukończenie."},{"term":"Kompetencje zawodowe","definition":"Wiedza i umiejętności wykorzystywane przy wykonywaniu zadań zawodowych."}]
+faq: [{"question":"Jakie szkolenia przedstawia publikacja?","answer":"Wpis prezentuje zaświadczenia ze szkoleń dotyczących technologii IT, dronów i bezpieczeństwa w budownictwie."},{"question":"Z jakiego okresu pochodzą wymienione szkolenia?","answer":"Wśród udostępnionych materiałów znajdują się zaświadczenia z listopada 2023 roku."},{"question":"Czym są dokumenty zamieszczone we wpisie?","answer":"Są to materiały dotyczące rozwoju kompetencji zespołu, a nie certyfikaty konkretnych rur."}]
 category: "Aktualności"
 source: "https://ecotechgroup.pl/podnoszenie-kompetencji-naszego-zespolu-zaswiadczenia-z-kursow/"
 description: "Zapraszamy do zapoznania się z certyfikatami i zaświadczeniami z odbytych szkoleń przez nasz zespół, które świadczą o zaangażowaniu i rozwijaniu umiejętności żeby jak najlepiej sprostać…"

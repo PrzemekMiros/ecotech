@@ -2,6 +2,10 @@
 title: "Jakie gatunki stali wykorzystuje się do produkcji rur?"
 pubDate: 2022-09-18
 slug: "jakie-gatunki-stali-wykorzystuje-sie-do-produkcji-rur"
+dateModified: "2026-11-09"
+keyTakeaways: ["Artykuł objaśnia oznaczenia gatunków stali stosowanych do produkcji rur.","W opisanym systemie S odnosi się do stali konstrukcyjnych, P do ciśnieniowych, a L do rur przewodowych.","Oznaczenie gatunku trzeba odczytywać wraz z wymaganiami odpowiedniej normy i stanem dostawy wyrobu."]
+glossary: [{"term":"Gatunek stali","definition":"Oznaczenie materiału powiązane z jego składem i wymaganymi właściwościami."},{"term":"Stal stopowa","definition":"Stal klasyfikowana na podstawie zawartości pierwiastków stopowych według odpowiednich kryteriów materiałowych."},{"term":"Stan dostawy","definition":"Stan materiału po określonej obróbce, w jakim wyrób jest dostarczany."}]
+faq: [{"question":"Co wyjaśnia artykuł o gatunkach stali?","answer":"Artykuł objaśnia oznaczenia gatunków stali stosowanych do produkcji rur."},{"question":"Jakie znaczenie mają symbole S, P i L?","answer":"W opisanym systemie S odnosi się do stali konstrukcyjnych, P do ciśnieniowych, a L do rur przewodowych."},{"question":"Czy nazwa gatunku zastępuje pełną specyfikację?","answer":"Oznaczenie gatunku trzeba odczytywać wraz z wymaganiami odpowiedniej normy i stanem dostawy wyrobu."}]
 category: "Aktualności"
 source: "https://ecotechgroup.pl/jakie-gatunki-stali-wykorzystuje-sie-do-produkcji-rur/"
 description: "Stal jest wytrzymała, odporna na ściskanie, rozciąganie i działanie czynników mechanicznych, a przy tym ma odpowiednią sprężystość oraz elastyczność. Dlatego właśnie ona jest popularnym…"

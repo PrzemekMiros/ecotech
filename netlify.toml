@@ -5,6 +5,39 @@
 [build.environment]
   NODE_VERSION = "20.19.6"
 
+# Apply at the CDN as well as in middleware, including files copied from public/.
+[[headers]]
+  for = "/*.pdf"
+  [headers.values]
+    X-Robots-Tag = "noindex, follow"
+
+[[headers]]
+  for = "/*.docx"
+  [headers.values]
+    X-Robots-Tag = "noindex, follow"
+
+[[headers]]
+  for = "/*.xlsx"
+  [headers.values]
+    X-Robots-Tag = "noindex, follow"
+
+[[headers]]
+  for = "/*.zip"
+  [headers.values]
+    X-Robots-Tag = "noindex, follow"
+
+[[redirects]]
+  from = "/rury-stalowe/:category/:product/"
+  to = "/:product/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rury-stalowe/:category/:product"
+  to = "/:product/"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/uslugi/ciecie-plazmowe-cnc-wypalanie-blach-cnc/"
   to = "https://ecotechgroup.pl/uslugi/"

@@ -7,7 +7,8 @@ import { isExcludedFromIndexing } from './src/lib/indexing.mjs';
 export default defineConfig({
   site: 'https://ecotechgroup.pl',
   output: 'server',
-  adapter: netlify(),
+  // Negotiate Markdown at request time for prerendered pages as well as SSR pages.
+  adapter: netlify({ edgeMiddleware: true }),
   image: {
     remotePatterns: [{ protocol: 'https', hostname: 'cdn.sanity.io' }]
   },

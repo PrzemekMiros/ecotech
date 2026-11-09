@@ -1,6 +1,6 @@
 # Dostęp agentów do Eco Tech Group
 
-Wersja: 1.0.0
+Wersja: 1.1.0
 
 ## Aktualny model dostępu
 
@@ -20,6 +20,8 @@ Nie należy przesyłać nagłówka `Authorization`. Serwis nie publikuje metadan
 
 Zapytania ofertowe zawierają dane osobowe i wymagają świadomej zgody użytkownika. Agent powinien otworzyć formularz `https://ecotechgroup.pl/kontakt/`, przedstawić użytkownikowi treść i uzyskać jego zgodę przed wysłaniem. Publiczny interfejs tylko do odczytu nie wysyła zapytań i nie składa zamówień.
 
-## Brak usług MCP i A2A
+## MCP i A2A
 
-Eco Tech Group nie udostępnia obecnie zdalnego serwera MCP ani agenta A2A. Brak kart tych usług jest zamierzony; klienci nie powinni próbować łączyć się z nieudokumentowanymi endpointami.
+Publiczny serwer MCP jest dostępny pod `https://ecotechgroup.pl/api/mcp` (Streamable HTTP, POST, bez sesji). Karta serwera: `https://ecotechgroup.pl/.well-known/mcp/server-card.json`. Uwierzytelnienie nie jest wymagane. Narzędzia udostępniają wyłącznie publiczne dane kontaktowe i obliczanie masy rur; nie mają dostępu do danych klientów ani możliwości zapisu. Szczegóły i parametry: `/docs/agents.md`.
+
+Serwis nie udostępnia agenta A2A; brak jego karty jest zamierzony.

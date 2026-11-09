@@ -2,6 +2,10 @@
 title: "Rola pali stalowych w konstrukcjach fundamentowych"
 pubDate: 2026-02-20
 slug: "rola-pali-stalowych-w-konstrukcjach-fundamentowych"
+dateModified: "2026-11-09"
+keyTakeaways: ["Pale rurowe są elementami fundamentów pośrednich przenoszących obciążenia konstrukcji na grunt.","Artykuł omawia pale wielkośrednicowe oraz małośrednicowe, stosowane w różnych warunkach posadowienia.","Dobór pala uwzględnia także gatunek stali, obciążenia i warunki gruntowe określone w projekcie."]
+glossary: [{"term":"Pal rurowy","definition":"Element posadowienia wykonany z rury, przekazujący obciążenia konstrukcji na grunt."},{"term":"Fundament pośredni","definition":"Posadowienie przenoszące obciążenia za pośrednictwem elementów zagłębionych w gruncie, np. pali."},{"term":"Nośność","definition":"Zdolność elementu lub podłoża do przenoszenia obciążeń zgodnie z przyjętymi kryteriami projektowymi."}]
+faq: [{"question":"Jaką funkcję pełnią pale stalowe?","answer":"Pale rurowe są elementami fundamentów pośrednich przenoszących obciążenia konstrukcji na grunt."},{"question":"Jakie rodzaje pali opisano?","answer":"Artykuł omawia pale wielkośrednicowe oraz małośrednicowe, stosowane w różnych warunkach posadowienia."},{"question":"Czy średnica wystarcza do wyboru pala?","answer":"Dobór pala uwzględnia także gatunek stali, obciążenia i warunki gruntowe określone w projekcie."}]
 category: "Aktualności"
 source: "https://ecotechgroup.pl/rola-pali-stalowych-w-konstrukcjach-fundamentowych/"
 description: "Gdy mowa o budowie fundamentów, zwykle w naszej głowie rysuje się obraz płyt fundamentowych i prętów zbrojeniowych. Tymczasem konstrukcje fundamentowe równie dobrze mogą być tworzone z…"

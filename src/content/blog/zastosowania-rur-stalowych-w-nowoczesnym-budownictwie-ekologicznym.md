@@ -2,6 +2,10 @@
 title: "Zastosowania rur stalowych w nowoczesnym budownictwie ekologicznym"
 pubDate: 2025-06-01
 slug: "zastosowania-rur-stalowych-w-nowoczesnym-budownictwie-ekologicznym"
+dateModified: "2026-11-09"
+keyTakeaways: ["Stal może być ponownie przetwarzana, co wpisuje ją w gospodarkę obiegu zamkniętego.","Tekst wiąże trwałość i ochronę antykorozyjną z ograniczaniem potrzeby wymiany elementów.","Artykuł omawia zastosowania rur w konstrukcjach oraz instalacjach ogrzewania i chłodzenia."]
+glossary: [{"term":"Recykling stali","definition":"Odzysk materiału stalowego przez przetworzenie go na surowiec do kolejnej produkcji."},{"term":"Gospodarka obiegu zamkniętego","definition":"Podejście zakładające utrzymywanie materiałów w użyciu m.in. przez ponowne wykorzystanie i recykling."},{"term":"Trwałość użytkowa","definition":"Zdolność elementu do zachowania wymaganej funkcji w przewidzianym okresie eksploatacji."}]
+faq: [{"question":"Jaką rolę odgrywa recykling stali?","answer":"Stal może być ponownie przetwarzana, co wpisuje ją w gospodarkę obiegu zamkniętego."},{"question":"Co poza recyklingiem omawia artykuł?","answer":"Tekst wiąże trwałość i ochronę antykorozyjną z ograniczaniem potrzeby wymiany elementów."},{"question":"Jakie zastosowania budowlane przedstawiono?","answer":"Artykuł omawia zastosowania rur w konstrukcjach oraz instalacjach ogrzewania i chłodzenia."}]
 category: "Aktualności"
 source: "https://ecotechgroup.pl/zastosowania-rur-stalowych-w-nowoczesnym-budownictwie-ekologicznym/"
 description: "W dobie rosnącej świadomości ekologicznej i konieczności ograniczania negatywnego wpływu budownictwa na środowisko, rury stalowe zyskują na znaczeniu jako materiał konstrukcyjny i…"

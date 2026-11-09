@@ -8,6 +8,7 @@ export const agentLinks = [
   '</docs/agents.md>; rel="service-doc"; type="text/markdown"',
   '</.well-known/api-catalog>; rel="api-catalog"; type="application/linkset+json"',
   '</openapi.json>; rel="service-desc"; type="application/vnd.oai.openapi+json"',
+  '</.well-known/mcp/server-card.json>; rel="service-desc"; type="application/json"',
   '</.well-known/ai-catalog.json>; rel="ai-catalog"; type="application/ai-catalog+json"'
 ].join(', ');
 
@@ -21,7 +22,10 @@ export function acceptsMarkdown(accept: string): boolean {
     return { type: type.trim(), q: Number.isFinite(q) && q >= 0 && q <= 1 ? q : 0 };
   });
   const markdown = types.find(item => item.type === 'text/markdown')?.q ?? 0;
-  const html = types.find(item => item.type === 'text/html')?.q ?? 0;
+  const html = types.find(item => item.type === 'text/html')?.q
+    ?? types.find(item => item.type === 'text/*')?.q
+    ?? types.find(item => item.type === '*/*')?.q
+    ?? 0;
   return markdown > 0 && markdown >= html;
 }
 

@@ -2,6 +2,10 @@
 title: "Gosia Prus na Rajdzie Barbórka 2025"
 pubDate: 2025-12-15
 slug: "gosia-prus-na-rajdzie-barborka-2025"
+dateModified: "2026-11-09"
+keyTakeaways: ["Wpis jest relacją z Rajdu Barbórka 2025, rozgrywanego w Warszawie.","EcoTech Group wskazuje w relacji swoje wsparcie dla startującej Gosi Prus.","W relacji wyróżniono finał na Karowej jako część rajdowych wydarzeń."]
+glossary: [{"term":"Rajd samochodowy","definition":"Wydarzenie motorsportowe, w którym rywalizują załogi samochodowe na wyznaczonej trasie."},{"term":"Sponsoring sportowy","definition":"Wsparcie zawodnika lub wydarzenia połączone z prezentacją sponsora."}]
+faq: [{"question":"Jakiego wydarzenia dotyczy relacja?","answer":"Wpis jest relacją z Rajdu Barbórka 2025, rozgrywanego w Warszawie."},{"question":"Kogo wspiera EcoTech Group?","answer":"EcoTech Group wskazuje w relacji swoje wsparcie dla startującej Gosi Prus."},{"question":"Jaki element finału opisano?","answer":"W relacji wyróżniono finał na Karowej jako część rajdowych wydarzeń."}]
 category: "Aktualności"
 source: "https://ecotechgroup.pl/gosia-prus-na-rajdzie-barborka-2025/"
 description: "Rajd Barbórka od lat zamyka sezon i robi to w swoim stylu: dynamicznie, głośno i w samym sercu miasta. Tegoroczna edycja to dwa intensywne dni motorsportu, a finał na Karowej ponownie…"

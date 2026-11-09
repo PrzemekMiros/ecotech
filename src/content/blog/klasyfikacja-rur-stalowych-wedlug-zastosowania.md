@@ -2,6 +2,10 @@
 title: "Klasyfikacja rur według zastosowania"
 pubDate: 2021-04-19
 slug: "klasyfikacja-rur-stalowych-wedlug-zastosowania"
+dateModified: "2026-11-09"
+keyTakeaways: ["Przegląd obejmuje między innymi rury konstrukcyjne, ciśnieniowe, kotłowe i precyzyjne.","Zastosowanie rury i sposób jej wykonania to odrębne kryteria klasyfikacji.","Wybór konkretnej rury wymaga określenia wymiarów, gatunku stali i warunków pracy."]
+glossary: [{"term":"Rura konstrukcyjna","definition":"Rura przeznaczona do zastosowania jako element konstrukcji."},{"term":"Rura ciśnieniowa","definition":"Rura o wymaganiach materiałowych i odbiorowych określonych dla pracy pod ciśnieniem."},{"term":"Rura precyzyjna","definition":"Rura wykonywana z wymaganiami dotyczącymi dokładności wymiarowej i jakości powierzchni."}]
+faq: [{"question":"Jakie zastosowania rur zestawiono?","answer":"Przegląd obejmuje między innymi rury konstrukcyjne, ciśnieniowe, kotłowe i precyzyjne."},{"question":"Czy podział według zastosowania jest tym samym co technologia wykonania?","answer":"Zastosowanie rury i sposób jej wykonania to odrębne kryteria klasyfikacji."},{"question":"Co trzeba sprawdzić oprócz nazwy rodzaju rury?","answer":"Wybór konkretnej rury wymaga określenia wymiarów, gatunku stali i warunków pracy."}]
 category: "Aktualności"
 source: "https://ecotechgroup.pl/klasyfikacja-rur-stalowych-wedlug-zastosowania/"
 description: "Rury stalowe są bardzo ważnym elementem funkcjonowania praktycznie wszystkich zakładów przemysłowych. Z uwagi na swoją specyfikacje są stosowane w różnych dziedzinach przemysł. Rury…"

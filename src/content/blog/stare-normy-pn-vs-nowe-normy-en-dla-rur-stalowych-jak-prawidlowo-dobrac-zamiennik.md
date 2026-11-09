@@ -2,6 +2,10 @@
 title: "Stare normy PN vs nowe normy EN dla rur stalowych - jak prawidłowo dobrać zamiennik?"
 pubDate: 2026-06-17
 slug: "stare-normy-pn-vs-nowe-normy-en-dla-rur-stalowych-jak-prawidlowo-dobrac-zamiennik"
+howTo: {"name":"Jak prawidłowo dobrać zamiennik rury krok po kroku?","steps":[{"name":"Odczytaj dokumentację","text":"Odczytaj ze starej dokumentacji pełne oznaczenie rury: norma, wymiar, grubość ścianki, gatunek stali, rodzaj wykonania i ewentualne wymagania dodatkowe."},{"name":"Ustal zastosowanie","text":"Ustal rzeczywiste zastosowanie rury: konstrukcyjne, ciśnieniowe, instalacyjne, osłonowe, przewodowe, precyzyjne lub mechaniczne."},{"name":"Sprawdź wykonanie rury","text":"Sprawdź, czy rura była bez szwu, ze szwem, gwintowana, ocynkowana, izolowana albo przeznaczona do spawania."},{"name":"Wybierz rodzinę norm","text":"Dobierz rodzinę norm PN-EN właściwą dla zastosowania."},{"name":"Porównaj wymagania","text":"Porównaj własności mechaniczne, skład chemiczny, tolerancje, wymiary i wymagane badania."},{"name":"Ustal dokument odbiorowy","text":"Wymagaj dokumentu odbiorowego, najczęściej EN 10204 3.1, jeżeli rura ma znaczenie techniczne lub konstrukcyjne."},{"name":"Uzyskaj wymaganą akceptację","text":"W razie wątpliwości uzyskaj akceptację projektanta, inspektora nadzoru albo osoby odpowiedzialnej za technologię instalacji."}]}
+dateModified: "2026-11-09"
+keyTakeaways: ["Stara norma PN i współczesna norma PN-EN nie muszą stanowić zamienników jeden do jednego.","Ocena zamiennika obejmuje zastosowanie, materiał, wykonanie, tolerancje i wymagania odbiorowe.","Zamianę należy potwierdzić odpowiednią dokumentacją i, gdy wymaga tego projekt, akceptacją osoby odpowiedzialnej za dobór."]
+glossary: [{"term":"Zamiennik techniczny","definition":"Wyrób spełniający wymagania przyjęte dla zastępowanego elementu, nie tylko jego wymiary."},{"term":"Tolerancja wymiarowa","definition":"Dopuszczalny zakres odchylenia wymiaru od wartości określonej w specyfikacji."},{"term":"Dokument odbiorowy","definition":"Dokument zawierający informacje o zgodności wyrobu i, zależnie od typu, wyniki wymaganych badań."}]
 category: "Aktualności"
 source: "https://ecotechgroup.pl/stare-normy-pn-vs-nowe-normy-en-dla-rur-stalowych-jak-prawidlowo-dobrac-zamiennik/"
 description: "W dokumentacji technicznej, projektach wykonawczych i starszych specyfikacjach materiałowych nadal można spotkać oznaczenia dawnych Polskich Norm, takie jak PN-80/H-74219, PN-74/H-74200…"
@@ -136,41 +140,6 @@ faq:
 
 
 
-<h2 class="wp-block-heading"><strong>Jak prawidłowo dobrać zamiennik krok po kroku?</strong></h2>
-
-
-
-<p>Najbezpieczniejsza procedura wygląda następująco:</p>
-
-
-
-<ol class="wp-block-list">
-<li>Odczytaj ze starej dokumentacji pełne oznaczenie rury: norma, wymiar, grubość ścianki, gatunek stali, rodzaj wykonania i ewentualne wymagania dodatkowe.</li>
-
-
-
-<li>Ustal rzeczywiste zastosowanie rury: konstrukcyjne, ciśnieniowe, instalacyjne, osłonowe, przewodowe, precyzyjne lub mechaniczne.</li>
-
-
-
-<li>Sprawdź, czy rura była bez szwu, ze szwem, gwintowana, ocynkowana, izolowana albo przeznaczona do spawania.</li>
-
-
-
-<li>Dobierz rodzinę norm PN-EN właściwą dla zastosowania.</li>
-
-
-
-<li>Porównaj własności mechaniczne, skład chemiczny, tolerancje, wymiary i wymagane badania.</li>
-
-
-
-<li>Wymagaj dokumentu odbiorowego, najczęściej EN 10204 3.1, jeżeli rura ma znaczenie techniczne lub konstrukcyjne.</li>
-
-
-
-<li>W razie wątpliwości uzyskaj akceptację projektanta, inspektora nadzoru albo osoby odpowiedzialnej za technologię instalacji.</li>
-</ol>
 
 
 

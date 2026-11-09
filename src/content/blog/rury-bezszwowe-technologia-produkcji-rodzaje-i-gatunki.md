@@ -2,6 +2,10 @@
 title: "Rury bezszwowe - technologia produkcji, rodzaje i gatunki"
 pubDate: 2026-03-22
 slug: "rury-bezszwowe-technologia-produkcji-rodzaje-i-gatunki"
+dateModified: "2026-11-09"
+keyTakeaways: ["Rura bezszwowa nie ma szwu powstałego przez połączenie krawędzi blachy.","Tekst przedstawia technologie formowania rur bezszwowych oraz obróbkę na gorąco i na zimno.","Sposób wykonania i gatunek stali wpływają na właściwości rury i zakres jej zastosowań."]
+glossary: [{"term":"Rura bezszwowa","definition":"Rura wytwarzana bez połączenia krawędzi blachy szwem spawanym lub zgrzewanym."},{"term":"Walcowanie","definition":"Kształtowanie materiału przez nacisk obracających się walców."},{"term":"Gatunek stali","definition":"Oznaczenie materiału powiązane z jego składem i wymaganymi właściwościami."}]
+faq: [{"question":"Co odróżnia rurę bezszwową od spawanej?","answer":"Rura bezszwowa nie ma szwu powstałego przez połączenie krawędzi blachy."},{"question":"Jakie zagadnienia produkcyjne omawia tekst?","answer":"Tekst przedstawia technologie formowania rur bezszwowych oraz obróbkę na gorąco i na zimno."},{"question":"Dlaczego technologia i gatunek mają znaczenie?","answer":"Sposób wykonania i gatunek stali wpływają na właściwości rury i zakres jej zastosowań."}]
 category: "Aktualności"
 source: "https://ecotechgroup.pl/rury-bezszwowe-technologia-produkcji-rodzaje-i-gatunki/"
 description: "Rury bezszwowe to elementy składające się na wiele instalacji, które towarzyszą nam w codziennym życiu, choć nie zawsze mamy tego świadomość. Jeszcze mniej osób wie, w jaki sposób…"

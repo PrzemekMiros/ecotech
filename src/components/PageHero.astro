@@ -1,6 +1,7 @@
 ---
 import { Picture } from 'astro:assets';
 import defaultHeroImage from '../assets/img/main/hala-rury-stalowe-wynajem.jpg';
+import { getImageDimensions } from '../lib/image-dimensions.mjs';
 
 interface Breadcrumb {
   label: string;
@@ -20,13 +21,14 @@ const {
   image,
   imageAlt = 'Hala z rurami stalowymi'
 } = Astro.props;
+const dimensions = image ? getImageDimensions(image) : defaultHeroImage;
 ---
 
 <section class="relative isolate flex min-h-[10rem] items-end overflow-hidden bg-[#030b20] text-white md:min-h-[22rem]">
   {image ? (
-    <img src={image} alt={imageAlt} class="absolute inset-0 -z-20 h-full w-full object-cover object-center" />
+    <img src={image} width={dimensions.width} height={dimensions.height} loading="eager" fetchpriority="high" alt={imageAlt} class="absolute inset-0 -z-20 h-full w-full object-cover object-center" />
   ) : (
-    <Picture src={defaultHeroImage} widths={[640, 960, 1440, 1920]} sizes="100vw" formats={['avif', 'webp']} alt={imageAlt} class="absolute inset-0 -z-20 h-full w-full object-cover object-center" />
+    <Picture src={defaultHeroImage} widths={[640, 960, 1440, 1920]} sizes="100vw" formats={['avif', 'webp']} loading="eager" fetchpriority="high" alt={imageAlt} class="absolute inset-0 -z-20 h-full w-full object-cover object-center" />
   )}
   <div class="absolute inset-0 -z-10 bg-[#02091d]/75"></div>
   <div class="absolute inset-0 -z-10 bg-gradient-to-r from-[#02091d]/85 via-[#02091d]/60 to-[#02091d]/35"></div>

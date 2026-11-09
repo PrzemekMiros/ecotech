@@ -2,6 +2,11 @@
 title: "Ceny stali na rynku w 2022 roku"
 pubDate: 2023-07-03
 slug: "ceny-stali-na-rynku-w-2022-roku"
+dateModified: "2026-11-09"
+keyTakeaways: ["Analiza dotyczy cen stali w 2022 roku i została opublikowana w 2023 roku.","W tekście wskazano ograniczenia handlu, wzrost kosztów surowców i energii oraz popyt po pandemii.","Opisane wahania cen utrudniały planowanie zakupów i kosztów w budownictwie oraz motoryzacji."]
+glossary: [{"term":"Podaż","definition":"Ilość wyrobów oferowanych na rynku w danym okresie."},{"term":"Surowce","definition":"Materiały wejściowe wykorzystywane w produkcji wyrobów stalowych."},{"term":"Zmienność cen","definition":"Wahania poziomu cen w czasie, utrudniające porównywanie ofert z różnych okresów."}]
+faq: [{"question":"Którego roku dotyczy artykuł?","answer":"Analiza dotyczy cen stali w 2022 roku i została opublikowana w 2023 roku."},{"question":"Jakie czynniki rynkowe opisano?","answer":"W tekście wskazano ograniczenia handlu, wzrost kosztów surowców i energii oraz popyt po pandemii."},{"question":"Jak zmienność cen wpływała na firmy?","answer":"Opisane wahania cen utrudniały planowanie zakupów i kosztów w budownictwie oraz motoryzacji."}]
+archiveNote: "Dane i prognozy w tej publikacji odnoszą się do 2022 roku i okresu opisanego w tekście. Aktualizacja redakcyjna porządkuje wnioski, FAQ i słownik; nie stanowi aktualizacji notowań ani oferty cenowej."
 category: "Aktualności"
 source: "https://ecotechgroup.pl/ceny-stali-na-rynku-w-2022-roku/"
 description: "Ceny stali na rynku od połowy 2020 roku były obiektem dynamicznego wzrostu, a sytuacja ta utrzymała się również w 2022 roku. Pomimo oczekiwań dotyczących równowagi gospodarki światowej…"

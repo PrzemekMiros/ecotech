@@ -2,6 +2,10 @@
 title: "Typy powłok antykorozyjnych dla rur stalowych"
 pubDate: 2025-05-05
 slug: "typy-powlok-antykorozyjnych-dla-rur-stalowych"
+dateModified: "2026-11-09"
+keyTakeaways: ["Dobór powłoki antykorozyjnej zależy od środowiska pracy i sposobu aplikacji.","Przegląd obejmuje między innymi powłoki epoksydowe, poliuretanowe, polietylenowe i cynkowe.","Przygotowanie powierzchni stanowi część wykonania systemu ochronnego i wpływa na jego działanie."]
+glossary: [{"term":"Korozja","definition":"Degradacja materiału wskutek oddziaływania środowiska."},{"term":"Powłoka antykorozyjna","definition":"Warstwa ochronna ograniczająca oddziaływanie środowiska na powierzchnię stali."},{"term":"Przyczepność powłoki","definition":"Zdolność powłoki do utrzymywania połączenia z podłożem lub inną warstwą systemu."}]
+faq: [{"question":"Od czego zależy wybór powłoki?","answer":"Dobór powłoki antykorozyjnej zależy od środowiska pracy i sposobu aplikacji."},{"question":"Jakie systemy ochronne opisano?","answer":"Przegląd obejmuje między innymi powłoki epoksydowe, poliuretanowe, polietylenowe i cynkowe."},{"question":"Dlaczego przygotowanie powierzchni jest ważne?","answer":"Przygotowanie powierzchni stanowi część wykonania systemu ochronnego i wpływa na jego działanie."}]
 category: "Aktualności"
 source: "https://ecotechgroup.pl/typy-powlok-antykorozyjnych-dla-rur-stalowych/"
 description: "Zabezpieczenie antykorozyjne powierzchni rur stalowych zależy od technologii aplikacji (np. malowanie, taśmowanie) oraz środowiska pracy. Systemy antykorozyjne muszą uwzględniać…"

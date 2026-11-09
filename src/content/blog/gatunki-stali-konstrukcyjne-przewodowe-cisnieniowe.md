@@ -2,6 +2,10 @@
 title: "Gatunki stali - konstrukcyjne, przewodowe, ciśnieniowe"
 pubDate: 2023-03-22
 slug: "gatunki-stali-konstrukcyjne-przewodowe-cisnieniowe"
+dateModified: "2026-11-09"
+keyTakeaways: ["Artykuł rozróżnia stale konstrukcyjne, przewodowe i ciśnieniowe według zastosowania.","Oznaczenia literowo-cyfrowe przekazują informacje o przeznaczeniu i wybranych wymaganiach materiałowych.","Symbole dodatkowe opisują między innymi wymagania udarności i stan dostawy materiału."]
+glossary: [{"term":"Gatunek stali","definition":"Oznaczenie materiału powiązane z jego składem i wymaganymi właściwościami."},{"term":"Udarność","definition":"Właściwość opisująca zachowanie materiału przy obciążeniu udarowym, badana w określonych warunkach."},{"term":"Stan dostawy","definition":"Stan materiału po określonej obróbce, w jakim wyrób jest dostarczany."}]
+faq: [{"question":"Jakie grupy stali omawia artykuł?","answer":"Artykuł rozróżnia stale konstrukcyjne, przewodowe i ciśnieniowe według zastosowania."},{"question":"Co zawiera oznaczenie gatunku stali?","answer":"Oznaczenia literowo-cyfrowe przekazują informacje o przeznaczeniu i wybranych wymaganiach materiałowych."},{"question":"Dlaczego znaczenie mają symbole dodatkowe?","answer":"Symbole dodatkowe opisują między innymi wymagania udarności i stan dostawy materiału."}]
 category: "Aktualności"
 source: "https://ecotechgroup.pl/gatunki-stali-konstrukcyjne-przewodowe-cisnieniowe/"
 description: "Stal to jeden z najważniejszych materiałów inżynieryjnych, które znajdują zastosowanie w różnych dziedzinach przemysłu, w tym w budownictwie, motoryzacji, lotnictwie czy energetyce. W…"

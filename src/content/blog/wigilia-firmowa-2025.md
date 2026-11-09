@@ -2,6 +2,10 @@
 title: "Wigilia firmowa - 2025"
 pubDate: 2026-01-29
 slug: "wigilia-firmowa-2025"
+dateModified: "2026-11-09"
+keyTakeaways: ["Relacja dotyczy wigilii firmowej Eco-Tech z grudnia 2025 roku.","Spotkanie służyło wspólnemu świętowaniu i podsumowaniu mijającego roku.","Wpis o wydarzeniu z 2025 roku opublikowano 29 stycznia 2026 roku."]
+glossary: [{"term":"Podsumowanie roku","definition":"Omówienie wydarzeń i działań z kończącego się okresu."},{"term":"Relacja firmowa","definition":"Publikacja dokumentująca wydarzenie związane z działalnością lub zespołem firmy."}]
+faq: [{"question":"Jakiego wydarzenia dotyczy wpis?","answer":"Relacja dotyczy wigilii firmowej Eco-Tech z grudnia 2025 roku."},{"question":"Jaki cel spotkania opisano?","answer":"Spotkanie służyło wspólnemu świętowaniu i podsumowaniu mijającego roku."},{"question":"Kiedy opublikowano tę relację?","answer":"Wpis o wydarzeniu z 2025 roku opublikowano 29 stycznia 2026 roku."}]
 category: "Aktualności"
 source: "https://ecotechgroup.pl/wigilia-firmowa-2025/"
 description: "W grudniu spotkaliśmy się na Wigilii firmowej 2025, aby podsumować mijający rok, wspólnie świętować i spędzić czas w gronie całego zespołu Eco-Tech."

@@ -2,6 +2,11 @@
 title: "Ceny stali na rynku w 2021 roku"
 pubDate: 2021-08-13
 slug: "ceny-stali-na-rynku-w-2021-roku"
+dateModified: "2026-11-09"
+keyTakeaways: ["Artykuł opisuje rynek stali w 2021 roku, po zakłóceniach gospodarczych związanych z pandemią.","W analizie wzrost cen powiązano z odbudową popytu i ograniczonymi możliwościami produkcyjnymi hut.","Porównania cen odnoszą się do lat 2019–2021 i nie stanowią bieżącej oferty handlowej."]
+glossary: [{"term":"Popyt","definition":"Zapotrzebowanie odbiorców na określony wyrób w danym czasie."},{"term":"Podaż","definition":"Ilość wyrobów oferowanych na rynku w danym okresie."},{"term":"Złom stalowy","definition":"Materiał stalowy przeznaczony do odzysku i ponownego przetworzenia."}]
+faq: [{"question":"Jakiego okresu dotyczy analiza?","answer":"Artykuł opisuje rynek stali w 2021 roku, po zakłóceniach gospodarczych związanych z pandemią."},{"question":"Jakie przyczyny wzrostu cen wskazano?","answer":"W analizie wzrost cen powiązano z odbudową popytu i ograniczonymi możliwościami produkcyjnymi hut."},{"question":"Czy zestawienie jest aktualnym cennikiem?","answer":"Porównania cen odnoszą się do lat 2019–2021 i nie stanowią bieżącej oferty handlowej."}]
+archiveNote: "Dane i prognozy w tej publikacji odnoszą się do 2021 roku i okresu opisanego w tekście. Aktualizacja redakcyjna porządkuje wnioski, FAQ i słownik; nie stanowi aktualizacji notowań ani oferty cenowej."
 category: "Aktualności"
 source: "https://ecotechgroup.pl/ceny-stali-na-rynku-w-2021-roku/"
 description: "Rok 2021 to czas, w którym światowa gospodarka odzyskuje równowagę po zawirowaniach spowodowanych pandemią koronawirusa. Jest to widoczne również w branży budowlanej. Zobaczmy, jak…"

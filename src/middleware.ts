@@ -1,107 +1,56 @@
-import { getCollection } from 'astro:content';
-import { defineMiddleware, sequence } from 'astro:middleware';
+import { defineMiddleware } from 'astro:middleware';
 import { isExcludedFromIndexing } from './lib/indexing.mjs';
 import { maintenanceResponse } from './lib/maintenance.mjs';
-import { agentLinks, homeMarkdown, acceptsMarkdown, markdownResponse } from './lib/agent-resources';
+import { agentLinks, homeMarkdown, acceptsMarkdown } from './lib/agent-resources';
+import { pageToMarkdown, varyByRepresentation } from './lib/page-markdown';
 
 const AI_USER_AGENTS = /(?:GPTBot|ChatGPT-User|ClaudeBot|Claude-SearchBot|PerplexityBot|OAI-SearchBot)/i;
 const BINARY_ASSET = /\.(?:pdf|docx|xlsx|zip)$/i;
 
-const decodeHtmlEntities = (value: string) => value
-  .replace(/&nbsp;/gi, ' ')
-  .replace(/&amp;/gi, '&')
-  .replace(/&quot;/gi, '"')
-  .replace(/&#39;|&apos;/gi, "'")
-  .replace(/&lt;/gi, '<')
-  .replace(/&gt;/gi, '>');
-
-const htmlToMarkdown = (html: string) => decodeHtmlEntities(html)
-  .replace(/<h1[^>]*>([\s\S]*?)<\/h1>/gi, '# $1\n\n')
-  .replace(/<h2[^>]*>([\s\S]*?)<\/h2>/gi, '## $1\n\n')
-  .replace(/<h3[^>]*>([\s\S]*?)<\/h3>/gi, '### $1\n\n')
-  .replace(/<strong[^>]*>([\s\S]*?)<\/strong>/gi, '**$1**')
-  .replace(/<b[^>]*>([\s\S]*?)<\/b>/gi, '**$1**')
-  .replace(/<li[^>]*>([\s\S]*?)<\/li>/gi, '- $1\n')
-  .replace(/<br\s*\/?>(?:\r?\n)?/gi, '\n')
-  .replace(/<p[^>]*>([\s\S]*?)<\/p>/gi, '$1\n\n')
-  .replace(/<\/?(?:ul|ol|figure|figcaption|table|thead|tbody|tr|td|th)[^>]*>/gi, '\n')
-  .replace(/<[^>]+>/g, '')
-  .replace(/\n{3,}/g, '\n\n')
-  .trim();
-
-const excludeFromIndexing = defineMiddleware(async (context, next) => {
-  const response = await next();
-  if (context.url.pathname === '/' && response.ok) response.headers.append('Link', agentLinks);
-  if (context.url.pathname === '/' || /^\/aktualnosci\/[^/]+\/?$/.test(context.url.pathname)) {
-    const vary = new Set((response.headers.get('Vary') ?? '').split(',').map(value => value.trim()).filter(Boolean));
-    vary.add('Accept');
-    vary.add('User-Agent');
-    response.headers.set('Vary', [...vary].join(', '));
-    // Avoid a CDN reusing one negotiated representation for another request.
-    response.headers.set('Netlify-CDN-Cache-Control', 'no-store');
-  }
-  if (response.status !== 503 && isExcludedFromIndexing(context.url.pathname)) {
-    response.headers.set('X-Robots-Tag', 'noindex, follow');
-  }
-  return response;
-});
-
-const handleRequest = defineMiddleware(async (context, next) => {
+export const onRequest = defineMiddleware(async (context, next) => {
+  // Build-time prerendering has no request headers. Netlify Edge runs again at request time.
+  if (context.isPrerendered && !import.meta.env.DEV) return next();
   const { request, url } = context;
   const maintenanceMode = (process.env.MAINTENANCE_MODE ?? import.meta.env.MAINTENANCE_MODE)?.toLowerCase() === 'true';
-
-  if (maintenanceMode && !context.isPrerendered) {
-    return maintenanceResponse();
-  }
+  if (maintenanceMode && !context.isPrerendered) return maintenanceResponse();
 
   if (/^\/uslugi\/(?:ciecie-plazmowe-cnc-wypalanie-blach-cnc|demontaz-rurociagow-stalowych)\/?$/.test(url.pathname)) {
     return context.redirect('https://ecotechgroup.pl/uslugi/', 301);
   }
 
-  if (context.isPrerendered) return next();
+  const response = await next();
+  const headers = new Headers(response.headers);
+  if (response.status !== 503 && (BINARY_ASSET.test(url.pathname) || isExcludedFromIndexing(url.pathname))) {
+    headers.set('X-Robots-Tag', 'noindex, follow');
+  }
+  if (url.pathname === '/' && response.ok) headers.append('Link', agentLinks);
 
-  if (BINARY_ASSET.test(url.pathname)) {
-    const response = await next();
-    response.headers.set('X-Robots-Tag', 'noindex, follow');
-    return response;
+  // Negotiate only successful HTML pages. Keep redirects, errors, API and assets intact.
+  if (response.status !== 200 || !/^text\/html(?:;|$)/i.test(headers.get('Content-Type') ?? '') || !['GET', 'HEAD'].includes(request.method)) {
+    return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
   }
 
+  varyByRepresentation(headers);
+  headers.append('Link', `<${url.pathname}>; rel="alternate"; type="text/markdown"`);
   const accept = request.headers.get('accept') ?? '';
   const userAgent = request.headers.get('user-agent') ?? '';
   const wantsMarkdown = acceptsMarkdown(accept) || (!accept.toLowerCase().includes('text/markdown') && AI_USER_AGENTS.test(userAgent));
-  const articleMatch = url.pathname.match(/^\/aktualnosci\/([^/]+)\/?$/);
+  if (!wantsMarkdown) return new Response(response.body, { status: response.status, headers });
 
-  if (wantsMarkdown && url.pathname === '/' && ['GET', 'HEAD'].includes(request.method)) {
-    const response = markdownResponse(homeMarkdown);
-    return request.method === 'HEAD' ? new Response(null, response) : response;
+  // HEAD from a static CDN has no body to convert, but uses the same representation headers.
+  let markdown: string | null = null;
+  if (request.method !== 'HEAD') {
+    const html = await response.text();
+    markdown = url.pathname === '/' ? homeMarkdown : pageToMarkdown(html, url);
+    if (markdown === null) return new Response(html, { status: response.status, headers });
+  } else {
+    await response.body?.cancel();
   }
 
-  if (!wantsMarkdown || !articleMatch || !['GET', 'HEAD'].includes(request.method)) {
-    return next();
-  }
-
-  const posts = await getCollection('news');
-  const post = posts.find((entry) => entry.data.slug === articleMatch[1]);
-
-  if (!post) return next();
-
-  const canonicalUrl = new URL(`/aktualnosci/${post.data.slug}/`, url.origin).href;
-  const markdown = [
-    `# ${post.data.title}`,
-    `Canonical URL: ${canonicalUrl}`,
-    '',
-    `> ${post.data.description}`,
-    '',
-    htmlToMarkdown(post.body ?? '')
-  ].join('\n');
-
-  return new Response(request.method === 'HEAD' ? null : `${markdown.trim()}\n`, {
-    headers: {
-      'Content-Type': 'text/markdown; charset=utf-8',
-      Vary: 'Accept, User-Agent',
-      'Cache-Control': 'public, max-age=300'
-    }
-  });
+  headers.set('Content-Type', 'text/markdown; charset=utf-8');
+  headers.set('Cache-Control', 'public, max-age=300');
+  headers.set('X-Content-Type-Options', 'nosniff');
+  // These describe the upstream HTML bytes and must not be reused for Markdown.
+  for (const name of ['Content-Length', 'Content-Encoding', 'ETag', 'Last-Modified', 'Accept-Ranges', 'Content-Range']) headers.delete(name);
+  return new Response(markdown, { status: response.status, headers });
 });
-
-export const onRequest = sequence(excludeFromIndexing, handleRequest);
