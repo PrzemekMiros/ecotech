@@ -10,6 +10,9 @@ export async function saveLeadStatistic({ lead, source, formPage, formId }: {
   const dataset = import.meta.env.SANITY_STUDIO_DATASET;
   const token = import.meta.env.SANITY_API_WRITE_TOKEN;
   if (!projectId || !dataset || !token) {
+    console.error('Sanity form configuration missing:', {
+      projectId: Boolean(projectId), dataset: Boolean(dataset), token: Boolean(token),
+    });
     throw new Error('Sanity write configuration missing.');
   }
   const document = {
@@ -20,7 +23,11 @@ export async function saveLeadStatistic({ lead, source, formPage, formId }: {
   try {
     const client = createClient({ projectId, dataset, token, apiVersion: '2025-02-19', useCdn: false, timeout: 5000, maxRetries: 2 });
     await client.createIfNotExists(document);
-  } catch {
+  } catch (error) {
+    // Do not log the request: it contains personal data and authorization headers.
+    const statusCode = typeof error === 'object' && error !== null && 'statusCode' in error
+      ? error.statusCode : undefined;
+    console.error('Sanity form write failed:', { statusCode: typeof statusCode === 'number' ? statusCode : 'network-or-config' });
     throw new Error('Sanity form submission failed.');
   }
 }

@@ -1,0 +1,7 @@
+﻿import React from 'react';
+import {createRoot} from 'react-dom/client';
+import {LeadStatisticsView} from '../sanity/LeadStatistics';
+const channels=['ads','organic','direct','social','email','ads','organic'];
+const rows=Array.from({length:23},(_,i)=>({_id:String(i),name:['Anna Kowalska','Piotr Nowak','Marta Zielinska'][i%3],submittedAt:new Date(Date.now()-i*3600000).toISOString(),channel:channels[i%7],email:'klient@example.com',phone:'+48 123 456 789',company:'Firma przykladowa',product:'Rury stalowe bez szwu',message:'Prosze o wycene rur i informacje o terminie dostawy.\nPotrzebujemy 120 metrow biezacych.',formPage:i%2?'/kontakt/':'/rura-stalowa-bez-szwu-fi-114-3-x-10-mm/',landingPage:'/rury-stalowe/',utmCampaign:i%3?'':'Rury / listopad',utmSource:i%3?'':'google'}));
+function App(){const [days,setDays]=React.useState('30');const [mode,setMode]=React.useState('data');return <><div style={{position:'fixed',bottom:0,right:0,zIndex:20}}><select aria-label="Preview state" value={mode} onChange={e=>setMode(e.target.value)}>{['data','empty','loading','error','light'].map(s=><option key={s}>{s}</option>)}</select></div><div style={{height:'100vh',...(mode==='light'?{'--card-bg-color':'#ffffff','--card-fg-color':'#18212c'}:{})}}><LeadStatisticsView rows={mode==='empty'?[]:rows} days={days} setDays={setDays} loading={mode==='loading'} error={mode==='error'?'Test error':''} refresh={()=>{}} updatedAt={new Date()}/></div></>}
+createRoot(document.getElementById('root')).render(<App/>);
