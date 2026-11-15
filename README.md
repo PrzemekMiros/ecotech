@@ -1,6 +1,6 @@
 # Eco Tech Group
 
-Strona Astro z obsługą formularzy przekazywanych do CRM Firmao.
+Strona Astro z formularzami zapisywanymi wyłącznie w panelu Sanity.
 
 ## Uruchomienie
 
@@ -9,17 +9,17 @@ npm install
 npm run dev
 ```
 
-## Konfiguracja Firmao
+## Konfiguracja formularzy
 
-1. Skopiuj `.env.example` do pliku `.env`.
-2. Ustaw `FIRMAO_ORGANIZATION_ID` (fragment adresu URL panelu Firmao po zalogowaniu), `FIRMAO_API_LOGIN` i `FIRMAO_API_PASSWORD`.
-3. Upewnij się w Firmao, że API jest włączone dla używanego konta.
+1. Uzupełnij `.env` według `.env.example`.
+2. Ustaw `SANITY_STUDIO_PROJECT_ID`, `SANITY_STUDIO_DATASET` i serwerowy `SANITY_API_WRITE_TOKEN` z prawem zapisu.
+3. Zapytania i ich źródła odczytasz w zakładce „Statystyki formularzy” w Sanity.
 
-Zmienne nie mogą mieć prefiksu `PUBLIC_`; są odczytywane wyłącznie przez endpoint serwerowy. Każde zapytanie tworzy kontrahenta (lub używa istniejącego kontrahenta o tym samym NIP-ie) i dodaje do niego notatkę handlową.
+Token nie może mieć prefiksu `PUBLIC_` ani `SANITY_STUDIO_`. Dane formularza są zapisywane przez endpoint serwerowy w dokumentach o ograniczonym dostępie. Firmao nie jest wywoływane.
 
 ## Wdrożenie
 
-Formularze wymagają hostingu obsługującego Node.js. Po wdrożeniu skonfiguruj te same trzy zmienne środowiskowe w panelu hostingu, zbuduj stronę poleceniem `npm run build` i uruchom ją przez `npm run start`.
+Formularze wymagają działającego endpointu serwerowego. Ustaw powyższe zmienne w hostingu i wdróż stronę przez adapter Netlify skonfigurowany w projekcie (`npm run build`). Studio publikuje się osobno przez `npm run studio:deploy`.
 
 
 ## Sanity CMS

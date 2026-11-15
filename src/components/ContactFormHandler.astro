@@ -27,7 +27,7 @@
       if (button) button.disabled = true;
       if (status) status.textContent = 'Wysyłanie…';
       try {
-        const response = await fetch('/api/firmao-lead', {
+        const response = await fetch('/api/lead', {
           method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data),
         });
         const result = await response.json().catch(() => ({}));

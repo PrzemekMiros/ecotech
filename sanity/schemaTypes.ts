@@ -28,7 +28,10 @@ const document = (name: string, title: string, fields: ReturnType<typeof defineF
 export const schemaTypes = [
   defineType({
     name: 'leadStatistic', title: 'Statystyka zapytania', type: 'document', readOnly: true,
-    fields: [field('submittedAt', 'Data wysłania', 'datetime'), field('channel', 'Kanał'),
+    fields: [field('name', 'Imię i nazwisko'), field('email', 'E-mail'), field('phone', 'Telefon'),
+      field('company', 'Firma'), field('nip', 'NIP'), field('product', 'Produkt'), field('message', 'Wiadomość', 'text'),
+      field('privacyAccepted', 'Zgoda na przetwarzanie danych', 'boolean'),
+      field('submittedAt', 'Data wysłania', 'datetime'), field('channel', 'Kanał'),
       field('formPage', 'Strona formularza'), field('formId', 'Formularz'), field('landingPage', 'Strona wejścia'),
       field('referrerHost', 'Witryna odsyłająca'), field('utmSource', 'UTM source'), field('utmMedium', 'UTM medium'),
       field('utmCampaign', 'UTM campaign'), field('utmTerm', 'UTM term'), field('utmContent', 'UTM content')],
