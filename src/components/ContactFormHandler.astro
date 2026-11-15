@@ -1,4 +1,6 @@
 <script>
+  import { detectSource, getSessionSource } from '../lib/lead-source.mjs';
+  function initialiseForms() {
   document.querySelectorAll<HTMLFormElement>('.contact-form').forEach((form) => {
     if (form.dataset.initialised) return;
     form.dataset.initialised = 'true';
@@ -9,10 +11,12 @@
       event.preventDefault();
       const data = Object.fromEntries(new FormData(form).entries());
       try {
-        data.source = sessionStorage.getItem('ecotech-lead-source') || '';
+        data.source = JSON.stringify(getSessionSource(sessionStorage, location.href, document.referrer));
       } catch {
-        data.source = '';
+        data.source = JSON.stringify(detectSource(location.href, document.referrer));
       }
+      data.formPage = location.pathname;
+      data.formId = form.id || form.dataset.formId || 'contact-form';
       const required = ['name', 'message'];
       const hasContact = String(data.email || '').trim() || String(data.phone || '').trim();
       if (required.some((field) => !String(data[field] || '').trim()) || !hasContact || !data.privacy) {
@@ -37,4 +41,7 @@
       }
     });
   });
+  }
+  initialiseForms();
+  document.addEventListener('astro:page-load', initialiseForms);
 </script>

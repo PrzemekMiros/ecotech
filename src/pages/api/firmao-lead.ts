@@ -1,4 +1,6 @@
 import type { APIRoute } from 'astro';
+import { readSource } from '../../lib/lead-source.mjs';
+import { saveLeadStatistic } from '../../lib/lead-statistics';
 
 export const prerender = false;
 
@@ -13,27 +15,6 @@ function readString(value: unknown, maximum: number) {
 
 function isEmail(value: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-}
-
-function readSource(value: unknown): LeadSource | undefined {
-  if (typeof value !== 'string' || !value) return undefined;
-  try {
-    const source = JSON.parse(value) as Record<string, unknown>;
-    const channel = readString(source.channel, 20);
-    if (!['ads', 'organic', 'referral', 'direct'].includes(channel)) return undefined;
-    return {
-      channel,
-      landingPage: readString(source.landingPage, 300),
-      referrerHost: readString(source.referrerHost, MAX_LENGTHS.source),
-      utmSource: readString(source.utmSource, MAX_LENGTHS.source),
-      utmMedium: readString(source.utmMedium, MAX_LENGTHS.source),
-      utmCampaign: readString(source.utmCampaign, MAX_LENGTHS.source),
-      utmTerm: readString(source.utmTerm, MAX_LENGTHS.source),
-      utmContent: readString(source.utmContent, MAX_LENGTHS.source),
-    };
-  } catch {
-    return undefined;
-  }
 }
 
 function getCustomerId(body: unknown) {
@@ -93,6 +74,7 @@ export const POST: APIRoute = async ({ request }) => {
   let payload: Record<string, unknown>;
   try {
     payload = await request.json();
+    if (!payload || typeof payload !== 'object' || Array.isArray(payload)) throw new Error('Invalid payload');
   } catch {
     return Response.json({ message: 'Nieprawidłowe dane formularza.' }, { status: 400 });
   }
@@ -103,7 +85,9 @@ export const POST: APIRoute = async ({ request }) => {
     phone: readString(payload.phone, MAX_LENGTHS.phone), company: readString(payload.company, MAX_LENGTHS.company),
     nip: readString(payload.nip, MAX_LENGTHS.nip), message: readString(payload.message, MAX_LENGTHS.message),
   };
-  const source = readSource(payload.source);
+  const source = readSource(payload.source) as LeadSource | undefined;
+  const formPage = readString(payload.formPage, 300).split(/[?#]/)[0];
+  const formId = readString(payload.formId, 100);
   if (!lead.name || !lead.message || (!lead.email && !lead.phone)) {
     return Response.json({ message: 'Podaj imię, wiadomość oraz adres e-mail lub numer telefonu.' }, { status: 400 });
   }
@@ -115,7 +99,7 @@ export const POST: APIRoute = async ({ request }) => {
     Authorization: `Basic ${Buffer.from(`${login}:${password}`).toString('base64')}`,
     'Content-Type': 'application/json; charset=UTF-8',
   };
-  const description = leadDescription(lead, source);
+  const description = [leadDescription(lead, source), `Strona formularza: ${formPage || 'nieznana'}`, `Formularz: ${formId || 'nieznany'}`].join('\n');
 
   try {
     let customerId: string | number | undefined;
@@ -152,6 +136,7 @@ export const POST: APIRoute = async ({ request }) => {
       return Response.json({ message: 'Dane kontaktowe zapisano, ale nie udało się dodać treści zapytania.' }, { status: 502 });
     }
 
+    await saveLeadStatistic({ source, formPage, formId });
     return Response.json({ message: 'Dziękujemy — zapytanie zostało wysłane.' }, { status: 201 });
   } catch (error) {
     console.error('Firmao request failed.', error);

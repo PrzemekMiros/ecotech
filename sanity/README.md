@@ -1,5 +1,21 @@
 # Sanity — Eco Tech Group
 
+## Statystyki formularzy
+
+Zakładka **Statystyki formularzy** pokazuje zapytania przyjęte przez Firmao: kanały, strony formularzy i wejścia, kampanie, źródła UTM, witryny odsyłające i ostatnie 100 wysłań. Podsumowania obejmują wszystkie zapisane zdarzenia w okresie 7/30/90/365 dni. Odświeżanie jest ręczne.
+
+1. W Sanity Manage utwórz token API z prawem zapisu w docelowym datasecie (np. Editor; przy dostępności własnych ról ogranicz zapis do typu `leadStatistic`).
+2. Ustaw `SANITY_API_WRITE_TOKEN` w `.env` i zmiennych serwerowych hostingu. Bez prefiksów `PUBLIC_` ani `SANITY_STUDIO_`. Projekt i dataset są wspólne ze Studio. Działa również przy `CONTENT_SOURCE=local`.
+3. Przebuduj i wdróż aplikację oraz Studio. Sprawdź kontrolne wysłanie z `/kontakt/?utm_source=google&utm_medium=cpc&utm_campaign=test` w CRM i panelu. To tworzy prawdziwe zapytanie w Firmao.
+
+Źródło oznacza pierwsze wejście w sesji karty przeglądarki (sessionStorage). Strona wysłania jest zapisywana osobno. Ścieżki nie zawierają query string ani fragmentów. Zapisujemy pola UTM, ale nie wartości identyfikatorów kliknięć. Nie umieszczaj danych osobowych w UTM. Sam `fbclid` oznacza social media; reklamy Meta oznaczaj `utm_medium=paid_social`.
+
+Dokumenty `leadStatistics.<uuid>` nie zawierają danych kontaktowych, wiadomości ani IP. Identyfikatory z kropką ograniczają anonimowy odczyt także w publicznym datasecie ([dokumentacja Sanity](https://www.sanity.io/docs/content-lake/keeping-your-data-safe)). Panel używa uprawnień zalogowanego użytkownika.
+
+Brak konfiguracji lub błąd Sanity jest logowany i nie zmienia udanego wysłania do CRM w błąd. Klient ponawia zapis, lecz nie ma trwałej kolejki: dłuższa awaria może powodować braki w statystykach. Atrybucja jest orientacyjna; blokada referrera lub storage wpływa na wynik. Bez storage źródło dotyczy bieżącego wejścia. Historyczne wysłania nie są importowane. Raport nie mierzy wizyt, unikalnych osób ani współczynnika konwersji.
+
+Testy: `node --test scripts/lead-source.test.mjs`.
+
 ## Pierwsze uruchomienie
 
 1. Utwórz projekt i dataset `production` w https://www.sanity.io/manage (lub użyj istniejących).

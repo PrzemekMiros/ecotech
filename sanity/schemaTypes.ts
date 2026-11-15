@@ -26,6 +26,14 @@ const document = (name: string, title: string, fields: ReturnType<typeof defineF
 });
 
 export const schemaTypes = [
+  defineType({
+    name: 'leadStatistic', title: 'Statystyka zapytania', type: 'document', readOnly: true,
+    fields: [field('submittedAt', 'Data wysłania', 'datetime'), field('channel', 'Kanał'),
+      field('formPage', 'Strona formularza'), field('formId', 'Formularz'), field('landingPage', 'Strona wejścia'),
+      field('referrerHost', 'Witryna odsyłająca'), field('utmSource', 'UTM source'), field('utmMedium', 'UTM medium'),
+      field('utmCampaign', 'UTM campaign'), field('utmTerm', 'UTM term'), field('utmContent', 'UTM content')],
+    preview: { select: { title: 'formPage', subtitle: 'submittedAt' } },
+  }),
   document('news', 'Aktualności', [date(), source(), ...images,
     defineField({ name: 'dateModified', title: 'Data modyfikacji treści', type: 'date', description: 'Zmieniaj po redakcji treści, nie przy każdym wdrożeniu.' }),
     defineField({ name: 'keyTakeaways', title: 'Kluczowe wnioski', type: 'array', of: [{ type: 'string' }], validation: rule => rule.min(3).max(4) }),
