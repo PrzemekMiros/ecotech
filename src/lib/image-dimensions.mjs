@@ -29,7 +29,8 @@ export const imageDimensions = {
   '/img/posts/2022/12/eco-tech-zbiorniki-stalowe-compress.jpg': { width: 1280, height: 427 },
   '/img/posts/2022/12/ecotech-walcowanie-blach-1-compress.jpg': { width: 1280, height: 427 },
   '/img/posts/2022/12/montaz-rur-stalowych-dwudzielnych-compress.jpeg': { width: 1280, height: 671 },
-  '/img/posts/2022/12/spawanie-konstrukcji-compress.jpeg': { width: 1078, height: 720 }
+  '/img/posts/2022/12/spawanie-konstrukcji-compress.jpeg': { width: 1078, height: 720 },
+  '/img/posts/2024/02/ecotech-giecie-rur-3.jpg': { width: 1267, height: 658 }
 };
 
 /** @param {string} src */
