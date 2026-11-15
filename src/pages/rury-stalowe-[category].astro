@@ -69,9 +69,9 @@ const products = (await getCollection('steelPipeProducts'))
             </div>
 
             {products.length > 0 ? (
-              <ul class="mt-6 divide-y divide-ink/10 border-y border-ink/10">
-                {products.map((product) => (
-                  <li>
+              <ul id="category-products-list" class="mt-6 divide-y divide-ink/10 border-y border-ink/10">
+                {products.map((product, index) => (
+                  <li hidden={index >= 10}>
                     <a href={`/${product.data.slug}/`} class="group grid items-center gap-2 px-4 py-4 transition-colors hover:bg-mist sm:grid-cols-[10rem_minmax(0,1fr)_auto] sm:gap-6 sm:px-5">
                       <span class="text-xs font-bold uppercase tracking-[0.12em] text-accent-1">{product.data.specification ?? 'Rura stalowa'}</span>
                       <span class="text-base font-semibold leading-6 tracking-[-0.02em] text-[#142b3a] group-hover:text-accent-1">{product.data.title}</span>
@@ -82,6 +82,11 @@ const products = (await getCollection('steelPipeProducts'))
               </ul>
             ) : (
               <p class="mt-6 border border-dashed border-accent-1/20 bg-mist p-6 text-sm leading-6 text-ink/65">Produkty w tej kategorii zostaną wkrótce uzupełnione.</p>
+            )}
+            {products.length > 10 && (
+              <button type="button" data-show-more-products aria-controls="category-products-list" class="mt-6 border border-accent-1 bg-accent-1 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-1">
+                Zobacz więcej
+              </button>
             )}
           </section>
 
@@ -121,6 +126,32 @@ const products = (await getCollection('steelPipeProducts'))
     </div>
   </article>
 </BaseLayout>
+
+<script>
+  function initProductList() {
+    const button = document.querySelector<HTMLButtonElement>('[data-show-more-products]');
+    const list = document.getElementById('category-products-list');
+    if (!button || !list || button.dataset.initialized) return;
+    button.dataset.initialized = 'true';
+
+    button.addEventListener('click', () => {
+      const nextProducts = Array.from(list.querySelectorAll<HTMLLIElement>('li[hidden]')).slice(0, 10);
+      nextProducts.forEach((product) => { product.hidden = false; });
+      nextProducts[0]?.querySelector<HTMLAnchorElement>('a')?.focus({ preventScroll: true });
+      button.hidden = !list.querySelector('li[hidden]');
+    });
+  }
+
+  initProductList();
+  document.addEventListener('astro:page-load', initProductList);
+</script>
+
+<noscript>
+  <style>
+    #category-products-list > li[hidden] { display: list-item !important; }
+    [data-show-more-products] { display: none !important; }
+  </style>
+</noscript>
 
 <style is:global>
   body:has(.pipe-category-page) > header { background: #fff; color: var(--color-ink); }

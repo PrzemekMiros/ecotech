@@ -19,7 +19,7 @@ const featuredImages = {
 };
 ---
 
-<BaseLayout title={`${title} | Eco Tech Group`} description={category ? `Artykuły i wiedza techniczna: ${category.toLowerCase()}. Eco Tech Group.` : 'Najnowsze informacje, wiedza branżowa i aktualności Eco Tech Group.'} structuredData={[itemListSchema(title, posts.map(({ data }) => ({ name: data.title, path: `/aktualnosci/${data.slug}` })))]}>
+<BaseLayout title={`${title} | Eco Tech Group`} description={category ? `Artykuły i wiedza techniczna: ${category.toLowerCase()}. Eco Tech Group.` : 'Najnowsze informacje, wiedza branżowa i aktualności Eco Tech Group.'} structuredData={[itemListSchema(title, posts.map(({ data }) => ({ name: data.title, path: `/${data.slug}/` })))]}>
   <PageHero title={title} />
 
   <section class="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
@@ -38,7 +38,7 @@ const featuredImages = {
           : featuredImages[post.data.category];
 
         return (
-        <a href={`/aktualnosci/${post.data.slug}`} class="group flex min-h-80 flex-col overflow-hidden border border-accent-1/15 bg-white transition-colors hover:border-accent-1 hover:bg-mist">
+        <a href={`/${post.data.slug}/`} class="group flex min-h-80 flex-col overflow-hidden border border-accent-1/15 bg-white transition-colors hover:border-accent-1 hover:bg-mist">
           <Picture
             src={featuredImage.src} alt={featuredImage.alt}
             width={1280} height={680}

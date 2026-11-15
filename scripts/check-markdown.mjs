@@ -61,7 +61,7 @@ for (const contentType of ['application/json', 'application/pdf', 'text/plain'])
   assert.equal(await response.text(), 'unchanged');
 }
 assert.match((await run('/kontakt/', fixture, { method: 'POST' })).headers.get('content-type'), /^text\/html/);
-const excluded = await run('/aktualnosci/wigilia-firmowa-2025/', fixture);
+const excluded = await run('/wigilia-firmowa-2025/', fixture);
 assert.equal(excluded.headers.get('x-robots-tag'), 'noindex, follow');
 const oldMaintenance = process.env.MAINTENANCE_MODE;
 process.env.MAINTENANCE_MODE = 'true';

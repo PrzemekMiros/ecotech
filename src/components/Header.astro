@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { productionUrl } from '../lib/production-url';
 import darkLogo from '../assets/img/logo/EcoTech_Logo_dark.png';
 import NavigationLink from './NavigationLink.astro';
 
@@ -19,7 +20,7 @@ const services = (await getCollection('services')).sort((a, b) => a.data.order -
 const productionItems = (await getCollection('production')).sort((a, b) => a.data.order - b.data.order);
 const pipeCategories = (await getCollection('steelPipeCategories')).sort((a, b) => a.data.order - b.data.order);
 const itemHref = (menu: 'pipes' | 'services' | 'production', baseHref: string, slug: string) =>
-  menu === 'pipes' ? `/rury-stalowe-${slug}` : `${baseHref}/${slug}`;
+  menu === 'pipes' ? `/rury-stalowe-${slug}` : menu === 'production' ? productionUrl(slug) : `${baseHref}/${slug}`;
 ---
 
 <header class="absolute inset-x-0 top-0 z-30 text-white">
@@ -134,7 +135,7 @@ const itemHref = (menu: 'pipes' | 'services' | 'production', baseHref: string, s
               <div class="pb-5">
                 <a href="/produkcja" class="mb-2 block text-sm font-semibold text-sun">Cała produkcja →</a>
                 <div class="grid gap-1 sm:grid-cols-2">
-                  {productionItems.map((item) => <a href={`/produkcja/${item.data.slug}`} class="block py-2 text-sm text-ink/65 hover:text-accent-1">{item.data.title}</a>)}
+                  {productionItems.map((item) => <a href={productionUrl(item.data.slug)} class="block py-2 text-sm text-ink/65 hover:text-accent-1">{item.data.title}</a>)}
                 </div>
               </div>
             </details>

@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { productionUrl } from '../../lib/production-url';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
 import OfferTile from '../../components/OfferTile.astro';
@@ -8,13 +9,13 @@ import { itemListSchema } from '../../lib/structured-data';
 const productionItems = (await getCollection('production')).sort((a, b) => a.data.order - b.data.order);
 ---
 
-<BaseLayout title="Produkcja | Eco Tech Group" description="Produkcja elementów i konstrukcji stalowych na potrzeby inwestycji przemysłowych oraz infrastrukturalnych." structuredData={[itemListSchema('Produkcja', productionItems.map(({ data }) => ({ name: data.title, path: `/produkcja/${data.slug}` })))]}>
+<BaseLayout title="Produkcja | Eco Tech Group" description="Produkcja elementów i konstrukcji stalowych na potrzeby inwestycji przemysłowych oraz infrastrukturalnych." structuredData={[itemListSchema('Produkcja', productionItems.map(({ data }) => ({ name: data.title, path: productionUrl(data.slug) })))]}>
   <PageHero title="Produkcja" />
 
   <section class="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
     <div class="grid gap-x-8 gap-y-12 md:grid-cols-2">
       {productionItems.map((item) => (
-        <OfferTile href={'/produkcja/' + item.data.slug} title={item.data.title} image={item.data.image} imageAlt={item.data.imageAlt} />
+        <OfferTile href={productionUrl(item.data.slug)} title={item.data.title} image={item.data.image} imageAlt={item.data.imageAlt} />
       ))}
     </div>
   </section>

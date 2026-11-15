@@ -1,0 +1,17 @@
+---
+import { getCollection } from 'astro:content';
+import ProductionPage from '../../components/ProductionPage.astro';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const items = await getCollection('production');
+  return items.map((item) => ({
+    params: { slug: item.data.slug },
+    props: { item }
+  }));
+}
+
+const { item } = Astro.props;
+---
+<ProductionPage item={item} />

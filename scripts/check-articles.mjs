@@ -12,7 +12,7 @@ let questions = 0, howTos = 0;
 const glossaryVariants = new Set();
 for (const file of files) {
   const { data } = matter(await readFile(`src/content/blog/${file}`, 'utf8'));
-  const pathname = `/aktualnosci/${data.slug}/`;
+  const pathname = `/${data.slug}/`;
   const get = options => fetch(new URL(pathname, base), { redirect: 'manual', signal: AbortSignal.timeout(30000), ...options });
   const response = await get({ headers: { Accept: 'text/html' } });
   assert.equal(response.status, 200, pathname);
