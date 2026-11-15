@@ -24,6 +24,7 @@ export const imageDimensions = {
   '/img/posts/2022/12/eco-tech-malowanie-rur.jpeg': { width: 840, height: 480 },
   '/img/posts/2022/12/eco-tech-paloscianki-compress.jpg': { width: 1280, height: 427 },
   '/img/posts/2022/12/eco-tech-podpory-mostowe-compress.jpg': { width: 1280, height: 427 },
+  '/img/posts/2022/12/eco-tech-rury-stalowe-compress.webp': { width: 1081, height: 720 },
   '/img/posts/2022/12/eco-tech-skup-rur-compress.webp': { width: 767, height: 511 },
   '/img/posts/2022/12/eco-tech-zbiorniki-stalowe-compress.jpg': { width: 1280, height: 427 },
   '/img/posts/2022/12/ecotech-walcowanie-blach-1-compress.jpg': { width: 1280, height: 427 },
