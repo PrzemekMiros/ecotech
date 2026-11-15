@@ -25,7 +25,7 @@ const featuredImages = {
   <section class="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
     <nav class="mb-8 flex flex-wrap gap-3" aria-label="Kategorie artykułów">
       {[
-        { label: 'Wszystkie artykuły', href: '/aktualnosci', active: !category },
+        { label: 'Wszystkie artykuły', href: '/aktualnosci/', active: !category },
         { label: 'Właściwości mechaniczne stali', href: '/wlasciwosci-mechaniczne-stali/', active: category === 'Właściwości mechaniczne stali' },
         { label: 'Wymiary rur stalowych', href: '/wymiary-rur-stalowych/', active: category === 'Wymiary rur stalowych' }
       ].map(item => <a href={item.href} aria-current={item.active ? 'page' : undefined} class:list={['border px-4 py-3 text-sm font-semibold', item.active ? 'border-accent-1 bg-accent-1 text-white' : 'border-accent-1/20 text-accent-1 hover:bg-mist']}>{item.label}</a>)}

@@ -20,7 +20,7 @@ const formatDate = new Intl.DateTimeFormat('pl-PL', { day: '2-digit', month: 'lo
 
     <div class="mt-12 grid gap-4 md:grid-cols-2">
       {jobs.map((job) => (
-        <a href={`/praca/${job.data.slug}`} class="group flex min-h-56 flex-col justify-between border border-accent-1/15 bg-white p-6 transition-colors hover:border-accent-1 hover:bg-mist">
+        <a href={`/praca/${job.data.slug}/`} class="group flex min-h-56 flex-col justify-between border border-accent-1/15 bg-white p-6 transition-colors hover:border-accent-1 hover:bg-mist">
           <div>
             <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-bold uppercase tracking-[0.12em] text-accent-1">
               {job.data.location && <span>{job.data.location}</span>}

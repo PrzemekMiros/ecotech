@@ -1,5 +1,6 @@
 import { defineMiddleware } from 'astro:middleware';
 import { isExcludedFromIndexing } from './lib/indexing.mjs';
+import { isPipeFilterUrl } from './lib/pipe-filters.mjs';
 import { maintenanceResponse } from './lib/maintenance.mjs';
 import { agentLinks, homeMarkdown, acceptsMarkdown } from './lib/agent-resources';
 import { pageToMarkdown, varyByRepresentation } from './lib/page-markdown';
@@ -20,7 +21,7 @@ export const onRequest = defineMiddleware(async (context, next) => {
 
   const response = await next();
   const headers = new Headers(response.headers);
-  if (response.status !== 503 && (BINARY_ASSET.test(url.pathname) || isExcludedFromIndexing(url.pathname))) {
+  if (response.status !== 503 && (BINARY_ASSET.test(url.pathname) || isExcludedFromIndexing(url.pathname) || isPipeFilterUrl(url))) {
     headers.set('X-Robots-Tag', 'noindex, follow');
   }
   if (url.pathname === '/' && response.ok) headers.append('Link', agentLinks);

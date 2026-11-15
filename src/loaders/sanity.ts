@@ -1,5 +1,6 @@
 import { createClient } from '@sanity/client';
 import { glob, type Loader } from 'astro/loaders';
+import { normalizeContentLinks } from '../lib/content-links.mjs';
 
 /** Keep the existing collection/render API, switching sources explicitly. */
 export function contentLoader(type: string, directory: string): Loader {
@@ -33,7 +34,9 @@ export function contentLoader(type: string, directory: string): Loader {
         // Sanity projects absent optional values as null; Zod expects undefined.
         const data = Object.fromEntries(Object.entries({ ...fields, slug }).filter(([, value]) => value !== null));
         const parsed = await parseData({ id: _id, data });
-        entries.push({ id: _id, data: parsed, body, rendered: await renderMarkdown(body), digest: generateDigest(document) });
+        const rendered = await renderMarkdown(body);
+        rendered.html = normalizeContentLinks(rendered.html);
+        entries.push({ id: _id, data: parsed, body, rendered, digest: generateDigest(document) });
       }
       // Only replace the store after the complete collection has passed validation.
       store.clear();

@@ -25,14 +25,14 @@ const { Content } = await render(delivery);
 
 <BaseLayout title={`${delivery.data.title} | Eco Tech Group`} description={delivery.data.description} structuredData={[serviceSchema(delivery.data.title, delivery.data.description, Astro.url.pathname, delivery.data.city)]}>
   <article>
-    <PageHero title={delivery.data.title} breadcrumbs={[{ label: 'Dostawa rur stalowych', href: '/dostawa-rur-stalowych' }]} />
+    <PageHero title={delivery.data.title} breadcrumbs={[{ label: 'Dostawa rur stalowych', href: '/dostawa-rur-stalowych/' }]} />
 
     <section class="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:grid-cols-[minmax(0,1fr)_18rem] md:px-8 md:py-24">
       <div class="delivery-content min-w-0 max-w-3xl text-base leading-7 text-ink/75 [&_h2]:mt-10 [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:leading-tight [&_h2]:tracking-[-0.04em] [&_p]:mt-6"><Content /></div>
       <aside class="h-fit border-t-2 border-accent-1 bg-mist p-6">
         <p class="text-sm font-semibold">Potrzebujesz dostawy?</p>
         <p class="mt-3 text-sm leading-6 text-ink/65">Skontaktuj się z nami, aby ustalić dostępność materiału, transport i termin dostawy.</p>
-        <a href="/kontakt" class="mt-6 inline-flex bg-accent-1 px-5 py-3 text-sm font-semibold text-white hover:bg-accent-1/85">Wyślij zapytanie</a>
+        <a href="/kontakt/" class="mt-6 inline-flex bg-accent-1 px-5 py-3 text-sm font-semibold text-white hover:bg-accent-1/85">Wyślij zapytanie</a>
       </aside>
     </section>
   </article>

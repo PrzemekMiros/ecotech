@@ -5,22 +5,22 @@ import darkLogo from '../assets/img/logo/EcoTech_Logo_dark.png';
 import NavigationLink from './NavigationLink.astro';
 
 const links = [
-  { href: '/rury-stalowe', label: 'Rury stalowe', dropdown: true, menu: 'pipes' },
-  { href: '/uslugi', label: 'Usługi', dropdown: true, menu: 'services' },
-  { href: '/produkcja', label: 'Produkcja', dropdown: true, menu: 'production' },
-  { href: '/aktualnosci', label: 'Aktualności', dropdown: false, menu: undefined },
-  { href: '/do-pobrania', label: 'Do pobrania', dropdown: false, menu: undefined },
-  { href: '/praca', label: 'Praca', dropdown: false, menu: undefined },
-  { href: '/o-nas', label: 'O nas', dropdown: false, menu: undefined },
-  { href: '/kontakt', label: 'Kontakt', dropdown: false, menu: undefined }
+  { href: '/rury-stalowe/', label: 'Rury stalowe', dropdown: true, menu: 'pipes' },
+  { href: '/uslugi/', label: 'Usługi', dropdown: true, menu: 'services' },
+  { href: '/produkcja/', label: 'Produkcja', dropdown: true, menu: 'production' },
+  { href: '/aktualnosci/', label: 'Aktualności', dropdown: false, menu: undefined },
+  { href: '/do-pobrania/', label: 'Do pobrania', dropdown: false, menu: undefined },
+  { href: '/praca/', label: 'Praca', dropdown: false, menu: undefined },
+  { href: '/o-nas/', label: 'O nas', dropdown: false, menu: undefined },
+  { href: '/kontakt/', label: 'Kontakt', dropdown: false, menu: undefined }
 ];
 
-const pathname = Astro.url.pathname;
+const pathname = `${Astro.url.pathname.replace(/\/$/, '')}/`;
 const services = (await getCollection('services')).sort((a, b) => a.data.order - b.data.order);
 const productionItems = (await getCollection('production')).sort((a, b) => a.data.order - b.data.order);
 const pipeCategories = (await getCollection('steelPipeCategories')).sort((a, b) => a.data.order - b.data.order);
 const itemHref = (menu: 'pipes' | 'services' | 'production', baseHref: string, slug: string) =>
-  menu === 'pipes' ? `/rury-stalowe-${slug}` : menu === 'production' ? productionUrl(slug) : `${baseHref}/${slug}`;
+  menu === 'pipes' ? `/rury-stalowe-${slug}/` : menu === 'production' ? productionUrl(slug) : `${baseHref.replace(/\/$/, '')}/${slug}/`;
 ---
 
 <header class="absolute inset-x-0 top-0 z-30 text-white">
@@ -37,7 +37,7 @@ const itemHref = (menu: 'pipes' | 'services' | 'production', baseHref: string, s
           <a href="https://ecotechgroup.de/" aria-label="Deutsch" class="transition-opacity hover:opacity-70">🇩🇪</a>
         </div>
         <a href="mailto:sprzedaz@ecotechgroup.pl" class="text-white/90 transition-colors hover:text-white">✉ sprzedaz@ecotechgroup.pl</a>
-        <a href="/kontakt" class="bg-accent-1 px-9 py-3 text-sm font-semibold tracking-[0.02em] transition-colors hover:bg-accent-1/85">Wyślij zapytanie</a>
+        <a href="/kontakt/" class="bg-accent-1 px-9 py-3 text-sm font-semibold tracking-[0.02em] transition-colors hover:bg-accent-1/85">Wyślij zapytanie</a>
       </div>
       <nav class="flex h-[44px] items-center justify-end gap-8 border-t border-white/20 text-sm font-semibold" aria-label="Nawigacja główna">
         {links.map((link) => link.dropdown ? (
@@ -47,7 +47,7 @@ const itemHref = (menu: 'pipes' | 'services' | 'production', baseHref: string, s
               aria-haspopup="true"
               class:list={[
                 'flex h-full items-center gap-2 transition-colors hover:text-white/70 group-focus-within:text-white',
-                pathname.startsWith(link.href) ? 'text-white' : 'text-white/90'
+                pathname.startsWith(link.href.replace(/\/$/, '')) ? 'text-white' : 'text-white/90'
               ]}
             >
               {link.label}<span aria-hidden="true" class="transition-transform group-hover:rotate-180 group-focus-within:rotate-180">
@@ -107,7 +107,7 @@ const itemHref = (menu: 'pipes' | 'services' | 'production', baseHref: string, s
                 <span class="text-accent-1 transition-transform group-open/mobile:rotate-45" aria-hidden="true">+</span>
               </summary>
               <div class="pb-5">
-                <a href="/rury-stalowe" class="mb-2 block text-sm font-semibold text-sun">Wszystkie kategorie →</a>
+                <a href="/rury-stalowe/" class="mb-2 block text-sm font-semibold text-sun">Wszystkie kategorie →</a>
                 <div class="grid gap-1 sm:grid-cols-2">
                   {pipeCategories.map((category) => <a href={itemHref('pipes', '/rury-stalowe', category.data.slug)} class="block py-2 text-sm text-ink/65 hover:text-accent-1">{category.data.title}</a>)}
                 </div>
@@ -120,9 +120,9 @@ const itemHref = (menu: 'pipes' | 'services' | 'production', baseHref: string, s
                 <span class="text-accent-1 transition-transform group-open/mobile:rotate-45" aria-hidden="true">+</span>
               </summary>
               <div class="pb-5">
-                <a href="/uslugi" class="mb-2 block text-sm font-semibold text-sun">Wszystkie usługi →</a>
+                <a href="/uslugi/" class="mb-2 block text-sm font-semibold text-sun">Wszystkie usługi →</a>
                 <div class="grid gap-1 sm:grid-cols-2">
-                  {services.map((service) => <a href={`/uslugi/${service.data.slug}`} class="block py-2 text-sm text-ink/65 hover:text-accent-1">{service.data.title}</a>)}
+                  {services.map((service) => <a href={`/uslugi/${service.data.slug}/`} class="block py-2 text-sm text-ink/65 hover:text-accent-1">{service.data.title}</a>)}
                 </div>
               </div>
             </details>
@@ -133,7 +133,7 @@ const itemHref = (menu: 'pipes' | 'services' | 'production', baseHref: string, s
                 <span class="text-accent-1 transition-transform group-open/mobile:rotate-45" aria-hidden="true">+</span>
               </summary>
               <div class="pb-5">
-                <a href="/produkcja" class="mb-2 block text-sm font-semibold text-sun">Cała produkcja →</a>
+                <a href="/produkcja/" class="mb-2 block text-sm font-semibold text-sun">Cała produkcja →</a>
                 <div class="grid gap-1 sm:grid-cols-2">
                   {productionItems.map((item) => <a href={productionUrl(item.data.slug)} class="block py-2 text-sm text-ink/65 hover:text-accent-1">{item.data.title}</a>)}
                 </div>
@@ -148,7 +148,7 @@ const itemHref = (menu: 'pipes' | 'services' | 'production', baseHref: string, s
           </div>
 
           <div class="mt-6 grid gap-3 sm:grid-cols-2">
-            <a href="/kontakt" class="bg-accent-1 px-5 py-4 text-center text-sm font-semibold text-white hover:bg-accent-1/85">Wyślij zapytanie</a>
+            <a href="/kontakt/" class="bg-accent-1 px-5 py-4 text-center text-sm font-semibold text-white hover:bg-accent-1/85">Wyślij zapytanie</a>
             <a href="mailto:sprzedaz@ecotechgroup.pl" class="border border-ink/20 px-5 py-4 text-center text-sm font-semibold text-ink hover:border-accent-1 hover:text-accent-1">sprzedaz@ecotechgroup.pl</a>
           </div>
         </nav>

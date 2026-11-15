@@ -5,7 +5,7 @@ interface Props {
   description: string;
   href?: string;
 }
-const { number, title, description, href = '/oferta' } = Astro.props;
+const { number, title, description, href = '/oferta/' } = Astro.props;
 ---
 
 <a href={href} class="group flex min-h-64 flex-col justify-between border border-accent-1/15 bg-white p-6 hover:border-accent-1 hover:bg-mist">

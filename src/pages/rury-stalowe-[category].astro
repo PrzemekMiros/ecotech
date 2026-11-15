@@ -1,5 +1,6 @@
 ---
 import { getCollection, render, type CollectionEntry } from 'astro:content';
+import SteelPipeFilters from '../components/SteelPipeFilters.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { pageUrl } from '../lib/structured-data';
 
@@ -43,7 +44,7 @@ const products = (await getCollection('steelPipeProducts'))
       <nav class="flex flex-wrap items-center gap-x-2 gap-y-1 py-6 text-sm text-ink/55" aria-label="Okruszki nawigacyjne">
         <a href="/" class="hover:text-accent-1">Strona główna</a>
         <span aria-hidden="true">/</span>
-        <a href="/rury-stalowe" class="hover:text-accent-1">Rury stalowe</a>
+        <a href="/rury-stalowe/" class="hover:text-accent-1">Rury stalowe</a>
         <span aria-hidden="true">/</span>
         <span aria-current="page" class="text-ink/70">{category.data.title}</span>
       </nav>
@@ -108,20 +109,7 @@ const products = (await getCollection('steelPipeProducts'))
           )}
         </section>
 
-        <aside class="self-stretch bg-[#f3f5f6] px-6 py-10 md:px-10 lg:min-h-[44rem] lg:py-12">
-          <form class="mx-auto max-w-sm" aria-labelledby="category-filter-label" aria-describedby="filter-unavailable">
-            <p id="category-filter-label" class="text-2xl font-semibold tracking-[-0.04em] text-[#142b3a]">Znajdź rurę stalową</p>
-            <p id="filter-unavailable" class="mt-3 text-sm leading-6 text-ink/60">Filtr jest obecnie w przygotowaniu. Skontaktuj się z nami, aby dobrać produkt.</p>
-            <fieldset disabled class="mt-8 grid gap-4 disabled:opacity-100">
-              <label><span class="sr-only">Średnica</span><select class="pipe-filter-input"><option>Średnica</option></select></label>
-              <label><span class="sr-only">Ścianka</span><select class="pipe-filter-input"><option>Ścianka</option></select></label>
-              <label><span class="sr-only">Długość</span><select class="pipe-filter-input"><option>Długość</option></select></label>
-              <label><span class="sr-only">Gatunek</span><select class="pipe-filter-input"><option>Gatunek</option></select></label>
-              <label><span class="sr-only">Norma</span><select class="pipe-filter-input"><option>Norma</option></select></label>
-            </fieldset>
-            <button type="button" disabled class="mt-5 bg-accent-1 px-7 py-3.5 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-65">Filtruj</button>
-          </form>
-        </aside>
+        <SteelPipeFilters category={category.data.slug} />
       </div>
     </div>
   </article>

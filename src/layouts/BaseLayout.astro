@@ -7,6 +7,7 @@ import LeadSourceTracker from '../components/LeadSourceTracker.astro';
 import WebMcpTools from '../components/WebMcpTools.astro';
 import { absoluteUrl, pageUrl, pageGraph, serializeSchema, type SchemaNode, type Breadcrumb } from '../lib/structured-data';
 import { isExcludedFromIndexing } from '../lib/indexing.mjs';
+import { isPipeFilterUrl } from '../lib/pipe-filters.mjs';
 
 interface Props {
   title?: string;
@@ -62,7 +63,7 @@ const pageTransition = {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={pageDescription} />
-    {isExcludedFromIndexing(Astro.url.pathname) && <meta name="robots" content="noindex, follow" />}
+    {(isExcludedFromIndexing(Astro.url.pathname) || isPipeFilterUrl(Astro.url)) && <meta name="robots" content="noindex, follow" />}
     {Astro.response.status < 400 && <link rel="canonical" href={canonicalUrl} />}
     <meta property="og:site_name" content="Eco Tech Group" />
     <meta property="og:locale" content="pl_PL" />
