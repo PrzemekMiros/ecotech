@@ -1,0 +1,161 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "location": null,
+    "canonical": "https://ecotechgroup.pl/",
+    "title": "Hurtownia rur stalowych | Eco Tech Group",
+    "h1": 1,
+    "schemas": [
+      [
+        "Organization",
+        "WebSite",
+        "WebPage"
+      ]
+    ],
+    "imagesWithoutDimensions": 0
+  },
+  {
+    "path": "/rury-stalowe-bez-szwu/",
+    "status": 200,
+    "location": null,
+    "canonical": "https://ecotechgroup.pl/rury-stalowe-bez-szwu/",
+    "title": "Rury stalowe bez szwu | Rury stalowe | Eco Tech Group",
+    "h1": 1,
+    "schemas": [
+      [
+        "Organization",
+        "WebSite",
+        "CollectionPage",
+        "BreadcrumbList",
+        "ItemList"
+      ]
+    ],
+    "imagesWithoutDimensions": 2
+  },
+  {
+    "path": "/rura-stalowa-bez-szwu-fi-114-3-x-10-mm/",
+    "status": 200,
+    "location": null,
+    "canonical": "https://ecotechgroup.pl/rura-stalowa-bez-szwu-fi-114-3-x-10-mm/",
+    "title": "Rura stalowa bez szwu fi 114,3 x 10 mm | Eco Tech Group",
+    "h1": 1,
+    "schemas": [
+      [
+        "Organization",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Product"
+      ]
+    ],
+    "imagesWithoutDimensions": 0
+  },
+  {
+    "path": "/uslugi/izolowanie-rur-stalowych/",
+    "status": 200,
+    "location": null,
+    "canonical": "https://ecotechgroup.pl/uslugi/izolowanie-rur-stalowych/",
+    "title": "Izolowanie rur stalowych | Eco Tech Group",
+    "h1": 1,
+    "schemas": [
+      [
+        "Organization",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Service"
+      ]
+    ],
+    "imagesWithoutDimensions": 6
+  },
+  {
+    "path": "/ceny-stali-na-rynku-w-2021-roku/",
+    "status": 200,
+    "location": null,
+    "canonical": "https://ecotechgroup.pl/ceny-stali-na-rynku-w-2021-roku/",
+    "title": "Ceny stali na rynku w 2021 roku | Eco Tech Group",
+    "h1": 1,
+    "schemas": [
+      [
+        "Organization",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "BlogPosting"
+      ]
+    ],
+    "imagesWithoutDimensions": 3
+  },
+  {
+    "path": "/testowa/",
+    "status": 404,
+    "location": null,
+    "title": "Nie znaleziono strony | Eco Tech Group",
+    "h1": 1,
+    "schemas": [],
+    "imagesWithoutDimensions": 0
+  },
+  {
+    "path": "/gatunek/s235/",
+    "status": 404,
+    "location": null,
+    "title": "Nie znaleziono strony | Eco Tech Group",
+    "h1": 1,
+    "schemas": [],
+    "imagesWithoutDimensions": 0
+  },
+  {
+    "path": "/rury-stalowe/?diameter=114.3",
+    "status": 200,
+    "location": null,
+    "robots": "noindex, follow",
+    "canonical": "https://ecotechgroup.pl/rury-stalowe/",
+    "title": "Rury stalowe | Eco Tech Group",
+    "h1": 1,
+    "schemas": [
+      [
+        "Organization",
+        "WebSite",
+        "CollectionPage",
+        "BreadcrumbList",
+        "ItemList"
+      ],
+      null
+    ],
+    "imagesWithoutDimensions": 0
+  },
+  {
+    "path": "/uslugi/ciecie-plazmowe-cnc-wypalanie-blach-cnc/",
+    "status": 301,
+    "location": "https://ecotechgroup.pl/uslugi/",
+    "h1": 0,
+    "schemas": [],
+    "imagesWithoutDimensions": 0
+  },
+  {
+    "path": "/llms.txt",
+    "status": 200,
+    "location": null,
+    "h1": 0,
+    "schemas": [],
+    "imagesWithoutDimensions": 0
+  },
+  {
+    "path": "/sitemap-0.xml",
+    "status": 200,
+    "location": null,
+    "h1": 0,
+    "schemas": [],
+    "imagesWithoutDimensions": 0,
+    "sitemapUrls": 1620
+  },
+  {
+    "path": "/.well-known/mcp/server-card.json",
+    "status": 200,
+    "location": null,
+    "h1": 0,
+    "schemas": [],
+    "imagesWithoutDimensions": 0
+  }
+]
